@@ -5,7 +5,7 @@ Climate saver group projec
 ## Credits
 
 [Arin Alexander](https://github.com/arialexa9)
-Kyle DeGuzman   
+[Kyle DeGuzman](https://github.com/kyledeguzmanx)   
 Isaac Garcia   
 Faizan Hussain  
 Raydon Lam  
