@@ -4,7 +4,7 @@ Climate saver group projec
 
 ## Credits
 
-Arin Alexander  
+Arin Alexander | @arialexa9
 Kyle DeGuzman 
 Isaac Garcia   
 Faizan Hussain  
