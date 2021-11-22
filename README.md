@@ -9,4 +9,5 @@ Kyle DeGuzman
 Isaac Garcia   
 Faizan Hussain  
 Raydon Lam  
-Evelyn Lopez, Karen Prava
+Evelyn Lopez   
+Karen Prava
