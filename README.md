@@ -1,4 +1,4 @@
-[Logo1](https://github.com/faizan12123/Climate-Saver/blob/main/README-Img/logo1.png)  
+![Logo1](https://github.com/faizan12123/Climate-Saver/blob/main/README-Img/logo1.png)  
 
 ## Introduction  
 
