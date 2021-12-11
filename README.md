@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/faizan12123/Climate-Saver/blob/main/README/logo-version5.png"/>
+  <img src="https://github.com/faizan12123/Climate-Saver/blob/main/README/LOGO-VERSION5.png"/>
 </p>  
 
 ## Introduction  
