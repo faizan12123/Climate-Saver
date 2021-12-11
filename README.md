@@ -1,4 +1,3 @@
-![Logo1](https://github.com/faizan12123/Climate-Saver/blob/main/README-Img/logo-version1.png)  
 <p align="center">
   <img src="https://github.com/faizan12123/Climate-Saver/blob/main/README-Img/logo-version1.png"/>
 </p>
