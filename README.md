@@ -1,8 +1,13 @@
-# Climate-Saver
-Climate saver group projec
+<p align="center">
+  <img src="https://github.com/faizan12123/Climate-Saver/blob/main/README/LOGO-VERSION5.png"/>
+</p>  
+
+## INTRODUCTION  
+
+## TECHNOLOGY USED
 
 
-## Credits
+## CREDITS
 
 [Arin Alexander](https://github.com/arialexa9)  
 Role: Level designer and front-end developer.  
