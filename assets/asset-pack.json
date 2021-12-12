@@ -1,0 +1,73 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": "assets/Layer_0.png",
+                "type": "image",
+                "key": "Layer_0"
+            },
+            {
+                "url": "assets/Layer_1.png",
+                "type": "image",
+                "key": "Layer_1"
+            },
+            {
+                "url": "assets/Layer_2.png",
+                "type": "image",
+                "key": "Layer_2"
+            },
+            {
+                "url": "assets/Layer_3.png",
+                "type": "image",
+                "key": "Layer_3"
+            },
+            {
+                "url": "assets/Layer_4.png",
+                "type": "image",
+                "key": "Layer_4"
+            },
+            {
+                "url": "assets/LOGO-VERSION5.png",
+                "type": "image",
+                "key": "LOGO-VERSION5"
+            },
+            {
+                "url": "assets/main-menu-button-controls.png",
+                "type": "image",
+                "key": "main-menu-button-controls"
+            },
+            {
+                "url": "assets/main-menu-button-credits.png",
+                "type": "image",
+                "key": "main-menu-button-credits"
+            },
+            {
+                "url": "assets/main-menu-button-settings.png",
+                "type": "image",
+                "key": "main-menu-button-settings"
+            },
+            {
+                "url": "assets/main-menu-button-start.png",
+                "type": "image",
+                "key": "main-menu-button-start"
+            },
+            {
+                "url": "assets/main-menu-button-tutorial.png",
+                "type": "image",
+                "key": "main-menu-button-tutorial"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

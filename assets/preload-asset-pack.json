@@ -1,0 +1,28 @@
+{
+    "section1": {
+      "files": [
+        {
+          "url": "assets/guapen.png",
+          "type": "image",
+          "key": "guapen"
+        },
+        {
+          "url": "assets/Layer_0.png",
+          "type": "image",
+          "key": "Layer_0"
+        },
+        {
+          "url": "assets/LOGO-VERSION5.png",
+          "type": "image",
+          "key": "LOGO-VERSION5"
+        }
+      ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
