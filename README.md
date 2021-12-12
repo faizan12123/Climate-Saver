@@ -3,8 +3,12 @@
 </p>  
 
 ## INTRODUCTION  
-
-## TECHNOLOGY USED
+## TECHNOLOGIES USED
+- ADOBE PHOTOSHOP 2022  
+- PHASER 3 FRAMEWORK  
+- PHASER EDITOR 2D BY ARIAN FORNARIS  
+- VISUAL STUDIO 2019
+## SCREENSHOTS
 ![Loading Screen](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-loadingscene-version1-fs.png)
 ![Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
 
