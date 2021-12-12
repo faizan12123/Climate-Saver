@@ -9,17 +9,10 @@
 
 ## CREDITS
 
-[Arin Alexander](https://github.com/arialexa9)  
-Role: Level designer and front-end developer.  
-[Kyle DeGuzman](https://github.com/kyledeguzmanx)  
-Role: Front-end developer, Audio designer, asset collector.  
-[Isaac Garcia](https://github.com/isaacmg00)   
-Role: Level designer and front-end developer.  
-[Faizan Hussain](https://github.com/faizan12123)   
-Role: Scrum master, UX designer, front-end developer.  
-[Raydon Lam](https://github.com/itzraytothedon)   
-Role:Front-end developer and UI Designer  
-[Evelyn Lopez](https://github.com/eve-19)     
-Role: Project manager and front-end developer.  
-[Karen Prava](https://github.com/karenprava)  
-Role:Front-end developer and asset collector  
+[Arin Alexander](https://github.com/arialexa9): Level Designer and Programmer  
+[Kyle DeGuzman](https://github.com/kyledeguzmanx: Asset Collector and Programmer  
+[Isaac Garcia](https://github.com/isaacmg00): Level Designer and Programmer  
+[Faizan Hussain](https://github.com/faizan12123): Scrum Master, UX Designer, Programmer  
+[Raydon Lam](https://github.com/itzraytothedon): Programmer and UI Designer  
+[Evelyn Lopez](https://github.com/eve-19): Project Manager and Programmer  
+[Karen Prava](https://github.com/karenprava): Asset Collector and Programmer  
