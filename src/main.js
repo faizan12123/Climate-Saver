@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
 	
 	game.scene.add("Preload", Preload);
 	game.scene.add("MainMenu", MainMenu);
+	game.scene.add("Credits", Credits);
 	game.scene.add("Boot", Boot, true);
 });
 
