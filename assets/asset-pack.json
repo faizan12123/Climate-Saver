@@ -1,0 +1,68 @@
+{
+    "section1": {
+        "files": [
+          {
+            "url": "assets/environment/main-menu-environment-sky.png",
+            "type": "image",
+            "key": "main-menu-environment-sky"
+          },
+          {
+            "url": "assets/environment/main-menu-environment-cloud.png",
+            "type": "image",
+            "key": "main-menu-environment-cloud"
+          },
+          {
+            "url": "assets/environment/main-menu-environment-tree1.png",
+            "type": "image",
+            "key": "main-menu-environment-tree1"
+          },
+          {
+            "url": "assets/environment/main-menu-environment-tree2.png",
+            "type": "image",
+            "key": "main-menu-environment-tree2"
+          },
+          {
+            "url": "assets/environment/main-menu-environment-tree.png",
+            "type": "image",
+            "key": "main-menu-environment-tree"
+          },
+            {
+                "url": "assets/sprites/logo-version5.png",
+                "type": "image",
+                "key": "logo-version5"
+            },
+            {
+                "url": "assets/buttons/main-menu-button-controls.png",
+                "type": "image",
+                "key": "main-menu-button-controls"
+            },
+          {
+            "url": "assets/buttons/main-menu-button-credits.png",
+            "type": "image",
+            "key": "main-menu-button-credits"
+          },
+          {
+            "url": "assets/buttons/main-menu-button-settings.png",
+            "type": "image",
+            "key": "main-menu-button-settings"
+          },
+          {
+            "url": "assets/buttons/main-menu-button-start.png",
+            "type": "image",
+            "key": "main-menu-button-start"
+          },
+          {
+            "url": "assets/buttons/main-menu-button-tutorial.png",
+            "type": "image",
+            "key": "main-menu-button-tutorial"
+          }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

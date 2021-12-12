@@ -1,0 +1,23 @@
+{
+    "section1": {
+      "files": [
+        {
+          "url": "assets/environment/main-menu-environment-sky.png",
+          "type": "image",
+          "key": "main-menu-environment-sky"
+        },
+        {
+          "url": "assets/sprites/logo-version5.png",
+          "type": "image",
+          "key": "logo-version5"
+        }
+      ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
