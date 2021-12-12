@@ -1,0 +1,58 @@
+{
+    "id": "04331fb6-ed91-4d74-b6e9-4bfe0fcfb457",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadMethodName": "editorPreload",
+        "preloadPackFiles": [
+            "starter-template-basic-typescript/assets/asset-pack.json"
+        ],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Preload"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "6f597d92-08b4-4ac0-beec-83d6c11e910d",
+            "label": "layer_0",
+            "components": [],
+            "texture": {
+                "key": "main-menu-environment-sky"
+            },
+            "x": 485,
+            "y": 306
+        },
+        {
+            "type": "Text",
+            "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
+            "label": "progress",
+            "components": [
+                "PreloadText"
+            ],
+            "x": 400,
+            "y": 349,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "0%",
+            "fontSize": "40px",
+            "color": "#f7b20cff"
+        },
+        {
+            "type": "Image",
+            "id": "63744eed-3e87-4217-b871-2203a2c7f487",
+            "label": "lOGO_VERSION5",
+            "components": [],
+            "texture": {
+                "key": "logo-version5"
+            },
+            "x": 392,
+            "y": 183
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

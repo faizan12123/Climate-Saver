@@ -1,0 +1,171 @@
+{
+    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level"
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "5b26eff2-cd51-4eab-b56c-ce44eb8ea551",
+            "label": "main-menu-background",
+            "components": [],
+            "x": 407,
+            "y": 309,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "2aeef1b2-f344-4611-9c25-30b5f490a80a",
+                    "label": "layer_0",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-sky"
+                    },
+                    "x": -6,
+                    "y": -4,
+                    "scaleX": 0.19,
+                    "scaleY": 0.28
+                },
+                {
+                    "type": "Image",
+                    "id": "372deea6-9154-43c9-8fa1-daf1179afba0",
+                    "label": "layer_1",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-cloud"
+                    },
+                    "x": -6,
+                    "y": -98,
+                    "scaleX": 0.2,
+                    "scaleY": 0.2
+                },
+                {
+                    "type": "Image",
+                    "id": "3c09b48c-7bad-4de7-a575-b1a8d4264e67",
+                    "label": "layer_2",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree1"
+                    },
+                    "x": -3,
+                    "y": 122,
+                    "scaleX": 0.19,
+                    "scaleY": 0.17
+                },
+                {
+                    "type": "Image",
+                    "id": "d9b44736-7d89-4306-8644-4a9fa537597f",
+                    "label": "layer_3",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree2"
+                    },
+                    "x": -9,
+                    "y": 107,
+                    "scaleX": 0.19,
+                    "scaleY": 0.17
+                },
+                {
+                    "type": "Image",
+                    "id": "b671566a-81c2-49a8-8075-16e9dce5e126",
+                    "label": "layer_4",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree"
+                    },
+                    "x": -4,
+                    "y": 112,
+                    "scaleX": 0.19,
+                    "scaleY": 0.17
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "79c9472d-7e1f-4083-9457-325a1d55dab0",
+            "label": "lOGO_VERSION5",
+            "components": [],
+            "texture": {
+                "key": "logo-version5"
+            },
+            "x": 290,
+            "y": 247,
+            "scaleX": 0.7,
+            "scaleY": 0.7
+        },
+        {
+            "type": "Image",
+            "id": "70d2cfaf-9936-48eb-9bfc-923111da698e",
+            "label": "main_menu_button_start",
+            "components": [],
+            "texture": {
+                "key": "main-menu-button-start"
+            },
+            "x": 656,
+            "y": 131,
+            "scaleX": 0.36,
+            "scaleY": 0.36
+        },
+        {
+            "type": "Image",
+            "id": "8e6ddb57-8a46-4ba6-9ccd-2ae834e32cf4",
+            "label": "main_menu_button_tutorial",
+            "components": [],
+            "texture": {
+                "key": "main-menu-button-tutorial"
+            },
+            "x": 656,
+            "y": 222,
+            "scaleX": 0.36,
+            "scaleY": 0.36
+        },
+        {
+            "type": "Image",
+            "id": "d52b7698-9045-4105-a889-438434863b0a",
+            "label": "main_menu_button_controls",
+            "components": [],
+            "texture": {
+                "key": "main-menu-button-controls"
+            },
+            "x": 655,
+            "y": 311,
+            "scaleX": 0.36,
+            "scaleY": 0.36
+        },
+        {
+            "type": "Image",
+            "id": "e5a10fb8-e07d-4175-8bc5-f68c07dd2c94",
+            "label": "main_menu_button_settings",
+            "components": [],
+            "texture": {
+                "key": "main-menu-button-settings"
+            },
+            "x": 656,
+            "y": 401,
+            "scaleX": 0.36,
+            "scaleY": 0.36
+        },
+        {
+            "type": "Image",
+            "id": "3e0cc14d-262e-41e0-bc4f-3131c081160f",
+            "label": "main_menu_button_credits",
+            "components": [],
+            "texture": {
+                "key": "main-menu-button-credits"
+            },
+            "x": 655,
+            "y": 493,
+            "scaleX": 0.36,
+            "scaleY": 0.36
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
