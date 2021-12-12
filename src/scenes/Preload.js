@@ -23,7 +23,7 @@ class Preload extends Phaser.Scene {
 	editorCreate() {
 
 		// layer_0
-		this.add.image(485, 306, "Layer_0");
+		this.add.image(485, 306, "main-menu-environment-sky");
 
 		// progress
 		const progress = this.add.text(400, 349, "", {});
@@ -32,7 +32,7 @@ class Preload extends Phaser.Scene {
 		progress.setStyle({ "color": "#f7b20cff", "fontSize": "40px" });
 
 		// lOGO_VERSION5
-		this.add.image(392, 183, "LOGO-VERSION5");
+		this.add.image(392, 183, "logo-version5");
 
 		// progress (components)
 		new PreloadText(progress);

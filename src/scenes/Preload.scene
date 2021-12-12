@@ -16,7 +16,7 @@
             "label": "layer_0",
             "components": [],
             "texture": {
-                "key": "Layer_0"
+                "key": "main-menu-environment-sky"
             },
             "x": 485,
             "y": 306
@@ -42,7 +42,7 @@
             "label": "lOGO_VERSION5",
             "components": [],
             "texture": {
-                "key": "LOGO-VERSION5"
+                "key": "logo-version5"
             },
             "x": 392,
             "y": 183

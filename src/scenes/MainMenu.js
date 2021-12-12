@@ -20,37 +20,37 @@ class MainMenu extends Phaser.Scene {
 		const main_menu_background = this.add.container(407, 309);
 
 		// layer_0
-		const layer_0 = this.add.image(-6, -4, "Layer_0");
-		layer_0.scaleX = 0.185;
+		const layer_0 = this.add.image(-6, -4, "main-menu-environment-sky");
+		layer_0.scaleX = 0.19;
 		layer_0.scaleY = 0.28;
 		main_menu_background.add(layer_0);
 
 		// layer_1
-		const layer_1 = this.add.image(-6, -98, "Layer_1");
+		const layer_1 = this.add.image(-6, -98, "main-menu-environment-cloud");
 		layer_1.scaleX = 0.2;
 		layer_1.scaleY = 0.2;
 		main_menu_background.add(layer_1);
 
 		// layer_2
-		const layer_2 = this.add.image(-3, 122, "Layer_2");
+		const layer_2 = this.add.image(-3, 122, "main-menu-environment-tree1");
 		layer_2.scaleX = 0.19;
 		layer_2.scaleY = 0.17;
 		main_menu_background.add(layer_2);
 
 		// layer_3
-		const layer_3 = this.add.image(-9, 107, "Layer_3");
+		const layer_3 = this.add.image(-9, 107, "main-menu-environment-tree2");
 		layer_3.scaleX = 0.19;
 		layer_3.scaleY = 0.17;
 		main_menu_background.add(layer_3);
 
 		// layer_4
-		const layer_4 = this.add.image(-4, 112, "Layer_4");
+		const layer_4 = this.add.image(-4, 112, "main-menu-environment-tree");
 		layer_4.scaleX = 0.19;
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
 		// lOGO_VERSION5
-		const lOGO_VERSION5 = this.add.image(290, 247, "LOGO-VERSION5");
+		const lOGO_VERSION5 = this.add.image(290, 247, "logo-version5");
 		lOGO_VERSION5.scaleX = 0.7;
 		lOGO_VERSION5.scaleY = 0.7;
 

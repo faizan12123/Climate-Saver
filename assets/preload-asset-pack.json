@@ -2,19 +2,14 @@
     "section1": {
       "files": [
         {
-          "url": "assets/guapen.png",
+          "url": "assets/environment/main-menu-environment-sky.png",
           "type": "image",
-          "key": "guapen"
+          "key": "main-menu-environment-sky"
         },
         {
-          "url": "assets/Layer_0.png",
+          "url": "assets/sprites/logo-version5.png",
           "type": "image",
-          "key": "Layer_0"
-        },
-        {
-          "url": "assets/LOGO-VERSION5.png",
-          "type": "image",
-          "key": "LOGO-VERSION5"
+          "key": "logo-version5"
         }
       ]
     },
