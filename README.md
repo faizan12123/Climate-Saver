@@ -10,7 +10,7 @@
 ## CREDITS
 
 [Arin Alexander](https://github.com/arialexa9): Level Designer and Programmer  
-[Kyle DeGuzman](https://github.com/kyledeguzmanx: Asset Collector and Programmer  
+[Kyle DeGuzman](https://github.com/kyledeguzmanx): Asset Collector and Programmer  
 [Isaac Garcia](https://github.com/isaacmg00): Level Designer and Programmer  
 [Faizan Hussain](https://github.com/faizan12123): Scrum Master, UX Designer, Programmer  
 [Raydon Lam](https://github.com/itzraytothedon): Programmer and UI Designer  
