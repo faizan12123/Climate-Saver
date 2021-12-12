@@ -5,7 +5,8 @@
 ## INTRODUCTION  
 
 ## TECHNOLOGY USED
-
+[!Loading Screen](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-loadingscene-version1-fs.png)
+[!Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
 
 ## CREDITS
 
