@@ -1,12 +1,3 @@
----
-name: Bug/Issue Template
-about: Issue report format
-title: ''
-labels: ''
-assignees: ''
-
----
-
 ### Subject of the issue
 Describe your issue here.
 
