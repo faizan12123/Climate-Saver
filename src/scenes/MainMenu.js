@@ -16,6 +16,8 @@ class MainMenu extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
+		
+
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
 
@@ -64,6 +66,7 @@ class MainMenu extends Phaser.Scene {
 		main_menu_button_tutorial.scaleX = 0.36;
 		main_menu_button_tutorial.scaleY = 0.36;
 
+
 		// main_menu_button_controls
 		const main_menu_button_controls = this.add.image(655, 311, "main-menu-button-controls");
 		main_menu_button_controls.scaleX = 0.36;
@@ -76,10 +79,19 @@ class MainMenu extends Phaser.Scene {
 
 		// main_menu_button_credits
 		const main_menu_button_credits = this.add.image(655, 493, "main-menu-button-credits");
+		main_menu_button_credits.setInteractive();
+    	main_menu_button_credits.on('pointerover', () => { this.scene.start("Beach"); });
+
 		main_menu_button_credits.scaleX = 0.36;
 		main_menu_button_credits.scaleY = 0.36;
 
 		this.events.emit("scene-awake");
+		console.log("hi")
+
+		const helloButton = this.add.text(100, 100, 'Hello Phaser!', { fill: '#0f0' });
+    	helloButton.setInteractive();
+
+    	helloButton.on('pointerover', () => { console.log('pointerover'); });
 	}
 
 	/* START-USER-CODE */
