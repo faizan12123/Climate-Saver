@@ -1,0 +1,29 @@
+{
+    "id": "1151ef9b-0952-4b8b-bd36-e81972272acb",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "beach"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "b92a5891-8e7b-4adc-a1dc-f7044a9288d6",
+            "label": "main_menu_environment_sky",
+            "components": [],
+            "texture": {
+                "key": "main-menu-environment-sky"
+            },
+            "x": 316,
+            "y": 210
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
