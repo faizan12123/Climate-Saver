@@ -13,7 +13,8 @@
 ![Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
 
 ## CREDITS
-
+| Member | Role |
+| :---: | :------: |
 |[Arin Alexander](https://github.com/arialexa9)|Level Designer and Programmer  
 |[Kyle DeGuzman](https://github.com/kyledeguzmanx)|Asset Collector and Programmer  
 |[Isaac Garcia](https://github.com/isaacmg00)|Level Designer and Programmer  
