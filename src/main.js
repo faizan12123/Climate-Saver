@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
   game.scene.add("Tutorial", Tutorial);
   game.scene.add("Controls", Controls);
   game.scene.add("Settings", Settings);
-
+  game.scene.add("Credits", Credits);
   game.scene.add("Boot", Boot, true);
 	var game = new Phaser.Game({
 		width: 800,
