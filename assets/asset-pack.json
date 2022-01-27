@@ -7,6 +7,11 @@
                 "key": "button-back"
             },
             {
+                "url": "assets/buttons/button-forward.png",
+                "type": "image",
+                "key": "button-forward"
+            },
+            {
                 "url": "assets/sprites/credit-textbox-content3.png",
                 "type": "image",
                 "key": "credit-textbox-content3"
@@ -30,6 +35,11 @@
                 "url": "assets/sprites/credits-textbox-content5.png",
                 "type": "image",
                 "key": "credits-textbox-content5"
+            },
+            {
+                "url": "assets/environment/Layer_0.png",
+                "type": "image",
+                "key": "Layer_0"
             },
             {
                 "url": "assets/sprites/logo-version5.png",
@@ -85,6 +95,11 @@
                 "url": "assets/environment/main-menu-environment-tree2.png",
                 "type": "image",
                 "key": "main-menu-environment-tree2"
+            },
+            {
+                "url": "assets/sprites/map-selection.png",
+                "type": "image",
+                "key": "map-selection"
             }
         ]
     },
