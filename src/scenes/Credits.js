@@ -17,7 +17,7 @@ class Credits extends Phaser.Scene {
 	editorCreate() {
 
 		// main-menu-background
-		const main_menu_background = this.add.container(418, 314);
+		const main_menu_background = this.add.container(407, 309);
 
 		// layer_0
 		const layer_0 = this.add.image(-6, -4, "main-menu-environment-sky");
@@ -53,15 +53,9 @@ class Credits extends Phaser.Scene {
 		const button_back = this.add.image(88, 87, "button-back");
 		button_back.scaleX = 0.15;
 		button_back.scaleY = 0.15;
-
-		button_back.setInteractive();
-
-		button_back.on("pointerdown", () => {
-		this.scene.start("MainMenu");
-		});
-
+		button_back.setInteractive(); button_back.on("pointerdown", () => { this.scene.start("MainMenu"); });
 		// credits_textbox_content5
-		const credits_textbox_content5 = this.add.image(420, 301, "credits-textbox-content5");
+		const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
 		credits_textbox_content5.scaleX = 0.3;
 		credits_textbox_content5.scaleY = 0.3;
 
