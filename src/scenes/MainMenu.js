@@ -57,26 +57,45 @@ class MainMenu extends Phaser.Scene {
 		const main_menu_button_start = this.add.image(656, 131, "main-menu-button-start");
 		main_menu_button_start.scaleX = 0.36;
 		main_menu_button_start.scaleY = 0.36;
+    main_menu_button_start.setInteractive();
+    main_menu_button_start.on("pointerdown", () => {
+      this.scene.start("Start");
+    });
 
 		// main_menu_button_tutorial
 		const main_menu_button_tutorial = this.add.image(656, 222, "main-menu-button-tutorial");
 		main_menu_button_tutorial.scaleX = 0.36;
 		main_menu_button_tutorial.scaleY = 0.36;
+    main_menu_button_tutorial.setInteractive();
+    main_menu_button_tutorial.on("pointerdown", () => {
+      this.scene.start("Tutorial");
+    });
 
 		// main_menu_button_controls
 		const main_menu_button_controls = this.add.image(655, 311, "main-menu-button-controls");
 		main_menu_button_controls.scaleX = 0.36;
 		main_menu_button_controls.scaleY = 0.36;
-
+    main_menu_button_controls.setInteractive();
+     main_menu_button_controls.on("pointerdown", () => {
+      this.scene.start("Controls");
+    });
 		// main_menu_button_settings
 		const main_menu_button_settings = this.add.image(656, 401, "main-menu-button-settings");
 		main_menu_button_settings.scaleX = 0.36;
 		main_menu_button_settings.scaleY = 0.36;
+    main_menu_button_settings.setInteractive();
+    main_menu_button_settings.on("pointerdown", () => {
+      this.scene.start("Settings");
+    });
 
 		// main_menu_button_credits
 		const main_menu_button_credits = this.add.image(655, 493, "main-menu-button-credits");
 		main_menu_button_credits.scaleX = 0.36;
 		main_menu_button_credits.scaleY = 0.36;
+    main_menu_button_credits.setInteractive();
+    main_menu_button_credits.on("pointerdown", () => {
+      this.scene.start("Credits");
+    });
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
