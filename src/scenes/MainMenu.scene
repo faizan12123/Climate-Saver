@@ -56,10 +56,10 @@
                     "texture": {
                         "key": "main-menu-environment-tree1"
                     },
-                    "x": -3,
-                    "y": 122,
-                    "scaleX": 0.19,
-                    "scaleY": 0.17,
+                    "x": 5,
+                    "y": 11,
+                    "scaleX": 0.2,
+                    "scaleY": 0.2,
                     "width": 4320,
                     "height": 2160
                 },
@@ -72,8 +72,7 @@
                     "texture": {
                         "key": "main-menu-environment-tree2"
                     },
-                    "x": -9,
-                    "y": 107,
+                    "y": 59,
                     "scaleX": 0.19,
                     "scaleY": 0.17,
                     "width": 4320,
