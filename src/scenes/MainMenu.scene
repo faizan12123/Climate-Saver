@@ -16,7 +16,7 @@
             "y": 309,
             "list": [
                 {
-                    "type": "Image",
+                    "type": "TileSprite",
                     "id": "2aeef1b2-f344-4611-9c25-30b5f490a80a",
                     "label": "layer_0",
                     "components": [],
@@ -26,10 +26,12 @@
                     "x": -6,
                     "y": -4,
                     "scaleX": 0.19,
-                    "scaleY": 0.28
+                    "scaleY": 0.28,
+                    "width": 4320,
+                    "height": 2160
                 },
                 {
-                    "type": "Image",
+                    "type": "TileSprite",
                     "id": "372deea6-9154-43c9-8fa1-daf1179afba0",
                     "label": "layer_1",
                     "components": [],
@@ -39,10 +41,12 @@
                     "x": -6,
                     "y": -98,
                     "scaleX": 0.2,
-                    "scaleY": 0.2
+                    "scaleY": 0.2,
+                    "width": 4320,
+                    "height": 2160
                 },
                 {
-                    "type": "Image",
+                    "type": "TileSprite",
                     "id": "3c09b48c-7bad-4de7-a575-b1a8d4264e67",
                     "label": "layer_2",
                     "components": [],
@@ -52,10 +56,12 @@
                     "x": -3,
                     "y": 122,
                     "scaleX": 0.19,
-                    "scaleY": 0.17
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
                 },
                 {
-                    "type": "Image",
+                    "type": "TileSprite",
                     "id": "d9b44736-7d89-4306-8644-4a9fa537597f",
                     "label": "layer_3",
                     "components": [],
@@ -65,10 +71,12 @@
                     "x": -9,
                     "y": 107,
                     "scaleX": 0.19,
-                    "scaleY": 0.17
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
                 },
                 {
-                    "type": "Image",
+                    "type": "TileSprite",
                     "id": "b671566a-81c2-49a8-8075-16e9dce5e126",
                     "label": "layer_4",
                     "components": [],
@@ -78,7 +86,9 @@
                     "x": -4,
                     "y": 112,
                     "scaleX": 0.19,
-                    "scaleY": 0.17
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
                 }
             ]
         },
