@@ -125,7 +125,6 @@ class MainMenu extends Phaser.Scene {
     this.editorCreate();
   }
   update(){
-    this.layer_0.tilePositionX += 0.3;
     this.layer_1.tilePositionX += 1;
     this.layer_2.tilePositionX += 0.4;
     this.layer_3.tilePositionX += 0.6;
