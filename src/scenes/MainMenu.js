@@ -83,6 +83,8 @@ class MainMenu extends Phaser.Scene {
 
     // Button Sounds
     var buttonClicked = this.sound.add("buttonOnClick");
+    var backgroundMusic = this.sound.add("main-menu");
+    backgroundMusic.play();
 
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
