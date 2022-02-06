@@ -12,6 +12,13 @@
                 "key": "button-forward"
             },
             {
+                "url": [
+                    "assets/sounds/buttonOnClick.mp3"
+                ],
+                "type": "audio",
+                "key": "buttonOnClick"
+            },
+            {
                 "url": "assets/sprites/credit-textbox-content3.png",
                 "type": "image",
                 "key": "credit-textbox-content3"
@@ -45,6 +52,13 @@
                 "url": "assets/sprites/logo-version5.png",
                 "type": "image",
                 "key": "logo-version5"
+            },
+            {
+                "url": [
+                    "assets/sounds/main-menu.mp3"
+                ],
+                "type": "audio",
+                "key": "main-menu"
             },
             {
                 "url": "assets/buttons/main-menu-button-controls.png",
