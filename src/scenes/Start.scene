@@ -1,24 +1,70 @@
 {
-  "id": "ede7ea82-0e57-403c-8a8c-bfa95fdb79af",
-  "settings": {
-    "compilerOutputLanguage": "JAVA_SCRIPT",
-    "javaScriptInitFieldsInConstructor": false,
-    "exportClass": false,
-    "autoImport": false,
-    "createMethodName": "editorCreate",
-    "compilerInsertSpaces": false,
-    "compilerTabSize": 4,
-    "borderWidth": 800,
-    "borderHeight": 600,
-    "borderX": 0,
-    "borderY": 0,
-    "sceneKey": "Start"
-  },
-  "sceneType": "SCENE",
-  "displayList": [],
-  "meta": {
-    "app": "Phaser Editor 2D - Scene Editor",
-    "url": "https://phasereditor2d.com",
-    "contentType": "phasereditor2d.core.scene.SceneContentType"
-  }
+    "id": "ede7ea82-0e57-403c-8a8c-bfa95fdb79af",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Start"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "6fb2b8d3-153a-4ea7-961f-7c21d1542e71",
+            "label": "layer_0",
+            "components": [],
+            "texture": {
+                "key": "Layer_0"
+            },
+            "x": 413,
+            "y": 304,
+            "scaleX": 0.2,
+            "scaleY": 0.3
+        },
+        {
+            "type": "Image",
+            "id": "34058b0a-698f-464b-8798-fbf34ca91761",
+            "label": "button_back",
+            "components": [],
+            "texture": {
+                "key": "button-back"
+            },
+            "x": 88,
+            "y": 87,
+            "scaleX": 0.15,
+            "scaleY": 0.15
+        },
+        {
+            "type": "Image",
+            "id": "85f5171d-76f8-40d2-aac7-93e2454d4712",
+            "label": "button_forward",
+            "components": [],
+            "texture": {
+                "key": "button-forward"
+            },
+            "x": 682,
+            "y": 79,
+            "scaleX": 0.15,
+            "scaleY": 0.15
+        },
+        {
+            "type": "Image",
+            "id": "3b488adb-dab9-4bff-96de-fae4f1293b26",
+            "label": "map_selection",
+            "components": [],
+            "texture": {
+                "key": "map-selection"
+            },
+            "x": 407,
+            "y": 309,
+            "scaleX": 0.3,
+            "scaleY": 0.3
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
 }

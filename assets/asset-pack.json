@@ -1,31 +1,46 @@
 {
     "section1": {
         "files": [
-          {
-            "url": "assets/environment/main-menu-environment-sky.png",
-            "type": "image",
-            "key": "main-menu-environment-sky"
-          },
-          {
-            "url": "assets/environment/main-menu-environment-cloud.png",
-            "type": "image",
-            "key": "main-menu-environment-cloud"
-          },
-          {
-            "url": "assets/environment/main-menu-environment-tree1.png",
-            "type": "image",
-            "key": "main-menu-environment-tree1"
-          },
-          {
-            "url": "assets/environment/main-menu-environment-tree2.png",
-            "type": "image",
-            "key": "main-menu-environment-tree2"
-          },
-          {
-            "url": "assets/environment/main-menu-environment-tree.png",
-            "type": "image",
-            "key": "main-menu-environment-tree"
-          },
+            {
+                "url": "assets/buttons/button-back.png",
+                "type": "image",
+                "key": "button-back"
+            },
+            {
+                "url": "assets/buttons/button-forward.png",
+                "type": "image",
+                "key": "button-forward"
+            },
+            {
+                "url": "assets/sprites/credit-textbox-content3.png",
+                "type": "image",
+                "key": "credit-textbox-content3"
+            },
+            {
+                "url": "assets/sprites/credits-banner-title.png",
+                "type": "image",
+                "key": "credits-banner-title"
+            },
+            {
+                "url": "assets/sprites/credits-textbox-content.png",
+                "type": "image",
+                "key": "credits-textbox-content"
+            },
+            {
+                "url": "assets/sprites/credits-textbox-content2.png",
+                "type": "image",
+                "key": "credits-textbox-content2"
+            },
+            {
+                "url": "assets/sprites/credits-textbox-content5.png",
+                "type": "image",
+                "key": "credits-textbox-content5"
+            },
+            {
+                "url": "assets/environment/Layer_0.png",
+                "type": "image",
+                "key": "Layer_0"
+            },
             {
                 "url": "assets/sprites/logo-version5.png",
                 "type": "image",
@@ -36,26 +51,56 @@
                 "type": "image",
                 "key": "main-menu-button-controls"
             },
-          {
-            "url": "assets/buttons/main-menu-button-credits.png",
-            "type": "image",
-            "key": "main-menu-button-credits"
-          },
-          {
-            "url": "assets/buttons/main-menu-button-settings.png",
-            "type": "image",
-            "key": "main-menu-button-settings"
-          },
-          {
-            "url": "assets/buttons/main-menu-button-start.png",
-            "type": "image",
-            "key": "main-menu-button-start"
-          },
-          {
-            "url": "assets/buttons/main-menu-button-tutorial.png",
-            "type": "image",
-            "key": "main-menu-button-tutorial"
-          }
+            {
+                "url": "assets/buttons/main-menu-button-credits.png",
+                "type": "image",
+                "key": "main-menu-button-credits"
+            },
+            {
+                "url": "assets/buttons/main-menu-button-settings.png",
+                "type": "image",
+                "key": "main-menu-button-settings"
+            },
+            {
+                "url": "assets/buttons/main-menu-button-start.png",
+                "type": "image",
+                "key": "main-menu-button-start"
+            },
+            {
+                "url": "assets/buttons/main-menu-button-tutorial.png",
+                "type": "image",
+                "key": "main-menu-button-tutorial"
+            },
+            {
+                "url": "assets/environment/main-menu-environment-cloud.png",
+                "type": "image",
+                "key": "main-menu-environment-cloud"
+            },
+            {
+                "url": "assets/environment/main-menu-environment-sky.png",
+                "type": "image",
+                "key": "main-menu-environment-sky"
+            },
+            {
+                "url": "assets/environment/main-menu-environment-tree.png",
+                "type": "image",
+                "key": "main-menu-environment-tree"
+            },
+            {
+                "url": "assets/environment/main-menu-environment-tree1.png",
+                "type": "image",
+                "key": "main-menu-environment-tree1"
+            },
+            {
+                "url": "assets/environment/main-menu-environment-tree2.png",
+                "type": "image",
+                "key": "main-menu-environment-tree2"
+            },
+            {
+                "url": "assets/sprites/map-selection.png",
+                "type": "image",
+                "key": "map-selection"
+            }
         ]
     },
     "meta": {

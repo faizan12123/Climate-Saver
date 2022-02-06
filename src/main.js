@@ -18,8 +18,17 @@ window.addEventListener("load", function () {
   game.scene.add("Controls", Controls);
   game.scene.add("Settings", Settings);
   game.scene.add("Credits", Credits);
-
   game.scene.add("Boot", Boot, true);
+	var game = new Phaser.Game({
+		width: 800,
+		height: 600,
+		type: Phaser.AUTO,
+        backgroundColor: "#242424",
+		scale: {
+			mode: Phaser.Scale.FIT,
+			autoCenter: Phaser.Scale.CENTER_BOTH
+		}
+	});
 });
 
 class Boot extends Phaser.Scene {
