@@ -62,6 +62,10 @@ class Tutorial extends Phaser.Scene {
 			this.scene.start("MainMenu");
 		});
 
+		button_back.on("pointerover", () => {
+      		button_back.scale += 0.05;
+    	});
+
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
 		this.layer_2 = layer_2;

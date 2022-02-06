@@ -27,9 +27,15 @@ class Start extends Phaser.Scene {
 		const button_back = this.add.image(88, 87, "button-back");
 		button_back.scaleX = 0.15;
 		button_back.scaleY = 0.15;
-		button_back.setInteractive(); button_back.on("pointerdown", () => {
+		button_back.setInteractive(); 
+		button_back.on("pointerdown", () => {
 			buttonClicked.play(); 
-			this.scene.start("MainMenu"); });
+			this.scene.start("MainMenu"); 
+		});
+			
+		button_back.on("pointerover", () => {
+      		button_back.scale += 0.05;
+    	});
 		// button_forward
 		const button_forward = this.add.image(682, 79, "button-forward");
 		button_forward.scaleX = 0.15;
