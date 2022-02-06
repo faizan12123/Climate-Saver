@@ -12,6 +12,13 @@
                 "key": "button-forward"
             },
             {
+                "url": [
+                    "assets/sounds/buttonOnClick.mp3"
+                ],
+                "type": "audio",
+                "key": "buttonOnClick"
+            },
+            {
                 "url": "assets/sprites/credit-textbox-content3.png",
                 "type": "image",
                 "key": "credit-textbox-content3"

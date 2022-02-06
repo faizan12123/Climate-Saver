@@ -81,6 +81,9 @@ class MainMenu extends Phaser.Scene {
     lOGO_VERSION5.scaleX = 0.7;
     lOGO_VERSION5.scaleY = 0.7;
 
+    // Button Sounds
+    var buttonClicked = this.sound.add("buttonOnClick");
+
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
       656,
@@ -91,6 +94,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_start.scaleY = 0.36;
     main_menu_button_start.setInteractive();
     main_menu_button_start.on("pointerdown", () => {
+      buttonClicked.play();
       this.scene.start("Start");
     });
     main_menu_button_start.on("pointerover", () => {
@@ -111,6 +115,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_tutorial.scaleY = 0.36;
     main_menu_button_tutorial.setInteractive();
     main_menu_button_tutorial.on("pointerdown", () => {
+      buttonClicked.play();
       this.scene.start("Tutorial");
     });
     main_menu_button_tutorial.on("pointerover", () => {
@@ -131,6 +136,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_controls.scaleY = 0.36;
     main_menu_button_controls.setInteractive();
     main_menu_button_controls.on("pointerdown", () => {
+      buttonClicked.play();
       this.scene.start("Controls");
     });
     main_menu_button_controls.on("pointerover", () => {
@@ -151,6 +157,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_settings.scaleY = 0.36;
     main_menu_button_settings.setInteractive();
     main_menu_button_settings.on("pointerdown", () => {
+      buttonClicked.play();
       this.scene.start("Settings");
     });
     main_menu_button_settings.on("pointerover", () => {
@@ -171,7 +178,9 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_credits.scaleY = 0.36;
     main_menu_button_credits.setInteractive();
     main_menu_button_credits.on("pointerdown", () => {
+      buttonClicked.play();
       this.scene.start("Credits");
+
     });
     main_menu_button_credits.on("pointerover", () => {
       main_menu_button_credits.scale += 0.05;
