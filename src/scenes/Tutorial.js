@@ -49,13 +49,17 @@ class Tutorial extends Phaser.Scene {
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
+		 // Button Sounds
+    	var buttonClicked = this.sound.add("buttonOnClick");
+
 		// button_back
 		const button_back = this.add.image(88, 87, "button-back");
 		button_back.scaleX = 0.15;
 		button_back.scaleY = 0.15;
 		button_back.setInteractive();
 		button_back.on("pointerdown", () => {
-		this.scene.start("MainMenu");
+			buttonClicked.play();
+			this.scene.start("MainMenu");
 		});
 
 		this.layer_0 = layer_0;
