@@ -3,6 +3,8 @@
 </p>  
 
 ## INTRODUCTION  
+Climate Saver is an educational web game designed to teach the youth about enviornmental issues and ways they can become better stewards of their planet.
+
 ## TECHNOLOGIES USED
 - ADOBE PHOTOSHOP 2022  
 - PHASER 3 FRAMEWORK  
@@ -22,3 +24,5 @@
 |[Raydon Lam](https://github.com/itzraytothedon)|Programmer and UI Designer  
 |[Evelyn Lopez](https://github.com/eve-19)|Project Manager and Programmer  
 |[Karen Prava](https://github.com/karenprava)|Asset Collector and Programmer 
+
+Sound effects and music obtained from https://www.zapsplat.com/ under a Standard License.
