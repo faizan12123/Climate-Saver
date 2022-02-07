@@ -15,6 +15,7 @@ Climate Saver is an educational web game designed to teach the youth about envio
 ![Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
 
 ## CREDITS
+### MEET THE TEAM
 | Member | Role |
 | :---: | :------: |
 |[Arin Alexander](https://github.com/arialexa9)|Level Designer and Programmer  
@@ -25,4 +26,8 @@ Climate Saver is an educational web game designed to teach the youth about envio
 |[Evelyn Lopez](https://github.com/eve-19)|Project Manager and Programmer  
 |[Karen Prava](https://github.com/karenprava)|Asset Collector and Programmer 
 
-Sound effects and music obtained from https://www.zapsplat.com/ under a Standard License.
+### SPECIAL THANKS TO: 
+[ZapSplat](https://www.zapsplat.com/) for Sound FX & Music    
+[CPasteGame](https://www.artstation.com/cpastegame) for Visual Graphics  
+[thatWitch](https://thatwitchdesign.wixsite.com/thatwitch/portfilio) for GUI Graphics  
+[Ruslan Kudriachenko](https://www.thepirateparrot.com/) for Logo Graphics    
