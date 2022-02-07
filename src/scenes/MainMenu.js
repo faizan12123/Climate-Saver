@@ -13,10 +13,14 @@ class MainMenu extends Phaser.Scene {
 
   /** @returns {void} */
   editorCreate() {
-
+    //background-music
+    
     var backgroundMusic = this.sound.add("main-menu");
+    console.log(backgroundMusic.isPlaying);
     backgroundMusic.play();
+    console.log(backgroundMusic.isPlaying);
     backgroundMusic.loop = true;
+
     // main-menu-background
     const main_menu_background = this.add.container(407, 309);
 
@@ -98,6 +102,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_start.scaleY = 0.36;
     main_menu_button_start.setInteractive();
     main_menu_button_start.on("pointerdown", () => {
+      backgroundMusic.stop();
       buttonClicked.play();
       this.scene.start("Start");
     });
@@ -119,6 +124,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_tutorial.scaleY = 0.36;
     main_menu_button_tutorial.setInteractive();
     main_menu_button_tutorial.on("pointerdown", () => {
+      backgroundMusic.stop();
       buttonClicked.play();
       this.scene.start("Tutorial");
     });
@@ -140,6 +146,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_controls.scaleY = 0.36;
     main_menu_button_controls.setInteractive();
     main_menu_button_controls.on("pointerdown", () => {
+      backgroundMusic.stop();
       buttonClicked.play();
       this.scene.start("Controls");
     });
@@ -161,6 +168,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_settings.scaleY = 0.36;
     main_menu_button_settings.setInteractive();
     main_menu_button_settings.on("pointerdown", () => {
+      backgroundMusic.stop();
       buttonClicked.play();
       this.scene.start("Settings");
     });
@@ -182,6 +190,7 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_credits.scaleY = 0.36;
     main_menu_button_credits.setInteractive();
     main_menu_button_credits.on("pointerdown", () => {
+      backgroundMusic.stop();
       buttonClicked.play();
       this.scene.start("Credits");
 

@@ -14,6 +14,10 @@ class Start extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
+		//background music
+		var backgroundMusic = this.sound.add("main-menu");
+		backgroundMusic.play();
+		backgroundMusic.loop = true;
 
 		// layer_0
 		const layer_0 = this.add.image(413, 304, "Layer_0");
@@ -29,6 +33,7 @@ class Start extends Phaser.Scene {
 		button_back.scaleY = 0.15;
 		button_back.setInteractive(); 
 		button_back.on("pointerdown", () => {
+			backgroundMusic.stop();
 			buttonClicked.play(); 
 			this.scene.start("MainMenu"); 
 		});
