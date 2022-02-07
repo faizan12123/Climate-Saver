@@ -181,14 +181,6 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_credits.scaleY = 0.36;
     });
 
-    this.layer_0 = layer_0;
-    this.layer_1 = layer_1;
-    this.layer_2 = layer_2;
-    this.layer_3 = layer_3;
-    this.layer_4 = layer_4;
-
-    this.events.emit("scene-awake");
-  }
 
   /** @type {Phaser.GameObjects.TileSprite} */
   layer_0;
@@ -213,6 +205,7 @@ class MainMenu extends Phaser.Scene {
     this.layer_2.tilePositionX += 0.4;
     this.layer_3.tilePositionX += 0.6;
     this.layer_4.tilePositionX += 4.5;
+    
   }
 
   /* END-USER-CODE */

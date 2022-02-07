@@ -2,6 +2,13 @@ window.addEventListener("load", function () {
   var game = new Phaser.Game({
     width: 800,
     height: 600,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
     type: Phaser.AUTO,
     backgroundColor: "#242424",
     scale: {
@@ -22,6 +29,13 @@ window.addEventListener("load", function () {
 	var game = new Phaser.Game({
 		width: 800,
 		height: 600,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
 		type: Phaser.AUTO,
         backgroundColor: "#242424",
 		scale: {
