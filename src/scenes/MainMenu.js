@@ -14,11 +14,8 @@ class MainMenu extends Phaser.Scene {
   /** @returns {void} */
   editorCreate() {
     //background-music
-    
     var backgroundMusic = this.sound.add("main-menu");
-    console.log(backgroundMusic.isPlaying);
     backgroundMusic.play();
-    console.log(backgroundMusic.isPlaying);
     backgroundMusic.loop = true;
 
     // main-menu-background

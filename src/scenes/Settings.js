@@ -64,11 +64,13 @@ class Settings extends Phaser.Scene {
 			backgroundMusic.stop();
 			buttonClicked.play();
 			this.scene.start("MainMenu");
-		});
-		button_back.on("pointerover", () => {
+		}).on("pointerover", () => {
       		button_back.scale += 0.05;
-    	});
-
+    	}).on("pointerout", () => {
+			button_back.scaleX = 0.15;
+			button_back.scaleY = 0.15;
+		});
+		
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
 		this.layer_2 = layer_2;

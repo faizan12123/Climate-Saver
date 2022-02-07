@@ -34,13 +34,14 @@ class Start extends Phaser.Scene {
 		button_back.setInteractive(); 
 		button_back.on("pointerdown", () => {
 			backgroundMusic.stop();
-			buttonClicked.play(); 
-			this.scene.start("MainMenu"); 
-		});
-			
-		button_back.on("pointerover", () => {
+			buttonClicked.play();
+			this.scene.start("MainMenu");
+		}).on("pointerover", () => {
       		button_back.scale += 0.05;
-    	});
+    	}).on("pointerout", () => {
+			button_back.scaleX = 0.15;
+			button_back.scaleY = 0.15;
+		});
 		// button_forward
 		const button_forward = this.add.image(682, 79, "button-forward");
 		button_forward.scaleX = 0.15;

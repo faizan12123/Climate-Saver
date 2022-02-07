@@ -64,10 +64,12 @@ class Credits extends Phaser.Scene {
 			backgroundMusic.stop();
 			buttonClicked.play();
 			this.scene.start("MainMenu");
-		});
-		button_back.on("pointerover", () => {
+		}).on("pointerover", () => {
       		button_back.scale += 0.05;
-    	});
+    	}).on("pointerout", () => {
+			button_back.scaleX = 0.15;
+			button_back.scaleY = 0.15;
+		});
 		
 		// credits_textbox_content5
 		const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
