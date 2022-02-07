@@ -15,6 +15,9 @@ class Credits extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
+		var backgroundMusic = this.sound.add("main-menu");
+		backgroundMusic.play();
+		backgroundMusic.loop = true;
 
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
@@ -58,12 +61,15 @@ class Credits extends Phaser.Scene {
 		button_back.scaleY = 0.15;
 		button_back.setInteractive();
 		button_back.on("pointerdown", () => {
+			backgroundMusic.stop();
 			buttonClicked.play();
 			this.scene.start("MainMenu");
-		});
-		button_back.on("pointerover", () => {
+		}).on("pointerover", () => {
       		button_back.scale += 0.05;
-    	});
+    	}).on("pointerout", () => {
+			button_back.scaleX = 0.15;
+			button_back.scaleY = 0.15;
+		});
 		
 		// credits_textbox_content5
 		const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");

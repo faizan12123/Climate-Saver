@@ -14,6 +14,10 @@ class Controls extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
+		//background music
+		var backgroundMusic = this.sound.add("main-menu");
+		backgroundMusic.play();
+		backgroundMusic.loop = true;
 
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
@@ -57,12 +61,15 @@ class Controls extends Phaser.Scene {
 		button_back.scaleY = 0.15;
 		button_back.setInteractive();
 		button_back.on("pointerdown", () => {
+			backgroundMusic.stop();
 			buttonClicked.play();
 			this.scene.start("MainMenu");
-		});
-		button_back.on("pointerover", () => {
+		}).on("pointerover", () => {
       		button_back.scale += 0.05;
-    	});
+    	}).on("pointerout", () => {
+			button_back.scaleX = 0.15;
+			button_back.scaleY = 0.15;
+		});
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
