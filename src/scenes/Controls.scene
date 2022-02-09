@@ -125,7 +125,7 @@
         {
             "type": "Image",
             "id": "047dbe09-d86b-4532-a8d0-b6a08ad85dc8",
-            "label": "button_radio",
+            "label": "ARROW_radio",
             "components": [],
             "texture": {
                 "key": "button-radio"
@@ -138,7 +138,7 @@
         {
             "type": "Image",
             "id": "9cb627a0-98b4-48b0-b050-02d570ec5f3e",
-            "label": "button_radio_1",
+            "label": "WASD_radio",
             "components": [],
             "texture": {
                 "key": "button-radio"
