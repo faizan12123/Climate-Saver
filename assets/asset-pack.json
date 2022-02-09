@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/buttons/buttom-volumeUp.png",
+                "type": "image",
+                "key": "buttom-volumeUp"
+            },
+            {
                 "url": "assets/buttons/button-back.png",
                 "type": "image",
                 "key": "button-back"
@@ -20,6 +25,16 @@
                 "url": "assets/buttons/button-toggle.png",
                 "type": "image",
                 "key": "button-toggle"
+            },
+            {
+                "url": "assets/buttons/button-volumeDown.png",
+                "type": "image",
+                "key": "button-volumeDown"
+            },
+            {
+                "url": "assets/buttons/button-yes.png",
+                "type": "image",
+                "key": "button-yes"
             },
             {
                 "url": [
