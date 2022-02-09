@@ -12,6 +12,16 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-tick.png",
+                "type": "image",
+                "key": "button-tick"
+            },
+            {
+                "url": "assets/buttons/button-toggle.png",
+                "type": "image",
+                "key": "button-toggle"
+            },
+            {
                 "url": [
                     "assets/sounds/buttonOnClick.mp3"
                 ],
@@ -114,6 +124,11 @@
                 "url": "assets/sprites/map-selection.png",
                 "type": "image",
                 "key": "map-selection"
+            },
+            {
+                "url": "assets/sprites/settings-container.png",
+                "type": "image",
+                "key": "settings-container"
             }
         ]
     },
