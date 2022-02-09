@@ -131,7 +131,9 @@ class Settings extends Phaser.Scene {
 		button_volumeDown.scaleX = 0.1;
 		button_volumeDown.scaleY = 0.1;
 		button_volumeDown.setInteractive();
-		button_volumeDown.on("pointerover", () => {
+		button_volumeDown.on("pointerdown", () => {
+            buttonClicked.play()
+		}).on("pointerover", () => {
               button_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
             button_volumeDown.scaleX = 0.1;
@@ -144,7 +146,9 @@ class Settings extends Phaser.Scene {
 		button_volumeDown_1.scaleX = 0.1;
 		button_volumeDown_1.scaleY = 0.1;
 		button_volumeDown_1.setInteractive();
-		button_volumeDown_1.on("pointerover", () => {
+		button_volumeDown_1.on("pointerdown", () => {
+            buttonClicked.play()
+		}).on("pointerover", () => {
               button_volumeDown_1.scale += 0.05;
         }).on("pointerout", () => {
             button_volumeDown_1.scaleX = 0.1;
@@ -156,7 +160,9 @@ class Settings extends Phaser.Scene {
 		buttom_volumeUp.scaleX = 0.1;
 		buttom_volumeUp.scaleY = 0.1;
 		buttom_volumeUp.setInteractive();
-		buttom_volumeUp.on("pointerover", () => {
+		buttom_volumeUp.on("pointerdown", () => {
+            buttonClicked.play()
+		}).on("pointerover", () => {
               buttom_volumeUp.scale += 0.05;
         }).on("pointerout", () => {
             buttom_volumeUp.scaleX = 0.1;
@@ -168,7 +174,9 @@ class Settings extends Phaser.Scene {
 		buttom_volumeUp_1.scaleX = 0.1;
 		buttom_volumeUp_1.scaleY = 0.1;
 		buttom_volumeUp_1.setInteractive();
-		buttom_volumeUp_1.on("pointerover", () => {
+		buttom_volumeUp_1.on("pointerdown", () => {
+            buttonClicked.play()
+		}).on("pointerover", () => {
               buttom_volumeUp_1.scale += 0.05;
         }).on("pointerout", () => {
             buttom_volumeUp_1.scaleX = 0.1;
