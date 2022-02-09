@@ -151,7 +151,7 @@
         {
             "type": "Image",
             "id": "7851c9be-04db-46b5-86ea-94bbb08926ed",
-            "label": "button_tick",
+            "label": "ARROW_tick",
             "components": [],
             "texture": {
                 "key": "button-tick"
@@ -164,7 +164,7 @@
         {
             "type": "Image",
             "id": "9d40b656-7054-4e0b-8cab-392bff2a37de",
-            "label": "button_tick_1",
+            "label": "WASD_tick",
             "components": [],
             "texture": {
                 "key": "button-tick"
