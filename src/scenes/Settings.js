@@ -95,6 +95,11 @@ class Settings extends Phaser.Scene {
 				button_volumeDown.visible = false;
 				buttom_volumeUp.visible = false;
 			}
+        }).on("pointerover", () => {
+             fX_toggle.scale += 0.05;
+        }).on("pointerout", () => {
+            fX_toggle.scaleX = 0.3;
+            fX_toggle.scaleY = 0.3;
         });
 
 		// music_toggle
@@ -114,6 +119,11 @@ class Settings extends Phaser.Scene {
 				button_volumeDown_1.visible = false;
 				buttom_volumeUp_1.visible = false;
 			}
+        }).on("pointerover", () => {
+             music_toggle.scale += 0.05;
+        }).on("pointerout", () => {
+            music_toggle.scaleX = 0.3;
+            music_toggle.scaleY = 0.3;
         });
 
 		// button_volumeDown
@@ -122,11 +132,12 @@ class Settings extends Phaser.Scene {
 		button_volumeDown.scaleY = 0.1;
 		button_volumeDown.setInteractive();
 		button_volumeDown.on("pointerover", () => {
-             button_volumeDown.scale += 0.05;
+              button_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
             button_volumeDown.scaleX = 0.1;
             button_volumeDown.scaleY = 0.1;
         });
+
 
 		// button_volumeDown_1
 		const button_volumeDown_1 = this.add.image(510, 369, "button-volumeDown");
