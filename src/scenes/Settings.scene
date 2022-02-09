@@ -108,6 +108,123 @@
             "y": 87,
             "scaleX": 0.15,
             "scaleY": 0.15
+        },
+        {
+            "type": "Image",
+            "id": "63b915be-cd28-4db7-96d4-114a87d0fbb9",
+            "label": "settings_container",
+            "components": [],
+            "texture": {
+                "key": "settings-container"
+            },
+            "x": 407,
+            "y": 309,
+            "scaleX": 0.35,
+            "scaleY": 0.35
+        },
+        {
+            "type": "Image",
+            "id": "27d9b938-d0d7-456b-b442-f8503812c9bc",
+            "label": "FX_toggle",
+            "components": [],
+            "texture": {
+                "key": "button-toggle"
+            },
+            "x": 417,
+            "y": 305,
+            "scaleX": 0.3,
+            "scaleY": 0.3
+        },
+        {
+            "type": "Image",
+            "id": "a89ae21c-9541-4e93-974e-0140936cd497",
+            "label": "music_toggle",
+            "components": [],
+            "texture": {
+                "key": "button-toggle"
+            },
+            "x": 417,
+            "y": 374,
+            "scaleX": 0.3,
+            "scaleY": 0.3
+        },
+        {
+            "type": "Image",
+            "id": "8996cf69-7707-4d75-9ac3-099c392c9094",
+            "label": "button_volumeDown",
+            "components": [],
+            "texture": {
+                "key": "button-volumeDown"
+            },
+            "x": 510,
+            "y": 308,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3bf0b37f-82ec-4354-83fc-286ae789dd1d",
+            "label": "button_volumeDown_1",
+            "components": [],
+            "texture": {
+                "key": "button-volumeDown"
+            },
+            "x": 510,
+            "y": 369,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "c1362b9b-eaa1-4290-b3ef-254f271a59cf",
+            "label": "buttom_volumeUp",
+            "components": [],
+            "texture": {
+                "key": "buttom-volumeUp"
+            },
+            "x": 574,
+            "y": 308,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "d381276b-cc89-480e-9936-bda3b50931a6",
+            "label": "buttom_volumeUp_1",
+            "components": [],
+            "texture": {
+                "key": "buttom-volumeUp"
+            },
+            "x": 574,
+            "y": 369,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "7c985f4e-f533-4065-a6fb-6e7a83aa50c1",
+            "label": "fx_tick",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 417,
+            "y": 303,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "2927f49d-ad80-4da9-a66a-638044bf6e03",
+            "label": "music_tick",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 417,
+            "y": 372,
+            "scaleX": 0.1,
+            "scaleY": 0.1
         }
     ],
     "plainObjects": [],
