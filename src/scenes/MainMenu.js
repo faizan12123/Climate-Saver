@@ -92,7 +92,7 @@ class MainMenu extends Phaser.Scene {
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
       656,
-      131,
+      173,
       "main-menu-button-start"
     );
     main_menu_button_start.scaleX = 0.36;
@@ -111,32 +111,10 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_start.scaleY = 0.36;
     });
 
-    // main_menu_button_tutorial
-    const main_menu_button_tutorial = this.add.image(
-      656,
-      222,
-      "main-menu-button-tutorial"
-    );
-    main_menu_button_tutorial.scaleX = 0.36;
-    main_menu_button_tutorial.scaleY = 0.36;
-    main_menu_button_tutorial.setInteractive();
-    main_menu_button_tutorial.on("pointerdown", () => {
-      backgroundMusic.stop();
-      buttonClicked.play();
-      this.scene.start("Tutorial");
-    });
-    main_menu_button_tutorial.on("pointerover", () => {
-      main_menu_button_tutorial.scale += 0.05;
-    });
-    main_menu_button_tutorial.on("pointerout", () => {
-      main_menu_button_tutorial.scaleX = 0.36;
-      main_menu_button_tutorial.scaleY = 0.36;
-    });
-
     // main_menu_button_controls
     const main_menu_button_controls = this.add.image(
-      655,
-      311,
+      653,
+      261,
       "main-menu-button-controls"
     );
     main_menu_button_controls.scaleX = 0.36;
@@ -157,8 +135,8 @@ class MainMenu extends Phaser.Scene {
 
     // main_menu_button_settings
     const main_menu_button_settings = this.add.image(
-      656,
-      401,
+      653,
+      351,
       "main-menu-button-settings"
     );
     main_menu_button_settings.scaleX = 0.36;
@@ -179,8 +157,8 @@ class MainMenu extends Phaser.Scene {
 
     // main_menu_button_credits
     const main_menu_button_credits = this.add.image(
-      655,
-      493,
+      653,
+      443,
       "main-menu-button-credits"
     );
     main_menu_button_credits.scaleX = 0.36;
