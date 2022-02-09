@@ -16,9 +16,11 @@ class Settings extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 		//background music
-		var backgroundMusic = this.sound.add("main-menu");
-		backgroundMusic.play();
-		backgroundMusic.loop = true;
+        var backgroundMusic = this.sound.add("main-menu");
+        backgroundMusic.play();
+        backgroundMusic.loop = true;
+
+
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
 
@@ -53,24 +55,93 @@ class Settings extends Phaser.Scene {
 		main_menu_background.add(layer_4);
 
 		// Button Sounds
-    	var buttonClicked = this.sound.add("buttonOnClick");
+        var buttonClicked = this.sound.add("buttonOnClick");
 
-		// button_back
-		const button_back = this.add.image(88, 87, "button-back");
-		button_back.scaleX = 0.15;
-		button_back.scaleY = 0.15;
-		button_back.setInteractive();
-		button_back.on("pointerdown", () => {
-			backgroundMusic.stop();
-			buttonClicked.play();
-			this.scene.start("MainMenu");
-		}).on("pointerover", () => {
-      		button_back.scale += 0.05;
-    	}).on("pointerout", () => {
-			button_back.scaleX = 0.15;
-			button_back.scaleY = 0.15;
-		});
-		
+        // button_back
+        const button_back = this.add.image(88, 87, "button-back");
+        button_back.scaleX = 0.15;
+        button_back.scaleY = 0.15;
+        button_back.setInteractive();
+        button_back.on("pointerdown", () => {
+            backgroundMusic.stop();
+            buttonClicked.play();
+            this.scene.start("MainMenu");
+        }).on("pointerover", () => {
+              button_back.scale += 0.05;
+        }).on("pointerout", () => {
+            button_back.scaleX = 0.15;
+            button_back.scaleY = 0.15;
+        });
+
+		// settings_container
+		const settings_container = this.add.image(407, 309, "settings-container");
+		settings_container.scaleX = 0.35;
+		settings_container.scaleY = 0.35;
+
+		// FX_toggle
+		const fX_toggle = this.add.image(417, 305, "button-toggle");
+		fX_toggle.scaleX = 0.3;
+		fX_toggle.scaleY = 0.3;
+		fX_toggle.setInteractive();
+		fX_toggle.on("pointerdown", () => {
+            buttonClicked.play();
+            if(fx_tick.visible){
+				fx_tick.visible = false;
+			}
+			else{
+				fx_tick.visible = true;
+
+			}
+        });
+
+		// music_toggle
+		const music_toggle = this.add.image(417, 374, "button-toggle");
+		music_toggle.scaleX = 0.3;
+		music_toggle.scaleY = 0.3;
+		music_toggle.setInteractive();
+		music_toggle.on("pointerdown", () => {
+            buttonClicked.play();
+            if(music_tick.visible){
+				music_tick.visible = false;
+			}
+			else{
+				music_tick.visible = true;
+				
+			}
+        });
+
+		// button_volumeDown
+		const button_volumeDown = this.add.image(510, 308, "button-volumeDown");
+		button_volumeDown.scaleX = 0.1;
+		button_volumeDown.scaleY = 0.1;
+
+		// button_volumeDown_1
+		const button_volumeDown_1 = this.add.image(510, 369, "button-volumeDown");
+		button_volumeDown_1.scaleX = 0.1;
+		button_volumeDown_1.scaleY = 0.1;
+
+		// buttom_volumeUp
+		const buttom_volumeUp = this.add.image(574, 308, "buttom-volumeUp");
+		buttom_volumeUp.scaleX = 0.1;
+		buttom_volumeUp.scaleY = 0.1;
+
+		// buttom_volumeUp_1
+		const buttom_volumeUp_1 = this.add.image(574, 369, "buttom-volumeUp");
+		buttom_volumeUp_1.scaleX = 0.1;
+		buttom_volumeUp_1.scaleY = 0.1;
+
+		// fx_tick
+		const fx_tick = this.add.image(417, 303, "button-tick");
+		fx_tick.scaleX = 0.1;
+		fx_tick.scaleY = 0.1;
+		fx_tick.visible = false;
+
+		// music_tick
+		const music_tick = this.add.image(417, 372, "button-tick");
+		music_tick.scaleX = 0.1;
+		music_tick.scaleY = 0.1;
+		music_tick.visible = false;
+
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
 		this.layer_2 = layer_2;
