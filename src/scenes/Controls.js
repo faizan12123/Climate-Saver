@@ -76,25 +76,42 @@ class Controls extends Phaser.Scene {
 		controlsOF.scaleX = 0.35;
 		controlsOF.scaleY = 0.35;
 
-		// button_radio
-		const button_radio = this.add.image(237, 283, "button-radio");
-		button_radio.scaleX = 0.5;
-		button_radio.scaleY = 0.5;
+		// ARROW_radio
+		const aRROW_radio = this.add.image(237, 283, "button-radio");
+		aRROW_radio.scaleX = 0.5;
+		aRROW_radio.scaleY = 0.5;
+		aRROW_radio.setInteractive();
+		aRROW_radio.on("pointerdown", () => {
+			buttonClicked.play();
+			if(!aRROW_tick.visible){
+				aRROW_tick.visible = true;
+				wASD_tick.visible = false;
+			}
+		});
 
-		// button_radio_1
-		const button_radio_1 = this.add.image(240, 377, "button-radio");
-		button_radio_1.scaleX = 0.5;
-		button_radio_1.scaleY = 0.5;
+		// WASD_radio
+		const wASD_radio = this.add.image(240, 377, "button-radio");
+		wASD_radio.scaleX = 0.5;
+		wASD_radio.scaleY = 0.5;
+		wASD_radio.setInteractive();
+		wASD_radio.on("pointerdown", () => {
+			buttonClicked.play();
+			if(!wASD_tick.visible){
+				wASD_tick.visible = true;
+				aRROW_tick.visible = false;
+			}
+		});
 
-		// button_tick
-		const button_tick = this.add.image(236, 284, "button-tick");
-		button_tick.scaleX = 0.1;
-		button_tick.scaleY = 0.1;
+		// ARROW_tick
+		const aRROW_tick = this.add.image(236, 284, "button-tick");
+		aRROW_tick.scaleX = 0.1;
+		aRROW_tick.scaleY = 0.1;
 
-		// button_tick_1
-		const button_tick_1 = this.add.image(239, 376, "button-tick");
-		button_tick_1.scaleX = 0.1;
-		button_tick_1.scaleY = 0.1;
+		// WASD_tick
+		const wASD_tick = this.add.image(239, 376, "button-tick");
+		wASD_tick.scaleX = 0.1;
+		wASD_tick.scaleY = 0.1;
+		wASD_tick.visible = false;
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
