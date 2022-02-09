@@ -87,10 +87,13 @@ class Settings extends Phaser.Scene {
             buttonClicked.play();
             if(fx_tick.visible){
 				fx_tick.visible = false;
+				button_volumeDown.visible = true;
+				buttom_volumeUp.visible = true;
 			}
 			else{
 				fx_tick.visible = true;
-
+				button_volumeDown.visible = false;
+				buttom_volumeUp.visible = false;
 			}
         });
 
@@ -103,10 +106,13 @@ class Settings extends Phaser.Scene {
             buttonClicked.play();
             if(music_tick.visible){
 				music_tick.visible = false;
+				button_volumeDown_1.visible = true;
+				buttom_volumeUp_1.visible = true;
 			}
 			else{
 				music_tick.visible = true;
-				
+				button_volumeDown_1.visible = false;
+				buttom_volumeUp_1.visible = false;
 			}
         });
 
