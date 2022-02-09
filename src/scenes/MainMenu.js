@@ -92,7 +92,7 @@ class MainMenu extends Phaser.Scene {
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
       656,
-      173,
+      130,
       "main-menu-button-start"
     );
     main_menu_button_start.scaleX = 0.36;
@@ -114,7 +114,7 @@ class MainMenu extends Phaser.Scene {
     // main_menu_button_controls
     const main_menu_button_controls = this.add.image(
       653,
-      261,
+      240,
       "main-menu-button-controls"
     );
     main_menu_button_controls.scaleX = 0.36;
@@ -136,7 +136,7 @@ class MainMenu extends Phaser.Scene {
     // main_menu_button_settings
     const main_menu_button_settings = this.add.image(
       653,
-      351,
+      350,
       "main-menu-button-settings"
     );
     main_menu_button_settings.scaleX = 0.36;
@@ -158,7 +158,7 @@ class MainMenu extends Phaser.Scene {
     // main_menu_button_credits
     const main_menu_button_credits = this.add.image(
       653,
-      443,
+      460,
       "main-menu-button-credits"
     );
     main_menu_button_credits.scaleX = 0.36;
