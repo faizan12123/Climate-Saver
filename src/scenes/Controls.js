@@ -5,7 +5,7 @@
 class Controls extends Phaser.Scene {
 
 	constructor() {
-		super("Credits");
+		super("Controls");
 
 		/* START-USER-CTR-CODE */
     // Write your code here.
@@ -14,6 +14,10 @@ class Controls extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
+		//background music
+        var backgroundMusic = this.sound.add("main-menu");
+        backgroundMusic.play();
+        backgroundMusic.loop = true;
 
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
@@ -48,10 +52,24 @@ class Controls extends Phaser.Scene {
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
-		// button_back
-		const button_back = this.add.image(88, 87, "button-back");
-		button_back.scaleX = 0.15;
-		button_back.scaleY = 0.15;
+		// Button Sounds
+        var buttonClicked = this.sound.add("buttonOnClick");
+
+        // button_back
+        const button_back = this.add.image(88, 87, "button-back");
+        button_back.scaleX = 0.15;
+        button_back.scaleY = 0.15;
+        button_back.setInteractive();
+        button_back.on("pointerdown", () => {
+            backgroundMusic.stop();
+            buttonClicked.play();
+            this.scene.start("MainMenu");
+        }).on("pointerover", () => {
+              button_back.scale += 0.05;
+        }).on("pointerout", () => {
+            button_back.scaleX = 0.15;
+            button_back.scaleY = 0.15;
+        });
 
 		// controlsOF
 		const controlsOF = this.add.image(407, 309, "controlsOF");
