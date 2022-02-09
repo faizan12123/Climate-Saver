@@ -120,21 +120,49 @@ class Settings extends Phaser.Scene {
 		const button_volumeDown = this.add.image(510, 308, "button-volumeDown");
 		button_volumeDown.scaleX = 0.1;
 		button_volumeDown.scaleY = 0.1;
+		button_volumeDown.setInteractive();
+		button_volumeDown.on("pointerover", () => {
+             button_volumeDown.scale += 0.05;
+        }).on("pointerout", () => {
+            button_volumeDown.scaleX = 0.1;
+            button_volumeDown.scaleY = 0.1;
+        });
 
 		// button_volumeDown_1
 		const button_volumeDown_1 = this.add.image(510, 369, "button-volumeDown");
 		button_volumeDown_1.scaleX = 0.1;
 		button_volumeDown_1.scaleY = 0.1;
+		button_volumeDown_1.setInteractive();
+		button_volumeDown_1.on("pointerover", () => {
+              button_volumeDown_1.scale += 0.05;
+        }).on("pointerout", () => {
+            button_volumeDown_1.scaleX = 0.1;
+            button_volumeDown_1.scaleY = 0.1;
+        });
 
 		// buttom_volumeUp
 		const buttom_volumeUp = this.add.image(574, 308, "buttom-volumeUp");
 		buttom_volumeUp.scaleX = 0.1;
 		buttom_volumeUp.scaleY = 0.1;
+		buttom_volumeUp.setInteractive();
+		buttom_volumeUp.on("pointerover", () => {
+              buttom_volumeUp.scale += 0.05;
+        }).on("pointerout", () => {
+            buttom_volumeUp.scaleX = 0.1;
+            buttom_volumeUp.scaleY = 0.1;
+        });
 
 		// buttom_volumeUp_1
 		const buttom_volumeUp_1 = this.add.image(574, 369, "buttom-volumeUp");
 		buttom_volumeUp_1.scaleX = 0.1;
 		buttom_volumeUp_1.scaleY = 0.1;
+		buttom_volumeUp_1.setInteractive();
+		buttom_volumeUp_1.on("pointerover", () => {
+              buttom_volumeUp_1.scale += 0.05;
+        }).on("pointerout", () => {
+            buttom_volumeUp_1.scaleX = 0.1;
+            buttom_volumeUp_1.scaleY = 0.1;
+        });
 
 		// fx_tick
 		const fx_tick = this.add.image(417, 303, "button-tick");
