@@ -17,6 +17,11 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-radio.png",
+                "type": "image",
+                "key": "button-radio"
+            },
+            {
                 "url": "assets/buttons/button-tick.png",
                 "type": "image",
                 "key": "button-tick"
@@ -42,6 +47,11 @@
                 ],
                 "type": "audio",
                 "key": "buttonOnClick"
+            },
+            {
+                "url": "assets/sprites/controlsOF.png",
+                "type": "image",
+                "key": "controlsOF"
             },
             {
                 "url": "assets/sprites/credit-textbox-content3.png",
