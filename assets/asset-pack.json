@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/buttons/buttom-volumeUp.png",
+                "type": "image",
+                "key": "buttom-volumeUp"
+            },
+            {
                 "url": "assets/buttons/button-back.png",
                 "type": "image",
                 "key": "button-back"
@@ -10,6 +15,26 @@
                 "url": "assets/buttons/button-forward.png",
                 "type": "image",
                 "key": "button-forward"
+            },
+            {
+                "url": "assets/buttons/button-tick.png",
+                "type": "image",
+                "key": "button-tick"
+            },
+            {
+                "url": "assets/buttons/button-toggle.png",
+                "type": "image",
+                "key": "button-toggle"
+            },
+            {
+                "url": "assets/buttons/button-volumeDown.png",
+                "type": "image",
+                "key": "button-volumeDown"
+            },
+            {
+                "url": "assets/buttons/button-yes.png",
+                "type": "image",
+                "key": "button-yes"
             },
             {
                 "url": [
@@ -114,6 +139,11 @@
                 "url": "assets/sprites/map-selection.png",
                 "type": "image",
                 "key": "map-selection"
+            },
+            {
+                "url": "assets/sprites/settings-container.png",
+                "type": "image",
+                "key": "settings-container"
             }
         ]
     },
