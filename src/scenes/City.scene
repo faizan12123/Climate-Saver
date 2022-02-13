@@ -1,24 +1,91 @@
 {
-  "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
-  "settings": {
-    "compilerOutputLanguage": "JAVA_SCRIPT",
-    "javaScriptInitFieldsInConstructor": false,
-    "exportClass": false,
-    "autoImport": false,
-    "createMethodName": "editorCreate",
-    "compilerInsertSpaces": false,
-    "compilerTabSize": 4,
-    "borderWidth": 800,
-    "borderHeight": 600,
-    "borderX": 0,
-    "borderY": 0,
-    "sceneKey": "City"
-  },
-  "sceneType": "SCENE",
-  "displayList": [],
-  "meta": {
-    "app": "Phaser Editor 2D - Scene Editor",
-    "url": "https://phasereditor2d.com",
-    "contentType": "phasereditor2d.core.scene.SceneContentType"
-  }
+    "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "City"
+    },
+    "displayList": [
+        {
+            "type": "TilemapLayer",
+            "id": "4a205ebb-f2b9-4466-b87a-cd8ab519f63f",
+            "label": "ground_1",
+            "components": [],
+            "x": 4,
+            "y": -97,
+            "scaleX": 1.25,
+            "scaleY": 1.25,
+            "tilemapId": "51465a14-094a-478b-83ae-c2ff5cb92871",
+            "layerName": "Ground",
+            "tilesets": [
+                "City"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "99e9a9ef-8768-499a-a302-29bdc4137dab",
+            "label": "world_Layer",
+            "components": [],
+            "x": 4,
+            "y": -97,
+            "scaleX": 1.25,
+            "scaleY": 1.25,
+            "tilemapId": "51465a14-094a-478b-83ae-c2ff5cb92871",
+            "layerName": "World Layer",
+            "tilesets": [
+                "City"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "99c8bf50-bae1-4e82-82a7-35d73e2c47a2",
+            "label": "lights",
+            "components": [],
+            "x": 4,
+            "y": -97,
+            "scaleX": 1.25,
+            "scaleY": 1.25,
+            "tilemapId": "51465a14-094a-478b-83ae-c2ff5cb92871",
+            "layerName": "Lights",
+            "tilesets": [
+                "City"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "4af7bf8d-1a52-424e-aba3-040ea1ccbb46",
+            "label": "windows_and_Doors",
+            "components": [],
+            "x": 4,
+            "y": -97,
+            "scaleX": 1.25,
+            "scaleY": 1.25,
+            "tilemapId": "51465a14-094a-478b-83ae-c2ff5cb92871",
+            "layerName": "Windows and Doors",
+            "tilesets": [
+                "City"
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "51465a14-094a-478b-83ae-c2ff5cb92871",
+            "type": "Tilemap",
+            "label": "cityV2",
+            "key": "cityV2",
+            "tilesets": [
+                {
+                    "name": "City",
+                    "imageKey": "city-tilesV1"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
 }
