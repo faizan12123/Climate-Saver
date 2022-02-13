@@ -49,6 +49,16 @@
                 "key": "buttonOnClick"
             },
             {
+                "url": "assets/environment/city-tilesV1.png",
+                "type": "image",
+                "key": "city-tilesV1"
+            },
+            {
+                "url": "assets/environment/cityV1.json",
+                "type": "tilemapTiledJSON",
+                "key": "cityV1"
+            },
+            {
                 "url": "assets/sprites/controlsOF.png",
                 "type": "image",
                 "key": "controlsOF"
