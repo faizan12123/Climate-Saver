@@ -59,6 +59,11 @@
                 "key": "cityV1"
             },
             {
+                "url": "assets/environment/cityV2.json",
+                "type": "tilemapTiledJSON",
+                "key": "cityV2"
+            },
+            {
                 "url": "assets/sprites/controlsOF.png",
                 "type": "image",
                 "key": "controlsOF"
