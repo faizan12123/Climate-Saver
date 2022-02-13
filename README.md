@@ -30,5 +30,6 @@ Live Site: https://faizan12123.github.io/Climate-Saver/
 ### SPECIAL THANKS TO: 
 [ZapSplat](https://www.zapsplat.com/) for Sound FX & Music    
 [CPasteGame](https://www.artstation.com/cpastegame) for Visual Graphics  
+[Exuin](https://emily2.itch.io/) for Visual Graphics  
 [thatWitch](https://thatwitchdesign.wixsite.com/thatwitch/portfilio) for GUI Graphics  
 [Ruslan Kudriachenko](https://www.thepirateparrot.com/) for Logo Graphics    

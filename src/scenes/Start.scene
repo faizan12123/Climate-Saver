@@ -8,17 +8,93 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "6fb2b8d3-153a-4ea7-961f-7c21d1542e71",
-            "label": "layer_0",
+            "type": "Container",
+            "id": "5d9968e5-1f7f-4b05-9958-3d3c74cacd4b",
+            "label": "main-menu-background",
             "components": [],
-            "texture": {
-                "key": "Layer_0"
-            },
-            "x": 413,
-            "y": 304,
-            "scaleX": 0.2,
-            "scaleY": 0.3
+            "x": 407,
+            "y": 309,
+            "list": [
+                {
+                    "type": "TileSprite",
+                    "id": "8464b476-db2e-4899-bb28-7316bcd79674",
+                    "label": "layer_0",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-sky"
+                    },
+                    "x": -6,
+                    "y": -4,
+                    "scaleX": 0.19,
+                    "scaleY": 0.28,
+                    "width": 4320,
+                    "height": 2160
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "0aa663ae-7ae9-42dc-bdc9-fa67b3086c26",
+                    "label": "layer_1",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-cloud"
+                    },
+                    "x": -6,
+                    "y": -98,
+                    "scaleX": 0.2,
+                    "scaleY": 0.2,
+                    "width": 4320,
+                    "height": 2160
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "9535fa94-1348-400a-beb9-331ada1751cb",
+                    "label": "layer_2",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree1"
+                    },
+                    "x": 5,
+                    "y": 122,
+                    "scaleX": 0.2,
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "4f707dd5-1267-4dfe-9b24-eff4e8745ea6",
+                    "label": "layer_3",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree2"
+                    },
+                    "y": 107,
+                    "scaleX": 0.19,
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "07895368-7ef1-435d-a5b0-78253e1f04f3",
+                    "label": "layer_4",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-environment-tree"
+                    },
+                    "x": -4,
+                    "y": 112,
+                    "scaleX": 0.19,
+                    "scaleY": 0.17,
+                    "width": 4320,
+                    "height": 2160
+                }
+            ]
         },
         {
             "type": "Image",
@@ -28,7 +104,7 @@
             "texture": {
                 "key": "button-back"
             },
-            "x": 88,
+            "x": 86,
             "y": 87,
             "scaleX": 0.15,
             "scaleY": 0.15
@@ -41,23 +117,96 @@
             "texture": {
                 "key": "button-forward"
             },
-            "x": 682,
-            "y": 79,
+            "x": 722,
+            "y": 91,
             "scaleX": 0.15,
             "scaleY": 0.15
         },
         {
             "type": "Image",
-            "id": "3b488adb-dab9-4bff-96de-fae4f1293b26",
-            "label": "map_selection",
+            "id": "99650d3a-4e0f-4136-ac17-8d0e86a580e0",
+            "label": "beach-container",
             "components": [],
             "texture": {
-                "key": "map-selection"
+                "key": "bg"
             },
-            "x": 407,
-            "y": 309,
-            "scaleX": 0.3,
-            "scaleY": 0.3
+            "x": 595,
+            "y": 503,
+            "scaleX": 0.35,
+            "scaleY": 0.2
+        },
+        {
+            "type": "Image",
+            "id": "f4bc575a-3b1b-4966-9fe5-bfde87f4539b",
+            "label": "forest-container",
+            "components": [],
+            "texture": {
+                "key": "bg"
+            },
+            "x": 595,
+            "y": 288,
+            "scaleX": 0.35,
+            "scaleY": 0.2
+        },
+        {
+            "type": "Image",
+            "id": "6de64b73-171b-4693-80c6-93d6121cd89f",
+            "label": "icey-container",
+            "components": [],
+            "texture": {
+                "key": "bg"
+            },
+            "x": 225,
+            "y": 503,
+            "scaleX": 0.35,
+            "scaleY": 0.2
+        },
+        {
+            "type": "Image",
+            "id": "0de71c05-ec7c-48a9-a71d-caff2c13d302",
+            "label": "maps_banner_title",
+            "components": [],
+            "texture": {
+                "key": "maps-banner-title"
+            },
+            "x": 394,
+            "y": 102,
+            "scaleX": 0.35,
+            "scaleY": 0.35
+        },
+        {
+            "type": "Container",
+            "id": "4d30e9de-7ed0-4fee-bc7d-7df232894949",
+            "label": "city-group",
+            "components": [],
+            "x": 218,
+            "y": 287,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "7928fb7d-88ca-4c48-976f-1f8423df1bb4",
+                    "label": "city-container",
+                    "components": [],
+                    "texture": {
+                        "key": "bg"
+                    },
+                    "x": 7,
+                    "y": 1,
+                    "scaleX": 0.35,
+                    "scaleY": 0.2
+                },
+                {
+                    "type": "Image",
+                    "id": "b38aa1f3-09aa-477c-bf84-6d96a93c24a8",
+                    "label": "city_img",
+                    "components": [],
+                    "texture": {
+                        "key": "city-img"
+                    },
+                    "scaleX": 0.15,
+                    "scaleY": 0.15
+                }
+            ]
         }
     ],
     "plainObjects": [],
