@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
   game.scene.add("Preload", Preload);
   game.scene.add("MainMenu", MainMenu);
   game.scene.add("Beach", Beach);
+  game.scene.add("City", City);
   game.scene.add("Start", Start);
   game.scene.add("Tutorial", Tutorial);
   game.scene.add("Controls", Controls);
