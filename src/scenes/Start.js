@@ -46,6 +46,12 @@ class Start extends Phaser.Scene {
 		const button_forward = this.add.image(682, 79, "button-forward");
 		button_forward.scaleX = 0.15;
 		button_forward.scaleY = 0.15;
+		button_forward.setInteractive();
+		button_forward.on("pointerdown", () => {
+            backgroundMusic.stop();
+            buttonClicked.play();
+            this.scene.start("City");
+        })
 
 		// map_selection
 		const map_selection = this.add.image(407, 309, "map-selection");
