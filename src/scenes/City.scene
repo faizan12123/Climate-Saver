@@ -1,0 +1,24 @@
+{
+  "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
+  "settings": {
+    "compilerOutputLanguage": "JAVA_SCRIPT",
+    "javaScriptInitFieldsInConstructor": false,
+    "exportClass": false,
+    "autoImport": false,
+    "createMethodName": "editorCreate",
+    "compilerInsertSpaces": false,
+    "compilerTabSize": 4,
+    "borderWidth": 800,
+    "borderHeight": 600,
+    "borderX": 0,
+    "borderY": 0,
+    "sceneKey": "City"
+  },
+  "sceneType": "SCENE",
+  "displayList": [],
+  "meta": {
+    "app": "Phaser Editor 2D - Scene Editor",
+    "url": "https://phasereditor2d.com",
+    "contentType": "phasereditor2d.core.scene.SceneContentType"
+  }
+}
