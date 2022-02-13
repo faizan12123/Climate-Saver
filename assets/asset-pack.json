@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/Tile Background/bg.png",
+                "type": "image",
+                "key": "bg"
+            },
+            {
                 "url": "assets/buttons/buttom-volumeUp.png",
                 "type": "image",
                 "key": "buttom-volumeUp"
@@ -47,6 +52,11 @@
                 ],
                 "type": "audio",
                 "key": "buttonOnClick"
+            },
+            {
+                "url": "assets/environment/city-img.jpg",
+                "type": "image",
+                "key": "city-img"
             },
             {
                 "url": "assets/environment/city-tilesV1.png",
@@ -164,6 +174,11 @@
                 "url": "assets/sprites/map-selection.png",
                 "type": "image",
                 "key": "map-selection"
+            },
+            {
+                "url": "assets/sprites/maps-banner-title.png",
+                "type": "image",
+                "key": "maps-banner-title"
             },
             {
                 "url": "assets/sprites/settings-container.png",
