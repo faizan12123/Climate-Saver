@@ -13,10 +13,9 @@ class MainMenu extends Phaser.Scene {
 
   /** @returns {void} */
   editorCreate() {
-    //background-music
-    var backgroundMusic = this.sound.add("main-menu");
-    backgroundMusic.play();
-    backgroundMusic.loop = true;
+     var loadingMusic = this.sound.add("loading-sound", {volume: 0.5});
+     loadingMusic.play();
+     loadingMusic.loop = true;
 
     // main-menu-background
     const main_menu_background = this.add.container(407, 309);
@@ -88,7 +87,7 @@ class MainMenu extends Phaser.Scene {
 
     // Button Sounds
     var buttonClicked = this.sound.add("buttonOnClick");
-
+    
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
       656,
@@ -177,6 +176,12 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_credits.scaleX = 0.36;
       main_menu_button_credits.scaleY = 0.36;
     });
+
+    //background-music
+    var backgroundMusic = this.sound.add("main-menu");
+    loadingMusic.stop();
+    backgroundMusic.play();
+    backgroundMusic.loop = true;
 
     this.layer_0 = layer_0;
     this.layer_1 = layer_1;

@@ -15,7 +15,7 @@ class Credits extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
-		var loadingMusic = this.sound.add("loading-sound");
+		var loadingMusic = this.sound.add("loading-sound", {volume: 0.3});
         loadingMusic.play();
         loadingMusic.loop = true;
 		
