@@ -15,10 +15,6 @@ class Credits extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
-		var backgroundMusic = this.sound.add("main-menu");
-		backgroundMusic.play();
-		backgroundMusic.loop = true;
-
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
 
@@ -52,29 +48,40 @@ class Credits extends Phaser.Scene {
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
-		 // Button Sounds
-   		 var buttonClicked = this.sound.add("buttonOnClick");
+		// Button Sounds
+            var buttonClicked = this.sound.add("buttonOnClick");
 
 		// button_back
-		const button_back = this.add.image(88, 87, "button-back");
-		button_back.scaleX = 0.15;
-		button_back.scaleY = 0.15;
-		button_back.setInteractive();
-		button_back.on("pointerdown", () => {
+        const button_back = this.add.image(88, 87, "button-back");
+        button_back.scaleX = 0.15;
+        button_back.scaleY = 0.15;
+        button_back.setInteractive();
+        button_back.on("pointerdown", () => {
+			loading_graphic.visible = true;
+            buttonClicked.play();
+            setTimeout(() => {this.scene.start("MainMenu");}, 500);
 			backgroundMusic.stop();
-			buttonClicked.play();
-			this.scene.start("MainMenu");
-		}).on("pointerover", () => {
-      		button_back.scale += 0.05;
-    	}).on("pointerout", () => {
-			button_back.scaleX = 0.15;
-			button_back.scaleY = 0.15;
-		});
-		
+        }).on("pointerover", () => {
+              button_back.scale += 0.05;
+        }).on("pointerout", () => {
+            button_back.scaleX = 0.15;
+            button_back.scaleY = 0.15;
+        });
+
 		// credits_textbox_content5
 		const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
 		credits_textbox_content5.scaleX = 0.3;
 		credits_textbox_content5.scaleY = 0.3;
+		
+		var backgroundMusic = this.sound.add("main-menu");
+        backgroundMusic.play();
+        backgroundMusic.loop = true;
+
+		// loading_graphic
+		const loading_graphic = this.add.image(404, 309, "loading-graphic");
+		loading_graphic.scaleX = 1.1;
+		loading_graphic.scaleY = 1.1;
+		loading_graphic.visible = false;
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
