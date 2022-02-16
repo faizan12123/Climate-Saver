@@ -160,6 +160,17 @@
             "y": 443,
             "scaleX": 0.36,
             "scaleY": 0.36
+        },
+        {
+            "type": "Image",
+            "id": "dceaf751-84dc-4ed7-a25f-d78d45bae376",
+            "label": "loading_graphic",
+            "components": [],
+            "texture": {
+                "key": "loading-graphic"
+            },
+            "x": 408,
+            "y": 313
         }
     ],
     "plainObjects": [],
