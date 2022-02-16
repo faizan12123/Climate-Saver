@@ -63,7 +63,7 @@ class Credits extends Phaser.Scene {
         button_back.on("pointerdown", () => {
 			loading_graphic.visible = true;
             buttonClicked.play();
-            setTimeout(() => {this.scene.start("MainMenu");}, 500);
+            setTimeout(() => {this.scene.start("MainMenu")}, 20);
 			backgroundMusic.stop();
         }).on("pointerover", () => {
               button_back.scale += 0.05;
