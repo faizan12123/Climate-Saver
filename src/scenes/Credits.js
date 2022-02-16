@@ -15,6 +15,10 @@ class Credits extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
+		var loadingMusic = this.sound.add("loading-sound");
+        loadingMusic.play();
+        loadingMusic.loop = true;
+		
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
 
@@ -49,7 +53,7 @@ class Credits extends Phaser.Scene {
 		main_menu_background.add(layer_4);
 
 		// Button Sounds
-            var buttonClicked = this.sound.add("buttonOnClick");
+        var buttonClicked = this.sound.add("buttonOnClick");
 
 		// button_back
         const button_back = this.add.image(88, 87, "button-back");
@@ -73,7 +77,9 @@ class Credits extends Phaser.Scene {
 		credits_textbox_content5.scaleX = 0.3;
 		credits_textbox_content5.scaleY = 0.3;
 		
+		//background music
 		var backgroundMusic = this.sound.add("main-menu");
+		loadingMusic.stop();
         backgroundMusic.play();
         backgroundMusic.loop = true;
 
