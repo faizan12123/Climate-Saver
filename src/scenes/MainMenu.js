@@ -3,20 +3,21 @@
 /* START OF COMPILED CODE */
 
 class MainMenu extends Phaser.Scene {
-  constructor() {
-    super("MainMenu");
 
-    /* START-USER-CTR-CODE */
+	constructor() {
+		super("MainMenu");
+
+		/* START-USER-CTR-CODE */
     // Write your code here.
     /* END-USER-CTR-CODE */
-  }
+	}
 
-  /** @returns {void} */
-  editorCreate() {
-    //background-music
-    var backgroundMusic = this.sound.add("main-menu");
-    backgroundMusic.play();
-    backgroundMusic.loop = true;
+	/** @returns {void} */
+	editorCreate() {
+
+		var loadingMusic = this.sound.add("loading-sound", {volume: 0.2});
+     loadingMusic.play();
+     loadingMusic.loop = true;
 
     // main-menu-background
     const main_menu_background = this.add.container(407, 309);
@@ -88,7 +89,7 @@ class MainMenu extends Phaser.Scene {
 
     // Button Sounds
     var buttonClicked = this.sound.add("buttonOnClick");
-
+    
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
       656,
@@ -99,9 +100,10 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_start.scaleY = 0.36;
     main_menu_button_start.setInteractive();
     main_menu_button_start.on("pointerdown", () => {
-      backgroundMusic.stop();
-      buttonClicked.play();
-      this.scene.start("Start");
+	  		loading_graphic.visible = true;
+            buttonClicked.play();
+            setTimeout(() => {this.scene.start("Start")}, 10);
+			backgroundMusic.stop();
     });
     main_menu_button_start.on("pointerover", () => {
       main_menu_button_start.scale += 0.05;
@@ -121,9 +123,10 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_controls.scaleY = 0.36;
     main_menu_button_controls.setInteractive();
     main_menu_button_controls.on("pointerdown", () => {
-      backgroundMusic.stop();
-      buttonClicked.play();
-      this.scene.start("Controls");
+      	loading_graphic.visible = true;
+    	buttonClicked.play();
+        setTimeout(() => {this.scene.start("Controls")}, 10);
+		backgroundMusic.stop();
     });
     main_menu_button_controls.on("pointerover", () => {
       main_menu_button_controls.scale += 0.05;
@@ -143,9 +146,10 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_settings.scaleY = 0.36;
     main_menu_button_settings.setInteractive();
     main_menu_button_settings.on("pointerdown", () => {
-      backgroundMusic.stop();
-      buttonClicked.play();
-      this.scene.start("Settings");
+     	loading_graphic.visible = true;
+    	buttonClicked.play();
+        setTimeout(() => {this.scene.start("Settings")}, 10);
+		backgroundMusic.stop();
     });
     main_menu_button_settings.on("pointerover", () => {
       main_menu_button_settings.scale += 0.05;
@@ -165,9 +169,10 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_credits.scaleY = 0.36;
     main_menu_button_credits.setInteractive();
     main_menu_button_credits.on("pointerdown", () => {
-      backgroundMusic.stop();
-      buttonClicked.play();
-      this.scene.start("Credits");
+     	 loading_graphic.visible = true;
+    	buttonClicked.play();
+        setTimeout(() => {this.scene.start("Credits")}, 10);
+		backgroundMusic.stop();
 
     });
     main_menu_button_credits.on("pointerover", () => {
@@ -178,27 +183,39 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_credits.scaleY = 0.36;
     });
 
-    this.layer_0 = layer_0;
-    this.layer_1 = layer_1;
-    this.layer_2 = layer_2;
-    this.layer_3 = layer_3;
-    this.layer_4 = layer_4;
+    //background-music
+    var backgroundMusic = this.sound.add("main-menu");
+    loadingMusic.stop();
+    backgroundMusic.play();
+    backgroundMusic.loop = true;
 
-    this.events.emit("scene-awake");
-  }
+		// loading_graphic
+		const loading_graphic = this.add.image(408, 313, "loading-graphic");
+		loading_graphic.scaleX = 1.1;
+        loading_graphic.scaleY = 1.1;
+        loading_graphic.visible = false;
 
-  /** @type {Phaser.GameObjects.TileSprite} */
-  layer_0;
-  /** @type {Phaser.GameObjects.TileSprite} */
-  layer_1;
-  /** @type {Phaser.GameObjects.TileSprite} */
-  layer_2;
-  /** @type {Phaser.GameObjects.TileSprite} */
-  layer_3;
-  /** @type {Phaser.GameObjects.TileSprite} */
-  layer_4;
+		this.layer_0 = layer_0;
+		this.layer_1 = layer_1;
+		this.layer_2 = layer_2;
+		this.layer_3 = layer_3;
+		this.layer_4 = layer_4;
 
-  /* START-USER-CODE */
+		this.events.emit("scene-awake");
+	}
+
+	/** @type {Phaser.GameObjects.TileSprite} */
+	layer_0;
+	/** @type {Phaser.GameObjects.TileSprite} */
+	layer_1;
+	/** @type {Phaser.GameObjects.TileSprite} */
+	layer_2;
+	/** @type {Phaser.GameObjects.TileSprite} */
+	layer_3;
+	/** @type {Phaser.GameObjects.TileSprite} */
+	layer_4;
+
+	/* START-USER-CODE */
 
   // Write more your code here
 

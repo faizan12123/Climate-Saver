@@ -15,11 +15,9 @@ class Settings extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
-		//background music
-        var backgroundMusic = this.sound.add("main-menu");
-        backgroundMusic.play();
-        backgroundMusic.loop = true;
-
+		var loadingMusic = this.sound.add("loading-sound", {volume: 0.2});
+        loadingMusic.play();
+        loadingMusic.loop = true;
 
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
@@ -63,9 +61,10 @@ class Settings extends Phaser.Scene {
         button_back.scaleY = 0.15;
         button_back.setInteractive();
         button_back.on("pointerdown", () => {
-            backgroundMusic.stop();
+            loading_graphic.visible = true;
             buttonClicked.play();
-            this.scene.start("MainMenu");
+            setTimeout(() => {this.scene.start("MainMenu")}, 20);
+			backgroundMusic.stop();
         }).on("pointerover", () => {
               button_back.scale += 0.05;
         }).on("pointerout", () => {
@@ -194,6 +193,18 @@ class Settings extends Phaser.Scene {
 		music_tick.scaleX = 0.1;
 		music_tick.scaleY = 0.1;
 		music_tick.visible = false;
+
+		//background music
+        var backgroundMusic = this.sound.add("main-menu");
+		loadingMusic.stop();
+        backgroundMusic.play();
+        backgroundMusic.loop = true;
+
+		// loading_graphic
+		const loading_graphic = this.add.image(404, 309, "loading-graphic");
+		loading_graphic.scaleX = 1.1;
+		loading_graphic.scaleY = 1.1;
+		loading_graphic.visible = false;
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;

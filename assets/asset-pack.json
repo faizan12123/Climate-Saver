@@ -109,6 +109,18 @@
                 "key": "Layer_0"
             },
             {
+                "url": "assets/environment/loading-graphic.png",
+                "type": "image",
+                "key": "loading-graphic"
+            },
+            {
+                "url": [
+                    "assets/sounds/loading-sound.mp3"
+                ],
+                "type": "audio",
+                "key": "loading-sound"
+            },
+            {
                 "url": "assets/sprites/logo-version5.png",
                 "type": "image",
                 "key": "logo-version5"
