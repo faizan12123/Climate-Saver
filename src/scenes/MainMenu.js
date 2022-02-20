@@ -183,16 +183,18 @@ class MainMenu extends Phaser.Scene {
 
 
   /** @type {Phaser.GameObjects.TileSprite} */
-  layer_0;
+  this.layer_0 =layer_0;
   /** @type {Phaser.GameObjects.TileSprite} */
-  layer_1;
+  this.layer_1 = layer_1
   /** @type {Phaser.GameObjects.TileSprite} */
-  layer_2;
+  this.layer_2 = layer_2;
   /** @type {Phaser.GameObjects.TileSprite} */
-  layer_3;
+  this.layer_3 = layer_3;
   /** @type {Phaser.GameObjects.TileSprite} */
-  layer_4;
+  this.layer_4 = layer_4;
 
+  this.events.emit("scene-awake");
+  }
   /* START-USER-CODE */
 
   // Write more your code here
