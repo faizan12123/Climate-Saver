@@ -37,6 +37,11 @@
                 "key": "credits-textbox-content5"
             },
             {
+                "url": "assets/sprites/dude.png",
+                "type": "image",
+                "key": "dude"
+            },
+            {
                 "url": "assets/environment/Layer_0.png",
                 "type": "image",
                 "key": "Layer_0"
