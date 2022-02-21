@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class City extends Phaser.Scene {
+class City_Pause extends Phaser.Scene {
 
 	constructor() {
-		super("City");
+		super("City_Pause");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -50,22 +50,10 @@ class City extends Phaser.Scene {
 		life_Bar_Animated_1.scaleX = 1.801947436688974;
 		life_Bar_Animated_1.scaleY = 1.801947436688974;
 
-		var buttonClicked = this.sound.add("buttonOnClick");
-
 		// menu
 		const menu = this.add.image(49, 41, "Menu");
 		menu.scaleX = 0.6972659199911628;
 		menu.scaleY = 0.6818283014111137;
-		menu.setInteractive();
-		menu.on("pointerdown", () => {
-            buttonClicked.play();
-            this.scene.start("City_Pause");
-		}).on("pointerover", () => {
-      		menu.scale += 0.05;
-    	}).on("pointerout", () => {
-			menu.scaleX = 0.6972659199911628;
-			menu_.scaleY = 0.6818283014111137;
-		});
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -75,6 +63,43 @@ class City extends Phaser.Scene {
 		score.scaleX = 0.62297233942359;
 		score.scaleY = 0.62297233942359;
 
+		// pause_menu
+		const pause_menu = this.add.image(407, 278, "pause-menu");
+		pause_menu.scaleX = 0.26626053769694924;
+		pause_menu.scaleY = 0.27093994892320916;
+
+		var buttonClicked = this.sound.add("buttonOnClick");
+
+		// button_yes
+		const button_yes = this.add.image(307, 347, "button-yes");
+		button_yes.scaleX = 0.32122529083972184;
+		button_yes.scaleY = 0.32122529083972184;
+		button_yes.setInteractive();
+		button_yes.on("pointerdown", () => {
+			buttonClicked.play();
+			this.scene.start("Start");
+		}).on("pointerover", () => {
+      		button_yes.scale += 0.05;
+    	}).on("pointerout", () => {
+			button_yes.scaleX = 0.32122529083972184;
+			button_yes.scaleY = 0.32122529083972184;
+		});
+
+		// button_no
+		const button_no = this.add.image(499, 347, "button-no");
+		button_no.scaleX = 0.32122529083972184;
+		button_no.scaleY = 0.32122529083972184;
+		button_no.setInteractive();
+		button_no.on("pointerdown", () => {
+			buttonClicked.play();
+			this.scene.start("City");
+		}).on("pointerover", () => {
+      		button_no.scale += 0.05;
+    	}).on("pointerout", () => {
+			button_no.scaleX = 0.32122529083972184;
+			button_no.scaleY = 0.32122529083972184;
+		});
+
 		this.cityV2 = cityV2;
 
 		this.events.emit("scene-awake");
@@ -82,7 +107,7 @@ class City extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	// Write more your code here
+	// Write your code here
 
 	create() {
 

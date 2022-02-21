@@ -1,5 +1,5 @@
 {
-    "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
+    "id": "a7d9f443-6881-4bab-ad46-fad9e0e7d90e",
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
@@ -129,6 +129,45 @@
             "y": 44,
             "scaleX": 0.62297233942359,
             "scaleY": 0.62297233942359
+        },
+        {
+            "type": "Image",
+            "id": "0f3ebedb-334a-44f5-b8ae-c3293c1db8cf",
+            "label": "pause_menu",
+            "components": [],
+            "texture": {
+                "key": "pause-menu"
+            },
+            "x": 407,
+            "y": 278,
+            "scaleX": 0.26626053769694924,
+            "scaleY": 0.27093994892320916
+        },
+        {
+            "type": "Image",
+            "id": "72115f17-6c0f-404c-8ba2-c61522d239c4",
+            "label": "button_yes",
+            "components": [],
+            "texture": {
+                "key": "button-yes"
+            },
+            "x": 307,
+            "y": 347,
+            "scaleX": 0.32122529083972184,
+            "scaleY": 0.32122529083972184
+        },
+        {
+            "type": "Image",
+            "id": "24dbccf4-cbeb-4fbd-8803-8babb7b8889c",
+            "label": "button_no",
+            "components": [],
+            "texture": {
+                "key": "button-no"
+            },
+            "x": 499,
+            "y": 347,
+            "scaleX": 0.32122529083972184,
+            "scaleY": 0.32122529083972184
         }
     ],
     "plainObjects": [

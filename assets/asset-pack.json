@@ -22,6 +22,11 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-no.png",
+                "type": "image",
+                "key": "button-no"
+            },
+            {
                 "url": "assets/buttons/button-radio.png",
                 "type": "image",
                 "key": "button-radio"
@@ -104,9 +109,84 @@
                 "key": "credits-textbox-content5"
             },
             {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
+                "type": "image",
+                "key": "D-Pad"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Down.png",
+                "type": "image",
+                "key": "D-Pad Down"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Left.png",
+                "type": "image",
+                "key": "D-Pad Left"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Right.png",
+                "type": "image",
+                "key": "D-Pad Right"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Up.png",
+                "type": "image",
+                "key": "D-Pad Up"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
+                "type": "image",
+                "key": "health_bar_decoration"
+            },
+            {
                 "url": "assets/environment/Layer_0.png",
                 "type": "image",
                 "key": "Layer_0"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
+                "type": "image",
+                "key": "Life Bar Animated 1"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
+                "type": "image",
+                "key": "Life Bar Animated 2"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
+                "type": "image",
+                "key": "Life Bar Animated 3"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
+                "type": "image",
+                "key": "Life Bar Animated 4"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
+                "type": "image",
+                "key": "Life Bar Animated 5"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
+                "type": "image",
+                "key": "Life Bar Animated 6"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
+                "type": "image",
+                "key": "Life Bar Animated 7"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 8.png",
+                "type": "image",
+                "key": "Life Bar Animated 8"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
+                "type": "image",
+                "key": "Life Bar Animated 9"
             },
             {
                 "url": "assets/environment/loading-graphic.png",
@@ -191,6 +271,21 @@
                 "url": "assets/sprites/maps-banner-title.png",
                 "type": "image",
                 "key": "maps-banner-title"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/Menu.png",
+                "type": "image",
+                "key": "Menu"
+            },
+            {
+                "url": "assets/sprites/pause-menu.png",
+                "type": "image",
+                "key": "pause-menu"
+            },
+            {
+                "url": "assets/In Game Buttons/White Buttons/Score.png",
+                "type": "image",
+                "key": "Score"
             },
             {
                 "url": "assets/sprites/settings-container.png",
