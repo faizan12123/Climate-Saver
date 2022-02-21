@@ -1,5 +1,5 @@
 {
-    "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
+    "id": "a7d9f443-6881-4bab-ad46-fad9e0e7d90e",
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
@@ -66,6 +66,108 @@
             "tilesets": [
                 "City"
             ]
+        },
+        {
+            "type": "Image",
+            "id": "357017d5-6599-4954-8606-b42401a0cede",
+            "label": "health_bar_decoration",
+            "components": [],
+            "texture": {
+                "key": "health_bar_decoration"
+            },
+            "x": 691,
+            "y": 44,
+            "scaleX": 2.876226221353047,
+            "scaleY": 2.876226221353047
+        },
+        {
+            "type": "Image",
+            "id": "4d628ae6-d117-46db-b115-66a59da11bdf",
+            "label": "life_Bar_Animated_1",
+            "components": [],
+            "texture": {
+                "key": "Life Bar Animated 1"
+            },
+            "x": 713,
+            "y": 44,
+            "scaleX": 1.801947436688974,
+            "scaleY": 1.801947436688974
+        },
+        {
+            "type": "Image",
+            "id": "52b1d87f-452f-4398-81f2-dc5e6cf1ee4c",
+            "label": "menu",
+            "components": [],
+            "texture": {
+                "key": "Menu"
+            },
+            "x": 49,
+            "y": 41,
+            "scaleX": 0.6972659199911628,
+            "scaleY": 0.6818283014111137
+        },
+        {
+            "type": "Image",
+            "id": "0c5b0745-b1da-4274-ac24-a9f6560b2f21",
+            "label": "directionpad",
+            "components": [],
+            "texture": {
+                "key": "D-Pad"
+            },
+            "x": 692,
+            "y": 520
+        },
+        {
+            "type": "Image",
+            "id": "81d1a581-7425-485f-9788-aceb75f704fc",
+            "label": "score",
+            "components": [],
+            "texture": {
+                "key": "Score"
+            },
+            "x": 384,
+            "y": 44,
+            "scaleX": 0.62297233942359,
+            "scaleY": 0.62297233942359
+        },
+        {
+            "type": "Image",
+            "id": "0f3ebedb-334a-44f5-b8ae-c3293c1db8cf",
+            "label": "pause_menu",
+            "components": [],
+            "texture": {
+                "key": "pause-menu"
+            },
+            "x": 407,
+            "y": 278,
+            "scaleX": 0.26626053769694924,
+            "scaleY": 0.27093994892320916
+        },
+        {
+            "type": "Image",
+            "id": "72115f17-6c0f-404c-8ba2-c61522d239c4",
+            "label": "button_yes",
+            "components": [],
+            "texture": {
+                "key": "button-yes"
+            },
+            "x": 307,
+            "y": 347,
+            "scaleX": 0.32122529083972184,
+            "scaleY": 0.32122529083972184
+        },
+        {
+            "type": "Image",
+            "id": "24dbccf4-cbeb-4fbd-8803-8babb7b8889c",
+            "label": "button_no",
+            "components": [],
+            "texture": {
+                "key": "button-no"
+            },
+            "x": 499,
+            "y": 347,
+            "scaleX": 0.32122529083972184,
+            "scaleY": 0.32122529083972184
         }
     ],
     "plainObjects": [

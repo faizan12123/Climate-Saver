@@ -51,7 +51,7 @@ class Start extends Phaser.Scene {
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
-		 var buttonClicked = this.sound.add("buttonOnClick");
+		var buttonClicked = this.sound.add("buttonOnClick");
 
 		// button_back
 		const button_back = this.add.image(88, 87, "button-back");
@@ -59,9 +59,9 @@ class Start extends Phaser.Scene {
 		button_back.scaleY = 0.15;
 		button_back.setInteractive();
 		button_back.on("pointerdown", () => {
+            buttonClicked.play();
+            this.scene.start("MainMenu");
 			backgroundMusic.stop();
-			buttonClicked.play();
-			this.scene.start("MainMenu");
 		}).on("pointerover", () => {
       		button_back.scale += 0.05;
     	}).on("pointerout", () => {
@@ -121,6 +121,13 @@ class Start extends Phaser.Scene {
 			backgroundMusic.stop();
 			buttonClicked.play();
 			this.scene.start("City");
+		});
+		city_img.on("pointerover", () => {
+		city_img.scale += 0.01;
+		});
+		city_img.on("pointerout", () => {
+		city_img.scaleX = 0.15;
+		city_img.scaleY = 0.15;
 		});
 
 		this.layer_0 = layer_0;
