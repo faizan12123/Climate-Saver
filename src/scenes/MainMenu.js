@@ -184,20 +184,9 @@ class MainMenu extends Phaser.Scene {
 
 
     //******************character movement********************
-    var player;
-    var cursors;
-
-
-    function preload ()
-    {
-        this.load.spritesheet('dude', 'assets/sprites/dude.png', { frameWidth: 32, frameHeight: 48 });
-    }
-
-    function create ()
-    {
-
-
-        player = this.physics.add.sprite(100, 450, 'dude');
+    let player;
+    let cursors;
+    player = this.physics.add.sprite(100, 450, 'dude');
 
         player.setBounce(0.2);
         player.setCollideWorldBounds(true);
@@ -223,35 +212,6 @@ class MainMenu extends Phaser.Scene {
         });
 
         cursors = this.input.keyboard.createCursorKeys();
-    }
-
-    function update ()
-    {
-        if (cursors.left.isDown)
-        {
-            player.setVelocityX(-160);
-
-            player.anims.play('left', true);
-        }
-        else if (cursors.right.isDown)
-        {
-            player.setVelocityX(160);
-
-            player.anims.play('right', true);
-        }
-        else
-        {
-            player.setVelocityX(0);
-
-            player.anims.play('turn');
-        }
-
-        if (cursors.up.isDown && player.body.touching.down)
-        {
-            player.setVelocityY(-330);
-        }
-    }
-
 
 
 
@@ -270,6 +230,8 @@ class MainMenu extends Phaser.Scene {
   /** @type {Phaser.GameObjects.TileSprite} */
   this.layer_4 = layer_4;
 
+  this.player = player
+  this.cursors = cursors
   this.events.emit("scene-awake");
   }
   /* START-USER-CODE */
@@ -287,7 +249,30 @@ class MainMenu extends Phaser.Scene {
     this.layer_2.tilePositionX += 0.4;
     this.layer_3.tilePositionX += 0.6;
     this.layer_4.tilePositionX += 4.5;
+    
+        if (this.cursors.left.isDown)
+        {
+            this.player.setVelocityX(-160);
 
+            this.player.anims.play('left', true);
+        }
+        else if (this.cursors.right.isDown)
+        {
+            this.player.setVelocityX(160);
+
+            this.player.anims.play('right', true);
+        }
+        else
+        {
+            this.player.setVelocityX(0);
+
+            this.player.anims.play('turn');
+        }
+
+        if (this.cursors.up.isDown && this.player.body.touching.down)
+        {
+            this.player.setVelocityY(-330);
+        }
   }
 
   /* END-USER-CODE */
