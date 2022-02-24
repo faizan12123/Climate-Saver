@@ -88,7 +88,7 @@ class MainMenu extends Phaser.Scene {
     lOGO_VERSION5.scaleY = 0.7;
 
     // Button Sounds
-    var buttonClicked = this.sound.add("buttonOnClick");
+    var buttonClicked = this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
     
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
@@ -321,6 +321,7 @@ class MainMenu extends Phaser.Scene {
           if(sound_tick.visible){
             sound_tick.visible = false;
             backgroundMusic.play();
+            backgroundMusic.loop = true;
             localStorage.settingsOptionMusic = "true";
             sound_volumeDown.visible = true;
             sound_volumeUp.visible = true;
@@ -341,6 +342,11 @@ class MainMenu extends Phaser.Scene {
         fx_volumeDown.on("pointerdown", () => {
           if(localStorage.settingsOptionFX == "true")
             buttonClicked.play();
+
+          if(parseFloat(localStorage.fxVolume) >= 0.50){
+            localStorage.fxVolume = (parseFloat(localStorage.fxVolume) - 0.25).toString();
+            buttonClicked =  this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
+          }
 	    	}).on("pointerover", () => {
           fx_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
@@ -355,6 +361,14 @@ class MainMenu extends Phaser.Scene {
         sound_volumeDown.on("pointerdown", () => {
           if(localStorage.settingsOptionFX == "true")
            buttonClicked.play();
+
+          if(parseFloat(localStorage.musicVolume) >= 0.50){
+            localStorage.musicVolume = (parseFloat(localStorage.musicVolume) - 0.25).toString();
+            backgroundMusic.pause();
+            backgroundMusic =  this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+          }
 	    	}).on("pointerover", () => {
           sound_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
@@ -370,6 +384,12 @@ class MainMenu extends Phaser.Scene {
         fx_volumeUp.on("pointerdown", () => {
           if(localStorage.settingsOptionFX == "true")
             buttonClicked.play();
+
+          if(parseFloat(localStorage.fxVolume) <= 8.0){
+            localStorage.fxVolume = (parseFloat(localStorage.fxVolume) + 0.25).toString();
+            buttonClicked =  this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
+          }
+          
 		    }).on("pointerover", () => {
           fx_volumeUp.scale += 0.05;
         }).on("pointerout", () => {
@@ -383,8 +403,16 @@ class MainMenu extends Phaser.Scene {
         sound_volumeUp.scaleY = 0.1;
         sound_volumeUp.setInteractive();
         sound_volumeUp.on("pointerdown", () => {
-          if(localStorage.settingsOptionFX == "true")
+          if(localStorage.settingsOptionFX == "true"){
             buttonClicked.play();
+          }
+          if(parseFloat(localStorage.musicVolume) <= 4.75){
+            localStorage.musicVolume = (parseFloat(localStorage.musicVolume) + 0.25).toString();
+            backgroundMusic.pause();
+            backgroundMusic =  this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+          }
 		    }).on("pointerover", () => {
           sound_volumeUp.scale += 0.05;
         }).on("pointerout", () => {
@@ -483,7 +511,7 @@ class MainMenu extends Phaser.Scene {
         .visible = false;
 
     //background-music
-    var backgroundMusic = this.sound.add("main-menu");
+    var backgroundMusic = this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
     loadingMusic.stop();
     backgroundMusic.loop = true;
     if(localStorage.settingsOptionMusic == "true"){
