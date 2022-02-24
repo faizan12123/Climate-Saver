@@ -121,22 +121,94 @@ class MainMenu extends Phaser.Scene {
     );
     main_menu_button_controls.scaleX = 0.36;
     main_menu_button_controls.scaleY = 0.36;
-    main_menu_button_controls.setInteractive();
-    main_menu_button_controls.on("pointerdown", () => {
-      	loading_graphic.visible = true;
-    	buttonClicked.play();
-        setTimeout(() => {this.scene.start("Controls")}, 10);
-		backgroundMusic.stop();
-    });
-    main_menu_button_controls.on("pointerover", () => {
+    main_menu_button_controls.setInteractive().on("pointerover", () => {
       main_menu_button_controls.scale += 0.05;
     });
     main_menu_button_controls.on("pointerout", () => {
       main_menu_button_controls.scaleX = 0.36;
       main_menu_button_controls.scaleY = 0.36;
+    }).on("pointerdown", () => {
+      buttonClicked.play();
+      //HIDE EVERYTHING
+        main_menu_button_credits.visible = false;
+        main_menu_button_start.visible = false;
+        main_menu_button_controls.visible = false;
+        main_menu_button_settings.visible = false;
+        lOGO_VERSION5.visible = false;
+        button_back.visible =  true;
+
+      //BACK BUTTON
+        button_back.on("pointerdown", () => {
+              buttonClicked.play();
+              main_menu_button_credits.visible = true;
+              main_menu_button_start.visible = true;
+              main_menu_button_controls.visible = true;
+              main_menu_button_settings.visible = true;
+              lOGO_VERSION5.visible = true;
+              button_back.visible =  false;
+              aRROW_radio.visible = false;
+              controlsOF.visible = false;
+              wASD_radio.visible = false;
+              aRROW_tick.visible = false;
+              wASD_tick.visible= false;
+          })
+
+        // controlsOF
+        const controlsOF = this.add.image(407, 309, "controlsOF");
+        controlsOF.scaleX = 0.35;
+        controlsOF.scaleY = 0.35;
+
+        // ARROW_radio
+        const aRROW_radio = this.add.image(237, 283, "button-radio");
+        aRROW_radio.scaleX = 0.5;
+        aRROW_radio.scaleY = 0.5;
+        aRROW_radio.setInteractive();
+        aRROW_radio.on("pointerdown", () => {
+          buttonClicked.play();
+          if(!aRROW_tick.visible){
+            aRROW_tick.visible = true;
+            wASD_tick.visible = false;
+          }
+        }).on("pointerover", () => {
+              aRROW_radio.scale += 0.15;
+        }).on("pointerout", () => {
+            aRROW_radio.scaleX = 0.5;
+            aRROW_radio.scaleY = 0.5;
+        });
+
+        // WASD_radio
+        const wASD_radio = this.add.image(240, 377, "button-radio");
+        wASD_radio.scaleX = 0.5;
+        wASD_radio.scaleY = 0.5;
+        wASD_radio.setInteractive();
+        wASD_radio.on("pointerdown", () => {
+          buttonClicked.play();
+          if(!wASD_tick.visible){
+            wASD_tick.visible = true;
+            aRROW_tick.visible = false;
+          }
+        }).on("pointerover", () => {
+              wASD_radio.scale += 0.15;
+        }).on("pointerout", () => {
+            wASD_radio.scaleX = 0.5;
+            wASD_radio.scaleY = 0.5;
+        });
+        // ARROW_tick
+        const aRROW_tick = this.add.image(236, 284, "button-tick");
+        aRROW_tick.scaleX = 0.1;
+        aRROW_tick.scaleY = 0.1;
+
+        // WASD_tick
+        const wASD_tick = this.add.image(239, 376, "button-tick");
+        wASD_tick.scaleX = 0.1;
+        wASD_tick.scaleY = 0.1;
+        wASD_tick.visible = false;
+
+
     });
 
-    // main_menu_button_settings
+
+    // SETTINGS BUTTON
     const main_menu_button_settings = this.add.image(
       653,
       350,
@@ -145,21 +217,165 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_settings.scaleX = 0.36;
     main_menu_button_settings.scaleY = 0.36;
     main_menu_button_settings.setInteractive();
-    main_menu_button_settings.on("pointerdown", () => {
-     	loading_graphic.visible = true;
-    	buttonClicked.play();
-        setTimeout(() => {this.scene.start("Settings")}, 10);
-		backgroundMusic.stop();
-    });
     main_menu_button_settings.on("pointerover", () => {
       main_menu_button_settings.scale += 0.05;
-    });
-    main_menu_button_settings.on("pointerout", () => {
+    }).on("pointerout", () => {
       main_menu_button_settings.scaleX = 0.36;
       main_menu_button_settings.scaleY = 0.36;
-    });
+    }).on("pointerdown", () => {
+    	buttonClicked.play();
+      //HIDE EVERYTHING
+        main_menu_button_credits.visible = false;
+        main_menu_button_start.visible = false;
+        main_menu_button_controls.visible = false;
+        main_menu_button_settings.visible = false;
+        lOGO_VERSION5.visible = false;
+        button_back.visible =  true;
 
-    // main_menu_button_credits
+        //BACK BUTTON
+        button_back.on("pointerdown", () => {
+              buttonClicked.play();
+              main_menu_button_credits.visible = true;
+              main_menu_button_start.visible = true;
+              main_menu_button_controls.visible = true;
+              main_menu_button_settings.visible = true;
+              lOGO_VERSION5.visible = true;
+              button_back.visible =  false;
+
+              settings_container.visible = false;
+              fx_tick.visible = false;
+              fx_volumeDown.visible = false;
+              fx_volumeUp.visible = false;
+              fX_toggle.visible = false;
+              sound_volumeDown.visible = false;
+              sound_volumeUp.visible = false;
+              sound_tick.visible = false;
+              sound_toggle.visible = false;
+              
+          });
+
+        // settings_container
+        const settings_container = this.add.image(407, 309, "settings-container");
+        settings_container.scaleX = 0.35;
+        settings_container.scaleY = 0.35;
+        
+
+        // FX_toggle
+        const fX_toggle = this.add.image(417, 305, "button-toggle");
+        fX_toggle.scaleX = 0.3;
+        fX_toggle.scaleY = 0.3;
+        fX_toggle.setInteractive();
+        fX_toggle.on("pointerover", () => {
+          fX_toggle.scale += 0.05;
+        }).on("pointerout", () => {
+          fX_toggle.scaleX = 0.3;
+          fX_toggle.scaleY = 0.3;
+        }).on("pointerdown", () => {
+          buttonClicked.play();
+          if(fx_tick.visible){
+            fx_tick.visible = false;
+            fx_volumeDown.visible = true;
+            fx_volumeUp.visible = true;
+          }
+          else{
+            fx_tick.visible = true;
+            fx_volumeDown.visible = false;
+            fx_volumeUp.visible = false;
+          }
+        });
+        //MUSIC TOGGLE
+        const sound_toggle = this.add.image(417, 374, "button-toggle");
+        sound_toggle.scaleX = 0.3;
+        sound_toggle.scaleY = 0.3;
+        sound_toggle.setInteractive();
+        sound_toggle.on("pointerover", () => {
+          sound_toggle.scale += 0.05;
+        }).on("pointerout", () => {
+          sound_toggle.scaleX = 0.3;
+          sound_toggle.scaleY = 0.3;
+        }).on("pointerdown", () => {
+          buttonClicked.play();
+          if(sound_tick.visible){
+            sound_tick.visible = false;
+            sound_volumeDown.visible = true;
+            sound_volumeUp.visible = true;
+          }
+          else{
+            sound_tick.visible = true;
+            sound_volumeDown.visible = false;
+            sound_volumeUp.visible = false;
+          }
+        });
+        // FX VOLUME DOWN
+        const fx_volumeDown = this.add.image(510, 308, "button-volumeDown");
+        fx_volumeDown.scaleX = 0.1;
+        fx_volumeDown.scaleY = 0.1;
+        fx_volumeDown.setInteractive();
+        fx_volumeDown.on("pointerdown", () => {
+          buttonClicked.play()
+	    	}).on("pointerover", () => {
+          fx_volumeDown.scale += 0.05;
+        }).on("pointerout", () => {
+          fx_volumeDown.scaleX = 0.1;
+          fx_volumeDown.scaleY = 0.1;
+        });
+        // MUSIC VOLUME DOWN
+        const sound_volumeDown = this.add.image(510, 369, "button-volumeDown");
+        sound_volumeDown.scaleX = 0.1;
+        sound_volumeDown.scaleY = 0.1;
+        sound_volumeDown.setInteractive();
+        sound_volumeDown.on("pointerdown", () => {
+          buttonClicked.play()
+	    	}).on("pointerover", () => {
+          sound_volumeDown.scale += 0.05;
+        }).on("pointerout", () => {
+          sound_volumeDown.scaleX = 0.1;
+          sound_volumeDown.scaleY = 0.1;
+        });
+
+        //FX VOLUME UP
+        const fx_volumeUp = this.add.image(574, 308, "buttom-volumeUp");
+        fx_volumeUp.scaleX = 0.1;
+        fx_volumeUp.scaleY = 0.1;
+        fx_volumeUp.setInteractive();
+        fx_volumeUp.on("pointerdown", () => {
+          buttonClicked.play()
+		    }).on("pointerover", () => {
+          fx_volumeUp.scale += 0.05;
+        }).on("pointerout", () => {
+          fx_volumeUp.scaleX = 0.1;
+          fx_volumeUp.scaleY = 0.1;
+        });
+
+        // MUSIC VOLUME UP
+        const sound_volumeUp = this.add.image(574, 369, "buttom-volumeUp");
+        sound_volumeUp.scaleX = 0.1;
+        sound_volumeUp.scaleY = 0.1;
+        sound_volumeUp.setInteractive();
+        sound_volumeUp.on("pointerdown", () => {
+          buttonClicked.play()
+		    }).on("pointerover", () => {
+          sound_volumeUp.scale += 0.05;
+        }).on("pointerout", () => {
+          sound_volumeUp.scaleX = 0.1;
+          sound_volumeUp.scaleY = 0.1;
+        });
+
+        // FX TICK MARK
+        const fx_tick = this.add.image(417, 303, "button-tick");
+        fx_tick.scaleX = 0.1;
+        fx_tick.scaleY = 0.1;
+        fx_tick.visible = false;
+
+        // music_tick
+        const sound_tick = this.add.image(417, 372, "button-tick");
+        sound_tick.scaleX = 0.1;
+        sound_tick.scaleY = 0.1;
+        sound_tick.visible = false;
+
+    }); //end of SETTINGS BUTTON
+
+    // CREDITS BUTTON
     const main_menu_button_credits = this.add.image(
       653,
       460,
@@ -168,20 +384,53 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_credits.scaleX = 0.36;
     main_menu_button_credits.scaleY = 0.36;
     main_menu_button_credits.setInteractive();
-    main_menu_button_credits.on("pointerdown", () => {
-     	 loading_graphic.visible = true;
-    	buttonClicked.play();
-        setTimeout(() => {this.scene.start("Credits")}, 10);
-		backgroundMusic.stop();
+    main_menu_button_credits
+      .on("pointerover", () => {
+        main_menu_button_credits.scale += 0.05;
+      }).on("pointerout", () => {
+        main_menu_button_credits.scaleX = 0.36;
+        main_menu_button_credits.scaleY = 0.36;
+      }).on("pointerdown", () => {
+        buttonClicked.play();
+        
+        //HIDE EVERYTHING
+        main_menu_button_credits.visible = false;
+        main_menu_button_start.visible = false;
+        main_menu_button_controls.visible = false;
+        main_menu_button_settings.visible = false;
+        lOGO_VERSION5.visible = false;
+        button_back.visible =  true;
 
-    });
-    main_menu_button_credits.on("pointerover", () => {
-      main_menu_button_credits.scale += 0.05;
-    });
-    main_menu_button_credits.on("pointerout", () => {
-      main_menu_button_credits.scaleX = 0.36;
-      main_menu_button_credits.scaleY = 0.36;
-    });
+        //BACK BUTTON
+        button_back.on("pointerdown", () => {
+              buttonClicked.play();
+              main_menu_button_credits.visible = true;
+              main_menu_button_start.visible = true;
+              main_menu_button_controls.visible = true;
+              main_menu_button_settings.visible = true;
+              lOGO_VERSION5.visible = true;
+              button_back.visible =  false;
+              credits_textbox_content5.visible = false;
+        });
+
+        //DISPLAY NEW STUFF
+        const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
+        credits_textbox_content5.scaleX = 0.3;
+        credits_textbox_content5.scaleY = 0.3;
+      }); //end credits button
+    
+
+    const button_back = this.add.image(88, 87, "button-back");
+        button_back.scaleX = 0.15;
+        button_back.scaleY = 0.15;
+        button_back.setInteractive();
+        button_back.on("pointerover", () => {
+              button_back.scale += 0.05;
+        }).on("pointerout", () => {
+            button_back.scaleX = 0.15;
+            button_back.scaleY = 0.15;
+        })
+        .visible = false;
 
     //background-music
     var backgroundMusic = this.sound.add("main-menu");
@@ -190,10 +439,10 @@ class MainMenu extends Phaser.Scene {
     backgroundMusic.loop = true;
 
 		// loading_graphic
-		const loading_graphic = this.add.image(408, 313, "loading-graphic");
-		loading_graphic.scaleX = 1.1;
-        loading_graphic.scaleY = 1.1;
-        loading_graphic.visible = false;
+    const loading_graphic = this.add.image(408, 313, "loading-graphic");
+    loading_graphic.scaleX = 1.1;
+    loading_graphic.scaleY = 1.1;
+    loading_graphic.visible = false;
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;
