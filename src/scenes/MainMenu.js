@@ -407,8 +407,18 @@ class MainMenu extends Phaser.Scene {
         if(localStorage.getItem("settingsOptionFX") == "true"){
           fx_tick.visible = false;
         }
+        else{
+          fx_tick.visible = true;
+          fx_volumeDown.visible = false;
+          fx_volumeUp.visible = false;
+        }
         if(localStorage.getItem("settingsOptionMusic") == "true"){
           sound_tick.visible = false;
+        }
+        else{
+          sound_tick.visible = true;
+          sound_volumeDown.visible = false;
+          sound_volumeUp.visible = false;
         }
 
     }); //end of SETTINGS BUTTON
