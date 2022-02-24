@@ -47,6 +47,9 @@ class Preload extends Phaser.Scene {
 		if(localStorage.getItem("musicVolume") == null){
 			localStorage.setItem("musicVolume" , "0.5");
 		}
+		if(localStorage.getItem("fxVolume") == null){
+			localStorage.setItem("fxVolume" , "0.5");
+		}
 		
 
 		this.events.emit("scene-awake");
