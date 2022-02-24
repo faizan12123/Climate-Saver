@@ -121,20 +121,80 @@ class MainMenu extends Phaser.Scene {
     );
     main_menu_button_controls.scaleX = 0.36;
     main_menu_button_controls.scaleY = 0.36;
-    main_menu_button_controls.setInteractive();
-    main_menu_button_controls.on("pointerdown", () => {
-      	loading_graphic.visible = true;
-    	buttonClicked.play();
-        setTimeout(() => {this.scene.start("Controls")}, 10);
-		backgroundMusic.stop();
-    });
-    main_menu_button_controls.on("pointerover", () => {
+    main_menu_button_controls.setInteractive().on("pointerover", () => {
       main_menu_button_controls.scale += 0.05;
     });
     main_menu_button_controls.on("pointerout", () => {
       main_menu_button_controls.scaleX = 0.36;
       main_menu_button_controls.scaleY = 0.36;
+    }).on("pointerdown", () => {
+      buttonClicked.play();
+      //HIDE EVERYTHING
+        main_menu_button_credits.visible = false;
+        main_menu_button_start.visible = false;
+        main_menu_button_controls.visible = false;
+        main_menu_button_settings.visible = false;
+        lOGO_VERSION5.visible = false;
+        button_back.visible =  true;
+
+      //BACK BUTTON
+        button_back.on("pointerdown", () => {
+              buttonClicked.play();
+              main_menu_button_credits.visible = true;
+              main_menu_button_start.visible = true;
+              main_menu_button_controls.visible = true;
+              main_menu_button_settings.visible = true;
+              lOGO_VERSION5.visible = true;
+              button_back.visible =  false;
+              aRROW_radio.visible = false;
+              controlsOF.visible = false;
+              wASD_radio.visible = false;
+          })
+
+        // controlsOF
+        const controlsOF = this.add.image(407, 309, "controlsOF");
+        controlsOF.scaleX = 0.35;
+        controlsOF.scaleY = 0.35;
+
+        // ARROW_radio
+        const aRROW_radio = this.add.image(237, 283, "button-radio");
+        aRROW_radio.scaleX = 0.5;
+        aRROW_radio.scaleY = 0.5;
+        aRROW_radio.setInteractive();
+        aRROW_radio.on("pointerdown", () => {
+          buttonClicked.play();
+          if(!aRROW_tick.visible){
+            aRROW_tick.visible = true;
+            wASD_tick.visible = false;
+          }
+        });
+
+        // WASD_radio
+        const wASD_radio = this.add.image(240, 377, "button-radio");
+        wASD_radio.scaleX = 0.5;
+        wASD_radio.scaleY = 0.5;
+        wASD_radio.setInteractive();
+        wASD_radio.on("pointerdown", () => {
+          buttonClicked.play();
+          if(!wASD_tick.visible){
+            wASD_tick.visible = true;
+            aRROW_tick.visible = false;
+          }
+        });
+        // ARROW_tick
+        const aRROW_tick = this.add.image(236, 284, "button-tick");
+        aRROW_tick.scaleX = 0.1;
+        aRROW_tick.scaleY = 0.1;
+
+        // WASD_tick
+        const wASD_tick = this.add.image(239, 376, "button-tick");
+        wASD_tick.scaleX = 0.1;
+        wASD_tick.scaleY = 0.1;
+        wASD_tick.visible = false;
+
+
     });
+
 
     // SETTINGS BUTTON
     const main_menu_button_settings = this.add.image(
@@ -301,7 +361,7 @@ class MainMenu extends Phaser.Scene {
         sound_tick.scaleY = 0.1;
         sound_tick.visible = false;
 
-    });
+    }); //end of SETTINGS BUTTON
 
     // CREDITS BUTTON
     const main_menu_button_credits = this.add.image(
@@ -339,7 +399,7 @@ class MainMenu extends Phaser.Scene {
               lOGO_VERSION5.visible = true;
               button_back.visible =  false;
               credits_textbox_content5.visible = false;
-          })
+        });
 
         //DISPLAY NEW STUFF
         const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
