@@ -38,6 +38,12 @@ class Preload extends Phaser.Scene {
 		if(localStorage.getItem("controlsOptionArrows") == null){
 			localStorage.setItem("controlsOptionArrows", "true");
 		}
+		if(localStorage.getItem("settingsOptionFX") == null){
+			localStorage.setItem("settingsOptionFX", "true");
+		}
+		if(localStorage.getItem("settingsOptionMusic") == null){
+			localStorage.setItem("settingsOptionMusic" ,"true");
+		}
 		
 
 		this.events.emit("scene-awake");
