@@ -88,7 +88,7 @@ class MainMenu extends Phaser.Scene {
     lOGO_VERSION5.scaleY = 0.7;
 
     // Button Sounds
-    var buttonClicked = this.sound.add("buttonOnClick");
+    var buttonClicked = this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
     
     // main_menu_button_start
     const main_menu_button_start = this.add.image(
@@ -101,9 +101,10 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_start.setInteractive();
     main_menu_button_start.on("pointerdown", () => {
 	  		loading_graphic.visible = true;
-            buttonClicked.play();
-            setTimeout(() => {this.scene.start("Start")}, 10);
-			backgroundMusic.stop();
+        if(localStorage.settingsOptionFX == "true")
+          buttonClicked.play();
+        setTimeout(() => {this.scene.start("Start")}, 10);
+			  backgroundMusic.stop();
     });
     main_menu_button_start.on("pointerover", () => {
       main_menu_button_start.scale += 0.05;
@@ -128,7 +129,8 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_controls.scaleX = 0.36;
       main_menu_button_controls.scaleY = 0.36;
     }).on("pointerdown", () => {
-      buttonClicked.play();
+      if(localStorage.settingsOptionFX == "true")
+        buttonClicked.play();
       //HIDE EVERYTHING
         main_menu_button_credits.visible = false;
         main_menu_button_start.visible = false;
@@ -139,7 +141,8 @@ class MainMenu extends Phaser.Scene {
 
       //BACK BUTTON
         button_back.on("pointerdown", () => {
-              buttonClicked.play();
+              if(localStorage.settingsOptionFX == "true")
+                buttonClicked.play();
               main_menu_button_credits.visible = true;
               main_menu_button_start.visible = true;
               main_menu_button_controls.visible = true;
@@ -164,9 +167,12 @@ class MainMenu extends Phaser.Scene {
         aRROW_radio.scaleY = 0.5;
         aRROW_radio.setInteractive();
         aRROW_radio.on("pointerdown", () => {
-          buttonClicked.play();
+          if(localStorage.settingsOptionFX == "true")
+            buttonClicked.play();
+         
           if(!aRROW_tick.visible){
             aRROW_tick.visible = true;
+            localStorage.controlsOptionArrows = "true";
             wASD_tick.visible = false;
           }
         }).on("pointerover", () => {
@@ -182,9 +188,11 @@ class MainMenu extends Phaser.Scene {
         wASD_radio.scaleY = 0.5;
         wASD_radio.setInteractive();
         wASD_radio.on("pointerdown", () => {
-          buttonClicked.play();
+          if(localStorage.settingsOptionFX == "true")
+            buttonClicked.play();
           if(!wASD_tick.visible){
             wASD_tick.visible = true;
+            localStorage.controlsOptionArrows = "false";
             aRROW_tick.visible = false;
           }
         }).on("pointerover", () => {
@@ -197,13 +205,22 @@ class MainMenu extends Phaser.Scene {
         const aRROW_tick = this.add.image(236, 284, "button-tick");
         aRROW_tick.scaleX = 0.1;
         aRROW_tick.scaleY = 0.1;
+        
 
         // WASD_tick
         const wASD_tick = this.add.image(239, 376, "button-tick");
         wASD_tick.scaleX = 0.1;
         wASD_tick.scaleY = 0.1;
-        wASD_tick.visible = false;
+        //wASD_tick.visible = false;
 
+        if(localStorage.controlsOptionArrows == "true"){
+          aRROW_tick.visible = true;
+          wASD_tick.visible = false;
+        }
+        else{
+          aRROW_tick.visible = false;
+          wASD_tick.visible = true;
+        }
 
     });
 
@@ -223,7 +240,8 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_settings.scaleX = 0.36;
       main_menu_button_settings.scaleY = 0.36;
     }).on("pointerdown", () => {
-    	buttonClicked.play();
+    	if(localStorage.settingsOptionFX == "true")
+        buttonClicked.play();
       //HIDE EVERYTHING
         main_menu_button_credits.visible = false;
         main_menu_button_start.visible = false;
@@ -234,7 +252,8 @@ class MainMenu extends Phaser.Scene {
 
         //BACK BUTTON
         button_back.on("pointerdown", () => {
-              buttonClicked.play();
+              if(localStorage.settingsOptionFX == "true")
+                buttonClicked.play();
               main_menu_button_credits.visible = true;
               main_menu_button_start.visible = true;
               main_menu_button_controls.visible = true;
@@ -271,14 +290,17 @@ class MainMenu extends Phaser.Scene {
           fX_toggle.scaleX = 0.3;
           fX_toggle.scaleY = 0.3;
         }).on("pointerdown", () => {
-          buttonClicked.play();
+          
           if(fx_tick.visible){
             fx_tick.visible = false;
+            localStorage.settingsOptionFX = "true";
             fx_volumeDown.visible = true;
             fx_volumeUp.visible = true;
+
           }
           else{
             fx_tick.visible = true;
+            localStorage.settingsOptionFX = "false";
             fx_volumeDown.visible = false;
             fx_volumeUp.visible = false;
           }
@@ -294,14 +316,20 @@ class MainMenu extends Phaser.Scene {
           sound_toggle.scaleX = 0.3;
           sound_toggle.scaleY = 0.3;
         }).on("pointerdown", () => {
-          buttonClicked.play();
+          if(localStorage.settingsOptionFX == "true")
+            buttonClicked.play();
           if(sound_tick.visible){
             sound_tick.visible = false;
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+            localStorage.settingsOptionMusic = "true";
             sound_volumeDown.visible = true;
             sound_volumeUp.visible = true;
           }
           else{
             sound_tick.visible = true;
+            localStorage.settingsOptionMusic = "false";
+            backgroundMusic.stop();
             sound_volumeDown.visible = false;
             sound_volumeUp.visible = false;
           }
@@ -312,7 +340,13 @@ class MainMenu extends Phaser.Scene {
         fx_volumeDown.scaleY = 0.1;
         fx_volumeDown.setInteractive();
         fx_volumeDown.on("pointerdown", () => {
-          buttonClicked.play()
+          if(localStorage.settingsOptionFX == "true")
+            buttonClicked.play();
+
+          if(parseFloat(localStorage.fxVolume) >= 0.50){
+            localStorage.fxVolume = (parseFloat(localStorage.fxVolume) - 0.25).toString();
+            buttonClicked =  this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
+          }
 	    	}).on("pointerover", () => {
           fx_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
@@ -325,7 +359,16 @@ class MainMenu extends Phaser.Scene {
         sound_volumeDown.scaleY = 0.1;
         sound_volumeDown.setInteractive();
         sound_volumeDown.on("pointerdown", () => {
-          buttonClicked.play()
+          if(localStorage.settingsOptionFX == "true")
+           buttonClicked.play();
+
+          if(parseFloat(localStorage.musicVolume) >= 0.50){
+            localStorage.musicVolume = (parseFloat(localStorage.musicVolume) - 0.25).toString();
+            backgroundMusic.pause();
+            backgroundMusic =  this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+          }
 	    	}).on("pointerover", () => {
           sound_volumeDown.scale += 0.05;
         }).on("pointerout", () => {
@@ -339,7 +382,14 @@ class MainMenu extends Phaser.Scene {
         fx_volumeUp.scaleY = 0.1;
         fx_volumeUp.setInteractive();
         fx_volumeUp.on("pointerdown", () => {
-          buttonClicked.play()
+          if(localStorage.settingsOptionFX == "true")
+            buttonClicked.play();
+
+          if(parseFloat(localStorage.fxVolume) <= 8.0){
+            localStorage.fxVolume = (parseFloat(localStorage.fxVolume) + 0.25).toString();
+            buttonClicked =  this.sound.add("buttonOnClick",  {volume: parseFloat(localStorage.fxVolume)});
+          }
+          
 		    }).on("pointerover", () => {
           fx_volumeUp.scale += 0.05;
         }).on("pointerout", () => {
@@ -353,7 +403,16 @@ class MainMenu extends Phaser.Scene {
         sound_volumeUp.scaleY = 0.1;
         sound_volumeUp.setInteractive();
         sound_volumeUp.on("pointerdown", () => {
-          buttonClicked.play()
+          if(localStorage.settingsOptionFX == "true"){
+            buttonClicked.play();
+          }
+          if(parseFloat(localStorage.musicVolume) <= 4.75){
+            localStorage.musicVolume = (parseFloat(localStorage.musicVolume) + 0.25).toString();
+            backgroundMusic.pause();
+            backgroundMusic =  this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+          }
 		    }).on("pointerover", () => {
           sound_volumeUp.scale += 0.05;
         }).on("pointerout", () => {
@@ -365,13 +424,30 @@ class MainMenu extends Phaser.Scene {
         const fx_tick = this.add.image(417, 303, "button-tick");
         fx_tick.scaleX = 0.1;
         fx_tick.scaleY = 0.1;
-        fx_tick.visible = false;
+        //fx_tick.visible = false;
 
         // music_tick
         const sound_tick = this.add.image(417, 372, "button-tick");
         sound_tick.scaleX = 0.1;
         sound_tick.scaleY = 0.1;
-        sound_tick.visible = false;
+        //sound_tick.visible = false;
+
+        if(localStorage.getItem("settingsOptionFX") == "true"){
+          fx_tick.visible = false;
+        }
+        else{
+          fx_tick.visible = true;
+          fx_volumeDown.visible = false;
+          fx_volumeUp.visible = false;
+        }
+        if(localStorage.getItem("settingsOptionMusic") == "true"){
+          sound_tick.visible = false;
+        }
+        else{
+          sound_tick.visible = true;
+          sound_volumeDown.visible = false;
+          sound_volumeUp.visible = false;
+        }
 
     }); //end of SETTINGS BUTTON
 
@@ -391,7 +467,8 @@ class MainMenu extends Phaser.Scene {
         main_menu_button_credits.scaleX = 0.36;
         main_menu_button_credits.scaleY = 0.36;
       }).on("pointerdown", () => {
-        buttonClicked.play();
+        if(localStorage.settingsOptionFX == "true")
+          buttonClicked.play();
         
         //HIDE EVERYTHING
         main_menu_button_credits.visible = false;
@@ -403,7 +480,8 @@ class MainMenu extends Phaser.Scene {
 
         //BACK BUTTON
         button_back.on("pointerdown", () => {
-              buttonClicked.play();
+              if(localStorage.settingsOptionFX == "true")
+                buttonClicked.play();
               main_menu_button_credits.visible = true;
               main_menu_button_start.visible = true;
               main_menu_button_controls.visible = true;
@@ -433,10 +511,14 @@ class MainMenu extends Phaser.Scene {
         .visible = false;
 
     //background-music
-    var backgroundMusic = this.sound.add("main-menu");
+    var backgroundMusic = this.sound.add("main-menu" , {volume: parseFloat(localStorage.musicVolume)});
     loadingMusic.stop();
-    backgroundMusic.play();
     backgroundMusic.loop = true;
+    if(localStorage.settingsOptionMusic == "true"){
+      backgroundMusic.play();
+    }
+    
+    
 
 		// loading_graphic
     const loading_graphic = this.add.image(408, 313, "loading-graphic");
