@@ -149,6 +149,8 @@ class MainMenu extends Phaser.Scene {
               aRROW_radio.visible = false;
               controlsOF.visible = false;
               wASD_radio.visible = false;
+              aRROW_tick.visible = false;
+              wASD_tick.visible= false;
           })
 
         // controlsOF
