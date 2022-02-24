@@ -101,8 +101,8 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_start.setInteractive();
     main_menu_button_start.on("pointerdown", () => {
 	  		loading_graphic.visible = true;
-            buttonClicked.play();
-            setTimeout(() => {this.scene.start("Start")}, 10);
+        buttonClicked.play();
+          setTimeout(() => {this.scene.start("Start")}, 10);
 			backgroundMusic.stop();
     });
     main_menu_button_start.on("pointerover", () => {
@@ -167,6 +167,7 @@ class MainMenu extends Phaser.Scene {
           buttonClicked.play();
           if(!aRROW_tick.visible){
             aRROW_tick.visible = true;
+            localStorage.controlsOptionArrows = "true";
             wASD_tick.visible = false;
           }
         }).on("pointerover", () => {
@@ -185,6 +186,7 @@ class MainMenu extends Phaser.Scene {
           buttonClicked.play();
           if(!wASD_tick.visible){
             wASD_tick.visible = true;
+            localStorage.controlsOptionArrows = "false";
             aRROW_tick.visible = false;
           }
         }).on("pointerover", () => {
@@ -197,13 +199,22 @@ class MainMenu extends Phaser.Scene {
         const aRROW_tick = this.add.image(236, 284, "button-tick");
         aRROW_tick.scaleX = 0.1;
         aRROW_tick.scaleY = 0.1;
+        
 
         // WASD_tick
         const wASD_tick = this.add.image(239, 376, "button-tick");
         wASD_tick.scaleX = 0.1;
         wASD_tick.scaleY = 0.1;
-        wASD_tick.visible = false;
+        //wASD_tick.visible = false;
 
+        if(localStorage.controlsOptionArrows == "true"){
+          aRROW_tick.visible = true;
+          wASD_tick.visible = false;
+        }
+        else{
+          aRROW_tick.visible = false;
+          wASD_tick.visible = true;
+        }
 
     });
 
