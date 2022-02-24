@@ -121,19 +121,6 @@
             "y": 309,
             "scaleX": 0.3,
             "scaleY": 0.3
-        },
-        {
-            "type": "Image",
-            "id": "e301988c-2a4a-4a78-9835-261449e37eca",
-            "label": "loading_graphic",
-            "components": [],
-            "texture": {
-                "key": "loading-graphic"
-            },
-            "x": 404,
-            "y": 309,
-            "scaleX": 1.1,
-            "scaleY": 1.1
         }
     ],
     "plainObjects": [],

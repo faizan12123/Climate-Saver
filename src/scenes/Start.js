@@ -73,6 +73,17 @@ class Start extends Phaser.Scene {
 		const button_forward = this.add.image(722, 91, "button-forward");
 		button_forward.scaleX = 0.15;
 		button_forward.scaleY = 0.15;
+		button_forward.setInteractive();
+		button_forward.on("pointerdown", () => {
+			backgroundMusic.stop();
+			buttonClicked.play();
+			//this.scene.start("MainMenu");
+		}).on("pointerover", () => {
+      		button_forward.scale += 0.05;
+    	}).on("pointerout", () => {
+			button_forward.scaleX = 0.15;
+			button_forward.scaleY = 0.15;
+		});
 
 		// beach-container
 		const beach_container = this.add.image(595, 503, "bg");
