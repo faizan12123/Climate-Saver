@@ -1,16 +1,11 @@
-
-// You can write more code here
-
-/* START OF COMPILED CODE */
+/*
+	ARCHIVED, FULLY FUNCTIONAL, NO LONGER IMPLEMENTED IN GAME
+*/
 
 class Settings extends Phaser.Scene {
 
 	constructor() {
 		super("Settings");
-
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
 	}
 
 	/** @returns {void} */
