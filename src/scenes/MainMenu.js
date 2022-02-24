@@ -159,7 +159,7 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_settings.scaleY = 0.36;
     });
 
-    // main_menu_button_credits
+    // CREDITS BUTTON
     const main_menu_button_credits = this.add.image(
       653,
       460,
@@ -169,10 +169,39 @@ class MainMenu extends Phaser.Scene {
     main_menu_button_credits.scaleY = 0.36;
     main_menu_button_credits.setInteractive();
     main_menu_button_credits.on("pointerdown", () => {
-     	 loading_graphic.visible = true;
-    	buttonClicked.play();
-        setTimeout(() => {this.scene.start("Credits")}, 10);
-		backgroundMusic.stop();
+     	 //loading_graphic.visible = true;
+    	 buttonClicked.play();
+       //setTimeout(() => {this.scene.start("Credits")}, 10);
+		   //backgroundMusic.stop();
+
+
+       //HIDE EVERYTHING
+       main_menu_button_credits.visible = false;
+       main_menu_button_start.visible = false;
+       main_menu_button_controls.visible = false;
+       main_menu_button_settings.visible = false;
+       lOGO_VERSION5.visible = false;
+       button_back.visible =  true;
+
+       //BACK BUTTON
+       button_back.on("pointerdown", () => {
+            buttonClicked.play();
+            main_menu_button_credits.visible = true;
+            main_menu_button_start.visible = true;
+            main_menu_button_controls.visible = true;
+            main_menu_button_settings.visible = true;
+            lOGO_VERSION5.visible = true;
+            button_back.visible =  false;
+            credits_textbox_content5.visible = false;
+        })
+
+       //DISPLAY NEW STUFF
+       const credits_textbox_content5 = this.add.image(407, 309, "credits-textbox-content5");
+       credits_textbox_content5.scaleX = 0.3;
+       credits_textbox_content5.scaleY = 0.3;
+
+
+
 
     });
     main_menu_button_credits.on("pointerover", () => {
@@ -182,6 +211,18 @@ class MainMenu extends Phaser.Scene {
       main_menu_button_credits.scaleX = 0.36;
       main_menu_button_credits.scaleY = 0.36;
     });
+
+    const button_back = this.add.image(88, 87, "button-back");
+        button_back.scaleX = 0.15;
+        button_back.scaleY = 0.15;
+        button_back.setInteractive();
+        button_back.on("pointerover", () => {
+              button_back.scale += 0.05;
+        }).on("pointerout", () => {
+            button_back.scaleX = 0.15;
+            button_back.scaleY = 0.15;
+        })
+        .visible = false;
 
     //background-music
     var backgroundMusic = this.sound.add("main-menu");
