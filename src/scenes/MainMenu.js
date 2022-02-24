@@ -167,6 +167,11 @@ class MainMenu extends Phaser.Scene {
             aRROW_tick.visible = true;
             wASD_tick.visible = false;
           }
+        }).on("pointerover", () => {
+              aRROW_radio.scale += 0.15;
+        }).on("pointerout", () => {
+            aRROW_radio.scaleX = 0.5;
+            aRROW_radio.scaleY = 0.5;
         });
 
         // WASD_radio
@@ -180,6 +185,11 @@ class MainMenu extends Phaser.Scene {
             wASD_tick.visible = true;
             aRROW_tick.visible = false;
           }
+        }).on("pointerover", () => {
+              wASD_radio.scale += 0.15;
+        }).on("pointerout", () => {
+            wASD_radio.scaleX = 0.5;
+            wASD_radio.scaleY = 0.5;
         });
         // ARROW_tick
         const aRROW_tick = this.add.image(236, 284, "button-tick");
