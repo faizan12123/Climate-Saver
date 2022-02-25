@@ -157,12 +157,12 @@ class MainMenu extends Phaser.Scene {
           })
 
         // controlsOF
-        const controlsOF = this.add.image(407, 309, "controlsOF");
-        controlsOF.scaleX = 0.35;
-        controlsOF.scaleY = 0.35;
+        const controlsOF = this.add.image(405, 345, "controlsOF");
+        controlsOF.scaleX = 0.39;
+        controlsOF.scaleY = 0.39;
 
         // ARROW_radio
-        const aRROW_radio = this.add.image(237, 283, "button-radio");
+        const aRROW_radio = this.add.image(217, 320, "button-radio");
         aRROW_radio.scaleX = 0.5;
         aRROW_radio.scaleY = 0.5;
         aRROW_radio.setInteractive();
@@ -183,7 +183,7 @@ class MainMenu extends Phaser.Scene {
         });
 
         // WASD_radio
-        const wASD_radio = this.add.image(240, 377, "button-radio");
+        const wASD_radio = this.add.image(217, 410, "button-radio");
         wASD_radio.scaleX = 0.5;
         wASD_radio.scaleY = 0.5;
         wASD_radio.setInteractive();
@@ -202,13 +202,13 @@ class MainMenu extends Phaser.Scene {
             wASD_radio.scaleY = 0.5;
         });
         // ARROW_tick
-        const aRROW_tick = this.add.image(236, 284, "button-tick");
+        const aRROW_tick = this.add.image(217, 320, "button-tick");
         aRROW_tick.scaleX = 0.1;
         aRROW_tick.scaleY = 0.1;
         
 
         // WASD_tick
-        const wASD_tick = this.add.image(239, 376, "button-tick");
+        const wASD_tick = this.add.image(217, 410, "button-tick");
         wASD_tick.scaleX = 0.1;
         wASD_tick.scaleY = 0.1;
         //wASD_tick.visible = false;
@@ -274,13 +274,13 @@ class MainMenu extends Phaser.Scene {
           });
 
         // settings_container
-        const settings_container = this.add.image(407, 309, "settings-container");
+        const settings_container = this.add.image(398, 330, "settings-container");
         settings_container.scaleX = 0.35;
         settings_container.scaleY = 0.35;
         
 
         // FX_toggle
-        const fX_toggle = this.add.image(417, 305, "button-toggle");
+        const fX_toggle = this.add.image(417, 330, "button-toggle");
         fX_toggle.scaleX = 0.3;
         fX_toggle.scaleY = 0.3;
         fX_toggle.setInteractive();
@@ -306,7 +306,7 @@ class MainMenu extends Phaser.Scene {
           }
         });
         //MUSIC TOGGLE
-        const sound_toggle = this.add.image(417, 374, "button-toggle");
+        const sound_toggle = this.add.image(417, 395, "button-toggle");
         sound_toggle.scaleX = 0.3;
         sound_toggle.scaleY = 0.3;
         sound_toggle.setInteractive();
@@ -335,7 +335,7 @@ class MainMenu extends Phaser.Scene {
           }
         });
         // FX VOLUME DOWN
-        const fx_volumeDown = this.add.image(510, 308, "button-volumeDown");
+        const fx_volumeDown = this.add.image(510, 330, "button-volumeDown");
         fx_volumeDown.scaleX = 0.1;
         fx_volumeDown.scaleY = 0.1;
         fx_volumeDown.setInteractive();
@@ -354,7 +354,7 @@ class MainMenu extends Phaser.Scene {
           fx_volumeDown.scaleY = 0.1;
         });
         // MUSIC VOLUME DOWN
-        const sound_volumeDown = this.add.image(510, 369, "button-volumeDown");
+        const sound_volumeDown = this.add.image(510, 395, "button-volumeDown");
         sound_volumeDown.scaleX = 0.1;
         sound_volumeDown.scaleY = 0.1;
         sound_volumeDown.setInteractive();
@@ -377,7 +377,7 @@ class MainMenu extends Phaser.Scene {
         });
 
         //FX VOLUME UP
-        const fx_volumeUp = this.add.image(574, 308, "buttom-volumeUp");
+        const fx_volumeUp = this.add.image(574, 330, "buttom-volumeUp");
         fx_volumeUp.scaleX = 0.1;
         fx_volumeUp.scaleY = 0.1;
         fx_volumeUp.setInteractive();
@@ -398,7 +398,7 @@ class MainMenu extends Phaser.Scene {
         });
 
         // MUSIC VOLUME UP
-        const sound_volumeUp = this.add.image(574, 369, "buttom-volumeUp");
+        const sound_volumeUp = this.add.image(574, 395, "buttom-volumeUp");
         sound_volumeUp.scaleX = 0.1;
         sound_volumeUp.scaleY = 0.1;
         sound_volumeUp.setInteractive();
@@ -421,13 +421,13 @@ class MainMenu extends Phaser.Scene {
         });
 
         // FX TICK MARK
-        const fx_tick = this.add.image(417, 303, "button-tick");
+        const fx_tick = this.add.image(417, 330, "button-tick");
         fx_tick.scaleX = 0.1;
         fx_tick.scaleY = 0.1;
         //fx_tick.visible = false;
 
         // music_tick
-        const sound_tick = this.add.image(417, 372, "button-tick");
+        const sound_tick = this.add.image(417, 395, "button-tick");
         sound_tick.scaleX = 0.1;
         sound_tick.scaleY = 0.1;
         //sound_tick.visible = false;
