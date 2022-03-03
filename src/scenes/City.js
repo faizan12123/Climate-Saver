@@ -50,28 +50,6 @@ class City extends Phaser.Scene {
 		life_Bar_Animated_1.scaleX = 1.801947436688974;
 		life_Bar_Animated_1.scaleY = 1.801947436688974;
 
-		var buttonClicked = this.sound.add("buttonOnClick");
-
-
-		// menu
-		const menu = this.add.image(49, 41, "Menu");
-		menu.scaleX = 0.6972659199911628;
-		menu.scaleY = 0.6818283014111137;
-		menu.setInteractive();
-		menu.on("pointerdown", () => {
-			pause_menu.visible = true;
-			button_yes.visible = true;
-			button_no.visible = true;
-            buttonClicked.play();
-			})
-		menu.on("pointerover", () => {
-      		menu.scale += 0.05;
-    		})
-		menu.on("pointerout", () => {
-			menu.scaleX = 0.6972659199911628;
-			menu.scaleY = 0.6818283014111137;
-			});
-
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
 
@@ -81,51 +59,129 @@ class City extends Phaser.Scene {
 		score.scaleY = 0.62297233942359;
 
 		// pause_menu
-		const pause_menu = this.add.image(407, 278, "pause-menu");
+		const pause_menu = this.add.image(394, 281, "pause-menuV2");
 		pause_menu.scaleX = 0.26626053769694924;
 		pause_menu.scaleY = 0.27093994892320916;
 		pause_menu.visible = false;
 
+		//Button Sound
+		var buttonClicked = this.sound.add("buttonOnClick");
 
 		// button_yes
-		const button_yes = this.add.image(307, 347, "button-yes");
-		button_yes.scaleX = 0.32122529083972184;
-		button_yes.scaleY = 0.32122529083972184;
+		const button_yes = this.add.image(401, 409, "pause-menu-button-quit");
+		button_yes.scaleX = 0.27701381259992647;
+		button_yes.scaleY = 0.27701381259992647;
 		button_yes.setInteractive();
 		button_yes.on("pointerdown", () => {
 		buttonClicked.play();
 		this.scene.start("Start");
-		})
+		});
 		button_yes.on("pointerover", () => {
       	button_yes.scale += 0.05;
-    	})
+    	});
 		button_yes.on("pointerout", () => {
-		button_yes.scaleX = 0.32122529083972184;
-		button_yes.scaleY = 0.32122529083972184;
+		button_yes.scaleX = 0.27701381259992647;
+		button_yes.scaleY = 0.27701381259992647;
 		});
 		button_yes.visible = false;
-		
 
 		// button_no
-		const button_no = this.add.image(499, 347, "button-no");
-		button_no.scaleX = 0.32122529083972184;
-		button_no.scaleY = 0.32122529083972184;
+		const button_no = this.add.image(401, 323, "pause-menu-button-resume");
+		button_no.scaleX = 0.27701381259992647;
+		button_no.scaleY = 0.27701381259992647;
 		button_no.setInteractive();
 		button_no.on("pointerdown", () => {
 			buttonClicked.play();
 			this.scene.start("City");
-		})
+		});
 		button_no.on("pointerover", () => {
       		button_no.scale += 0.05;
-    	})
+    	});
 		button_no.on("pointerout", () => {
-			button_no.scaleX = 0.32122529083972184;
-			button_no.scaleY = 0.32122529083972184;
+			button_no.scaleX = 0.27701381259992647;
+			button_no.scaleY = 0.27701381259992647;
 		});
 		button_no.visible = false;
 
+		// button_sound
+		const button_sound = this.add.image(352, 229, "button-sound");
+		button_sound.scaleX = 0.16344056315099267;
+		button_sound.scaleY = 0.16344056315099267;
+		button_sound.setInteractive();
+		button_sound.on("pointerdown", () => {
+			buttonClicked.play();
+			if(fx_tick.visible){
+				fx_tick.visible = false;
+			}
+			else{
+				fx_tick.visible = true;
+			}
+		});
+		button_sound.on("pointerover", () => {
+      		button_sound.scale += 0.05;
+    	});
+		button_sound.on("pointerout", () => {
+			button_sound.scaleX = 0.16344056315099267;
+			button_sound.scaleY = 0.16344056315099267;
+		});
+		button_sound.visible = false;
 
-		
+		// button_music
+		const button_music = this.add.image(446, 229, "button-music");
+		button_music.scaleX = 0.16344056315099267;
+		button_music.scaleY = 0.16344056315099267;
+		button_music.setInteractive();
+		button_music.on("pointerdown", () => {
+			buttonClicked.play();
+			if(music_tick.visible){
+				music_tick.visible = false;
+			}
+			else{
+				music_tick.visible = true;
+			}
+		});
+		button_music.on("pointerover", () => {
+      		button_music.scale += 0.05;
+    	});
+		button_music.on("pointerout", () => {
+			button_music.scaleX = 0.16344056315099267;
+			button_music.scaleY = 0.16344056315099267;
+		});
+		button_music.visible = false;
+
+		// button_pause
+		const button_pause = this.add.image(49, 41, "button-pause");
+		button_pause.scaleX = 0.16010465842344668;
+		button_pause.scaleY = 0.1577276264549412;
+		button_pause.setInteractive();
+		button_pause.on("pointerdown", () => {
+			pause_menu.visible = true;
+			button_yes.visible = true;
+			button_no.visible = true;
+			button_sound.visible = true;
+			button_music.visible = true;
+            buttonClicked.play();
+			});
+		button_pause.on("pointerover", () => {
+      		button_pause.scale += 0.02;
+    		});
+		button_pause.on("pointerout", () => {
+			button_pause.scaleX = 0.16010465842344668;
+			button_pause.scaleY = 0.1577276264549412;
+			});
+
+		// music_tick
+		const music_tick = this.add.image(448, 225, "button-tick");
+		music_tick.scaleX = 0.14004985687875723;
+		music_tick.scaleY = 0.14004985687875723;
+		music_tick.visible = false;
+
+		// fx_tick
+		const fx_tick = this.add.image(353, 225, "button-tick");
+		fx_tick.scaleX = 0.14004985687875723;
+		fx_tick.scaleY = 0.14004985687875723;
+		fx_tick.visible = false;
+
 		this.cityV2 = cityV2;
 
 		this.events.emit("scene-awake");

@@ -95,19 +95,6 @@
         },
         {
             "type": "Image",
-            "id": "52b1d87f-452f-4398-81f2-dc5e6cf1ee4c",
-            "label": "menu",
-            "components": [],
-            "texture": {
-                "key": "Menu"
-            },
-            "x": 49,
-            "y": 41,
-            "scaleX": 0.6972659199911628,
-            "scaleY": 0.6818283014111137
-        },
-        {
-            "type": "Image",
             "id": "0c5b0745-b1da-4274-ac24-a9f6560b2f21",
             "label": "directionpad",
             "components": [],
@@ -136,10 +123,10 @@
             "label": "pause_menu",
             "components": [],
             "texture": {
-                "key": "pause-menu"
+                "key": "pause-menuV2"
             },
-            "x": 407,
-            "y": 278,
+            "x": 394,
+            "y": 281,
             "scaleX": 0.26626053769694924,
             "scaleY": 0.27093994892320916
         },
@@ -149,12 +136,12 @@
             "label": "button_yes",
             "components": [],
             "texture": {
-                "key": "button-yes"
+                "key": "pause-menu-button-quit"
             },
-            "x": 307,
-            "y": 347,
-            "scaleX": 0.32122529083972184,
-            "scaleY": 0.32122529083972184
+            "x": 401,
+            "y": 409,
+            "scaleX": 0.27701381259992647,
+            "scaleY": 0.27701381259992647
         },
         {
             "type": "Image",
@@ -162,12 +149,77 @@
             "label": "button_no",
             "components": [],
             "texture": {
-                "key": "button-no"
+                "key": "pause-menu-button-resume"
             },
-            "x": 499,
-            "y": 347,
-            "scaleX": 0.32122529083972184,
-            "scaleY": 0.32122529083972184
+            "x": 401,
+            "y": 323,
+            "scaleX": 0.27701381259992647,
+            "scaleY": 0.27701381259992647
+        },
+        {
+            "type": "Image",
+            "id": "56c3fd0e-990c-4665-972c-ea37fa65d7c0",
+            "label": "button_sound",
+            "components": [],
+            "texture": {
+                "key": "button-sound"
+            },
+            "x": 352,
+            "y": 229,
+            "scaleX": 0.16344056315099267,
+            "scaleY": 0.16344056315099267
+        },
+        {
+            "type": "Image",
+            "id": "557cc997-23b9-433c-be12-ae54438c21c8",
+            "label": "button_music",
+            "components": [],
+            "texture": {
+                "key": "button-music"
+            },
+            "x": 446,
+            "y": 229,
+            "scaleX": 0.16344056315099267,
+            "scaleY": 0.16344056315099267
+        },
+        {
+            "type": "Image",
+            "id": "2a566879-226a-4a7c-bc66-b739362c6b66",
+            "label": "button_pause",
+            "components": [],
+            "texture": {
+                "key": "button-pause"
+            },
+            "x": 49,
+            "y": 41,
+            "scaleX": 0.16010465842344668,
+            "scaleY": 0.1577276264549412
+        },
+        {
+            "type": "Image",
+            "id": "d50edbd3-8773-41d0-abf0-238a90a96888",
+            "label": "button_tick",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 448,
+            "y": 225,
+            "scaleX": 0.14004985687875723,
+            "scaleY": 0.14004985687875723
+        },
+        {
+            "type": "Image",
+            "id": "35652f02-0f10-44d5-8159-5653f4c1388f",
+            "label": "button_tick_1",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 353,
+            "y": 225,
+            "scaleX": 0.14004985687875723,
+            "scaleY": 0.14004985687875723
         }
     ],
     "plainObjects": [

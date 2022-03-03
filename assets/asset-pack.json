@@ -22,14 +22,29 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-music.png",
+                "type": "image",
+                "key": "button-music"
+            },
+            {
                 "url": "assets/buttons/button-no.png",
                 "type": "image",
                 "key": "button-no"
             },
             {
+                "url": "assets/buttons/button-pause.png",
+                "type": "image",
+                "key": "button-pause"
+            },
+            {
                 "url": "assets/buttons/button-radio.png",
                 "type": "image",
                 "key": "button-radio"
+            },
+            {
+                "url": "assets/buttons/button-sound.png",
+                "type": "image",
+                "key": "button-sound"
             },
             {
                 "url": "assets/buttons/button-tick.png",
@@ -281,6 +296,21 @@
                 "url": "assets/sprites/pause-menu.png",
                 "type": "image",
                 "key": "pause-menu"
+            },
+            {
+                "url": "assets/buttons/pause-menu-button-quit.png",
+                "type": "image",
+                "key": "pause-menu-button-quit"
+            },
+            {
+                "url": "assets/buttons/pause-menu-button-resume.png",
+                "type": "image",
+                "key": "pause-menu-button-resume"
+            },
+            {
+                "url": "assets/sprites/pause-menuV2.png",
+                "type": "image",
+                "key": "pause-menuV2"
             },
             {
                 "url": "assets/In Game Buttons/White Buttons/Score.png",
