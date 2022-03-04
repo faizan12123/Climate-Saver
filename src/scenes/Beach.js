@@ -6,7 +6,7 @@
 class Beach extends Phaser.Scene {
 
 	constructor() {
-		super("beach");
+		super("Beach");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -21,10 +21,10 @@ class Beach extends Phaser.Scene {
 		beachV1.addTilesetImage("beach", "beach-tilesV1");
 
 		// tilemap
-		const tilemap = this.add.container(0, 0);
+		const tilemap = this.add.container(0, -1);
 
 		// water_1
-		const water_1 = beachV1.createLayer("Water", ["beach"], 0, 0);
+		const water_1 = beachV1.createLayer("Water", ["beach"], 0, 1);
 		water_1.scaleX = 0.85;
 		water_1.scaleY = 0.85;
 		tilemap.add(water_1);
@@ -36,7 +36,7 @@ class Beach extends Phaser.Scene {
 		tilemap.add(dock);
 
 		// sand
-		const sand = beachV1.createLayer("Sand", ["beach"], 4, 5);
+		const sand = beachV1.createLayer("Sand", ["beach"], 7, 1);
 		sand.scaleX = 0.85;
 		sand.scaleY = 0.85;
 		tilemap.add(sand);
