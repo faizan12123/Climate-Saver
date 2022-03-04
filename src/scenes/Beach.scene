@@ -8,53 +8,69 @@
     },
     "displayList": [
         {
-            "type": "TilemapLayer",
-            "id": "c564751f-16bd-471d-a858-60f6848b7d8c",
-            "label": "water_1",
+            "type": "Container",
+            "id": "6800b03f-56a1-4f91-92d2-a16f1f3279cb",
+            "label": "tilemap",
             "components": [],
-            "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
-            "layerName": "Water",
-            "tilesets": [
-                "beach"
-            ]
-        },
-        {
-            "type": "TilemapLayer",
-            "id": "bec18719-7d16-47fe-ad88-524444356d1e",
-            "label": "dock",
-            "components": [],
-            "x": 4,
-            "y": 9,
-            "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
-            "layerName": "Dock",
-            "tilesets": [
-                "beach"
-            ]
-        },
-        {
-            "type": "TilemapLayer",
-            "id": "33377bb6-1146-4e09-b4ed-671401751422",
-            "label": "sand",
-            "components": [],
-            "x": 1,
-            "y": 2,
-            "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
-            "layerName": "Sand",
-            "tilesets": [
-                "beach"
-            ]
-        },
-        {
-            "type": "TilemapLayer",
-            "id": "2d86fd19-3c63-43a0-85d0-f4b751854c69",
-            "label": "objects",
-            "components": [],
-            "x": 3,
-            "y": 10,
-            "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
-            "layerName": "Objects",
-            "tilesets": [
-                "beach"
+            "list": [
+                {
+                    "type": "TilemapLayer",
+                    "id": "c564751f-16bd-471d-a858-60f6848b7d8c",
+                    "label": "water_1",
+                    "components": [],
+                    "scaleX": 0.85,
+                    "scaleY": 0.85,
+                    "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
+                    "layerName": "Water",
+                    "tilesets": [
+                        "beach"
+                    ]
+                },
+                {
+                    "type": "TilemapLayer",
+                    "id": "bec18719-7d16-47fe-ad88-524444356d1e",
+                    "label": "dock",
+                    "components": [],
+                    "x": 4,
+                    "y": 9,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85,
+                    "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
+                    "layerName": "Dock",
+                    "tilesets": [
+                        "beach"
+                    ]
+                },
+                {
+                    "type": "TilemapLayer",
+                    "id": "33377bb6-1146-4e09-b4ed-671401751422",
+                    "label": "sand",
+                    "components": [],
+                    "x": 4,
+                    "y": 5,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85,
+                    "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
+                    "layerName": "Sand",
+                    "tilesets": [
+                        "beach"
+                    ]
+                },
+                {
+                    "type": "TilemapLayer",
+                    "id": "2d86fd19-3c63-43a0-85d0-f4b751854c69",
+                    "label": "objects",
+                    "components": [],
+                    "x": 3,
+                    "y": 10,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85,
+                    "tilemapId": "ccb1241c-6e7a-4691-a658-abab31576cdc",
+                    "layerName": "Objects",
+                    "tilesets": [
+                        "beach"
+                    ]
+                }
             ]
         }
     ],
