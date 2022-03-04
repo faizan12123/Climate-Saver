@@ -2,6 +2,16 @@
     "section1": {
         "files": [
             {
+                "url": "assets/environment/beach-tilesV1.png",
+                "type": "image",
+                "key": "beach-tilesV1"
+            },
+            {
+                "url": "assets/environment/beachV1.json",
+                "type": "tilemapTiledJSON",
+                "key": "beachV1"
+            },
+            {
                 "url": "assets/Tile Background/bg.png",
                 "type": "image",
                 "key": "bg"

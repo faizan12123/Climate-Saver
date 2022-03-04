@@ -16,42 +16,40 @@ class Beach extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		
+		// beachV1
+		const beachV1 = this.add.tilemap("beachV1");
+		beachV1.addTilesetImage("beach", "beach-tilesV1");
 
-		// main-menu-background
-		const main_menu_background = this.add.container(407, 309);
+		// tilemap
+		const tilemap = this.add.container(0, -1);
 
-		// layer_0
-		const layer_0 = this.add.image(-6, -4, "main-menu-environment-sky");
-		layer_0.scaleX = 0.19;
-		layer_0.scaleY = 0.28;
-		main_menu_background.add(layer_0);
+		// water_1
+		const water_1 = beachV1.createLayer("Water", ["beach"], 0, 1);
+		water_1.scaleX = 0.85;
+		water_1.scaleY = 0.85;
+		tilemap.add(water_1);
 
-		// layer_1
-		const layer_1 = this.add.image(-6, -98, "main-menu-environment-cloud");
-		layer_1.scaleX = 0.2;
-		layer_1.scaleY = 0.2;
-		main_menu_background.add(layer_1);
+		// dock
+		const dock = beachV1.createLayer("Dock", ["beach"], 4, 9);
+		dock.scaleX = 0.85;
+		dock.scaleY = 0.85;
+		tilemap.add(dock);
 
-		// layer_2
-		const layer_2 = this.add.image(-3, 122, "main-menu-environment-tree1");
-		layer_2.scaleX = 0.19;
-		layer_2.scaleY = 0.17;
-		main_menu_background.add(layer_2);
+		// sand
+		const sand = beachV1.createLayer("Sand", ["beach"], 7, 1);
+		sand.scaleX = 0.85;
+		sand.scaleY = 0.85;
+		tilemap.add(sand);
 
-		// layer_3
-		const layer_3 = this.add.image(-9, 107, "main-menu-environment-tree2");
-		layer_3.scaleX = 0.19;
-		layer_3.scaleY = 0.17;
-		main_menu_background.add(layer_3);
+		// objects
+		const objects = beachV1.createLayer("Objects", ["beach"], 3, 10);
+		objects.scaleX = 0.85;
+		objects.scaleY = 0.85;
+		tilemap.add(objects);
+
+		this.beachV1 = beachV1;
 
 		this.events.emit("scene-awake");
-		console.log("beach has awoken")
-
-		const helloButton = this.add.text(100, 100, 'Hello Phaser!', { fill: '#000000' });
-    	helloButton.setInteractive();
-
-    	helloButton.on('pointerover', () => { console.log('pointerover'); });
 	}
 
 	/* START-USER-CODE */
