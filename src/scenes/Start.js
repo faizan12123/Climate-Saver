@@ -14,9 +14,6 @@ class Start extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
-		var backgroundMusic = this.sound.add("main-menu");
-		backgroundMusic.play();
-		backgroundMusic.loop = true;
 
 		// main-menu-background
 		const main_menu_background = this.add.container(407, 309);
@@ -51,7 +48,10 @@ class Start extends Phaser.Scene {
 		layer_4.scaleY = 0.17;
 		main_menu_background.add(layer_4);
 
-		 var buttonClicked = this.sound.add("buttonOnClick");
+		// bg
+		const bg = this.add.image(418, 370, "bg");
+		bg.scaleX = 0.75;
+		bg.scaleY = 0.5;
 
 		// button_back
 		const button_back = this.add.image(88, 87, "button-back");
@@ -85,21 +85,6 @@ class Start extends Phaser.Scene {
 			button_forward.scaleY = 0.15;
 		});
 
-		// beach-container
-		const beach_container = this.add.image(595, 503, "bg");
-		beach_container.scaleX = 0.35;
-		beach_container.scaleY = 0.2;
-
-		// forest-container
-		const forest_container = this.add.image(595, 288, "bg");
-		forest_container.scaleX = 0.35;
-		forest_container.scaleY = 0.2;
-
-		// icey-container
-		const icey_container = this.add.image(225, 503, "bg");
-		icey_container.scaleX = 0.35;
-		icey_container.scaleY = 0.2;
-
 		// maps_banner_title
 		const maps_banner_title = this.add.image(394, 102, "maps-banner-title");
 		maps_banner_title.scaleX = 0.35;
@@ -108,31 +93,55 @@ class Start extends Phaser.Scene {
 		// city-group
 		const city_group = this.add.container(218, 287);
 
-		// city-container
-		const city_container = this.add.image(7, 1, "bg");
-		city_container.scaleX = 0.35;
-		city_container.scaleY = 0.2;
-		city_group.add(city_container);
-		city_container.setInteractive();
-		city_container.on("pointerdown", () => {
-			console.log("city clicked");
-			backgroundMusic.stop();
-			buttonClicked.play();
-			this.scene.start("City");
-		});
+		// map_forest_disabled
+		const map_forest_disabled = this.add.image(556, 463, "map-forest-disabled");
+		map_forest_disabled.scaleX = 0.13;
+		map_forest_disabled.scaleY = 0.13;
 
-		// city_img
-		const city_img = this.add.image(0, 0, "city-img");
-		city_img.scaleX = 0.15;
-		city_img.scaleY = 0.15;
-		city_group.add(city_img);
-		city_img.setInteractive();
-		city_img.on("pointerdown", () => {
-			console.log("city clicked");
-			backgroundMusic.stop();
-			buttonClicked.play();
-			this.scene.start("City");
-		});
+		// map_icey_disabled
+		const map_icey_disabled = this.add.image(239, 463, "map-icey-disabled");
+		map_icey_disabled.scaleX = 0.13;
+		map_icey_disabled.scaleY = 0.13;
+
+		// map_beach_disabled
+		const map_beach_disabled = this.add.image(556, 271, "map-beach-disabled");
+		map_beach_disabled.scaleX = 0.13;
+		map_beach_disabled.scaleY = 0.13;
+
+		// map_city_disabled
+		const map_city_disabled = this.add.image(239, 276, "map-city-disabled");
+		map_city_disabled.scaleX = 0.13;
+		map_city_disabled.scaleY = 0.13;
+
+		// map_city_enabled
+		const map_city_enabled = this.add.image(239, 276, "map-city-enabled");
+		map_city_enabled.scaleX = 0.13;
+		map_city_enabled.scaleY = 0.13;
+
+		// map_forest_enabled
+		const map_forest_enabled = this.add.image(556, 462, "map-forest-enabled");
+		map_forest_enabled.scaleX = 0.13;
+		map_forest_enabled.scaleY = 0.13;
+
+		// map_beach_enabled
+		const map_beach_enabled = this.add.image(557, 270, "map-beach-enabled");
+		map_beach_enabled.scaleX = 0.13;
+		map_beach_enabled.scaleY = 0.13;
+
+		// map_icey_enabled
+		const map_icey_enabled = this.add.image(239, 462, "map-icey-enabled");
+		map_icey_enabled.scaleX = 0.13;
+		map_icey_enabled.scaleY = 0.13;
+
+		//background music
+		var backgroundMusic = this.sound.add("main-menu");
+		backgroundMusic.play();
+		backgroundMusic.loop = true;
+
+		map_city_enabled.visible = false;
+		map_forest_enabled.visible = false;
+		map_beach_enabled.visible = false;
+		map_icey_enabled.visible = false;
 
 		this.layer_0 = layer_0;
 		this.layer_1 = layer_1;

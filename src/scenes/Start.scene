@@ -98,6 +98,19 @@
         },
         {
             "type": "Image",
+            "id": "4090c571-f56c-4fd7-b88c-b4691b4a8680",
+            "label": "bg",
+            "components": [],
+            "texture": {
+                "key": "bg"
+            },
+            "x": 418,
+            "y": 370,
+            "scaleX": 0.75,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
             "id": "34058b0a-698f-464b-8798-fbf34ca91761",
             "label": "button_back",
             "components": [],
@@ -124,45 +137,6 @@
         },
         {
             "type": "Image",
-            "id": "99650d3a-4e0f-4136-ac17-8d0e86a580e0",
-            "label": "beach-container",
-            "components": [],
-            "texture": {
-                "key": "bg"
-            },
-            "x": 595,
-            "y": 503,
-            "scaleX": 0.35,
-            "scaleY": 0.2
-        },
-        {
-            "type": "Image",
-            "id": "f4bc575a-3b1b-4966-9fe5-bfde87f4539b",
-            "label": "forest-container",
-            "components": [],
-            "texture": {
-                "key": "bg"
-            },
-            "x": 595,
-            "y": 288,
-            "scaleX": 0.35,
-            "scaleY": 0.2
-        },
-        {
-            "type": "Image",
-            "id": "6de64b73-171b-4693-80c6-93d6121cd89f",
-            "label": "icey-container",
-            "components": [],
-            "texture": {
-                "key": "bg"
-            },
-            "x": 225,
-            "y": 503,
-            "scaleX": 0.35,
-            "scaleY": 0.2
-        },
-        {
-            "type": "Image",
             "id": "0de71c05-ec7c-48a9-a71d-caff2c13d302",
             "label": "maps_banner_title",
             "components": [],
@@ -181,32 +155,111 @@
             "components": [],
             "x": 218,
             "y": 287,
-            "list": [
-                {
-                    "type": "Image",
-                    "id": "7928fb7d-88ca-4c48-976f-1f8423df1bb4",
-                    "label": "city-container",
-                    "components": [],
-                    "texture": {
-                        "key": "bg"
-                    },
-                    "x": 7,
-                    "y": 1,
-                    "scaleX": 0.35,
-                    "scaleY": 0.2
-                },
-                {
-                    "type": "Image",
-                    "id": "b38aa1f3-09aa-477c-bf84-6d96a93c24a8",
-                    "label": "city_img",
-                    "components": [],
-                    "texture": {
-                        "key": "city-img"
-                    },
-                    "scaleX": 0.15,
-                    "scaleY": 0.15
-                }
-            ]
+            "list": []
+        },
+        {
+            "type": "Image",
+            "id": "1cc1c0f3-b2f0-453c-8e05-5b52ac51b3e3",
+            "label": "map_forest_disabled",
+            "components": [],
+            "texture": {
+                "key": "map-forest-disabled"
+            },
+            "x": 556,
+            "y": 463,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "8bd75848-a711-4f57-9ccd-4e699d25036c",
+            "label": "map_icey_disabled",
+            "components": [],
+            "texture": {
+                "key": "map-icey-disabled"
+            },
+            "x": 239,
+            "y": 463,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "199e0cb7-d6c7-4347-9cae-a6b4cff5bfdb",
+            "label": "map_beach_disabled",
+            "components": [],
+            "texture": {
+                "key": "map-beach-disabled"
+            },
+            "x": 556,
+            "y": 271,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "703b0364-d514-43e7-a592-edb0d45f8749",
+            "label": "map_city_disabled",
+            "components": [],
+            "texture": {
+                "key": "map-city-disabled"
+            },
+            "x": 239,
+            "y": 276,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "67e4f3cb-3065-447a-af4a-b339aa017301",
+            "label": "map_city_enabled",
+            "components": [],
+            "texture": {
+                "key": "map-city-enabled"
+            },
+            "x": 239,
+            "y": 276,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "20c9f17a-d46e-4155-917a-c2dfc928fb9e",
+            "label": "map_forest_enabled",
+            "components": [],
+            "texture": {
+                "key": "map-forest-enabled"
+            },
+            "x": 556,
+            "y": 462,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "84dac5ec-5878-496c-8157-767fe70106e3",
+            "label": "map_beach_enabled",
+            "components": [],
+            "texture": {
+                "key": "map-beach-enabled"
+            },
+            "x": 557,
+            "y": 270,
+            "scaleX": 0.13,
+            "scaleY": 0.13
+        },
+        {
+            "type": "Image",
+            "id": "310d1373-0250-4218-a811-bbd49ec2abdc",
+            "label": "map_icey_enabled",
+            "components": [],
+            "texture": {
+                "key": "map-icey-enabled"
+            },
+            "x": 239,
+            "y": 462,
+            "scaleX": 0.13,
+            "scaleY": 0.13
         }
     ],
     "plainObjects": [],
