@@ -2,6 +2,13 @@
     "section1": {
         "files": [
             {
+                "url": [
+                    "assets/sounds/beach.mp3"
+                ],
+                "type": "audio",
+                "key": "beach"
+            },
+            {
                 "url": "assets/environment/beach-tilesV1.png",
                 "type": "image",
                 "key": "beach-tilesV1"
@@ -64,6 +71,13 @@
                 "key": "buttonOnClick"
             },
             {
+                "url": [
+                    "assets/sounds/city-bgmusic.mp3"
+                ],
+                "type": "audio",
+                "key": "city-bgmusic"
+            },
+            {
                 "url": "assets/environment/city-img.jpg",
                 "type": "image",
                 "key": "city-img"
@@ -112,6 +126,13 @@
                 "url": "assets/sprites/credits-textbox-content5.png",
                 "type": "image",
                 "key": "credits-textbox-content5"
+            },
+            {
+                "url": [
+                    "assets/sounds/forest-bgmusic.mp3"
+                ],
+                "type": "audio",
+                "key": "forest-bgmusic"
             },
             {
                 "url": "assets/environment/Layer_0.png",
@@ -246,6 +267,13 @@
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
+            },
+            {
+                "url": [
+                    "assets/sounds/tundra-bgmusic.mp3"
+                ],
+                "type": "audio",
+                "key": "tundra-bgmusic"
             }
         ]
     },
