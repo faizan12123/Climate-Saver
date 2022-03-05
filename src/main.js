@@ -14,6 +14,8 @@ window.addEventListener("load", function () {
   game.scene.add("MainMenu", MainMenu);
   game.scene.add("Beach", Beach);
   game.scene.add("City", City);
+  game.scene.add("Icey", Icey);
+  game.scene.add("Forest", Forest);
   game.scene.add("Start", Start);
   /* DEPRECATED
   game.scene.add("Tutorial", Tutorial);
