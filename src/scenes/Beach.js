@@ -49,6 +49,11 @@ class Beach extends Phaser.Scene {
 
 		this.beachV1 = beachV1;
 
+		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
+		backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			backgroundMusic.play();
+		}
 		this.events.emit("scene-awake");
 	}
 
