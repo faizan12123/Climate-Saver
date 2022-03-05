@@ -1,0 +1,29 @@
+{
+    "id": "5059206f-881f-4a57-b463-6ad9c4d42903",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Forest"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "bfae7386-8b98-4d49-9bed-8d6d59004eb6",
+            "label": "loading_graphic",
+            "components": [],
+            "texture": {
+                "key": "loading-graphic"
+            },
+            "x": 506,
+            "y": 143
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

@@ -83,7 +83,11 @@ class City extends Phaser.Scene {
     		text.setText('Countdown: ' + formatTime(this.initialTime));
 			timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
 
-
+		var backgroundMusic = this.sound.add("city-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
+		backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			backgroundMusic.play();
+		}
 
 		this.events.emit("scene-awake");
 	}
