@@ -86,6 +86,7 @@ class Start extends Phaser.Scene {
 			button_forward.scaleX = 0.15;
 			button_forward.scaleY = 0.15;
 		});
+		button_forward.visible = false;
 
 		// maps_banner_title
 		const maps_banner_title = this.add.image(394, 102, "maps-banner-title");
@@ -104,6 +105,7 @@ class Start extends Phaser.Scene {
 			map_icey_disabled.visible = true;
 			map_beach_disabled.visible = true;
 			map_forest_disabled.visible = true;
+			button_forward.visible = true;
 		};
 
 		// map_forest_disabled
