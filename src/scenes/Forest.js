@@ -17,7 +17,7 @@ class Forest extends Phaser.Scene {
 	editorCreate() {
 
 		// loading_graphic
-		this.add.image(506, 143, "loading-graphic");
+		this.add.image(377, 239, "loading-graphic");
 
 		var backgroundMusic = this.sound.add("forest-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
