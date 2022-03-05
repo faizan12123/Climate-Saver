@@ -1,0 +1,29 @@
+{
+    "id": "57338d97-bb14-4cd9-aa9a-22aa51924f86",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Icey"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "aa3bdb55-36ee-41da-b760-49a831b3e830",
+            "label": "loading_graphic",
+            "components": [],
+            "texture": {
+                "key": "loading-graphic"
+            },
+            "x": 377,
+            "y": 239
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
