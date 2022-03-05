@@ -193,6 +193,46 @@
                 "key": "main-menu-environment-tree2"
             },
             {
+                "url": "assets/sprites/map-beach-disabled.png",
+                "type": "image",
+                "key": "map-beach-disabled"
+            },
+            {
+                "url": "assets/sprites/map-beach-enabled.png",
+                "type": "image",
+                "key": "map-beach-enabled"
+            },
+            {
+                "url": "assets/sprites/map-city-disabled.png",
+                "type": "image",
+                "key": "map-city-disabled"
+            },
+            {
+                "url": "assets/sprites/map-city-enabled.png",
+                "type": "image",
+                "key": "map-city-enabled"
+            },
+            {
+                "url": "assets/sprites/map-forest-disabled.png",
+                "type": "image",
+                "key": "map-forest-disabled"
+            },
+            {
+                "url": "assets/sprites/map-forest-enabled.png",
+                "type": "image",
+                "key": "map-forest-enabled"
+            },
+            {
+                "url": "assets/sprites/map-icey-disabled.png",
+                "type": "image",
+                "key": "map-icey-disabled"
+            },
+            {
+                "url": "assets/sprites/map-icey-enabled.png",
+                "type": "image",
+                "key": "map-icey-enabled"
+            },
+            {
                 "url": "assets/sprites/map-selection.png",
                 "type": "image",
                 "key": "map-selection"
