@@ -103,24 +103,9 @@
                 "key": "controlsOF"
             },
             {
-                "url": "assets/sprites/credit-textbox-content3.png",
-                "type": "image",
-                "key": "credit-textbox-content3"
-            },
-            {
                 "url": "assets/sprites/credits-banner-title.png",
                 "type": "image",
                 "key": "credits-banner-title"
-            },
-            {
-                "url": "assets/sprites/credits-textbox-content.png",
-                "type": "image",
-                "key": "credits-textbox-content"
-            },
-            {
-                "url": "assets/sprites/credits-textbox-content2.png",
-                "type": "image",
-                "key": "credits-textbox-content2"
             },
             {
                 "url": "assets/sprites/credits-textbox-content5.png",
