@@ -12,6 +12,11 @@
                 "key": "1_1"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/1.png",
+                "type": "image",
+                "key": "1_2"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/2.png",
                 "type": "image",
                 "key": "2"
@@ -20,6 +25,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_s/2.png",
                 "type": "image",
                 "key": "2_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/2.png",
+                "type": "image",
+                "key": "2_2"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/3.png",
@@ -32,6 +42,11 @@
                 "key": "3_1"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/3.png",
+                "type": "image",
+                "key": "3_2"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/4.png",
                 "type": "image",
                 "key": "4"
@@ -42,6 +57,11 @@
                 "key": "4_1"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/4.png",
+                "type": "image",
+                "key": "4_2"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/5.png",
                 "type": "image",
                 "key": "5"
@@ -50,6 +70,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_s/5.png",
                 "type": "image",
                 "key": "5_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/5.png",
+                "type": "image",
+                "key": "5_2"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/6.png",

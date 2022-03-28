@@ -82,6 +82,40 @@
             "frameRate": 24,
             "skipMissedFrames": true,
             "repeat": -1
+        },
+        {
+            "key": "up-idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5_2",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
         }
     ],
     "globalTimeScale": 1,
