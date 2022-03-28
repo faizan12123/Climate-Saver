@@ -17,6 +17,7 @@ window.addEventListener("load", function () {
   game.scene.add("Icey", Icey);
   game.scene.add("Forest", Forest);
   game.scene.add("Start", Start);
+  game.scene.add("Quiz", Quiz);
   /* DEPRECATED
   game.scene.add("Tutorial", Tutorial);
   game.scene.add("Controls", Controls);

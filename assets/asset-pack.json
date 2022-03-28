@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/buttons/answer-textbox.png",
+                "type": "image",
+                "key": "answer-textbox"
+            },
+            {
                 "url": [
                     "assets/sounds/beach.mp3"
                 ],
@@ -34,14 +39,29 @@
                 "key": "button-back"
             },
             {
+                "url": "assets/buttons/button-facts.png",
+                "type": "image",
+                "key": "button-facts"
+            },
+            {
                 "url": "assets/buttons/button-forward.png",
                 "type": "image",
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-quiz.png",
+                "type": "image",
+                "key": "button-quiz"
+            },
+            {
                 "url": "assets/buttons/button-radio.png",
                 "type": "image",
                 "key": "button-radio"
+            },
+            {
+                "url": "assets/buttons/button-setting.png",
+                "type": "image",
+                "key": "button-setting"
             },
             {
                 "url": "assets/buttons/button-tick.png",
@@ -249,9 +269,38 @@
                 "key": "maps-banner-title"
             },
             {
+                "url": "assets/environment/quiz-background.png",
+                "type": "image",
+                "key": "quiz-background"
+            },
+            {
+                "url": "assets/sprites/quiz-box.png",
+                "type": "image",
+                "key": "quiz-box"
+            },
+            {
+                "url": "assets/sprites/quiz-box-start.png",
+                "type": "image",
+                "key": "quiz-box-start"
+            },
+            {
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
+            },
+            {
+                "url": [
+                    "assets/sounds/sound-right.mp3"
+                ],
+                "type": "audio",
+                "key": "sound-right"
+            },
+            {
+                "url": [
+                    "assets/sounds/sound-wrong.mp3"
+                ],
+                "type": "audio",
+                "key": "sound-wrong"
             },
             {
                 "url": [

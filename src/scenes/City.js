@@ -62,6 +62,16 @@ class City extends Phaser.Scene {
 		windows_and_Doors.scaleY = 1.25;
 
 		this.cityV2 = cityV2;
+		
+		//temp button-quiz
+		const button_quiz = this.add.image(656,50,"button-quiz");
+		button_quiz.setInteractive();
+		button_quiz.scaleX = 0.36;
+    	button_quiz.scaleY = 0.36;
+		button_quiz.on("pointerdown", () =>{
+			backgroundMusic.stop();
+			this.scene.start("Quiz");
+		});
 
 		const main_menu_button_start = this.add.image(
       	656,
