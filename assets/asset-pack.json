@@ -39,9 +39,24 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-music.png",
+                "type": "image",
+                "key": "button-music"
+            },
+            {
+                "url": "assets/buttons/button-pause.png",
+                "type": "image",
+                "key": "button-pause"
+            },
+            {
                 "url": "assets/buttons/button-radio.png",
                 "type": "image",
                 "key": "button-radio"
+            },
+            {
+                "url": "assets/buttons/button-sound.png",
+                "type": "image",
+                "key": "button-sound"
             },
             {
                 "url": "assets/buttons/button-tick.png",
@@ -113,6 +128,11 @@
                 "key": "credits-textbox-content5"
             },
             {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
+                "type": "image",
+                "key": "D-Pad"
+            },
+            {
                 "url": [
                     "assets/sounds/forest-bgmusic.mp3"
                 ],
@@ -120,9 +140,19 @@
                 "key": "forest-bgmusic"
             },
             {
+                "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
+                "type": "image",
+                "key": "health_bar_decoration"
+            },
+            {
                 "url": "assets/environment/Layer_0.png",
                 "type": "image",
                 "key": "Layer_0"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
+                "type": "image",
+                "key": "Life Bar Animated 1"
             },
             {
                 "url": "assets/environment/loading-graphic.png",
@@ -247,6 +277,26 @@
                 "url": "assets/sprites/maps-banner-title.png",
                 "type": "image",
                 "key": "maps-banner-title"
+            },
+            {
+                "url": "assets/buttons/pause-menu-button-quit.png",
+                "type": "image",
+                "key": "pause-menu-button-quit"
+            },
+            {
+                "url": "assets/buttons/pause-menu-button-resume.png",
+                "type": "image",
+                "key": "pause-menu-button-resume"
+            },
+            {
+                "url": "assets/sprites/pause-menuV2.png",
+                "type": "image",
+                "key": "pause-menuV2"
+            },
+            {
+                "url": "assets/In Game Buttons/White Buttons/Score.png",
+                "type": "image",
+                "key": "Score"
             },
             {
                 "url": "assets/sprites/settings-container.png",
