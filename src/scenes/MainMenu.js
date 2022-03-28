@@ -186,27 +186,40 @@ class MainMenu extends Phaser.Scene {
     //******************character movement********************
     let player;
     let cursors;
-    player = this.physics.add.sprite(100, 450, 'dude');
+    player = this.physics.add.sprite(100, 450, 'character');
 
         player.setBounce(0.2);
         player.setCollideWorldBounds(true);
 
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+            frames: this.anims.generateFrameNumbers('character', { start: 26, end: 26 }),
             frameRate: 10,
             repeat: -1
         });
 
         this.anims.create({
             key: 'turn',
-            frames: [ { key: 'dude', frame: 4 } ],
+            frames: [ { key: 'character', frame: 2 } ],
             frameRate: 20
         });
 
         this.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frames: this.anims.generateFrameNumbers('character', { start: 10, end: 10 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.anims.create({
+            key: 'down',
+            frames: this.anims.generateFrameNumbers('character', { start: 4, end: 4 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'up',
+            frames: this.anims.generateFrameNumbers('character', { start: 18, end: 18 }),
             frameRate: 10,
             repeat: -1
         });
@@ -261,6 +274,18 @@ class MainMenu extends Phaser.Scene {
             this.player.setVelocityX(160);
 
             this.player.anims.play('right', true);
+        }
+        else if (this.cursors.up.isDown)
+        {
+            this.player.setVelocityY(-160);
+
+            this.player.anims.play('up', true);
+        }
+        else if (this.cursors.down.isDown)
+        {
+            this.player.setVelocityY(160);
+
+            this.player.anims.play('down', true);
         }
         else
         {
