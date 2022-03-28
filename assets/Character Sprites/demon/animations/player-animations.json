@@ -1,5 +1,90 @@
 {
-    "anims": [],
+    "anims": [
+        {
+            "key": "down-walk",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "6",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "7",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "8",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "down-idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5_1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        }
+    ],
+    "globalTimeScale": 1,
     "meta": {
         "app": "Phaser Editor 2D v3",
         "contentType": "Phaser v3 Animations"
