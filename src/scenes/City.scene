@@ -1,5 +1,5 @@
 {
-    "id": "661a5e77-ff4b-4544-a092-c23f55e5eb08",
+    "id": "a7d9f443-6881-4bab-ad46-fad9e0e7d90e",
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
@@ -66,6 +66,160 @@
             "tilesets": [
                 "City"
             ]
+        },
+        {
+            "type": "Image",
+            "id": "357017d5-6599-4954-8606-b42401a0cede",
+            "label": "health_bar_decoration",
+            "components": [],
+            "texture": {
+                "key": "health_bar_decoration"
+            },
+            "x": 691,
+            "y": 44,
+            "scaleX": 2.876226221353047,
+            "scaleY": 2.876226221353047
+        },
+        {
+            "type": "Image",
+            "id": "4d628ae6-d117-46db-b115-66a59da11bdf",
+            "label": "life_Bar_Animated_1",
+            "components": [],
+            "texture": {
+                "key": "Life Bar Animated 1"
+            },
+            "x": 713,
+            "y": 44,
+            "scaleX": 1.801947436688974,
+            "scaleY": 1.801947436688974
+        },
+        {
+            "type": "Image",
+            "id": "0c5b0745-b1da-4274-ac24-a9f6560b2f21",
+            "label": "directionpad",
+            "components": [],
+            "texture": {
+                "key": "D-Pad"
+            },
+            "x": 692,
+            "y": 520
+        },
+        {
+            "type": "Image",
+            "id": "81d1a581-7425-485f-9788-aceb75f704fc",
+            "label": "score",
+            "components": [],
+            "texture": {
+                "key": "Score"
+            },
+            "x": 384,
+            "y": 44,
+            "scaleX": 0.62297233942359,
+            "scaleY": 0.62297233942359
+        },
+        {
+            "type": "Image",
+            "id": "0f3ebedb-334a-44f5-b8ae-c3293c1db8cf",
+            "label": "pause_menu",
+            "components": [],
+            "texture": {
+                "key": "pause-menuV2"
+            },
+            "x": 394,
+            "y": 281,
+            "scaleX": 0.26626053769694924,
+            "scaleY": 0.27093994892320916
+        },
+        {
+            "type": "Image",
+            "id": "72115f17-6c0f-404c-8ba2-c61522d239c4",
+            "label": "button_yes",
+            "components": [],
+            "texture": {
+                "key": "pause-menu-button-quit"
+            },
+            "x": 401,
+            "y": 409,
+            "scaleX": 0.27701381259992647,
+            "scaleY": 0.27701381259992647
+        },
+        {
+            "type": "Image",
+            "id": "24dbccf4-cbeb-4fbd-8803-8babb7b8889c",
+            "label": "button_no",
+            "components": [],
+            "texture": {
+                "key": "pause-menu-button-resume"
+            },
+            "x": 401,
+            "y": 323,
+            "scaleX": 0.27701381259992647,
+            "scaleY": 0.27701381259992647
+        },
+        {
+            "type": "Image",
+            "id": "56c3fd0e-990c-4665-972c-ea37fa65d7c0",
+            "label": "button_sound",
+            "components": [],
+            "texture": {
+                "key": "button-sound"
+            },
+            "x": 352,
+            "y": 229,
+            "scaleX": 0.16344056315099267,
+            "scaleY": 0.16344056315099267
+        },
+        {
+            "type": "Image",
+            "id": "557cc997-23b9-433c-be12-ae54438c21c8",
+            "label": "button_music",
+            "components": [],
+            "texture": {
+                "key": "button-music"
+            },
+            "x": 446,
+            "y": 229,
+            "scaleX": 0.16344056315099267,
+            "scaleY": 0.16344056315099267
+        },
+        {
+            "type": "Image",
+            "id": "2a566879-226a-4a7c-bc66-b739362c6b66",
+            "label": "button_pause",
+            "components": [],
+            "texture": {
+                "key": "button-pause"
+            },
+            "x": 49,
+            "y": 41,
+            "scaleX": 0.16010465842344668,
+            "scaleY": 0.1577276264549412
+        },
+        {
+            "type": "Image",
+            "id": "d50edbd3-8773-41d0-abf0-238a90a96888",
+            "label": "button_tick",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 448,
+            "y": 225,
+            "scaleX": 0.14004985687875723,
+            "scaleY": 0.14004985687875723
+        },
+        {
+            "type": "Image",
+            "id": "35652f02-0f10-44d5-8159-5653f4c1388f",
+            "label": "button_tick_1",
+            "components": [],
+            "texture": {
+                "key": "button-tick"
+            },
+            "x": 353,
+            "y": 225,
+            "scaleX": 0.14004985687875723,
+            "scaleY": 0.14004985687875723
         }
     ],
     "plainObjects": [
