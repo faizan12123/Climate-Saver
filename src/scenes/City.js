@@ -227,6 +227,14 @@ class City extends Phaser.Scene {
 
 		this.cityV2 = cityV2;
 
+		/*--------------GAMEPLAY THINGS--------------- */
+		this.add.text(20, 0, 'Space Bar to hit things. Arrows to move', { fontFamily: "Georgia", fontSize: "40px", color: "yellow" });
+		// player
+		const player = this.add.sprite(489, 348, "1_1");
+		new PhysicsV2(player);
+		new MovementV2(player);
+		this.player = player;
+
 		this.events.emit("scene-awake");
 	}
 
@@ -237,6 +245,7 @@ class City extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.player.play("down-idle");
 	}
 
 	/* END-USER-CODE */
