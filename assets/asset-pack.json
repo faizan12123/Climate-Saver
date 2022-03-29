@@ -112,6 +112,11 @@
                 "key": "1_3"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/1.png",
+                "type": "image",
+                "key": "1_4"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_attack_w/10.png",
                 "type": "image",
                 "key": "10"
@@ -152,6 +157,11 @@
                 "key": "2_3"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/2.png",
+                "type": "image",
+                "key": "2_4"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/3.png",
                 "type": "image",
                 "key": "3"
@@ -170,6 +180,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_go_w/3.png",
                 "type": "image",
                 "key": "3_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/3.png",
+                "type": "image",
+                "key": "3_4"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/4.png",
@@ -192,6 +207,11 @@
                 "key": "4_3"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/4.png",
+                "type": "image",
+                "key": "4_4"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/5.png",
                 "type": "image",
                 "key": "5"
@@ -212,6 +232,11 @@
                 "key": "5_3"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/5.png",
+                "type": "image",
+                "key": "5_4"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/6.png",
                 "type": "image",
                 "key": "6"
@@ -220,6 +245,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_go_w/6.png",
                 "type": "image",
                 "key": "6_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/6.png",
+                "type": "image",
+                "key": "6_2"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/7.png",
@@ -232,6 +262,11 @@
                 "key": "7_1"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/7.png",
+                "type": "image",
+                "key": "7_2"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/8.png",
                 "type": "image",
                 "key": "8"
@@ -240,6 +275,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_go_w/8.png",
                 "type": "image",
                 "key": "8_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/8.png",
+                "type": "image",
+                "key": "8_2"
             },
             {
                 "url": "assets/buttons/answer-textbox.png",
