@@ -1,30 +1,31 @@
 
-// You can write more code here
-
-/* START OF COMPILED CODE */
-
 class Forest extends Phaser.Scene {
 
 	constructor() {
 		super("Forest");
-
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
 	}
 
 	/** @returns {void} */
 	editorCreate() {
 
-		// loading_graphic
-		this.add.image(377, 239, "loading-graphic");
+		// forestMap
+		const forestMap = this.add.tilemap("forestMap");
+		forestMap.addTilesetImage("forestTitle", "forestTile");
 
-		//load music
-		var backgroundMusic = this.sound.add("forest-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
-		backgroundMusic.loop = true;
-		if(localStorage.settingsOptionMusic == "true"){
-			backgroundMusic.play();
-		}
+		// groundLayer_1
+		const groundLayer_1 = forestMap.createLayer("groundLayer", ["forestTitle"], 0, -201);
+		groundLayer_1.scaleX = 1.3;
+		groundLayer_1.scaleY = 1.3;
+
+		// treeLayer
+		const treeLayer = forestMap.createLayer("treeLayer", ["forestTitle"], 0, -201);
+		treeLayer.scaleX = 1.3;
+		treeLayer.scaleY = 1.3;
+
+		// buildingLayer
+		const buildingLayer = forestMap.createLayer("buildingLayer", ["forestTitle"], 0, -201);
+		buildingLayer.scaleX = 1.3;
+		buildingLayer.scaleY = 1.3;
 
 		// health_bar_decoration
 		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
@@ -175,6 +176,14 @@ class Forest extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
+		//load music
+		var backgroundMusic = this.sound.add("forest-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
+		backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			backgroundMusic.play();
+		}
+
+		this.forestMap = forestMap;
 
 		this.events.emit("scene-awake");
 	}
