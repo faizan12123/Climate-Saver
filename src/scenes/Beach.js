@@ -20,32 +20,17 @@ class Beach extends Phaser.Scene {
 		const beachV1 = this.add.tilemap("beachV1");
 		beachV1.addTilesetImage("beach", "beach-tilesV1");
 
-		// tilemap
-		const tilemap = this.add.container(0, -1);
-
 		// water_1
-		const water_1 = beachV1.createLayer("Water", ["beach"], 0, 1);
-		water_1.scaleX = 0.85;
-		water_1.scaleY = 0.85;
-		tilemap.add(water_1);
+		beachV1.createLayer("Water", ["beach"], 1, 0);
 
 		// dock
-		const dock = beachV1.createLayer("Dock", ["beach"], 4, 9);
-		dock.scaleX = 0.85;
-		dock.scaleY = 0.85;
-		tilemap.add(dock);
+		beachV1.createLayer("Dock", ["beach"], 11, 0);
 
 		// sand
-		const sand = beachV1.createLayer("Sand", ["beach"], 7, 1);
-		sand.scaleX = 0.85;
-		sand.scaleY = 0.85;
-		tilemap.add(sand);
+		beachV1.createLayer("Sand", ["beach"], 14, -1);
 
 		// objects
-		const objects = beachV1.createLayer("Objects", ["beach"], 3, 10);
-		objects.scaleX = 0.85;
-		objects.scaleY = 0.85;
-		tilemap.add(objects);
+		beachV1.createLayer("Objects", ["beach"], 3, 2);
 
 		this.beachV1 = beachV1;
 

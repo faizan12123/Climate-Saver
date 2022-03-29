@@ -16,17 +16,27 @@ class Beta extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		
-		// bg
-		const bg = this.add.image(287, 164, "bg");
-		bg.scaleX = 0.2;
-		bg.scaleY = 0.2;
+		// beachV1
+		const beachV1 = this.add.tilemap("beachV1");
+		beachV1.addTilesetImage("beach", "beach-tilesV1");
 
 		// player
-		const player = this.add.sprite(489, 348, "1_1");
-		new PhysicsV2(player);
-		new MovementV2(player);
+		const player = this.add.sprite(490, 348, "1_1");
+
+		// water_1
+		beachV1.createLayer("Water", ["beach"], 1, 0);
+
+		// dock
+		beachV1.createLayer("Dock", ["beach"], 11, 0);
+
+		// sand
+		beachV1.createLayer("Sand", ["beach"], 14, -1);
+
+		// objects
+		beachV1.createLayer("Objects", ["beach"], 3, 2);
+
 		this.player = player;
+		this.beachV1 = beachV1;
 
 		this.events.emit("scene-awake");
 	}
