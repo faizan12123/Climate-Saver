@@ -7,7 +7,7 @@ class MovementV2 {
 
 	constructor(gameObject) {
 		this.gameObject = gameObject;
-		this.lastX = down;
+		this.lastX = "down";
 		gameObject["__MovementV2"] = this;
 
 		/* START-USER-CTR-CODE */
@@ -26,11 +26,12 @@ class MovementV2 {
 
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
+	lastX;
 
 	/* START-USER-CODE */
 	update(){
-		const speed = 200
-		const player = this.gameObject
+		const speed = 200;
+		const player = this.gameObject;
 		const body  = player.body;
 		if(!body){
 			return;
