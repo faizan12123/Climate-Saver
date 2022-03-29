@@ -61,8 +61,8 @@
             "id": "a7ac5247-3323-40fe-b839-7696e5f955ba",
             "label": "objects",
             "components": [],
-            "x": 15,
-            "y": 5,
+            "x": 3,
+            "y": 2,
             "tilemapId": "ac5438b9-c84a-472d-b78f-926fd9335c47",
             "layerName": "Objects",
             "tilesets": [

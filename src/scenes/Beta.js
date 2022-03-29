@@ -33,7 +33,7 @@ class Beta extends Phaser.Scene {
 		beachV1.createLayer("Sand", ["beach"], 14, -1);
 
 		// objects
-		beachV1.createLayer("Objects", ["beach"], 15, 5);
+		beachV1.createLayer("Objects", ["beach"], 3, 2);
 
 		this.player = player;
 		this.beachV1 = beachV1;
