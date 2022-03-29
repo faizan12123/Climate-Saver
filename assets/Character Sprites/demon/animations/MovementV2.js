@@ -13,10 +13,20 @@ class MovementV2 {
 		/* START-USER-CTR-CODE */
 
 		const scene = this.gameObject.scene;
-		this.cursors = scene.input.keyboard.createCursorKeys();
 		scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
 		// Write your code here.
 		/* END-USER-CTR-CODE */
+
+		//for WASD keys
+		this.keys = scene.input.keyboard.addKeys({
+			a:  Phaser.Input.Keyboard.KeyCodes.A,
+			s:  Phaser.Input.Keyboard.KeyCodes.S,
+			d:  Phaser.Input.Keyboard.KeyCodes.D,
+			w:  Phaser.Input.Keyboard.KeyCodes.W
+		});
+		//for arrow keys
+		this.cursors = scene.input.keyboard.createCursorKeys();
+
 	}
 
 	/** @returns {MovementV2} */
@@ -27,32 +37,33 @@ class MovementV2 {
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
 	lastX;
-
+	
 	/* START-USER-CODE */
 	update(){
+		
 		const speed = 200;
 		const player = this.gameObject;
 		const body  = player.body;
 		if(!body){
 			return;
 		}
-
-		if (this.cursors.left.isDown)
+		
+		if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.left.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.a.isDown))
 		{
 			body.setVelocity(-speed, 0)
 			player.play('up-walk', true)
 		}
-		else if (this.cursors.right.isDown)
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.right.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.d.isDown))
 		{
 			body.setVelocity(speed, 0)
 			player.play('right-walk', true)
 		}
-		else if (this.cursors.up.isDown)
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.up.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.w.isDown))
 		{
 			body.setVelocity(0, -speed)
 			player.play('up-walk', true)
 		}
-		else if (this.cursors.down.isDown)
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.down.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" &&  this.keys.s.isDown))
 		{
 			body.setVelocity(0, speed)
 			player.play('down-walk', true)
