@@ -8,6 +8,51 @@
     },
     "displayList": [
         {
+            "type": "TilemapLayer",
+            "id": "a6bad020-6284-45ed-bb5e-4fcd4f4c2a8b",
+            "label": "groundLayer_1",
+            "components": [],
+            "x": -21,
+            "y": -205,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "24f843f0-1db2-464c-b4a5-bc568d8c12a9",
+            "layerName": "groundLayer",
+            "tilesets": [
+                "snowyTile"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "3345080f-8fd8-44e8-8b9b-517fe1fe9430",
+            "label": "treeLayer",
+            "components": [],
+            "x": -24,
+            "y": -208,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "24f843f0-1db2-464c-b4a5-bc568d8c12a9",
+            "layerName": "treeLayer",
+            "tilesets": [
+                "snowyTile"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "842bf8d9-ab18-4976-aced-0a8865bbe32a",
+            "label": "buildingLayer",
+            "components": [],
+            "x": -24,
+            "y": -208,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "24f843f0-1db2-464c-b4a5-bc568d8c12a9",
+            "layerName": "buildingLayer",
+            "tilesets": [
+                "snowyTile"
+            ]
+        },
+        {
             "type": "Image",
             "id": "357017d5-6599-4954-8606-b42401a0cede",
             "label": "health_bar_decoration",
@@ -172,6 +217,18 @@
                 {
                     "name": "City",
                     "imageKey": "city-tilesV1"
+                }
+            ]
+        },
+        {
+            "id": "24f843f0-1db2-464c-b4a5-bc568d8c12a9",
+            "type": "Tilemap",
+            "label": "snowyMap",
+            "key": "snowyMap",
+            "tilesets": [
+                {
+                    "name": "snowyTile",
+                    "imageKey": "snowyTile"
                 }
             ]
         }

@@ -6,7 +6,8 @@
 class Icey extends Phaser.Scene {
 
 	constructor() {
-		super("Icey")
+		super("Icey");
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
@@ -15,16 +16,24 @@ class Icey extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// loading_graphic
-		this.add.image(377, 239, "loading-graphic");
+		// snowyMap
+		const snowyMap = this.add.tilemap("snowyMap");
+		snowyMap.addTilesetImage("snowyTile", "snowyTile");
 
-		
-		var backgroundMusic = this.sound.add("tundra-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
-		backgroundMusic.loop = true;
-		if(localStorage.settingsOptionMusic == "true"){
-			backgroundMusic.play();
-		}
+		// groundLayer_1
+		const groundLayer_1 = snowyMap.createLayer("groundLayer", ["snowyTile"], -21, -205);
+		groundLayer_1.scaleX = 1.3;
+		groundLayer_1.scaleY = 1.3;
 
+		// treeLayer
+		const treeLayer = snowyMap.createLayer("treeLayer", ["snowyTile"], -24, -208);
+		treeLayer.scaleX = 1.3;
+		treeLayer.scaleY = 1.3;
+
+		// buildingLayer
+		const buildingLayer = snowyMap.createLayer("buildingLayer", ["snowyTile"], -24, -208);
+		buildingLayer.scaleX = 1.3;
+		buildingLayer.scaleY = 1.3;
 
 		// health_bar_decoration
 		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
@@ -175,6 +184,15 @@ class Icey extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
+		
+		this.snowyMap = snowyMap;
+
+		//background music
+		var backgroundMusic = this.sound.add("tundra-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
+		backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			backgroundMusic.play();
+		}
 
 		this.events.emit("scene-awake");
 	}
