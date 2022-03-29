@@ -283,6 +283,55 @@
             "frameRate": 45,
             "skipMissedFrames": true,
             "repeat": -1
+        },
+        {
+            "key": "right-walk",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "6_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "7_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "8_2",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
         }
     ],
     "globalTimeScale": 1,

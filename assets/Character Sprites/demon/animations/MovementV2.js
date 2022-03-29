@@ -7,6 +7,7 @@ class MovementV2 {
 
 	constructor(gameObject) {
 		this.gameObject = gameObject;
+		this.lastX = down;
 		gameObject["__MovementV2"] = this;
 
 		/* START-USER-CTR-CODE */
@@ -43,7 +44,7 @@ class MovementV2 {
 		else if (this.cursors.right.isDown)
 		{
 			body.setVelocity(speed, 0)
-			player.play('down-walk', true)
+			player.play('right-walk', true)
 		}
 		else if (this.cursors.up.isDown)
 		{
