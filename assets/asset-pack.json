@@ -465,6 +465,16 @@
                 "key": "forest-bgmusic"
             },
             {
+                "url": "assets/environment/forestMap.json",
+                "type": "tilemapTiledJSON",
+                "key": "forestMap"
+            },
+            {
+                "url": "assets/environment/forestTile.png",
+                "type": "image",
+                "key": "forestTile"
+            },
+            {
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
                 "type": "image",
                 "key": "health_bar_decoration"
@@ -657,6 +667,16 @@
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
+            },
+            {
+                "url": "assets/environment/snowyMap.json",
+                "type": "tilemapTiledJSON",
+                "key": "snowyMap"
+            },
+            {
+                "url": "assets/environment/snowyTile.png",
+                "type": "image",
+                "key": "snowyTile"
             },
             {
                 "url": [
