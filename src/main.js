@@ -8,6 +8,12 @@ window.addEventListener("load", function () {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH,
     },
+    physics: {
+      default: "arcade",
+      arcade: {
+        gravity: { y:0 }
+      }
+    }
   });
 
   game.scene.add("Preload", Preload);
@@ -17,6 +23,8 @@ window.addEventListener("load", function () {
   game.scene.add("Icey", Icey);
   game.scene.add("Forest", Forest);
   game.scene.add("Start", Start);
+  game.scene.add("Quiz", Quiz);
+   game.scene.add("Beta", Beta);
   /* DEPRECATED
   game.scene.add("Tutorial", Tutorial);
   game.scene.add("Controls", Controls);

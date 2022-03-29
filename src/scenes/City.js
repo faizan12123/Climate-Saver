@@ -42,6 +42,32 @@ class City extends Phaser.Scene {
 		windows_and_Doors.scaleX = 1.25;
 		windows_and_Doors.scaleY = 1.25;
 
+		this.cityV2 = cityV2;
+
+		function formatTime(seconds){
+    		// Minutes
+    		var minutes = Math.floor(seconds/60);
+    		// Seconds
+    		var partInSeconds = seconds%60;
+    		// Adds left zeros to seconds
+    		partInSeconds = partInSeconds.toString().padStart(2,'0');
+    		// Returns formated time
+    		return `${partInSeconds}`;
+		}
+
+		
+
+		this.initialTime = 60;
+		//temp button-quiz
+		const button_quiz = this.add.image(656,50,"button-quiz");
+		button_quiz.setInteractive();
+		button_quiz.scaleX = 0.36;
+    	button_quiz.scaleY = 0.36;
+		button_quiz.on("pointerdown", () =>{
+			backgroundMusic.stop();
+			this.scene.start("Quiz");
+		});
+
 		//background music
 		var backgroundMusic = this.sound.add("city-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
