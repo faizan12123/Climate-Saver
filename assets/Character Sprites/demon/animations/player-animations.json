@@ -219,6 +219,70 @@
             "frameRate": 18,
             "skipMissedFrames": true,
             "repeat": -1
+        },
+        {
+            "key": "down-attack",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "01_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "02_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "03_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "04_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "05_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "06_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "07_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "08_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "09_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "10_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "11_1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
         }
     ],
     "globalTimeScale": 1,
