@@ -2,9 +2,49 @@
     "section1": {
         "files": [
             {
-                "url": "assets/buttons/answer-textbox.png",
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/01.png",
                 "type": "image",
-                "key": "answer-textbox"
+                "key": "01"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/02.png",
+                "type": "image",
+                "key": "02"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/03.png",
+                "type": "image",
+                "key": "03"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/04.png",
+                "type": "image",
+                "key": "04"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/05.png",
+                "type": "image",
+                "key": "05"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/06.png",
+                "type": "image",
+                "key": "06"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/07.png",
+                "type": "image",
+                "key": "07"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/08.png",
+                "type": "image",
+                "key": "08"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/09.png",
+                "type": "image",
+                "key": "09"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/1.png",
@@ -22,6 +62,21 @@
                 "key": "1_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/1.png",
+                "type": "image",
+                "key": "1_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/10.png",
+                "type": "image",
+                "key": "10"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/11.png",
+                "type": "image",
+                "key": "11"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/2.png",
                 "type": "image",
                 "key": "2"
@@ -35,6 +90,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_w/2.png",
                 "type": "image",
                 "key": "2_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/2.png",
+                "type": "image",
+                "key": "2_3"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/3.png",
@@ -52,6 +112,11 @@
                 "key": "3_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/3.png",
+                "type": "image",
+                "key": "3_3"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/4.png",
                 "type": "image",
                 "key": "4"
@@ -65,6 +130,11 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_w/4.png",
                 "type": "image",
                 "key": "4_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/4.png",
+                "type": "image",
+                "key": "4_3"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/5.png",
@@ -82,9 +152,19 @@
                 "key": "5_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/5.png",
+                "type": "image",
+                "key": "5_3"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/6.png",
                 "type": "image",
                 "key": "6"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/6.png",
+                "type": "image",
+                "key": "6_1"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/7.png",
@@ -92,9 +172,24 @@
                 "key": "7"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/7.png",
+                "type": "image",
+                "key": "7_1"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/8.png",
                 "type": "image",
                 "key": "8"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/8.png",
+                "type": "image",
+                "key": "8_1"
+            },
+            {
+                "url": "assets/buttons/answer-textbox.png",
+                "type": "image",
+                "key": "answer-textbox"
             },
             {
                 "url": [
@@ -139,11 +234,6 @@
                 "key": "button-forward"
             },
             {
-                "url": "assets/buttons/button-quiz.png",
-                "type": "image",
-                "key": "button-quiz"
-            },
-            {
                 "url": "assets/buttons/button-music.png",
                 "type": "image",
                 "key": "button-music"
@@ -152,6 +242,11 @@
                 "url": "assets/buttons/button-pause.png",
                 "type": "image",
                 "key": "button-pause"
+            },
+            {
+                "url": "assets/buttons/button-quiz.png",
+                "type": "image",
+                "key": "button-quiz"
             },
             {
                 "url": "assets/buttons/button-radio.png",
@@ -389,21 +484,6 @@
                 "key": "maps-banner-title"
             },
             {
-                "url": "assets/environment/quiz-background.png",
-                "type": "image",
-                "key": "quiz-background"
-            },
-            {
-                "url": "assets/sprites/quiz-box.png",
-                "type": "image",
-                "key": "quiz-box"
-            },
-            {
-                "url": "assets/sprites/quiz-box-start.png",
-                "type": "image",
-                "key": "quiz-box-start"
-            },
-            {
                 "url": "assets/buttons/pause-menu-button-quit.png",
                 "type": "image",
                 "key": "pause-menu-button-quit"
@@ -417,6 +497,21 @@
                 "url": "assets/sprites/pause-menuV2.png",
                 "type": "image",
                 "key": "pause-menuV2"
+            },
+            {
+                "url": "assets/environment/quiz-background.png",
+                "type": "image",
+                "key": "quiz-background"
+            },
+            {
+                "url": "assets/sprites/quiz-box.png",
+                "type": "image",
+                "key": "quiz-box"
+            },
+            {
+                "url": "assets/sprites/quiz-box-start.png",
+                "type": "image",
+                "key": "quiz-box-start"
             },
             {
                 "url": "assets/In Game Buttons/White Buttons/Score.png",
