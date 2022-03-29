@@ -554,6 +554,11 @@
                 "key": "pause-menuV2"
             },
             {
+                "url": "assets/Character Sprites/demon/animations/player-animations.json",
+                "type": "animation",
+                "key": "player-animations"
+            },
+            {
                 "url": "assets/environment/quiz-background.png",
                 "type": "image",
                 "key": "quiz-background"
