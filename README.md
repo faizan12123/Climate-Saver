@@ -15,6 +15,11 @@ Live Site: https://faizan12123.github.io/Climate-Saver/
 ## SCREENSHOTS
 ![Loading Screen](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-loadingscene-version1-fs.png)
 ![Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-mapselect-v1.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-snow-v1.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-city-v1.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-forest-v1.png?raw=true)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-beach-v1.png)
 
 ## CREDITS
 ### MEET THE TEAM
