@@ -539,6 +539,11 @@
                 "key": "maps-banner-title"
             },
             {
+                "url": "assets/Character Sprites/demon/animations/MovementV2.js",
+                "type": "script",
+                "key": "MovementV2"
+            },
+            {
                 "url": "assets/buttons/pause-menu-button-quit.png",
                 "type": "image",
                 "key": "pause-menu-button-quit"
@@ -552,6 +557,11 @@
                 "url": "assets/sprites/pause-menuV2.png",
                 "type": "image",
                 "key": "pause-menuV2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/animations/PhysicsV2.js",
+                "type": "script",
+                "key": "PhysicsV2"
             },
             {
                 "url": "assets/Character Sprites/demon/animations/player-animations.json",
