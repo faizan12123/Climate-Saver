@@ -109,7 +109,7 @@ class City extends Phaser.Scene {
 		button_yes.setInteractive();
 		button_yes.on("pointerdown", () => {
 		buttonClicked.play();
-		this.scene.start("Start");
+		this.scene.start("MainMenu");
 		backgroundMusic.stop();
 		});
 		button_yes.on("pointerover", () => {
