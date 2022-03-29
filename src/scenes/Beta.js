@@ -16,6 +16,7 @@ class Beta extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
+		
 		// bg
 		const bg = this.add.image(287, 164, "bg");
 		bg.scaleX = 0.2;
@@ -23,7 +24,8 @@ class Beta extends Phaser.Scene {
 
 		// player
 		const player = this.add.sprite(489, 348, "1_1");
-
+		new PhysicsV2(player);
+		new MovementV2(player);
 		this.player = player;
 
 		this.events.emit("scene-awake");
