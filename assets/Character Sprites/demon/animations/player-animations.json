@@ -162,7 +162,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 20,
+            "frameRate": 24,
             "skipMissedFrames": true,
             "repeat": -1
         },
@@ -216,7 +216,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 18,
+            "frameRate": 24,
             "skipMissedFrames": true,
             "repeat": -1
         },
@@ -280,7 +280,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 24,
+            "frameRate": 45,
             "skipMissedFrames": true,
             "repeat": -1
         }
