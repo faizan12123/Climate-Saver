@@ -204,6 +204,21 @@ class Beach extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
+
+
+		this.add.text(0, 0, 'Space Bar to hit things. Arrows to move', { fontFamily: "Georgia", fontSize: "40px", color: "yellow" });
+
+
+
+
+		/*--------------GAMEPLAY THINGS--------------- */
+
+		// player
+		const player = this.add.sprite(489, 348, "1_1");
+		new PhysicsV2(player);
+		new MovementV2(player);
+		this.player = player;
+
 		this.events.emit("scene-awake");
 	}
 
@@ -214,6 +229,7 @@ class Beach extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.player.play("down-idle");
 	}
 
 	/* END-USER-CODE */
