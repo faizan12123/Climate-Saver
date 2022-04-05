@@ -16,7 +16,7 @@ class Beach extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 		this.displayMap();
-		
+		this.displayTrash();
 
 		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
@@ -173,7 +173,7 @@ class Beach extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
-		this.displayTrash();
+		
 
 		this.events.emit("scene-awake");
 	}
