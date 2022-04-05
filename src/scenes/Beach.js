@@ -15,24 +15,8 @@ class Beach extends Phaser.Scene {
 
 	/** @returns {void} */
 	editorCreate() {
-
-		// beachV1
-		const beachV1 = this.add.tilemap("beachV1");
-		beachV1.addTilesetImage("beach", "beach-tilesV1");
-
-		// water_1
-		beachV1.createLayer("Water", ["beach"], 1, 0);
-
-		// dock
-		beachV1.createLayer("Dock", ["beach"], 11, 0);
-
-		// sand
-		beachV1.createLayer("Sand", ["beach"], 14, -1);
-
-		// objects
-		beachV1.createLayer("Objects", ["beach"], 3, 2);
-
-		this.beachV1 = beachV1;
+		this.displayMap();
+		
 
 		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
@@ -216,8 +200,29 @@ class Beach extends Phaser.Scene {
 		const spray_can = this.trashs.create(86+300, 118, "spray-can");
 	}
 
+	displayMap(){
+		// beachV1
+		const beachV1 = this.add.tilemap("beachV1");
+		beachV1.addTilesetImage("beach", "beach-tilesV1");
+
+		// water_1
+		beachV1.createLayer("Water", ["beach"], 1, 0);
+
+		// dock
+		beachV1.createLayer("Dock", ["beach"], 11, 0);
+
+		// sand
+		beachV1.createLayer("Sand", ["beach"], 14, -1);
+
+		// objects
+		beachV1.createLayer("Objects", ["beach"], 3, 2);
+
+		this.beachV1 = beachV1;
+	}
+
 	/* START-USER-CODE */
 	trashs;
+	beachV1;
 	// Write more your code here
 
 	create() {
