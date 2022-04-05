@@ -35,22 +35,35 @@ class Beta extends Phaser.Scene {
 		// objects
 		beachV1.createLayer("Objects", ["beach"], 3, 2);
 
+		// trashs
+		this.trashs = this.add.group();
+		this.trashs.enableBody = true;
+
+		// box
+		const box = this.trashs.create(405, 187, "box");
+		const ceramic_cup = this.trashs.create(110, 253, "ceramic-cup");
+		const can2 = this.trashs.create(359, 433, "can2");
+		const can = this.trashs.create(411, 266, "can");
+		const glass_bottle = this.trashs.create(179, 0, "glass-bottle");
+		const detergent_bottle = this.trashs.create(422, 521, "detergent-bottle");
+		const glass_bottle2 = this.trashs.create(251, 534, "glass-bottle2");
+		const glass_jar = this.trashs.create(189, 358, "glass-jar");
+		const milk_carton = this.trashs.create(264, 186, "milk-carton");
+		const paperbag = this.trashs.create(455, 368, "paperbag");
+		const newspaper = this.trashs.create(303, 289, "newspaper");
+		const pizza_box = this.trashs.create(0, 258, "pizza-box");
+		const soda_can = this.trashs.create(416, 62, "soda-can");
+		const spray_can = this.trashs.create(86, 118, "spray-can");
+
 		this.player = player;
 		this.beachV1 = beachV1;
-
-		this.keys = this.input.keyboard.addKeys({
-			a:  Phaser.Input.Keyboard.KeyCodes.A,
-			s:  Phaser.Input.Keyboard.KeyCodes.S,
-			d:  Phaser.Input.Keyboard.KeyCodes.D,
-			w:  Phaser.Input.Keyboard.KeyCodes.W
-		});
-		this.cursors = this.input.keyboard.createCursorKeys();
 
 		this.events.emit("scene-awake");
 	}
 
 	/** @type {Phaser.GameObjects.Sprite} */
 	player;
+	trashs;
 
 	/* START-USER-CODE */
 
@@ -61,7 +74,7 @@ class Beta extends Phaser.Scene {
 		this.editorCreate();
 		this.player.play("down-idle");
 	}
-	update(){
+	update(){/*
 		if (this.cursors.left.isDown)
 			console.log("left by arrow");
 
@@ -85,7 +98,9 @@ class Beta extends Phaser.Scene {
 		}
 		else if(this.keys.a.isDown){
 			console.log("left by a");
-		}
+		}*/
+
+		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
 	}
 
 	/* END-USER-CODE */
