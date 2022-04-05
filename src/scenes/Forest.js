@@ -185,6 +185,11 @@ class Forest extends Phaser.Scene {
 
 		this.forestMap = forestMap;
 
+		const player = this.add.sprite(489, 348, "1_1");
+		new PhysicsV2(player);
+		new MovementV2(player);
+		this.player = player;
+
 		this.events.emit("scene-awake");
 	}
 
@@ -195,6 +200,7 @@ class Forest extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.player.play("down-idle");
 	}
 
 	/* END-USER-CODE */

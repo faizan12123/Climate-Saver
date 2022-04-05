@@ -17,7 +17,7 @@ class Beach extends Phaser.Scene {
 	editorCreate() {
 		this.displayMap();
 		this.displayTrash();
-
+		this.displayPlayer();
 		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
 		if(localStorage.settingsOptionMusic == "true"){
@@ -177,7 +177,10 @@ class Beach extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
-		
+		const player = this.add.sprite(489, 348, "1_1");
+		new PhysicsV2(player);
+		new MovementV2(player);
+		this.player = player;
 
 		this.events.emit("scene-awake");
 	}
@@ -210,7 +213,7 @@ class Beach extends Phaser.Scene {
 		beachV1.addTilesetImage("beach", "beach-tilesV1");
 
 		// water_1
-		beachV1.createLayer("Water", ["beach"], 1, 0);
+		this.waterLayer = beachV1.createLayer("Water", ["beach"], 1, 0);
 
 		// dock
 		beachV1.createLayer("Dock", ["beach"], 11, 0);
@@ -223,6 +226,10 @@ class Beach extends Phaser.Scene {
 
 		this.beachV1 = beachV1;
 	}
+	displayPlayer(){
+		// player
+		
+	}
 
 	/* START-USER-CODE */
 	trashs;
@@ -232,10 +239,12 @@ class Beach extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.player.play("down-idle");
 		
 	}
 	update(){
 		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
+		this.physics.add.collider(this.player,this.waterLayer);
 	}
 	/* END-USER-CODE */
 }
