@@ -334,6 +334,11 @@
                 "key": "bg"
             },
             {
+                "url": "assets/Beach Assets/box.png",
+                "type": "image",
+                "key": "box"
+            },
+            {
                 "url": "assets/buttons/buttom-volumeUp.png",
                 "type": "image",
                 "key": "buttom-volumeUp"
@@ -411,6 +416,21 @@
                 "key": "buttonOnClick"
             },
             {
+                "url": "assets/Beach Assets/can.png",
+                "type": "image",
+                "key": "can"
+            },
+            {
+                "url": "assets/Beach Assets/can2.png",
+                "type": "image",
+                "key": "can2"
+            },
+            {
+                "url": "assets/Beach Assets/ceramic-cup.png",
+                "type": "image",
+                "key": "ceramic-cup"
+            },
+            {
                 "url": [
                     "assets/sounds/city-bgmusic.mp3"
                 ],
@@ -458,6 +478,11 @@
                 "key": "D-Pad"
             },
             {
+                "url": "assets/Beach Assets/detergent-bottle.png",
+                "type": "image",
+                "key": "detergent-bottle"
+            },
+            {
                 "url": [
                     "assets/sounds/forest-bgmusic.mp3"
                 ],
@@ -473,6 +498,21 @@
                 "url": "assets/environment/forestTile.png",
                 "type": "image",
                 "key": "forestTile"
+            },
+            {
+                "url": "assets/Beach Assets/glass-bottle.png",
+                "type": "image",
+                "key": "glass-bottle"
+            },
+            {
+                "url": "assets/Beach Assets/glass-bottle2.png",
+                "type": "image",
+                "key": "glass-bottle2"
+            },
+            {
+                "url": "assets/Beach Assets/glass-jar.png",
+                "type": "image",
+                "key": "glass-jar"
             },
             {
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
@@ -614,9 +654,24 @@
                 "key": "maps-banner-title"
             },
             {
+                "url": "assets/Beach Assets/milk-carton.png",
+                "type": "image",
+                "key": "milk-carton"
+            },
+            {
                 "url": "assets/Character Sprites/demon/animations/MovementV2.js",
                 "type": "script",
                 "key": "MovementV2"
+            },
+            {
+                "url": "assets/Beach Assets/newspaper.png",
+                "type": "image",
+                "key": "newspaper"
+            },
+            {
+                "url": "assets/Beach Assets/paperbag.png",
+                "type": "image",
+                "key": "paperbag"
             },
             {
                 "url": "assets/buttons/pause-menu-button-quit.png",
@@ -637,6 +692,11 @@
                 "url": "assets/Character Sprites/demon/animations/PhysicsV2.js",
                 "type": "script",
                 "key": "PhysicsV2"
+            },
+            {
+                "url": "assets/Beach Assets/pizza-box.png",
+                "type": "image",
+                "key": "pizza-box"
             },
             {
                 "url": "assets/Character Sprites/demon/animations/player-animations.json",
@@ -679,6 +739,11 @@
                 "key": "snowyTile"
             },
             {
+                "url": "assets/Beach Assets/soda-can.png",
+                "type": "image",
+                "key": "soda-can"
+            },
+            {
                 "url": [
                     "assets/sounds/sound-right.mp3"
                 ],
@@ -693,11 +758,26 @@
                 "key": "sound-wrong"
             },
             {
+                "url": "assets/Beach Assets/spray-can.png",
+                "type": "image",
+                "key": "spray-can"
+            },
+            {
+                "url": "assets/Beach Assets/stryrofoam-cup.png",
+                "type": "image",
+                "key": "stryrofoam-cup"
+            },
+            {
                 "url": [
                     "assets/sounds/tundra-bgmusic.mp3"
                 ],
                 "type": "audio",
                 "key": "tundra-bgmusic"
+            },
+            {
+                "url": "assets/Beach Assets/water-bottle.png",
+                "type": "image",
+                "key": "water-bottle"
             }
         ]
     },
