@@ -189,11 +189,35 @@ class Beach extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
+		this.displayTrash();
+
 		this.events.emit("scene-awake");
 	}
 
-	/* START-USER-CODE */
+	displayTrash(){
+		// trashs
+		this.trashs = this.add.group();
+		this.trashs.enableBody = true;
 
+		// box
+		const box = this.trashs.create(405+300, 187, "box");
+		const ceramic_cup = this.trashs.create(110+300, 253, "ceramic-cup");
+		const can2 = this.trashs.create(359+300, 433, "can2");
+		const can = this.trashs.create(411+300, 266, "can");
+		const glass_bottle = this.trashs.create(179+300, 50, "glass-bottle");
+		const detergent_bottle = this.trashs.create(422+300, 521, "detergent-bottle");
+		const glass_bottle2 = this.trashs.create(251+300, 534, "glass-bottle2");
+		const glass_jar = this.trashs.create(189+300, 358, "glass-jar");
+		const milk_carton = this.trashs.create(264+300, 186, "milk-carton");
+		const paperbag = this.trashs.create(455+300, 368, "paperbag");
+		const newspaper = this.trashs.create(303+300, 289, "newspaper");
+		const pizza_box = this.trashs.create(0+300, 258, "pizza-box");
+		const soda_can = this.trashs.create(416+300, 62, "soda-can");
+		const spray_can = this.trashs.create(86+300, 118, "spray-can");
+	}
+
+	/* START-USER-CODE */
+	trashs;
 	// Write more your code here
 
 	create() {
@@ -201,7 +225,9 @@ class Beach extends Phaser.Scene {
 		this.editorCreate();
 		
 	}
-
+	update(){
+		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
+	}
 	/* END-USER-CODE */
 }
 
