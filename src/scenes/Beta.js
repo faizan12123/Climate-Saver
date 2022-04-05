@@ -40,20 +40,20 @@ class Beta extends Phaser.Scene {
 		this.trashs.enableBody = true;
 
 		// box
-		const box = this.trashs.create(405, 187, "box");
-		const ceramic_cup = this.trashs.create(110, 253, "ceramic-cup");
-		const can2 = this.trashs.create(359, 433, "can2");
-		const can = this.trashs.create(411, 266, "can");
-		const glass_bottle = this.trashs.create(179, 0, "glass-bottle");
-		const detergent_bottle = this.trashs.create(422, 521, "detergent-bottle");
-		const glass_bottle2 = this.trashs.create(251, 534, "glass-bottle2");
-		const glass_jar = this.trashs.create(189, 358, "glass-jar");
-		const milk_carton = this.trashs.create(264, 186, "milk-carton");
-		const paperbag = this.trashs.create(455, 368, "paperbag");
-		const newspaper = this.trashs.create(303, 289, "newspaper");
-		const pizza_box = this.trashs.create(0, 258, "pizza-box");
-		const soda_can = this.trashs.create(416, 62, "soda-can");
-		const spray_can = this.trashs.create(86, 118, "spray-can");
+		const box = this.trashs.create(405+300, 187, "box");
+		const ceramic_cup = this.trashs.create(110+300, 253, "ceramic-cup");
+		const can2 = this.trashs.create(359+300, 433, "can2");
+		const can = this.trashs.create(411+300, 266, "can");
+		const glass_bottle = this.trashs.create(179+300, 100, "glass-bottle");
+		const detergent_bottle = this.trashs.create(422+300, 521, "detergent-bottle");
+		const glass_bottle2 = this.trashs.create(251+300, 534, "glass-bottle2");
+		const glass_jar = this.trashs.create(189+300, 358, "glass-jar");
+		const milk_carton = this.trashs.create(264+300, 186, "milk-carton");
+		const paperbag = this.trashs.create(455+300, 368, "paperbag");
+		const newspaper = this.trashs.create(303+300, 289, "newspaper");
+		const pizza_box = this.trashs.create(0+300, 258, "pizza-box");
+		const soda_can = this.trashs.create(416+300, 62, "soda-can");
+		const spray_can = this.trashs.create(86+300, 118, "spray-can");
 
 		this.player = player;
 		this.beachV1 = beachV1;
