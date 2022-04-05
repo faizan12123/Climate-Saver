@@ -152,7 +152,10 @@ class Beach extends Phaser.Scene {
 			button_no.visible = true;
 			button_sound.visible = true;
 			button_music.visible = true;
-            if(localStorage.settingsOptionFX=="true"){buttonClicked.play()}
+            if(localStorage.settingsOptionFX=="true")
+				{
+						buttonClicked.play()
+				}
 			});
 		button_pause.on("pointerover", () => {
       		button_pause.scale += 0.02;
