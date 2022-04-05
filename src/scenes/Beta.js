@@ -44,7 +44,7 @@ class Beta extends Phaser.Scene {
 		const ceramic_cup = this.trashs.create(110+300, 253, "ceramic-cup");
 		const can2 = this.trashs.create(359+300, 433, "can2");
 		const can = this.trashs.create(411+300, 266, "can");
-		const glass_bottle = this.trashs.create(179+300, 100, "glass-bottle");
+		const glass_bottle = this.trashs.create(179+300, 50, "glass-bottle");
 		const detergent_bottle = this.trashs.create(422+300, 521, "detergent-bottle");
 		const glass_bottle2 = this.trashs.create(251+300, 534, "glass-bottle2");
 		const glass_jar = this.trashs.create(189+300, 358, "glass-jar");
