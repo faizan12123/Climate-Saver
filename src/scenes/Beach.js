@@ -5,6 +5,9 @@
 
 class Beach extends Phaser.Scene {
 
+	trashs;
+	beachV1;
+
 	constructor() {
 		super("Beach");
 
@@ -177,14 +180,42 @@ class Beach extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
-		const player = this.add.sprite(489, 348, "1_1");
-		new PhysicsV2(player);
-		new MovementV2(player);
-		this.player = player;
+		
 
 		this.events.emit("scene-awake");
 	}
 
+
+	create() {
+
+		this.editorCreate();
+		this.player.play("down-idle");
+		this.physics.add.collider(this.player, this.waterLayer)
+		this.physics.add.collider(this.player, this.objectsLayer)
+	}
+	update(){
+		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
+		this.waterLayer.setCollisionByProperty({ collides: true });
+		this.objectsLayer.setCollisionByProperty({ collides: true });
+	}
+
+	displayMap(){
+		// beachV1
+		const beachV1 = this.add.tilemap("beachV1");
+		beachV1.addTilesetImage("beach", "beach-tilesV1");
+		this.waterLayer = beachV1.createLayer("Water", ["beach"], 1, 0);
+		beachV1.createLayer("Dock", ["beach"], 11, 0);
+		beachV1.createLayer("Sand", ["beach"], 14, -1);
+		this.objectsLayer = beachV1.createLayer("Objects", ["beach"], 3, 2);
+		this.beachV1 = beachV1;
+	}
+	displayPlayer(){
+		// player
+		const player = this.add.sprite(489, 348, "1_1");
+		new PhysicsV2(player);
+		new MovementV2(player);
+		this.player = player;
+	}
 	displayTrash(){
 		// trashs
 		this.trashs = this.add.group();
@@ -206,51 +237,4 @@ class Beach extends Phaser.Scene {
 		const soda_can = this.trashs.create(416+300, 62, "soda-can");
 		const spray_can = this.trashs.create(86+300, 388, "spray-can");
 	}
-
-	displayMap(){
-		// beachV1
-		const beachV1 = this.add.tilemap("beachV1");
-		beachV1.addTilesetImage("beach", "beach-tilesV1");
-
-		// water_1
-		this.waterLayer = beachV1.createLayer("Water", ["beach"], 1, 0);
-
-		// dock
-		beachV1.createLayer("Dock", ["beach"], 11, 0);
-
-		// sand
-		beachV1.createLayer("Sand", ["beach"], 14, -1);
-
-		// objects
-		this.objectsLayer = beachV1.createLayer("Objects", ["beach"], 3, 2);
-
-		this.beachV1 = beachV1;
-	}
-	displayPlayer(){
-		// player
-		
-	}
-
-	/* START-USER-CODE */
-	trashs;
-	beachV1;
-	// Write more your code here
-
-	create() {
-
-		this.editorCreate();
-		this.player.play("down-idle");
-		this.physics.add.collider(this.player, this.waterLayer)
-		this.physics.add.collider(this.player, this.objectsLayer)
-	}
-	update(){
-		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
-		this.waterLayer.setCollisionByProperty({ collides: true });
-		this.objectsLayer.setCollisionByProperty({ collides: true });
-	}
-	/* END-USER-CODE */
 }
-
-/* END OF COMPILED CODE */
-
-// You can write more code here
