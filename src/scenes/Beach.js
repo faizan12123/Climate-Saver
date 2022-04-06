@@ -204,7 +204,7 @@ class Beach extends Phaser.Scene {
 		const newspaper = this.trashs.create(303+300, 289, "newspaper");
 		const pizza_box = this.trashs.create(0+300, 258, "pizza-box");
 		const soda_can = this.trashs.create(416+300, 62, "soda-can");
-		const spray_can = this.trashs.create(86+300, 118, "spray-can");
+		const spray_can = this.trashs.create(86+300, 388, "spray-can");
 	}
 
 	displayMap(){
@@ -222,7 +222,7 @@ class Beach extends Phaser.Scene {
 		beachV1.createLayer("Sand", ["beach"], 14, -1);
 
 		// objects
-		beachV1.createLayer("Objects", ["beach"], 3, 2);
+		this.objectsLayer = beachV1.createLayer("Objects", ["beach"], 3, 2);
 
 		this.beachV1 = beachV1;
 	}
@@ -240,11 +240,13 @@ class Beach extends Phaser.Scene {
 
 		this.editorCreate();
 		this.player.play("down-idle");
-		
+		this.physics.add.collider(this.player, this.waterLayer)
+		this.physics.add.collider(this.player, this.objectsLayer)
 	}
 	update(){
 		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
-		this.physics.add.collider(this.player,this.waterLayer);
+		this.waterLayer.setCollisionByProperty({ collides: true });
+		this.objectsLayer.setCollisionByProperty({ collides: true });
 	}
 	/* END-USER-CODE */
 }
