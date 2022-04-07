@@ -15,7 +15,6 @@ class City extends Phaser.Scene {
 		this.displayPlayer();
 
 		
-
 		function formatTime(seconds){
     		// Minutes
     		var minutes = Math.floor(seconds/60);
@@ -61,7 +60,11 @@ class City extends Phaser.Scene {
 		this.add.image(692, 520, "D-Pad");
 
 		// score
+		var player_score = 0;
 		const score = this.add.image(384, 44, "Score");
+		const score_count = this.add.text(420, 30, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		score_count.setText(player_score+1);
+
 		score.scaleX = 0.62297233942359;
 		score.scaleY = 0.62297233942359;
 
