@@ -18,11 +18,7 @@ class Beach extends Phaser.Scene {
 		this.displayTrash();
 		this.displayPlayer();
 
-		this.backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
-		this.backgroundMusic.loop = true;
-		if(localStorage.settingsOptionMusic == "true"){
-			this.backgroundMusic.play();
-		}
+		
 
 		// health_bar_decoration
 		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
@@ -90,6 +86,14 @@ class Beach extends Phaser.Scene {
 		beachV1.createLayer("Sand", ["beach"], 14, -1);
 		this.objectsLayer = beachV1.createLayer("Objects", ["beach"], 3, 2);
 		this.beachV1 = beachV1;
+
+
+		//background music
+		this.backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
+		this.backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			this.backgroundMusic.play();
+		}
 	}
 	displayPlayer(){
 		// player
