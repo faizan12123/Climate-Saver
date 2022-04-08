@@ -10,10 +10,6 @@ class Beach extends Phaser.Scene {
 
 	constructor() {
 		super("Beach");
-
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
 	}
 
 	/** @returns {void} */
@@ -21,6 +17,7 @@ class Beach extends Phaser.Scene {
 		this.displayMap();
 		this.displayTrash();
 		this.displayPlayer();
+
 		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
 		if(localStorage.settingsOptionMusic == "true"){
@@ -56,7 +53,7 @@ class Beach extends Phaser.Scene {
 		pause_menu.visible = false;
 
 		//Button Sound
-		var buttonClicked = this.sound.add("buttonOnClick");
+		this.buttonClicked = this.sound.add("buttonOnClick");
 
 		// button_yes
 		const button_yes = this.add.image(401, 409, "pause-menu-button-quit");
@@ -191,11 +188,7 @@ class Beach extends Phaser.Scene {
 
 
 	create() {
-
 		this.editorCreate();
-		this.player.play("down-idle");
-		this.physics.add.collider(this.player, this.waterLayer)
-		this.physics.add.collider(this.player, this.objectsLayer)
 	}
 	update(){
 		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
@@ -219,6 +212,11 @@ class Beach extends Phaser.Scene {
 		new PhysicsV2(player);
 		new MovementV2(player);
 		this.player = player;
+
+		//animations + movements
+		this.player.play("down-idle");
+		this.physics.add.collider(this.player, this.waterLayer)
+		this.physics.add.collider(this.player, this.objectsLayer)
 	}
 	displayTrash(){
 		// trashs
@@ -240,5 +238,9 @@ class Beach extends Phaser.Scene {
 		const pizza_box = this.trashs.create(0+300, 258, "pizza-box");
 		const soda_can = this.trashs.create(416+300, 62, "soda-can");
 		const spray_can = this.trashs.create(86+300, 388, "spray-can");
+	}
+
+	setPauseMenu(){
+		
 	}
 }
