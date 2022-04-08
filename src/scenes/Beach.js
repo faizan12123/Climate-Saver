@@ -219,10 +219,12 @@ class Beach extends Phaser.Scene {
 				}
 				if(music_tick.visible){
 					music_tick.visible = false;
+					localStorage.settingsOptionMusic = "true";
 					this.backgroundMusic.play();
 				}
 				else{
 					music_tick.visible = true;
+					localStorage.settingsOptionMusic ="false";
 					this.backgroundMusic.stop();
 				}
 			})
@@ -248,11 +250,11 @@ class Beach extends Phaser.Scene {
 			fx_tick.visible = false;
 
 			if(localStorage.settingsOptionFX=="false"){
-					fx_tick.visible = true;
-				}
-				if(localStorage.settingsOptionMusic=="false"){
-					music_tick.visible = true;
-				}
+				fx_tick.visible = true;
+			}
+			if(localStorage.settingsOptionMusic=="false"){
+				music_tick.visible = true;
+			}
 	}
 
 }
