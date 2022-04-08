@@ -53,48 +53,53 @@ class Beach extends Phaser.Scene {
 		pause_menu.visible = false;
 
 		//Button Sound
-		this.buttonClicked = this.sound.add("buttonOnClick");
+		const buttonClicked = this.sound.add("buttonOnClick");
 
-		// button_yes
-		const button_yes = this.add.image(401, 409, "pause-menu-button-quit");
-		button_yes.scaleX = 0.27701381259992647;
-		button_yes.scaleY = 0.27701381259992647;
-		button_yes.setInteractive();
-		button_yes.on("pointerdown", () => {
-		buttonClicked.play();
-		this.scene.start("MainMenu");
-		backgroundMusic.stop();
-		});
-		button_yes.on("pointerover", () => {
-      	button_yes.scale += 0.05;
-    	});
-		button_yes.on("pointerout", () => {
-		button_yes.scaleX = 0.27701381259992647;
-		button_yes.scaleY = 0.27701381259992647;
-		});
-		button_yes.visible = false;
+		// btn_quit
+		const btn_quit = this.add.image(401, 409, "pause-menu-button-quit");
+		btn_quit.scaleX = 0.27701381259992647;
+		btn_quit.scaleY = 0.27701381259992647;
+		btn_quit
+			.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+            		buttonClicked.play();
+          		}
+				backgroundMusic.stop();
+				this.scene.start("MainMenu");
+			})
+			.on("pointerover", () => {
+      			btn_quit.scale += 0.05;
+    		})
+			.on("pointerout", () => {
+				btn_quit.scaleX = 0.27701381259992647;
+				btn_quit.scaleY = 0.27701381259992647;
+			})
+			.visible = false;
 
-		// button_no
-		const button_no = this.add.image(401, 323, "pause-menu-button-resume");
-		button_no.scaleX = 0.27701381259992647;
-		button_no.scaleY = 0.27701381259992647;
-		button_no.setInteractive();
-		button_no.on("pointerdown", () => {
-			buttonClicked.play();
-			pause_menu.visible = false;
-			button_yes.visible = false;
-			button_no.visible = false;
-			button_sound.visible = false;
-			button_music.visible = false;
-		});
-		button_no.on("pointerover", () => {
-      		button_no.scale += 0.05;
-    	});
-		button_no.on("pointerout", () => {
-			button_no.scaleX = 0.27701381259992647;
-			button_no.scaleY = 0.27701381259992647;
-		});
-		button_no.visible = false;
+		//btn_resume
+		const btn_resume = this.add.image(401, 323, "pause-menu-button-resume");
+		btn_resume.scaleX = 0.27701381259992647;
+		btn_resume.scaleY = 0.27701381259992647;
+		btn_resume.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+						buttonClicked.play();
+				}
+				pause_menu.visible = false;
+				btn_quit.visible = false;
+				btn_resume.visible = false;
+				button_sound.visible = false;
+				button_music.visible = false;
+			})
+			.on("pointerover", () => {
+      			btn_resume.scale += 0.05;
+    		})
+			.on("pointerout", () => {
+				btn_resume.scaleX = 0.27701381259992647;
+				btn_resume.scaleY = 0.27701381259992647;
+			})
+			.visible = false;
 
 		// button_sound
 		const button_sound = this.add.image(352, 229, "button-sound");
@@ -149,17 +154,16 @@ class Beach extends Phaser.Scene {
 		const button_pause = this.add.image(49, 41, "button-pause");
 		button_pause.scaleX = 0.16010465842344668;
 		button_pause.scaleY = 0.1577276264549412;
-		button_pause.setInteractive();
-		button_pause.on("pointerdown", () => {
-			pause_menu.visible = true;
-			button_yes.visible = true;
-			button_no.visible = true;
-			button_sound.visible = true;
-			button_music.visible = true;
-            if(localStorage.settingsOptionFX=="true")
-				{
+		button_pause.setInteractive()
+			.on("pointerdown", () => {
+				pause_menu.visible = true;
+				btn_quit.visible = true;
+				btn_resume.visible = true;
+				button_sound.visible = true;
+				button_music.visible = true;
+            if(localStorage.settingsOptionFX=="true"){
 						buttonClicked.play()
-				}
+			}
 			});
 		button_pause.on("pointerover", () => {
       		button_pause.scale += 0.02;
