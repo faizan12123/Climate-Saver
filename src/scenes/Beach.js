@@ -105,16 +105,21 @@ class Beach extends Phaser.Scene {
 		const button_sound = this.add.image(352, 229, "button-sound");
 		button_sound.scaleX = 0.16344056315099267;
 		button_sound.scaleY = 0.16344056315099267;
-		button_sound.setInteractive();
-		button_sound.on("pointerdown", () => {
-			buttonClicked.play();
-			if(fx_tick.visible){
-				fx_tick.visible = false;
-			}
-			else{
-				fx_tick.visible = true;
-			}
-		});
+		button_sound
+			.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+							buttonClicked.play();
+				}
+				if(fx_tick.visible){
+					fx_tick.visible = false;
+					localStorage.settingsOptionFX = "true";
+				}
+				else{
+					fx_tick.visible = true;
+					localStorage.settingsOptionFX = "false";
+				}
+			});
 		button_sound.on("pointerover", () => {
       		button_sound.scale += 0.05;
     	});
