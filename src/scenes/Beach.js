@@ -91,6 +91,8 @@ class Beach extends Phaser.Scene {
 				btn_resume.visible = false;
 				button_sound.visible = false;
 				button_music.visible = false;
+				fx_tick.visible = false;
+				music_tick.visible = false;
 			})
 			.on("pointerover", () => {
       			btn_resume.scale += 0.05;
@@ -109,7 +111,7 @@ class Beach extends Phaser.Scene {
 			.setInteractive()
 			.on("pointerdown", () => {
 				if(localStorage.settingsOptionFX == "true"){
-							buttonClicked.play();
+					buttonClicked.play();
 				}
 				if(fx_tick.visible){
 					fx_tick.visible = false;
@@ -119,41 +121,42 @@ class Beach extends Phaser.Scene {
 					fx_tick.visible = true;
 					localStorage.settingsOptionFX = "false";
 				}
-			});
-		button_sound.on("pointerover", () => {
-      		button_sound.scale += 0.05;
-    	});
-		button_sound.on("pointerout", () => {
-			button_sound.scaleX = 0.16344056315099267;
-			button_sound.scaleY = 0.16344056315099267;
-		});
-		button_sound.visible = false;
+			})
+			.on("pointerover", () => {
+      			button_sound.scale += 0.05;
+    		})
+			.on("pointerout", () => {
+				button_sound.scaleX = 0.16344056315099267;
+				button_sound.scaleY = 0.16344056315099267;
+			})
+			.visible = false;
 
 		// button_music
 		const button_music = this.add.image(446, 229, "button-music");
 		button_music.scaleX = 0.16344056315099267;
 		button_music.scaleY = 0.16344056315099267;
-		button_music.setInteractive();
-		button_music.on("pointerdown", () => {
-			if(localStorage.settingsOptionFX=="true")
-				{buttonClicked.play()}
-			if(music_tick.visible){
-				music_tick.visible = false;
-				backgroundMusic.play();
-			}
-			else{
-				music_tick.visible = true;
-				backgroundMusic.stop();
-			}
-		});
-		button_music.on("pointerover", () => {
-      		button_music.scale += 0.05;
-    	});
-		button_music.on("pointerout", () => {
-			button_music.scaleX = 0.16344056315099267;
-			button_music.scaleY = 0.16344056315099267;
-		});
-		button_music.visible = false;
+		button_music.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX=="true"){
+					buttonClicked.play()
+				}
+				if(music_tick.visible){
+					music_tick.visible = false;
+					backgroundMusic.play();
+				}
+				else{
+					music_tick.visible = true;
+					backgroundMusic.stop();
+				}
+			})
+			.on("pointerover", () => {
+      			button_music.scale += 0.05;
+    		})
+			.on("pointerout", () => {
+				button_music.scaleX = 0.16344056315099267;
+				button_music.scaleY = 0.16344056315099267;
+			})
+			.visible = false;
 
 		// button_pause
 		const button_pause = this.add.image(49, 41, "button-pause");
@@ -161,22 +164,30 @@ class Beach extends Phaser.Scene {
 		button_pause.scaleY = 0.1577276264549412;
 		button_pause.setInteractive()
 			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX=="true"){
+					buttonClicked.play()
+				}
 				pause_menu.visible = true;
 				btn_quit.visible = true;
 				btn_resume.visible = true;
 				button_sound.visible = true;
 				button_music.visible = true;
-            if(localStorage.settingsOptionFX=="true"){
-						buttonClicked.play()
-			}
+				if(localStorage.settingsOptionFX=="true"){
+					fx_tick.visible = true;
+				}
+				if(localStorage.settingsOptionMusic=="true"){
+					music_tick.visible = true;
+				}
+			})
+			.on("pointerover", () => {
+      			button_pause.scale += 0.02;
+    		})
+			.on("pointerout", () => {
+				button_pause.scaleX = 0.16010465842344668;
+				button_pause.scaleY = 0.1577276264549412;
 			});
-		button_pause.on("pointerover", () => {
-      		button_pause.scale += 0.02;
-    		});
-		button_pause.on("pointerout", () => {
-			button_pause.scaleX = 0.16010465842344668;
-			button_pause.scaleY = 0.1577276264549412;
-			});
+
+
 
 		// music_tick
 		const music_tick = this.add.image(448, 225, "button-tick");
