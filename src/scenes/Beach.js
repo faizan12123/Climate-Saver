@@ -172,10 +172,10 @@ class Beach extends Phaser.Scene {
 				btn_resume.visible = true;
 				button_sound.visible = true;
 				button_music.visible = true;
-				if(localStorage.settingsOptionFX=="true"){
+				if(localStorage.settingsOptionFX=="false"){
 					fx_tick.visible = true;
 				}
-				if(localStorage.settingsOptionMusic=="true"){
+				if(localStorage.settingsOptionMusic=="false"){
 					music_tick.visible = true;
 				}
 			})
