@@ -18,10 +18,10 @@ class Beach extends Phaser.Scene {
 		this.displayTrash();
 		this.displayPlayer();
 
-		var backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
-		backgroundMusic.loop = true;
+		this.backgroundMusic = this.sound.add("beach" , {volume: parseFloat(localStorage.musicVolume)});
+		this.backgroundMusic.loop = true;
 		if(localStorage.settingsOptionMusic == "true"){
-			backgroundMusic.play();
+			this.backgroundMusic.play();
 		}
 
 		// health_bar_decoration
@@ -142,7 +142,7 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
             		this.buttonClicked.play();
           		}
-				backgroundMusic.stop();
+				this.backgroundMusic.stop();
 				this.scene.start("MainMenu");
 			})
 			.on("pointerover", () => {
@@ -219,11 +219,11 @@ class Beach extends Phaser.Scene {
 				}
 				if(music_tick.visible){
 					music_tick.visible = false;
-					backgroundMusic.play();
+					this.backgroundMusic.play();
 				}
 				else{
 					music_tick.visible = true;
-					backgroundMusic.stop();
+					this.backgroundMusic.stop();
 				}
 			})
 			.on("pointerover", () => {
