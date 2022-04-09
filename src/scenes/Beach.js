@@ -2,6 +2,7 @@ class Beach extends Phaser.Scene {
 
 	trashs;
 	beachV1;
+	healthBarNumber; // start with 9 bars
 
 	constructor() {
 		super("Beach");
@@ -12,18 +13,7 @@ class Beach extends Phaser.Scene {
 		this.displayMap();
 		this.displayTrash();
 		this.displayPlayer();
-
-		
-
-		// health_bar_decoration
-		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
-		health_bar_decoration.scaleX = 2.876226221353047;
-		health_bar_decoration.scaleY = 2.876226221353047;
-
-		// life_Bar_Animated_1
-		const life_Bar_Animated_1 = this.add.image(713, 44, "Life Bar Animated 1");
-		life_Bar_Animated_1.scaleX = 1.801947436688974;
-		life_Bar_Animated_1.scaleY = 1.801947436688974;
+		this.displayHealthBar(); // there's working updateHealthBar() function
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -49,7 +39,8 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX=="true"){
 					this.buttonClicked.play()
 				}
-				this.displayPauseMenu()
+				this.displayPauseMenu();
+
 			})
 			.on("pointerover", () => {
       			button_pause.scale += 0.02;
@@ -64,6 +55,7 @@ class Beach extends Phaser.Scene {
 
 
 	create() {
+		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
 	}
 	update(){
@@ -260,5 +252,17 @@ class Beach extends Phaser.Scene {
 			//Block Character Movement on Pause
 			this.input.keyboard.enabled = false;
 	}
+	displayHealthBar(){
+		// health_bar_decoration
+		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
+		health_bar_decoration.scaleX = 2.876226221353047;
+		health_bar_decoration.scaleY = 2.876226221353047;
+
+		// life_Bar_Animated_1
+		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
+		this.healthBars.scaleX = 1.801947436688974;
+		this.healthBars.scaleY = 1.801947436688974;
+	}
+	
 
 }
