@@ -57,6 +57,9 @@ class Icey extends Phaser.Scene {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
 	}
+	update(){
+		
+	}
 
 	displayMap(){
 		// snowyMap
