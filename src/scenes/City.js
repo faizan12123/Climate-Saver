@@ -8,6 +8,7 @@ class City extends Phaser.Scene {
 	editorCreate() {
 		this.displayMap();
 		this.displayPlayer();
+		this.displayHealthBar(); // there's working updateHealthBar() function
 		
 		function formatTime(seconds){
     		// Minutes
@@ -33,17 +34,6 @@ class City extends Phaser.Scene {
 			this.scene.start("Quiz");
 		});
 
-		
-
-		// health_bar_decoration
-		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
-		health_bar_decoration.scaleX = 2.876226221353047;
-		health_bar_decoration.scaleY = 2.876226221353047;
-
-		// life_Bar_Animated_1
-		const life_Bar_Animated_1 = this.add.image(713, 44, "Life Bar Animated 1");
-		life_Bar_Animated_1.scaleX = 1.801947436688974;
-		life_Bar_Animated_1.scaleY = 1.801947436688974;
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -91,7 +81,7 @@ class City extends Phaser.Scene {
 	// Write your code here
 
 	create() {
-
+		this.healthBarNumber = 8;
 		this.editorCreate();
 		this.player.play("down-idle");
 		this.physics.add.collider(this.player, this.worldLayer)
@@ -274,6 +264,27 @@ class City extends Phaser.Scene {
 
 			//Block Character Movement on Pause
 			this.input.keyboard.enabled = false;
+	}
+	displayHealthBar(){
+		// health_bar_decoration
+		const health_bar_decoration = this.add.image(691, 44, "health_bar_decoration");
+		health_bar_decoration.scaleX = 2.876226221353047;
+		health_bar_decoration.scaleY = 2.876226221353047;
+
+		// life_Bar_Animated_1
+		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
+		this.healthBars.scaleX = 1.801947436688974;
+		this.healthBars.scaleY = 1.801947436688974;
+	}
+	updateHealthBar(){
+		this.healthBarNumber--;
+		this.healthBars.destroy();
+		if(this.healthBarNumber<0){
+			this.healthBarNumber = 0;
+		}
+		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
+		this.healthBars.scaleX = 1.801947436688974;
+		this.healthBars.scaleY = 1.801947436688974;
 	}
 }
 
