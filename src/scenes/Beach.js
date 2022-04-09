@@ -1,8 +1,3 @@
-
-// You can write more code here
-
-/* START OF COMPILED CODE */
-
 class Beach extends Phaser.Scene {
 
 	trashs;
@@ -146,6 +141,7 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
             		this.buttonClicked.play();
           		}
+				  this.input.keyboard.enabled = true;
 				this.backgroundMusic.stop();
 				this.scene.start("MainMenu");
 			})
@@ -174,6 +170,7 @@ class Beach extends Phaser.Scene {
 				button_music.visible = false;
 				fx_tick.visible = false;
 				music_tick.visible = false;
+				this.input.keyboard.enabled = true;
 			})
 			.on("pointerover", () => {
       			btn_resume.scale += 0.05;
@@ -259,6 +256,9 @@ class Beach extends Phaser.Scene {
 			if(localStorage.settingsOptionMusic=="false"){
 				music_tick.visible = true;
 			}
+
+			//Block Character Movement on Pause
+			this.input.keyboard.enabled = false;
 	}
 
 }
