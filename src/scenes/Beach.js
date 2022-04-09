@@ -263,6 +263,14 @@ class Beach extends Phaser.Scene {
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
 	}
-	
+	updateHealthBar(){
+		this.healthBars.destroy();
+		if(this.healthBarNumber<0){
+			this.healthBarNumber = 0;
+		}
+		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
+		this.healthBars.scaleX = 1.801947436688974;
+		this.healthBars.scaleY = 1.801947436688974;
+	}
 
 }
