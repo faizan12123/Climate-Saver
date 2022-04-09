@@ -58,7 +58,7 @@ class Icey extends Phaser.Scene {
 		this.editorCreate();
 	}
 	update(){
-		
+
 	}
 
 	displayMap(){
@@ -80,6 +80,13 @@ class Icey extends Phaser.Scene {
 		const buildingLayer = snowyMap.createLayer("buildingLayer", ["snowyTile"], -24, -208);
 		buildingLayer.scaleX = 1.3;
 		buildingLayer.scaleY = 1.3;
+
+		//load music
+		this.backgroundMusic = this.sound.add("tundra-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
+		this.backgroundMusic.loop = true;
+		if(localStorage.settingsOptionMusic == "true"){
+			this.backgroundMusic.play();
+		}
 	}
 	displayPlayer(){
 		// player
