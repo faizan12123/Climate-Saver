@@ -530,6 +530,46 @@
                 "key": "Life Bar Animated 1"
             },
             {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
+                "type": "image",
+                "key": "Life Bar Animated 2"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
+                "type": "image",
+                "key": "Life Bar Animated 3"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
+                "type": "image",
+                "key": "Life Bar Animated 4"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
+                "type": "image",
+                "key": "Life Bar Animated 5"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
+                "type": "image",
+                "key": "Life Bar Animated 6"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
+                "type": "image",
+                "key": "Life Bar Animated 7"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 8.png",
+                "type": "image",
+                "key": "Life Bar Animated 8"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
+                "type": "image",
+                "key": "Life Bar Animated 9"
+            },
+            {
                 "url": "assets/environment/loading-graphic.png",
                 "type": "image",
                 "key": "loading-graphic"
