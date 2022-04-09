@@ -264,6 +264,7 @@ class Beach extends Phaser.Scene {
 		this.healthBars.scaleY = 1.801947436688974;
 	}
 	updateHealthBar(){
+		this.healthBarNumber--;
 		this.healthBars.destroy();
 		if(this.healthBarNumber<0){
 			this.healthBarNumber = 0;
