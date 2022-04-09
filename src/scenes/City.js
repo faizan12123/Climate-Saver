@@ -83,8 +83,7 @@ class City extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8;
 		this.editorCreate();
-		this.player.play("down-idle");
-		this.physics.add.collider(this.player, this.worldLayer)
+		
 	}
 	update(){
 		this.worldLayer.setCollisionByProperty({ collides: true });
@@ -128,6 +127,10 @@ class City extends Phaser.Scene {
 		new PhysicsV2(player);
 		new MovementV2(player);
 		this.player = player;
+
+		//animations + movements
+		this.player.play("down-idle");
+		this.physics.add.collider(this.player, this.worldLayer)
 	}
 	displayPauseMenu(){
 		// pause_menu
