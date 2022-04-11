@@ -30,7 +30,6 @@ class City extends Phaser.Scene {
 		button_quiz.scaleX = 0.36;
     	button_quiz.scaleY = 0.36;
 		button_quiz.on("pointerdown", () =>{
-			backgroundMusic.stop();
 			this.scene.start("Quiz");
 		});
 

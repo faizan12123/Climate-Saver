@@ -141,12 +141,36 @@ class Quiz extends Phaser.Scene {
 			button_start.scaleY = 0.35;
 		});
 
+		// button_map
+		const button_map = this.add.image(400, 417, "button-map");
+		button_map.scaleX = 0.35;
+		button_map.scaleY = 0.35;
+		button_map.visible = false;
+		start_quiz.add(button_map);
+		button_map.setInteractive();
+		button_map.on("pointerdown", () => {
+			this.scene.start("Start");
+		}).on("pointerover", () => {
+      		button_map.scale += 0.12;
+    	}).on("pointerout", () => {
+			button_map.scaleX = 0.35;
+			button_map.scaleY = 0.35;
+		});
+
 		// quiz-message
 		const quiz_message = this.add.text(225, 255, "", {});
 		quiz_message.text = "Test your knowledge about the environment around you, press start to begin.\n";
 		quiz_message.setStyle({ "align": "center", "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
 		quiz_message.setWordWrapWidth(400);
 		start_quiz.add(quiz_message);
+		
+		// score_print
+		const score_print = this.add.text(261, 247, "", {});
+		score_print.text = "Score goes here";
+		score_print.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px", "stroke": "" });
+		score_print.visible = false;
+		start_quiz.add(score_print);
+
 
 		//quiz logic
 		let questions = [
@@ -188,6 +212,129 @@ class Quiz extends Phaser.Scene {
 				question: 'What is the process of reusing material?',
 				choice1:'Throwing it in the trash can', choice2:'Recycling it', choice3:'Buy more food', choice4:'Eat leftovers',
 				answer:'Recycling it',
+			},{
+				//beach question
+				question: 'Single-use plastics such as plastic straws, plastic beverage bottles, and food wrappers are the most commonly found items in coastal cleanups worldwide.',
+				choice1:'True', choice2:'False',
+				answer:'True',
+			},{
+				question: 'How many garbage patches are there?',
+				choice1:'4', choice2:'0', choice3:'5', choice4:'1',
+				answer:'5',
+			},{
+				question: 'Degrading plastics causes chemicals to contaminate the ocean. How many years does it take for a plastic water bottle to fully decompose?',
+				choice1:'4', choice2:'400', choice3:'500', choice4:'1,000',
+				answer:'400',
+			},{
+				question: 'What is one of the leading sources of pollution in the ocean caused by rainfall?',
+				choice1:'Precipitation', choice2:'Point Source', choice3:'Condensation', choice4:'Runoff',
+				answer:'Runoff',
+			},{
+				question: 'Seabirds and marine animals die more from predators rather than ocean pollution, plastic entanglement and ingestion combined.',
+				choice1:'True', choice2:'False', 
+				answer:'False',
+			},{
+				question: '________ pollution is a less common type of pollution but still greatly impacts the ocean. This type of pollution comes from a single source such as an oil truck spill or a chemical spill from a factory.',
+				choice1:'Point source', choice2:'Oil spill', choice3:'Single source', choice4:'Indirect',
+				answer:'Point source',
+			},{
+				question: 'Which of the following countries are responsible for a third of all plastic pollution?',
+				choice1:'China and USA', choice2:'China and Indonesia', choice3:'UK and Australia', choice4:'Canada and USA',
+				answer:'China and Indonesia',
+			},{
+				question: 'What percentage of ocean pollution will we never see nor clean because of the debris sinking to the bottom of the ocean?',
+				choice1:'10%', choice2:'30%', choice3:'70%', choice4:'90%',
+				answer:'70%',
+			},{
+				question: 'About how much of all plastic ever produced remains in the environment today?',
+				choice1:'1/4', choice2:'1/2', choice3:'2/3', choice4:'3/4',
+				answer:'2/3',
+			},{
+				question: 'What ocean is the biggest garbage patch located?',
+				choice1:'Atlantic', choice2:'Pacific', choice3:'Indian', choice4:'Arctic',
+				answer:'Pacific',
+			},{
+				//forest question
+				question:'Deforestation is the destruction of forest lands for the purpose of converting them into other uses which are usually regarded as less profitable.',
+				choice1: 'True', choice2: 'False',
+				answer:'False', 
+			},{
+				question:'Forests produce three-quarters of freshwater.',
+				choice1: 'True', choice2: 'False', 
+				answer:'True', 
+			},{
+				question:'How much of Earth\'s surface is covered by forests?',
+				choice1: '70%', choice2: '45%', choice3: '30%', choice4: '90%',
+				answer:'30%', 
+			},{
+				question:'Why are trees important against climate change?',
+				choice1: 'Trees slow down air polution', choice2: 'Trees provides shade and wood', choice3: 'Trees produce oxygen', choice4: 'Trees decrease greenhouse emissions',
+				answer:'Trees absorb decrease greenhouse emissions', 
+			},{
+				question:'All of the materials responsible for the majority of tropical deforestation beside?',
+				choice1: 'Beef', choice2: 'Fruit', choice3: 'Wood', choice4: 'Palm oil',
+				answer:'Fruit', 
+			},{
+				question:'Palm oil is a sought after resource contributing to deforestation.',
+				choice1: 'True', choice2: 'False',
+				answer:'False', 
+			},{
+				question:'How does deforestation affect water conditions in the tropical region?',
+				choice1: 'Reduce sunlight', choice2: 'Reduce rainfall', choice3: 'Reduce snowfall', choice4: 'Harsh winds',
+				answer:'Reduce rainfall', 
+			},{
+				question:'How does deforestation occur intentionally?',
+				choice1: 'Wildfires', choice2: 'Human activities', choice3: 'Logging', choice4: 'Fuel suppling',
+				answer:'Wildfires', 
+			},{
+				question:'Deforestation is one of the contributers to global warming?',
+				choice1: 'True', choice2: 'False', 
+				answer:'True', 
+			},{
+				question:'How many trees are cut down each year around the world?',
+				choice1: '20 million', choice2: '15 billion', choice3: '2 trillion', choice4: '12 million',
+				answer:'15 billion', 
+			},{
+				//icey question
+				question:'What is the frozen part of the Earth system called?',
+				choice1: 'Hemisphere', choice2: 'Cryosphere', choice3: 'Atmosphere', choice4: 'Icesphere',
+				answer:'Cryosphere', 
+			},{
+				question:'What places contain most of Earth\'s ice?',
+				choice1: 'Greenland and Antarctic', choice2: 'The Arctic and Iceland', choice3: 'Greenland and Iceland', choice4: 'The Arctic and Antarctic',
+				answer:'The Arctic and Antarctic', 
+			},{
+				question:'Why does solar energy reflect back more from snow and ice?',
+				choice1: 'Their light color', choice2: 'Coldness', choice3: 'Solid Phase', choice4: 'Fix volume',
+				answer:'Their light color', 
+			},{
+				question:'What short-lived pollutant affects the rate of snow and ice melting and reflectivity?',
+				choice1: 'Hydrogen', choice2: 'Nitrogen', choice3: 'Carbon Dioxide', choice4: 'Black Carbon',
+				answer:'Black Carbon', 
+			},{
+				question:'Black carbon is not preventable and can stay in the atmosphere months to years.',
+				choice1: 'True', choice2: 'False', 
+				answer:'False', 
+			},{
+				question:'Less snow is beneficial to the wildlife and communities in the Arctic.',
+				choice1: 'True', choice2: 'False', 
+				answer:'False', 
+			},{
+				question:'What gasses are released after the soil is thawed in icey environments?',
+				choice1: 'Carbon dioxide and Methane', choice2: 'Ethane and Methane', choice3: 'Nitrogen and Carbon dioxide', choice4: 'Chlorine and Carbonmonoxide',
+				answer:'Carbon dioxide and Methane', 
+			},{
+				question:'Sea ice affects the movement of ocean waters.',
+				choice1: 'True', choice2: 'False', 
+				answer:'True', 
+			},{
+				question:'About what percentage does snow and ice reflect solar energy?',
+				choice1: '100%', choice2: '50%', choice3: '90%', choice4: '10%',
+				answer:'90%', 
+			},{
+				question:'At what rate does the sea level increase per year?',
+				choice1: '100 centimeters', choice2: '1-2 meters', choice3: '1-2 millimeters', choice4: '1 kilometers',
+				answer:'1-2 millimeters', 
 			}
 		];
 
@@ -300,6 +447,7 @@ class Quiz extends Phaser.Scene {
 			 });
 			 
 		 }
+         //Next question or print score
 		 function disableButton(){
 			 choicebox_1.input.enabled = false;
 			 choicebox_2.input.enabled = false;
@@ -331,8 +479,10 @@ class Quiz extends Phaser.Scene {
 			 start_quiz.visible = true;
 			 button_start.visible = false;
 			 ++currentIndex;
-			 quiz_message.text = "You got " +score+ " out of " +currentIndex; 
-			 quiz_message.setStyle({ "align": "right", "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+			 score_print.visible = true;
+			 quiz_message.visible = false;
+			 button_map.visible = true;
+			 score_print.text = "You got " +score+ " out of " +currentIndex; 
 		 }
 
 
