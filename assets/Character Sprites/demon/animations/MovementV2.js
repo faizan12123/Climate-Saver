@@ -51,31 +51,35 @@ class MovementV2 {
 		if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.left.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.a.isDown))
 		{
 			body.setVelocity(-speed, 0)
-			player.play('up-walk', true)
+			player.play('left-walk', true)
+			
 		}
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.right.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.d.isDown))
 		{
 			body.setVelocity(speed, 0)
 			player.play('right-walk', true)
+			
 		}
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.up.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.w.isDown))
 		{
 			body.setVelocity(0, -speed)
 			player.play('up-walk', true)
+			
 		}
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.down.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" &&  this.keys.s.isDown))
 		{
 			body.setVelocity(0, speed)
 			player.play('down-walk', true)
+			
 		}
-		else if(this.cursors.space.isDown){
-			body.setVelocity(0, 0)
-			const key = player.anims.currentAnim.key
-			const parts = key.split('-')
-			const direction = parts[0]
-			console.log("-"+direction+"-")
-			player.play(direction+"-attack", true);
-		}
+		// else if(this.cursors.space.isDown){
+		// 	body.setVelocity(0, 0)
+		// 	const key = player.anims.currentAnim.key
+		// 	const parts = key.split('-')
+		// 	const direction = parts[0]
+		// 	console.log("-"+direction+"-")
+		// 	player.play(direction+"-attack", true);
+		// }
 		else
 		{
 			body.setVelocity(0, 0)

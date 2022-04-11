@@ -62,6 +62,42 @@ class Beach extends Phaser.Scene {
 		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
 		this.waterLayer.setCollisionByProperty({ collides: true });
 		this.objectsLayer.setCollisionByProperty({ collides: true });
+		// if (this.cursors.left.isDown)
+        // {
+        //     this.player.setVelocityX(-160);
+
+        //     this.player.anims.play('left', true);
+        // }
+        // else if (this.cursors.right.isDown)
+        // {
+        //     this.player.setVelocityX(160);
+
+        //     this.player.anims.play('right', true);
+        // }
+        // else if (this.cursors.up.isDown)
+        // {
+        //     this.player.setVelocityY(-160);
+
+        //     this.player.anims.play('up', true);
+        // }
+        // else if (this.cursors.down.isDown)
+        // {
+        //     this.player.setVelocityY(160);
+
+        //     this.player.anims.play('down', true);
+        // }
+        // else
+        // {
+        //     this.player.setVelocityX(0);
+
+        //     this.player.anims.play('turn');
+        // }
+
+        // if (this.cursors.up.isDown && this.player.body.touching.down)
+        // {
+        //     player.setVelocityY(-330);
+        // }
+  
 	}
 
 	displayMap(){
@@ -84,16 +120,67 @@ class Beach extends Phaser.Scene {
 	}
 	displayPlayer(){
 		// player
-		const player = this.add.sprite(489, 348, "1_1");
-		new PhysicsV2(player);
-		new MovementV2(player);
+		const player = this.add.sprite(489, 348, 'character');
 		this.player = player;
 
+		
+
 		//animations + movements
+		new PhysicsV2(player);
+		new MovementV2(player);
 		this.player.play("down-idle");
 		this.physics.add.collider(this.player, this.waterLayer)
 		this.physics.add.collider(this.player, this.objectsLayer)
 	}
+// 	displayCharacter(){
+// 	let player;
+//     let cursors;
+//     player = this.physics.add.sprite(489, 348, 'character');
+
+//         player.setBounce(0.2);
+//         player.setCollideWorldBounds(true);
+
+//         this.anims.create({
+//             key: 'left',
+//             frames: this.anims.generateFrameNumbers('character', { start: 26, end: 26 }),
+//             frameRate: 10,
+//             repeat: -1
+//         });
+
+//         this.anims.create({
+//             key: 'turn',
+//             frames: [ { key: 'character', frame: 2 } ],
+//             frameRate: 20
+//         });
+
+//         this.anims.create({
+//             key: 'right',
+//             frames: this.anims.generateFrameNumbers('character', { start: 10, end: 10 }),
+//             frameRate: 10,
+//             repeat: -1
+//         });
+
+//         this.anims.create({
+//             key: 'down',
+//             frames: this.anims.generateFrameNumbers('character', { start: 4, end: 4 }),
+//             frameRate: 10,
+//             repeat: -1
+//         });
+//         this.anims.create({
+//             key: 'up',
+//             frames: this.anims.generateFrameNumbers('character', { start: 18, end: 18 }),
+//             frameRate: 10,
+//             repeat: -1
+//         });
+
+//         cursors = this.input.keyboard.createCursorKeys();
+// 		this.player = player
+//   		this.cursors = cursors
+
+// 		this.physics.add.collider(this.player, this.waterLayer)
+// 		this.physics.add.collider(this.player, this.objectsLayer)
+//   }
+	
 	displayTrash(){
 		// trashs
 		this.trashs = this.add.group();

@@ -366,6 +366,89 @@
             "frameRate": 24,
             "skipMissedFrames": true,
             "repeat": -1
+        },
+        {
+            "key": "left-walk",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "6_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "7_1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "8_1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "left-idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "1_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "2_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "3_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "4_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "5_2",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
         }
     ],
     "globalTimeScale": 1,
