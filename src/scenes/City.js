@@ -125,10 +125,17 @@ class City extends Phaser.Scene {
 		score.scaleY = 0.4992280777321614;
 
 		// pause_menu
+<<<<<<< Updated upstream
 		const pause_menu = this.add.image(394, 281, "pause-menuV2");
 		pause_menu.scaleX = 0.26626053769694924;
 		pause_menu.scaleY = 0.27093994892320916;
 		pause_menu.visible = false;
+=======
+		this.pause_menu = this.add.image(394, 281, "pause-menuV2");
+		this.pause_menu.scaleX = 0.26626053769694924;
+		this.pause_menu.scaleY = 0.27093994892320916;
+		this.pause_menu.visible = false;
+>>>>>>> Stashed changes
 
 		//Button Sound
 		var buttonClicked = this.sound.add("buttonOnClick");
@@ -159,7 +166,11 @@ class City extends Phaser.Scene {
 		button_no.setInteractive();
 		button_no.on("pointerdown", () => {
 			buttonClicked.play();
+<<<<<<< Updated upstream
 			pause_menu.visible = false;
+=======
+			this.pause_menu.visible = false;
+>>>>>>> Stashed changes
 			button_yes.visible = false;
 			button_no.visible = false;
 			button_sound.visible = false;
@@ -225,12 +236,21 @@ class City extends Phaser.Scene {
 		button_music.visible = false;
 
 		// button_pause
+<<<<<<< Updated upstream
 		const button_pause = this.add.image(49, 41, "button-pause");
 		button_pause.scaleX = 0.16010465842344668;
 		button_pause.scaleY = 0.1577276264549412;
 		button_pause.setInteractive();
 		button_pause.on("pointerdown", () => {
 			pause_menu.visible = true;
+=======
+		this.button_pause = this.add.image(49, 41, "button-pause");
+		this.button_pause.scaleX = 0.16010465842344668;
+		this.button_pause.scaleY = 0.1577276264549412;
+		this.button_pause.setInteractive();
+		this.button_pause.on("pointerdown", () => {
+			this.pause_menu.visible = true;
+>>>>>>> Stashed changes
 			button_yes.visible = true;
 			button_no.visible = true;
 			button_sound.visible = true;
@@ -238,12 +258,21 @@ class City extends Phaser.Scene {
             buttonClicked.play();
 			this.lifecounter+=1;
 			});
+<<<<<<< Updated upstream
 		button_pause.on("pointerover", () => {
       		button_pause.scale += 0.02;
     		});
 		button_pause.on("pointerout", () => {
 			button_pause.scaleX = 0.16010465842344668;
 			button_pause.scaleY = 0.1577276264549412;
+=======
+		this.button_pause.on("pointerover", () => {
+      		this.button_pause.scale += 0.02;
+    		});
+		this.button_pause.on("pointerout", () => {
+			this.button_pause.scaleX = 0.16010465842344668;
+			this.button_pause.scaleY = 0.1577276264549412;
+>>>>>>> Stashed changes
 			});
 
 		// music_tick
@@ -295,10 +324,28 @@ class City extends Phaser.Scene {
 		console.log(this.cursors);
 
 		//creating score/score text updates
+<<<<<<< Updated upstream
 		var score = 0;
 		var scoreText;
 		scoreText = this.add.text(420, 23, '0', { fontSize: '25px', fill: '#000' });
 
+=======
+		this.score = 0;
+		this.scoreText = this.add.text(420, 20, '0', { font: '20px Georgia', fill: '#000' });
+
+		//creating timer
+		this.timeInSeconds = 150;
+		this.shouldSubtractSecond = 0;
+		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
+
+		//function for when timer's number is less than 10 and adds a zero before number
+		this.addZeros = function(num){
+			if(num < 10){
+				num = "0" + num;
+			}
+			return num;
+		};
+>>>>>>> Stashed changes
 
 	}
 	
@@ -306,9 +353,38 @@ class City extends Phaser.Scene {
 
 	update() {
 
+<<<<<<< Updated upstream
 		if (this.cursors.left.isDown)
 		{
 			this.d_Pad_Left.visible = true;
+=======
+		//Check to see if pause menu is off
+		if(this.pause_menu.visible == false)
+		{
+			//start of timer code
+			this.shouldSubtractSecond++;
+			if(this.shouldSubtractSecond == 120)
+			{
+				this.timeInSeconds--;
+				this.shouldSubtractSecond = 0;
+			}
+		}
+		
+		var minutes = Math.floor(this.timeInSeconds / 60);
+		var seconds = this.timeInSeconds - (minutes * 60);
+		var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
+		this.timeText.text = timeString;
+
+		if (this.timeInSeconds == 0) {
+			//this.game.state.restart();
+		}
+
+		if (this.cursors.left.isDown)
+		{
+			this.d_Pad_Left.visible = true;
+			this.score += 1;
+    		this.scoreText.setText(' ' + this.score);
+>>>>>>> Stashed changes
 		} 
 		else if (this.cursors.right.isDown) 
 		{
