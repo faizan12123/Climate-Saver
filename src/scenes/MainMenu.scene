@@ -117,21 +117,8 @@
             "texture": {
                 "key": "main-menu-button-start"
             },
-            "x": 656,
-            "y": 131,
-            "scaleX": 0.36,
-            "scaleY": 0.36
-        },
-        {
-            "type": "Image",
-            "id": "8e6ddb57-8a46-4ba6-9ccd-2ae834e32cf4",
-            "label": "main_menu_button_tutorial",
-            "components": [],
-            "texture": {
-                "key": "main-menu-button-tutorial"
-            },
-            "x": 656,
-            "y": 222,
+            "x": 653,
+            "y": 173,
             "scaleX": 0.36,
             "scaleY": 0.36
         },
@@ -143,8 +130,8 @@
             "texture": {
                 "key": "main-menu-button-controls"
             },
-            "x": 655,
-            "y": 311,
+            "x": 653,
+            "y": 261,
             "scaleX": 0.36,
             "scaleY": 0.36
         },
@@ -156,8 +143,8 @@
             "texture": {
                 "key": "main-menu-button-settings"
             },
-            "x": 656,
-            "y": 401,
+            "x": 654,
+            "y": 351,
             "scaleX": 0.36,
             "scaleY": 0.36
         },
@@ -169,8 +156,8 @@
             "texture": {
                 "key": "main-menu-button-credits"
             },
-            "x": 655,
-            "y": 493,
+            "x": 653,
+            "y": 443,
             "scaleX": 0.36,
             "scaleY": 0.36
         }

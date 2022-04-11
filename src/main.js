@@ -15,16 +15,29 @@ window.addEventListener("load", function () {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH,
     },
+    physics: {
+      default: "arcade",
+      arcade: {
+        gravity: { y:0 }
+      }
+    }
   });
 
   game.scene.add("Preload", Preload);
   game.scene.add("MainMenu", MainMenu);
   game.scene.add("Beach", Beach);
+  game.scene.add("City", City);
+  game.scene.add("Icey", Icey);
+  game.scene.add("Forest", Forest);
   game.scene.add("Start", Start);
+  game.scene.add("Quiz", Quiz);
+   game.scene.add("Beta", Beta);
+  /* DEPRECATED
   game.scene.add("Tutorial", Tutorial);
   game.scene.add("Controls", Controls);
   game.scene.add("Settings", Settings);
   game.scene.add("Credits", Credits);
+  */
   game.scene.add("Boot", Boot, true);
 	var game = new Phaser.Game({
 		width: 800,

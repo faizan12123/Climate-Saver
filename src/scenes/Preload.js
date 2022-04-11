@@ -7,10 +7,6 @@ class Preload extends Phaser.Scene {
 
 	constructor() {
 		super("Preload");
-
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
 	}
 
 	/** @returns {void} */
@@ -24,7 +20,7 @@ class Preload extends Phaser.Scene {
 
 		// layer_0
 		this.add.image(485, 306, "main-menu-environment-sky");
-
+		
 		// progress
 		const progress = this.add.text(400, 349, "", {});
 		progress.setOrigin(0.5, 0.5);
@@ -36,6 +32,25 @@ class Preload extends Phaser.Scene {
 
 		// progress (components)
 		new PreloadText(progress);
+
+
+		//LOCAL STORAGE
+		if(localStorage.getItem("controlsOptionArrows") == null){
+			localStorage.setItem("controlsOptionArrows", "true");
+		}
+		if(localStorage.getItem("settingsOptionFX") == null){
+			localStorage.setItem("settingsOptionFX", "true");
+		}
+		if(localStorage.getItem("settingsOptionMusic") == null){
+			localStorage.setItem("settingsOptionMusic" ,"true");
+		}
+		if(localStorage.getItem("musicVolume") == null){
+			localStorage.setItem("musicVolume" , "0.5");
+		}
+		if(localStorage.getItem("fxVolume") == null){
+			localStorage.setItem("fxVolume" , "0.5");
+		}
+		
 
 		this.events.emit("scene-awake");
 	}
