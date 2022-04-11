@@ -64,6 +64,7 @@ class Quiz extends Phaser.Scene {
 		const choice_4 = this.add.text(6, 374, "", {});
 		choice_4.text = "Choice 4\n";
 		choice_4.setStyle({ "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+		choice_4.setOrigin(0.5); choice_4.setX(182); choice_4.setY(387);
 		m_container.add(choice_4);
 
 		// choicebox_3
@@ -77,6 +78,7 @@ class Quiz extends Phaser.Scene {
 		const choice_3 = this.add.text(8, 301, "", {});
 		choice_3.text = "Choice 3\n";
 		choice_3.setStyle({ "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+		choice_3.setOrigin(0.5); choice_3.setX(184); choice_3.setY(314);
 		m_container.add(choice_3);
 
 		// choicebox_2
@@ -90,6 +92,7 @@ class Quiz extends Phaser.Scene {
 		const choice_2 = this.add.text(12, 227, "", {});
 		choice_2.text = "Choice 2\n";
 		choice_2.setStyle({ "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+		choice_2.setOrigin(0.5); choice_2.setX(188); choice_2.setY(239);
 		m_container.add(choice_2);
 
 		// choicebox_1
@@ -102,7 +105,8 @@ class Quiz extends Phaser.Scene {
 		// choice_1
 		const choice_1 = this.add.text(14, 155, "", {});
 		choice_1.text = "Choice 1\n";
-		choice_1.setStyle({ "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+		choice_1.setStyle({ "align": "center", "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+		choice_1.setOrigin(0.5); choice_1.setX(190); choice_1.setY(165);
 		m_container.add(choice_1);
 
 		// question-input
@@ -173,8 +177,10 @@ class Quiz extends Phaser.Scene {
 
 
 		//quiz logic
-		let questions = [
-			{
+		let questions = [];
+		let cityQ =[
+				{
+				//city question
 				question: 'What is the process of reusing material?',
 				choice1:'Reduce', choice2:'Reuse', choice3:'Recycle', choice4:'All of the above',
 				answer:'All of the above',
@@ -212,7 +218,9 @@ class Quiz extends Phaser.Scene {
 				question: 'What is the process of reusing material?',
 				choice1:'Throwing it in the trash can', choice2:'Recycling it', choice3:'Buy more food', choice4:'Eat leftovers',
 				answer:'Recycling it',
-			},{
+			}];
+			let beachQ =[
+				{
 				//beach question
 				question: 'Single-use plastics such as plastic straws, plastic beverage bottles, and food wrappers are the most commonly found items in coastal cleanups worldwide.',
 				choice1:'True', choice2:'False',
@@ -253,7 +261,9 @@ class Quiz extends Phaser.Scene {
 				question: 'What ocean is the biggest garbage patch located?',
 				choice1:'Atlantic', choice2:'Pacific', choice3:'Indian', choice4:'Arctic',
 				answer:'Pacific',
-			},{
+			}];
+			let forestQ =[
+				{
 				//forest question
 				question:'Deforestation is the destruction of forest lands for the purpose of converting them into other uses which are usually regarded as less profitable.',
 				choice1: 'True', choice2: 'False',
@@ -294,7 +304,9 @@ class Quiz extends Phaser.Scene {
 				question:'How many trees are cut down each year around the world?',
 				choice1: '20 million', choice2: '15 billion', choice3: '2 trillion', choice4: '12 million',
 				answer:'15 billion', 
-			},{
+			}]
+			let iceyQ =[
+				{
 				//icey question
 				question:'What is the frozen part of the Earth system called?',
 				choice1: 'Hemisphere', choice2: 'Cryosphere', choice3: 'Atmosphere', choice4: 'Icesphere',
@@ -336,12 +348,14 @@ class Quiz extends Phaser.Scene {
 				choice1: '100 centimeters', choice2: '1-2 meters', choice3: '1-2 millimeters', choice4: '1 kilometers',
 				answer:'1-2 millimeters', 
 			}
-		];
+			];
 
 		let currentIndex, shuffled;
 		let score = 0;
 
 		function showQuestion(){
+			//switch question by environment
+			questions = cityQ;
 			let q = questions[currentIndex];
 			question_input.text = q.question;
 			choice_1.text = q.choice1;

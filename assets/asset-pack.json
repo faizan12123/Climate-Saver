@@ -2,11 +2,6 @@
     "section1": {
         "files": [
             {
-                "url": "assets/buttons/answer-textbox.png",
-                "type": "image",
-                "key": "answer-textbox"
-            },
-            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/1.png",
                 "type": "image",
                 "key": "1"
@@ -97,6 +92,11 @@
                 "key": "8"
             },
             {
+                "url": "assets/buttons/answer-textbox.png",
+                "type": "image",
+                "key": "answer-textbox"
+            },
+            {
                 "url": [
                     "assets/sounds/beach.mp3"
                 ],
@@ -139,9 +139,9 @@
                 "key": "button-forward"
             },
             {
-                "url": "assets/buttons/button-quiz.png",
+                "url": "assets/buttons/button-map.png",
                 "type": "image",
-                "key": "button-quiz"
+                "key": "button-map"
             },
             {
                 "url": "assets/buttons/button-music.png",
@@ -152,6 +152,11 @@
                 "url": "assets/buttons/button-pause.png",
                 "type": "image",
                 "key": "button-pause"
+            },
+            {
+                "url": "assets/buttons/button-quiz.png",
+                "type": "image",
+                "key": "button-quiz"
             },
             {
                 "url": "assets/buttons/button-radio.png",
@@ -389,21 +394,6 @@
                 "key": "maps-banner-title"
             },
             {
-                "url": "assets/environment/quiz-background.png",
-                "type": "image",
-                "key": "quiz-background"
-            },
-            {
-                "url": "assets/sprites/quiz-box.png",
-                "type": "image",
-                "key": "quiz-box"
-            },
-            {
-                "url": "assets/sprites/quiz-box-start.png",
-                "type": "image",
-                "key": "quiz-box-start"
-            },
-            {
                 "url": "assets/buttons/pause-menu-button-quit.png",
                 "type": "image",
                 "key": "pause-menu-button-quit"
@@ -417,6 +407,21 @@
                 "url": "assets/sprites/pause-menuV2.png",
                 "type": "image",
                 "key": "pause-menuV2"
+            },
+            {
+                "url": "assets/environment/quiz-background.png",
+                "type": "image",
+                "key": "quiz-background"
+            },
+            {
+                "url": "assets/sprites/quiz-box.png",
+                "type": "image",
+                "key": "quiz-box"
+            },
+            {
+                "url": "assets/sprites/quiz-box-start.png",
+                "type": "image",
+                "key": "quiz-box-start"
             },
             {
                 "url": "assets/In Game Buttons/White Buttons/Score.png",
