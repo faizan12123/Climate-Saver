@@ -147,6 +147,14 @@ class Quiz extends Phaser.Scene {
 		quiz_message.setStyle({ "align": "center", "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
 		quiz_message.setWordWrapWidth(400);
 		start_quiz.add(quiz_message);
+		
+		// score_print
+		const score_print = this.add.text(261, 247, "", {});
+		score_print.text = "Score goes here";
+		score_print.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px", "stroke": "" });
+		score_print.visible = false;
+		start_quiz.add(score_print);
+
 
 		//quiz logic
 		let questions = [
@@ -188,6 +196,47 @@ class Quiz extends Phaser.Scene {
 				question: 'What is the process of reusing material?',
 				choice1:'Throwing it in the trash can', choice2:'Recycling it', choice3:'Buy more food', choice4:'Eat leftovers',
 				answer:'Recycling it',
+			},{
+				//beach question
+				question: 'Single-use plastics such as plastic straws, plastic beverage bottles, and food wrappers are the most commonly found items in coastal cleanups worldwide.',
+				choice1:'True', choice2:'False',
+				answer:'True',
+			},{
+				question: 'How many garbage patches are there?',
+				choice1:'4', choice2:'0', choice3:'5', choice4:'1',
+				answer:'5',
+			},{
+				question: 'Degrading plastics causes chemicals to contaminate the ocean. How many years does it take for a plastic water bottle to fully decompose?',
+				choice1:'4', choice2:'400', choice3:'500', choice4:'1,000',
+				answer:'400',
+			},{
+				question: 'What is one of the leading sources of pollution in the ocean caused by rainfall?',
+				choice1:'Precipitation', choice2:'Point Source', choice3:'Condensation', choice4:'Runoff',
+				answer:'Runoff',
+			},{
+				question: 'Seabirds and marine animals die more from predators rather than ocean pollution, plastic entanglement and ingestion combined.',
+				choice1:'True', choice2:'False', 
+				answer:'False',
+			},{
+				question: '________ pollution is a less common type of pollution but still greatly impacts the ocean. This type of pollution comes from a single source such as an oil truck spill or a chemical spill from a factory.',
+				choice1:'Point source', choice2:'Oil spill', choice3:'Single source', choice4:'Indirect',
+				answer:'Point source',
+			},{
+				question: 'Which of the following countries are responsible for a third of all plastic pollution?',
+				choice1:'China and USA', choice2:'China and Indonesia', choice3:'UK and Australia', choice4:'Canada and USA',
+				answer:'China and Indonesia',
+			},{
+				question: 'What percentage of ocean pollution will we never see nor clean because of the debris sinking to the bottom of the ocean?',
+				choice1:'10%', choice2:'30%', choice3:'70%', choice4:'90%',
+				answer:'70%',
+			},{
+				question: 'About how much of all plastic ever produced remains in the environment today?',
+				choice1:'1/4', choice2:'1/2', choice3:'2/3', choice4:'3/4',
+				answer:'2/3',
+			},{
+				question: 'What ocean is the biggest garbage patch located?',
+				choice1:'Atlantic', choice2:'Pacific', choice3:'Indian', choice4:'Arctic',
+				answer:'Pacific',
 			}
 		];
 
@@ -300,6 +349,7 @@ class Quiz extends Phaser.Scene {
 			 });
 			 
 		 }
+         //Next question or print score
 		 function disableButton(){
 			 choicebox_1.input.enabled = false;
 			 choicebox_2.input.enabled = false;
@@ -331,8 +381,9 @@ class Quiz extends Phaser.Scene {
 			 start_quiz.visible = true;
 			 button_start.visible = false;
 			 ++currentIndex;
-			 quiz_message.text = "You got " +score+ " out of " +currentIndex; 
-			 quiz_message.setStyle({ "align": "right", "baselineY":1.2,"color": "#000000ff", "fontFamily": "Poppins", "fontSize": "20px" });
+			 score_print.visible = true;
+			 quiz_message.visible = false;
+			 score_print.text = "You got " +score+ " out of " +currentIndex; 
 		 }
 
 

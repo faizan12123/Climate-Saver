@@ -238,6 +238,19 @@
                     "color": "#000000ff",
                     "baselineY": 1.2,
                     "wordWrapWidth": 430
+                },
+                {
+                    "type": "Text",
+                    "id": "3e33b7cc-d001-4f13-8af8-f76a1f672fb1",
+                    "label": "score_print",
+                    "components": [],
+                    "x": 261.49206662172037,
+                    "y": 247,
+                    "text": "Score goes here",
+                    "align": "center",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
                 }
             ]
         }
