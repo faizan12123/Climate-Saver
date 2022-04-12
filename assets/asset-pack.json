@@ -339,6 +339,19 @@
                 "key": "box"
             },
             {
+                "url": "assets/Character Sprites/simpleCharacter/Boy  sheet wlaking and Idle.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Boy  sheet wlaking and Idle"
+            },
+            {
                 "url": "assets/buttons/buttom-volumeUp.png",
                 "type": "image",
                 "key": "buttom-volumeUp"
@@ -473,6 +486,16 @@
                 "key": "credits-textbox-content5"
             },
             {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
+                "type": "image",
+                "key": "D-Pad"
+            },
+            {
+                "url": "assets/Beach Assets/detergent-bottle.png",
+                "type": "image",
+                "key": "detergent-bottle"
+            },
+            {
                 "url": "assets/sprites/dude.png",
                 "frameConfig": {
                     "frameWidth": 32,
@@ -484,16 +507,6 @@
                 },
                 "type": "spritesheet",
                 "key": "dude"
-            },
-            {
-                "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
-                "type": "image",
-                "key": "D-Pad"
-            },
-            {
-                "url": "assets/Beach Assets/detergent-bottle.png",
-                "type": "image",
-                "key": "detergent-bottle"
             },
             {
                 "url": [
@@ -538,39 +551,9 @@
                 "key": "Layer_0"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
                 "type": "image",
-                "key": "Life-Bar-8"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
-                "type": "image",
-                "key": "Life-Bar-7"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
-                "type": "image",
-                "key": "Life-Bar-6"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
-                "type": "image",
-                "key": "Life-Bar-5"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
-                "type": "image",
-                "key": "Life-Bar-4"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
-                "type": "image",
-                "key": "Life-Bar-3"
-            },
-            {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
-                "type": "image",
-                "key": "Life-Bar-2"
+                "key": "Life-Bar-0"
             },
             {
                 "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 8.png",
@@ -578,9 +561,39 @@
                 "key": "Life-Bar-1"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
                 "type": "image",
-                "key": "Life-Bar-0"
+                "key": "Life-Bar-2"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
+                "type": "image",
+                "key": "Life-Bar-3"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
+                "type": "image",
+                "key": "Life-Bar-4"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
+                "type": "image",
+                "key": "Life-Bar-5"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
+                "type": "image",
+                "key": "Life-Bar-6"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
+                "type": "image",
+                "key": "Life-Bar-7"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
+                "type": "image",
+                "key": "Life-Bar-8"
             },
             {
                 "url": "assets/environment/loading-graphic.png",
@@ -717,6 +730,16 @@
                 "key": "MovementV2"
             },
             {
+                "url": "assets/Character Sprites/simpleCharacter/animations/MovementV2.js",
+                "type": "script",
+                "key": "MovementV2_1"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/MovementV3.js",
+                "type": "script",
+                "key": "MovementV3"
+            },
+            {
                 "url": "assets/Beach Assets/newspaper.png",
                 "type": "image",
                 "key": "newspaper"
@@ -742,9 +765,14 @@
                 "key": "pause-menuV2"
             },
             {
-                "url": "assets/Character Sprites/demon/animations/PhysicsV2.js",
+                "url": "assets/Character Sprites/simpleCharacter/animations/PhysicsV2.js",
                 "type": "script",
                 "key": "PhysicsV2"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/PhysicsV3.js",
+                "type": "script",
+                "key": "PhysicsV3"
             },
             {
                 "url": "assets/Beach Assets/pizza-box.png",
@@ -752,9 +780,9 @@
                 "key": "pizza-box"
             },
             {
-                "url": "assets/Character Sprites/demon/animations/player-animations.json",
+                "url": "assets/Character Sprites/simpleCharacter/animations/player-animations.json",
                 "type": "animation",
-                "key": "player-animations"
+                "key": "player-animations_1"
             },
             {
                 "url": "assets/environment/quiz-background.png",
@@ -780,6 +808,19 @@
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/simpleCharacter.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "simpleCharacter"
             },
             {
                 "url": "assets/environment/snowyMap.json",

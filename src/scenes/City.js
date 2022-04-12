@@ -121,14 +121,15 @@ class City extends Phaser.Scene {
 			this.backgroundMusic.play();
 		}
 	}
+
 	displayPlayer(){
 		// player
-		const player = this.add.sprite(489, 348, "1_1");
+		const player = this.add.sprite(489, 348, 'Boy  sheet wlaking and Idle');
 		new PhysicsV2(player);
 		new MovementV2(player);
 		this.player = player;
-
 		//animations + movements
+		
 		this.player.play("down-idle");
 		this.physics.add.collider(this.player, this.worldLayer)
 	}

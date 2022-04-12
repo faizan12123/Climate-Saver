@@ -120,7 +120,7 @@ class Beach extends Phaser.Scene {
 	}
 	displayPlayer(){
 		// player
-		const player = this.add.sprite(489, 348, 'character');
+		const player = this.add.sprite(489, 348, 'Boy  sheet wlaking and Idle');
 		this.player = player;
 
 		
