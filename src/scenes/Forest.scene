@@ -8,6 +8,48 @@
     },
     "displayList": [
         {
+            "type": "TilemapLayer",
+            "id": "bcff3d7b-5993-405c-9711-553b58c5eb86",
+            "label": "groundLayer_1",
+            "components": [],
+            "y": -201,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "a1c85ead-6c7c-44ed-8401-8446834cd31f",
+            "layerName": "groundLayer",
+            "tilesets": [
+                "forestTitle"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "6e1a793c-7a12-4cb0-a4fd-201edfaed870",
+            "label": "treeLayer",
+            "components": [],
+            "y": -201,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "a1c85ead-6c7c-44ed-8401-8446834cd31f",
+            "layerName": "treeLayer",
+            "tilesets": [
+                "forestTitle"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "7f19982c-1f46-48df-a9ab-f8ca1cb52fe5",
+            "label": "buildingLayer",
+            "components": [],
+            "y": -201,
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "tilemapId": "a1c85ead-6c7c-44ed-8401-8446834cd31f",
+            "layerName": "buildingLayer",
+            "tilesets": [
+                "forestTitle"
+            ]
+        },
+        {
             "type": "Image",
             "id": "357017d5-6599-4954-8606-b42401a0cede",
             "label": "health_bar_decoration",
@@ -172,6 +214,18 @@
                 {
                     "name": "City",
                     "imageKey": "city-tilesV1"
+                }
+            ]
+        },
+        {
+            "id": "a1c85ead-6c7c-44ed-8401-8446834cd31f",
+            "type": "Tilemap",
+            "label": "forestMap",
+            "key": "forestMap",
+            "tilesets": [
+                {
+                    "name": "forestTitle",
+                    "imageKey": "forestTile"
                 }
             ]
         }

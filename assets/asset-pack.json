@@ -2,6 +2,96 @@
     "section1": {
         "files": [
             {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/01.png",
+                "type": "image",
+                "key": "01"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/01.png",
+                "type": "image",
+                "key": "01_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/02.png",
+                "type": "image",
+                "key": "02"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/02.png",
+                "type": "image",
+                "key": "02_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/03.png",
+                "type": "image",
+                "key": "03"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/03.png",
+                "type": "image",
+                "key": "03_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/04.png",
+                "type": "image",
+                "key": "04"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/04.png",
+                "type": "image",
+                "key": "04_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/05.png",
+                "type": "image",
+                "key": "05"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/05.png",
+                "type": "image",
+                "key": "05_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/06.png",
+                "type": "image",
+                "key": "06"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/06.png",
+                "type": "image",
+                "key": "06_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/07.png",
+                "type": "image",
+                "key": "07"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/07.png",
+                "type": "image",
+                "key": "07_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/08.png",
+                "type": "image",
+                "key": "08"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/08.png",
+                "type": "image",
+                "key": "08_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/09.png",
+                "type": "image",
+                "key": "09"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/09.png",
+                "type": "image",
+                "key": "09_1"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/1.png",
                 "type": "image",
                 "key": "1"
@@ -15,6 +105,41 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_w/1.png",
                 "type": "image",
                 "key": "1_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/1.png",
+                "type": "image",
+                "key": "1_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/1.png",
+                "type": "image",
+                "key": "1_4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_sw/1.png",
+                "type": "image",
+                "key": "1_5"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/10.png",
+                "type": "image",
+                "key": "10"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/10.png",
+                "type": "image",
+                "key": "10_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_w/11.png",
+                "type": "image",
+                "key": "11"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_attack_s/11.png",
+                "type": "image",
+                "key": "11_1"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/2.png",
@@ -32,6 +157,21 @@
                 "key": "2_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/2.png",
+                "type": "image",
+                "key": "2_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/2.png",
+                "type": "image",
+                "key": "2_4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_sw/2.png",
+                "type": "image",
+                "key": "2_5"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/3.png",
                 "type": "image",
                 "key": "3"
@@ -45,6 +185,21 @@
                 "url": "assets/Character Sprites/demon/demon/demon_idle_w/3.png",
                 "type": "image",
                 "key": "3_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/3.png",
+                "type": "image",
+                "key": "3_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/3.png",
+                "type": "image",
+                "key": "3_4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_sw/3.png",
+                "type": "image",
+                "key": "3_5"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/4.png",
@@ -62,6 +217,21 @@
                 "key": "4_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/4.png",
+                "type": "image",
+                "key": "4_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/4.png",
+                "type": "image",
+                "key": "4_4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_sw/4.png",
+                "type": "image",
+                "key": "4_5"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/5.png",
                 "type": "image",
                 "key": "5"
@@ -77,9 +247,34 @@
                 "key": "5_2"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/5.png",
+                "type": "image",
+                "key": "5_3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/5.png",
+                "type": "image",
+                "key": "5_4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_sw/5.png",
+                "type": "image",
+                "key": "5_5"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/6.png",
                 "type": "image",
                 "key": "6"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/6.png",
+                "type": "image",
+                "key": "6_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/6.png",
+                "type": "image",
+                "key": "6_2"
             },
             {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/7.png",
@@ -87,9 +282,29 @@
                 "key": "7"
             },
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/7.png",
+                "type": "image",
+                "key": "7_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/7.png",
+                "type": "image",
+                "key": "7_2"
+            },
+            {
                 "url": "assets/Character Sprites/demon/demon/demon_go_s/8.png",
                 "type": "image",
                 "key": "8"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_w/8.png",
+                "type": "image",
+                "key": "8_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_sw/8.png",
+                "type": "image",
+                "key": "8_2"
             },
             {
                 "url": "assets/buttons/answer-textbox.png",
@@ -119,6 +334,24 @@
                 "key": "bg"
             },
             {
+                "url": "assets/Beach Assets/box.png",
+                "type": "image",
+                "key": "box"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/Boy  sheet wlaking and Idle.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Boy  sheet wlaking and Idle"
+            },
+            {
                 "url": "assets/buttons/buttom-volumeUp.png",
                 "type": "image",
                 "key": "buttom-volumeUp"
@@ -137,11 +370,6 @@
                 "url": "assets/buttons/button-forward.png",
                 "type": "image",
                 "key": "button-forward"
-            },
-            {
-                "url": "assets/buttons/button-map.png",
-                "type": "image",
-                "key": "button-map"
             },
             {
                 "url": "assets/buttons/button-music.png",
@@ -201,6 +429,21 @@
                 "key": "buttonOnClick"
             },
             {
+                "url": "assets/Beach Assets/can.png",
+                "type": "image",
+                "key": "can"
+            },
+            {
+                "url": "assets/Beach Assets/can2.png",
+                "type": "image",
+                "key": "can2"
+            },
+            {
+                "url": "assets/Beach Assets/ceramic-cup.png",
+                "type": "image",
+                "key": "ceramic-cup"
+            },
+            {
                 "url": [
                     "assets/sounds/city-bgmusic.mp3"
                 ],
@@ -248,11 +491,54 @@
                 "key": "D-Pad"
             },
             {
+                "url": "assets/Beach Assets/detergent-bottle.png",
+                "type": "image",
+                "key": "detergent-bottle"
+            },
+            {
+                "url": "assets/sprites/dude.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "dude"
+            },
+            {
                 "url": [
                     "assets/sounds/forest-bgmusic.mp3"
                 ],
                 "type": "audio",
                 "key": "forest-bgmusic"
+            },
+            {
+                "url": "assets/environment/forestMap.json",
+                "type": "tilemapTiledJSON",
+                "key": "forestMap"
+            },
+            {
+                "url": "assets/environment/forestTile.png",
+                "type": "image",
+                "key": "forestTile"
+            },
+            {
+                "url": "assets/Beach Assets/glass-bottle.png",
+                "type": "image",
+                "key": "glass-bottle"
+            },
+            {
+                "url": "assets/Beach Assets/glass-bottle2.png",
+                "type": "image",
+                "key": "glass-bottle2"
+            },
+            {
+                "url": "assets/Beach Assets/glass-jar.png",
+                "type": "image",
+                "key": "glass-jar"
             },
             {
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
@@ -265,9 +551,49 @@
                 "key": "Layer_0"
             },
             {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
+                "type": "image",
+                "key": "Life-Bar-0"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 8.png",
+                "type": "image",
+                "key": "Life-Bar-1"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
+                "type": "image",
+                "key": "Life-Bar-2"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
+                "type": "image",
+                "key": "Life-Bar-3"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
+                "type": "image",
+                "key": "Life-Bar-4"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
+                "type": "image",
+                "key": "Life-Bar-5"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
+                "type": "image",
+                "key": "Life-Bar-6"
+            },
+            {
+                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
+                "type": "image",
+                "key": "Life-Bar-7"
+            },
+            {
                 "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
                 "type": "image",
-                "key": "Life Bar Animated 1"
+                "key": "Life-Bar-8"
             },
             {
                 "url": "assets/environment/loading-graphic.png",
@@ -394,6 +720,36 @@
                 "key": "maps-banner-title"
             },
             {
+                "url": "assets/Beach Assets/milk-carton.png",
+                "type": "image",
+                "key": "milk-carton"
+            },
+            {
+                "url": "assets/Character Sprites/demon/animations/MovementV2.js",
+                "type": "script",
+                "key": "MovementV2"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/MovementV2.js",
+                "type": "script",
+                "key": "MovementV2_1"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/MovementV3.js",
+                "type": "script",
+                "key": "MovementV3"
+            },
+            {
+                "url": "assets/Beach Assets/newspaper.png",
+                "type": "image",
+                "key": "newspaper"
+            },
+            {
+                "url": "assets/Beach Assets/paperbag.png",
+                "type": "image",
+                "key": "paperbag"
+            },
+            {
                 "url": "assets/buttons/pause-menu-button-quit.png",
                 "type": "image",
                 "key": "pause-menu-button-quit"
@@ -407,6 +763,26 @@
                 "url": "assets/sprites/pause-menuV2.png",
                 "type": "image",
                 "key": "pause-menuV2"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/PhysicsV2.js",
+                "type": "script",
+                "key": "PhysicsV2"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/PhysicsV3.js",
+                "type": "script",
+                "key": "PhysicsV3"
+            },
+            {
+                "url": "assets/Beach Assets/pizza-box.png",
+                "type": "image",
+                "key": "pizza-box"
+            },
+            {
+                "url": "assets/Character Sprites/simpleCharacter/animations/player-animations.json",
+                "type": "animation",
+                "key": "player-animations_1"
             },
             {
                 "url": "assets/environment/quiz-background.png",
@@ -434,6 +810,34 @@
                 "key": "settings-container"
             },
             {
+                "url": "assets/Character Sprites/simpleCharacter/simpleCharacter.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "simpleCharacter"
+            },
+            {
+                "url": "assets/environment/snowyMap.json",
+                "type": "tilemapTiledJSON",
+                "key": "snowyMap"
+            },
+            {
+                "url": "assets/environment/snowyTile.png",
+                "type": "image",
+                "key": "snowyTile"
+            },
+            {
+                "url": "assets/Beach Assets/soda-can.png",
+                "type": "image",
+                "key": "soda-can"
+            },
+            {
                 "url": [
                     "assets/sounds/sound-right.mp3"
                 ],
@@ -448,11 +852,26 @@
                 "key": "sound-wrong"
             },
             {
+                "url": "assets/Beach Assets/spray-can.png",
+                "type": "image",
+                "key": "spray-can"
+            },
+            {
+                "url": "assets/Beach Assets/stryrofoam-cup.png",
+                "type": "image",
+                "key": "stryrofoam-cup"
+            },
+            {
                 "url": [
                     "assets/sounds/tundra-bgmusic.mp3"
                 ],
                 "type": "audio",
                 "key": "tundra-bgmusic"
+            },
+            {
+                "url": "assets/Beach Assets/water-bottle.png",
+                "type": "image",
+                "key": "water-bottle"
             }
         ]
     },
