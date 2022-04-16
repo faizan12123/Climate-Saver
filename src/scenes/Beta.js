@@ -1,5 +1,38 @@
 
-// You can write more code here
+// You can write more code here?*
+/* grtrashs = game.add.group();
+grptrashs.enableBody = true;
+grptrashs.physicsBodyType = Phaser.Physics.ARCADE;
+//..
+
+function  createcoin() {
+    var c = game.add.sprite(50,700, 'trash');
+    grptrashs.add(c);
+}
+
+function update() {
+   //..
+   game.physics.arcade.overlap(player, grptrash, killtrash, null, this);
+   //..
+}
+
+function killtrash(pl, trh) {
+    trh.kill();
+}
+*/
+/* game.physics.arcade.overlap(coins, player, killtrash, null, this); //killtrash is callback so no(), trash with "s" as you are calling the whole group
+function killtrash(trash,player) {
+    trash.kill();
+}
+*/
+/*  trashs= game.add.group();// group of many pieces of trash
+        trashs.enableBody = true;
+        for (var i = 0; i<12; i++){
+            var trash = trashs.create(i*70,0, 'trash');// var individual pieces of trash
+            trashs.body.gravity.y = 6;
+            trashs.body.bounce.y = 0.7 +Math.random()*0.2;
+        }
+*/
 
 /* START OF COMPILED CODE */
 
