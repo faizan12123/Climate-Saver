@@ -414,6 +414,13 @@
                 "key": "quiz-background"
             },
             {
+                "url": [
+                    "assets/sounds/quiz-bg.wav"
+                ],
+                "type": "audio",
+                "key": "quiz-bg"
+            },
+            {
                 "url": "assets/sprites/quiz-box.png",
                 "type": "image",
                 "key": "quiz-box"

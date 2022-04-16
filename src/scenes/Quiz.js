@@ -153,6 +153,7 @@ class Quiz extends Phaser.Scene {
 		start_quiz.add(button_map);
 		button_map.setInteractive();
 		button_map.on("pointerdown", () => {
+			backgroundMusic.stop();
 			this.scene.start("Start");
 		}).on("pointerover", () => {
       		button_map.scale += 0.12;
@@ -501,7 +502,7 @@ class Quiz extends Phaser.Scene {
 
 
 		//background music
-		var backgroundMusic = this.sound.add("main-menu");
+		var backgroundMusic = this.sound.add("quiz-bg");
 		backgroundMusic.play();
 		backgroundMusic.loop = true;
 
