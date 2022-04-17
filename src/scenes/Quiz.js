@@ -241,7 +241,7 @@ class Quiz extends Phaser.Scene {
 				answer:'It is a hazard to recycling facilities',
 				fact: 'Broken glass should not be recycled. Glass shards can cause injury or damage to workers and equipment.',
 			},{
-				question: 'What are the benifits of recycling?',
+				question: 'What are the benefits of recycling?',
 				choice1:'Create new jobs', choice2:'Helps the environment', choice3:'Preserve valuable resources', choice4:'All of the above',
 				answer:'All of the above',
 				fact:'Recycling can create new jobs, help the environment, and benefit our economy by preserving valuable resources.',
@@ -388,7 +388,7 @@ class Quiz extends Phaser.Scene {
 		function showQuestion(){
 			//switch question by environment
 			questions = cityQ;
-			shuffled = questions.sort(()=>Math.random()-.5);
+			//shuffled = questions.sort(()=>Math.random()-.5);
 			let q = questions[currentIndex];
 			question_input.text = q.question;
 			choice_1.text = q.choice1;
@@ -429,7 +429,7 @@ class Quiz extends Phaser.Scene {
 		}
 
 		function nextQuestion(){
-			showQuestion(shuffled[currentIndex++]);
+			showQuestion(currentIndex++);
 			 clearChoice();
 			 enabledButton();
 			 console.log(score);

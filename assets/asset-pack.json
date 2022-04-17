@@ -372,6 +372,11 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-map.png",
+                "type": "image",
+                "key": "button-map"
+            },
+            {
                 "url": "assets/buttons/button-music.png",
                 "type": "image",
                 "key": "button-music"
@@ -491,11 +496,6 @@
                 "key": "D-Pad"
             },
             {
-                "url": "assets/sprites/fact-popup.png",
-                "type": "image",
-                "key": "fact-popup"
-            },
-            {
                 "url": "assets/Beach Assets/detergent-bottle.png",
                 "type": "image",
                 "key": "detergent-bottle"
@@ -512,6 +512,11 @@
                 },
                 "type": "spritesheet",
                 "key": "dude"
+            },
+            {
+                "url": "assets/sprites/fact-popup.png",
+                "type": "image",
+                "key": "fact-popup"
             },
             {
                 "url": [
