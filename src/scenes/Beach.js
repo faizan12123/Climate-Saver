@@ -79,6 +79,12 @@ class Beach extends Phaser.Scene {
 		pause_menu.scaleY = 0.27093994892320916;
 		pause_menu.visible = false;
 
+		//scoreboard
+		const scoreboard = this.add.image(394, 281, "scoreboard");
+		scoreboard.scaleX = 0.26626053769694924;
+		scoreboard.scaleY = 0.27093994892320916;
+		scoreboard.visible = false;
+
 		//Button Sound
 		var buttonClicked = this.sound.add("buttonOnClick");
 

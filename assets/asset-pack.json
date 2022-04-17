@@ -441,6 +441,19 @@
                 "key": "Score"
             },
             {
+                "url": "assets/sprites/scoreboard.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "scoreboard"
+            },
+            {
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
