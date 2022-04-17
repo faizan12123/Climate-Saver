@@ -491,11 +491,11 @@
                 "key": "D-Pad"
             },
             {
-<<<<<<< HEAD
                 "url": "assets/sprites/fact-popup.png",
                 "type": "image",
                 "key": "fact-popup"
-=======
+            },
+            {
                 "url": "assets/Beach Assets/detergent-bottle.png",
                 "type": "image",
                 "key": "detergent-bottle"
@@ -512,7 +512,6 @@
                 },
                 "type": "spritesheet",
                 "key": "dude"
->>>>>>> parent of 9f1eefb (Revert "Merge branch 'develop' into feature-quiz")
             },
             {
                 "url": [
