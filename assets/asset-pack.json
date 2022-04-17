@@ -248,6 +248,11 @@
                 "key": "D-Pad"
             },
             {
+                "url": "assets/sprites/fact-popup.png",
+                "type": "image",
+                "key": "fact-popup"
+            },
+            {
                 "url": [
                     "assets/sounds/forest-bgmusic.mp3"
                 ],

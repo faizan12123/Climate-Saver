@@ -13,6 +13,7 @@ class Quiz extends Phaser.Scene {
 
 		// quiz_background
 		const quiz_background = this.add.image(403, 309, "quiz-background");
+		quiz_background.setInteractive();
 		quiz_background.scaleX = 0.68;
 		quiz_background.scaleY = 0.783;
 
@@ -40,6 +41,25 @@ class Quiz extends Phaser.Scene {
 		const button_facts = this.add.image(88, 536, "button-facts");
 		button_facts.scaleX = 0.35;
 		button_facts.scaleY = 0.35;
+		button_facts.on("pointerdown", () => {
+			fact_box.visible= true;
+			 choicebox_1.input.enabled = false;
+			 choicebox_2.input.enabled = false;
+			 choicebox_3.input.enabled = false;
+			 choicebox_4.input.enabled = false;
+			close_f();
+		}).on("pointerover", () => {
+      		button_map.scale += 0.12;
+    	}).on("pointerout", () => {
+			button_map.scaleX = 0.35;
+			button_map.scaleY = 0.35;
+		});
+
+		//close_f
+		function close_f(){
+		fact_popup.setInteractive();
+		fact_popup.on("pointerdown", () => { fact_box.visible= false; enabledButton();})
+		};
 
 		// m_container
 		const m_container = this.add.container(214, 96);
@@ -138,6 +158,7 @@ class Quiz extends Phaser.Scene {
 			m_container.visible = true;
 			buttonClicked.play();
 			startQuiz();
+			button_facts.setInteractive();
 		}).on("pointerover", () => {
       		button_start.scale += 0.12;
     	}).on("pointerout", () => {
@@ -185,40 +206,50 @@ class Quiz extends Phaser.Scene {
 				question: 'What is the process of reusing material?',
 				choice1:'Reduce', choice2:'Reuse', choice3:'Recycle', choice4:'All of the above',
 				answer:'All of the above',
+				fact: 'Recycling is the process of reusing materials that would otherwise be thrown out as trash and transforming them into new products.',
 			}, {
 				question: 'How much pound each day can an average person generate?',
 				choice1:'1', choice2:'2', choice3:'4', choice4:'5',
 				answer:'4',
+				fact: 'An average person generates over 4 pounds of trash each day and 1.5 tons of solid waste a year.',
 			}, {
 				question: 'In United States, about 75% of waste stream can be recycled. How much is actually recycled?',
             	choice1:'90%', choice2:'10%', choice3:'60%', choice4:'30%',
 				answer:'30%',
+				fact: 'According to the EPA, approximately 75% of the waste stream in the United States can be recycled, but we recycle only 30% of it.',
 			},{
 				question: 'How much energy can a ton of recycled office paper save, equivalent to gasoline gallons.',
                 choice1:'122 gallons', choice2: '222 gallons', choice3: '322 gallons', choice4: '422 gallons',
 				answer: '322 gallons',
+				fact: 'A ton of recycled office paper can save the energy equivalent of 322 gallons of gasoline.',
 			},{
 				question: 'City uses too much energy and contribute to climate change.',
 				choice1: 'True', choice2: 'False', answer: 'True',
+				fact: 'One of the major contributors of climate change are cities because cities use 78% of the world\'s energy and create about 60% of greenhouse gas emissions, while only using 2% of Earth\'s surface.',
 			},{
 				question: 'How much plastic was recycled out of 35 million tons of plastic in 2018?',
                 choice1:'25.2%',  choice2:'8.7%', choice3: '60.4%', choice4: '5.5%', answer:'8.7%',
+				fact:'In 2018, the United States generated more than 35 million tons of plastic, but only 8.7 percent of it was recycled.',
 			},{
 				question: 'What type of product can\'t be recycled?',
 				choice1:'Food', choice2:'Cardboard', choice3:'Plastic', choice4:'Glass',
 				answer:'Food',
+				fact: 'Food cannot be recycled. Food that ends up in landfills leads to methane emissions that contribute to climate change.',
 			},{
 				question: 'Why shouldn\'t broken glass be recycled?',
 				choice1:'It has chemicals', choice2:'It is hard to reuse', choice3:'It is a hazard to recycling facilities', choice4:'All of the above',
 				answer:'It is a hazard to recycling facilities',
+				fact: 'Broken glass should not be recycled. Glass shards can cause injury or damage to workers and equipment.',
 			},{
 				question: 'What are the benifits of recycling?',
 				choice1:'Create new jobs', choice2:'Helps the environment', choice3:'Preserve valuable resources', choice4:'All of the above',
 				answer:'All of the above',
+				fact:'Recycling can create new jobs, help the environment, and benefit our economy by preserving valuable resources.',
 			},{
-				question: 'What is the process of reusing material?',
+				question: 'What can you do to reduce food waste?',
 				choice1:'Throwing it in the trash can', choice2:'Recycling it', choice3:'Buy more food', choice4:'Eat leftovers',
 				answer:'Recycling it',
+				fact: 'Composting is an environmentally-friendly means of disposing of food waste. According to the EPA, you can reduce food waste by only purchasing what you need and eating leftovers.',
 			}];
 			let beachQ =[
 				{
@@ -357,12 +388,14 @@ class Quiz extends Phaser.Scene {
 		function showQuestion(){
 			//switch question by environment
 			questions = cityQ;
+			shuffled = questions.sort(()=>Math.random()-.5);
 			let q = questions[currentIndex];
 			question_input.text = q.question;
 			choice_1.text = q.choice1;
 			choice_2.text = q.choice2;
 			choice_3.text = q.choice3;
 			choice_4.text = q.choice4;
+			f_text.text = q.fact;
 			if(q.choice3 == undefined){
 				choicebox_3.visible = false;
 				choicebox_4.visible = false;
@@ -403,7 +436,6 @@ class Quiz extends Phaser.Scene {
 		}
 
 		function startQuiz(){
-			shuffled = questions.sort(()=>Math.random()-.5);
 			currentIndex = 0;
 			hover();
 			showQuestion();
@@ -498,14 +530,36 @@ class Quiz extends Phaser.Scene {
 			 quiz_message.visible = false;
 			 button_map.visible = true;
 			 score_print.text = "You got " +score+ " out of " +currentIndex; 
-		 }
+		}
 
+		// fact_box
+		const fact_box = this.add.layer();
+		fact_box.visible = false;
+
+		// fact_popup
+		const fact_popup = this.add.image(438, 295, "fact-popup");
+		fact_popup.scaleX = 0.52;
+		fact_popup.scaleY = 0.48;
+		fact_box.add(fact_popup);
+
+		// f_text
+		const f_text = this.add.text(109, 177, "", {});
+		f_text.text = "Appear here\n";
+		f_text.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "27px" });
+		f_text.setWordWrapWidth(580);
+		f_text.setOrigin(0.5); f_text.setX(420); f_text.setY(270);
+		fact_box.add(f_text);
+
+		// close-fact
+		const close_fact = this.add.text(251, 399, "", {});
+		close_fact.text = "Click anywhere to exit\n";
+		close_fact.setStyle({ "color": "#000000ff", "fontSize": "25px" });
+		fact_box.add(close_fact);
 
 		//background music
-		var backgroundMusic = this.sound.add("quiz-bg");
+		var backgroundMusic = this.sound.add("quiz-bg", {volume: 0.2});
 		backgroundMusic.play();
 		backgroundMusic.loop = true;
-
 
 		this.events.emit("scene-awake");
 	}
