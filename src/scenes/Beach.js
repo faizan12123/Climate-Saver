@@ -207,8 +207,12 @@ class Beach extends Phaser.Scene {
 		if(this.overlapBool){
 			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
 				console.log("r pressed")
+				
+				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
 				console.log("t pressed")
+				
+				this.hideOverlapPrompt();
 			}
 		}
 	}
