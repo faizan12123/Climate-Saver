@@ -763,6 +763,11 @@
                 "key": "newspaper"
             },
             {
+                "url": "assets/Beach Assets/overlapPrompt.png",
+                "type": "image",
+                "key": "overlapPrompt"
+            },
+            {
                 "url": "assets/Beach Assets/paperbag.png",
                 "type": "image",
                 "key": "paperbag"
