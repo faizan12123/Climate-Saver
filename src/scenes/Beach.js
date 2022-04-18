@@ -15,6 +15,7 @@ class Beach extends Phaser.Scene {
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		this.displayScoreBoard();
+		this.overlapBool = false;
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -60,9 +61,10 @@ class Beach extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
+		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
 	}
 	update(){
-		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
+		
 		this.waterLayer.setCollisionByProperty({ collides: true });
 		this.objectsLayer.setCollisionByProperty({ collides: true });
 		if (this.healthBarNumber == 0){
@@ -103,6 +105,10 @@ class Beach extends Phaser.Scene {
         // {
         //     player.setVelocityY(-330);
         // }
+
+		if(!this.overlapBool){
+			this.hideOverlapPrompt();
+		}
   
 	}
 
@@ -123,6 +129,11 @@ class Beach extends Phaser.Scene {
 		if(localStorage.settingsOptionMusic == "true"){
 			this.backgroundMusic.play();
 		}
+
+		this.overlapPromptImg = this.add.image(128,499, "overlapPrompt");
+		this.overlapPromptImg.scaleX = 0.2;
+		this.overlapPromptImg.scaleY = 0.2;
+		this.overlapPromptImg.visible =false;
 	}
 
 	//scoreboard function
@@ -138,9 +149,20 @@ class Beach extends Phaser.Scene {
 	}
 
 
+	displayOverlapPrompt(){
+		this.overlapPromptImg.visible = true;
+		this.overlapBool = true;
+		setTimeout(()=>{
+			this.overlapBool = false;
+		}, 5000);
+	}
+	hideOverlapPrompt(){
+		this.overlapPromptImg.visible = false;
+	}
+
 	displayPlayer(){
 		// player
-		const player = this.add.sprite(489, 348, 'Boy  sheet wlaking and Idle');
+		const player = this.add.sprite(419, 348, 'Boy  sheet wlaking and Idle');
 		this.player = player;
 
 		
@@ -203,7 +225,7 @@ class Beach extends Phaser.Scene {
 	
 	displayTrash(){
 		// trashs
-		this.trashs = this.add.group();
+		this.trashs = this.physics.add.group();
 		this.trashs.enableBody = true;
 
 		// box

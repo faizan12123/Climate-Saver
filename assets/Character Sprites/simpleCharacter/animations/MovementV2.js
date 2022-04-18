@@ -1,7 +1,4 @@
 
-// You can write more code here
-
-/* START OF COMPILED CODE */
 
 class MovementV2 {
 
@@ -9,12 +6,9 @@ class MovementV2 {
 		this.gameObject = gameObject;
 		gameObject["__MovementV2"] = this;
 
-		/* START-USER-CTR-CODE */
-
 		const scene = this.gameObject.scene;
 		scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
-		// Write your code here.
-		/* END-USER-CTR-CODE */
+
 	}
 
 	/** @returns {MovementV2} */
@@ -78,12 +72,3 @@ class MovementV2 {
 		}
 	}
 }
-
-
-// You can write more code here
-/* END-USER-CODE */
-}
-
-/* END OF COMPILED CODE */
-
-// You can write more code here
