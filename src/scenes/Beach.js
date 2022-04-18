@@ -57,9 +57,10 @@ class Beach extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
+		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap")}, null, this)
 	}
 	update(){
-		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
+		
 		this.waterLayer.setCollisionByProperty({ collides: true });
 		this.objectsLayer.setCollisionByProperty({ collides: true });
 		// if (this.cursors.left.isDown)
@@ -183,7 +184,7 @@ class Beach extends Phaser.Scene {
 	
 	displayTrash(){
 		// trashs
-		this.trashs = this.add.group();
+		this.trashs = this.physics.add.group();
 		this.trashs.enableBody = true;
 
 		// box
