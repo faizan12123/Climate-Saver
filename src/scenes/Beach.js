@@ -25,9 +25,9 @@ class Beach extends Phaser.Scene {
 		this.add.image(692, 520, "D-Pad");
 
 		// score
-		var player_score = 0;
+		this.player_score = 0;
 		const score = this.add.image(384, 44, "Score");
-		const score_count = this.add.text(420, 30, "Resume", {
+		const score_count = this.add.text(420, 30, this.player_score, {
 		fontFamily: "Acme",
 		fontSize: "24px",
 		color: "yellow",
@@ -163,7 +163,10 @@ class Beach extends Phaser.Scene {
 		this.waterLayer.setCollisionByProperty({ collides: true });
 		this.objectsLayer.setCollisionByProperty({ collides: true });
 		if (this.healthBarNumber == 0){
-			this.scoreBoard.visible = true
+			this.scoreBoard.visible= true;
+			
+			this.go_to_quiz_button.visible = true;
+			
 		}
 		// if (this.cursors.left.isDown)
         // {
@@ -207,11 +210,14 @@ class Beach extends Phaser.Scene {
 		if(this.overlapBool){
 			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
 				console.log("r pressed")
-				
+				this.player_score++
+				console.log("score: " + this.player_score)
+				// this.score_count.setText(this.player_score+1)
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
 				console.log("t pressed")
-				
+				this.healthBarNumber--
+				console.log("Health: " + this.healthBarNumber)
 				this.hideOverlapPrompt();
 			}
 		}
@@ -244,11 +250,15 @@ class Beach extends Phaser.Scene {
 	//scoreboard function
 	displayScoreBoard(){
 		
-		const scoreBoard = this.add.image(400, 300, "scoreboard")
+		this.scoreBoard = this.add.image(400, 300, "scoreboard")
+		this.go_to_quiz_button = this.add.image(410,460, "continue-to-quiz-button")
+		this.go_to_quiz_button.scaleX = 0.08;
+		this.go_to_quiz_button.scaleY = 0.08;
+		this.go_to_quiz_button.visible = false;
 		
-		scoreBoard.visible= false;
-		scoreBoard.scaleX = 0.3;
-		scoreBoard.scaleY = 0.3;
+		this.scoreBoard.scaleX = 0.3;
+		this.scoreBoard.scaleY = 0.3;
+		this.scoreBoard.visible= false;
 		const end_score = this.add.text(400, 300, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
 		end_score.setText(this.player_score+1);
 	}
