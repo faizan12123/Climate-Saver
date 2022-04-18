@@ -312,6 +312,11 @@
                 "key": "answer-textbox"
             },
             {
+                "url": "assets/sprites/base.png",
+                "type": "image",
+                "key": "base"
+            },
+            {
                 "url": [
                     "assets/sounds/beach.mp3"
                 ],

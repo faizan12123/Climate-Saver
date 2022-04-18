@@ -23,11 +23,102 @@ class Beach extends Phaser.Scene {
 		// score
 		var player_score = 0;
 		const score = this.add.image(384, 44, "Score");
-		const score_count = this.add.text(420, 30, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
-		score_count.setText(player_score+1);
-
+		const score_count = this.add.text(420, 30, "Resume", {
+		fontFamily: "Acme",
+		fontSize: "24px",
+		color: "yellow",
+		fontStyle: "Bold",
+		});
+		//score_count.setText(player_score+1);
 		score.scaleX = 0.62297233942359;
 		score.scaleY = 0.62297233942359;
+
+		//this.buttonClicked = this.sound.add("buttonOnClick")
+		const tut_resume = this.add.image(401, 323, "pause-menu-button-resume");
+		tut_resume.scaleX = 0.27701381259992647;
+		tut_resume.scaleY = 0.27701381259992647;
+		tut_resume.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+						this.buttonClicked.play();
+				}
+				pause_menu.visible = true;
+				btn_quit.visible = true;
+				tut_resume.visible = true;
+				button_sound.visible = true;
+				button_music.visible = true;
+				fx_tick.visible = true;
+				music_tick.visible = true;
+				this.input.keyboard.enabled = true;
+			})
+			.on("pointerover", () => {
+      			tut_resume.scale += 0.05;
+    		})
+			.on("pointerout", () => {
+				tut_resume.scaleX = 0.27701381259992647;
+				tut_resume.scaleY = 0.27701381259992647;
+			})
+		tut_resume.visible = false;
+
+
+		//tutorial button
+		let tutorial_active = false;
+		const tutorial = this.add.image(120, 44, "button-radio");
+		const tutorial_symbol = this.add.text(115, 27, "?", {
+		fontFamily: "Acme",
+		fontSize: "28px",
+		color: "white",
+		fontStyle: "bold",
+		});
+		tutorial.scaleX = 0.7;
+		tutorial.scaleY = 0.7;
+		tutorial.setInteractive();
+		tutorial.on("pointerdown", () => {
+			if(!tutorial_active){
+				tutorial_active = true;
+				tutorial_desc.visible = true;
+				tutorial_label.visible = true;
+				tut_resume.visible = true;
+				details.visible = true;
+			}
+			else {
+				tutorial_active = false;
+				tutorial_desc.visible = false;
+				tutorial_label.visible = false;
+				tut_resume.visible = false;
+				details.visible = false;
+			}
+		console.log("pressed");
+		});
+		tutorial.on("pointerover", () => {
+		tutorial.scale += 0.06;
+		});
+		tutorial.on("pointerout", () => {
+		tutorial.scaleX = 0.7;
+		tutorial.scaleY = 0.7;
+		});
+
+		
+
+		const tutorial_desc = this.add.image(394, 231, "base");
+		const tutorial_label = this.add.text(305, 51, "How To Play", {
+		fontFamily: "Acme",
+		fontSize: "36px",
+		color: "white",
+		fontStyle: "Bold",
+		});
+		const details = this.add.text(303, 145, "Use directional keys to move \naround and follow the prompt \nto recycle/trash the items \nyou encounter.  \n\nChoose an incorrect action and \nyou lose one of your eight lives. \n\nThe game ends after you lose \nall lives or 60 seconds elapsed. \n\n\t\t\t           Happy Recycling!", {
+		fontFamily: "Acme",
+		fontSize: "16px",
+		color: "white",
+		fontStyle: "Bold",
+		});
+		details.visible = false;
+		tutorial_label.visible = false;
+		tutorial_desc.scaleX = 0.26626053769694924;
+		tutorial_desc.scaleY = 0.27093994892320916;
+		tutorial_desc.visible = false;
+
 
 		
 
