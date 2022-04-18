@@ -16,6 +16,10 @@ class Beach extends Phaser.Scene {
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		this.displayScoreBoard();
 		this.overlapBool = false;
+		
+		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+		this.cursors = this.input.keyboard.createCursorKeys()
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -200,7 +204,13 @@ class Beach extends Phaser.Scene {
 		if(!this.overlapBool){
 			this.hideOverlapPrompt();
 		}
-  
+		if(this.overlapBool){
+			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+				console.log("r pressed")
+			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
+				console.log("t pressed")
+			}
+		}
 	}
 
 	displayMap(){
