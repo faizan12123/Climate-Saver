@@ -61,22 +61,33 @@ class Beach extends Phaser.Scene {
 
 
 		//tutorial button
+		let tutorial_active = false;
 		const tutorial = this.add.image(120, 44, "button-radio");
-		const tutorial_symbol = this.add.text(111, 30, "?", {
+		const tutorial_symbol = this.add.text(115, 27, "?", {
 		fontFamily: "Acme",
 		fontSize: "28px",
 		color: "white",
-		fontStyle: "Bold",
+		fontStyle: "bold",
 		});
 		tutorial.scaleX = 0.7;
 		tutorial.scaleY = 0.7;
 		tutorial.setInteractive();
 		tutorial.on("pointerdown", () => {
+			if(!tutorial_active){
+				tutorial_active = true;
+				tutorial_desc.visible = true;
+				tutorial_label.visible = true;
+				tut_resume.visible = true;
+				details.visible = true;
+			}
+			else {
+				tutorial_active = false;
+				tutorial_desc.visible = false;
+				tutorial_label.visible = false;
+				tut_resume.visible = false;
+				details.visible = false;
+			}
 		console.log("pressed");
-		tutorial_desc.visible = true;
-		tutorial_label.visible = true;
-		tut_resume.visible = true;
-		details.visible = true;
 		});
 		tutorial.on("pointerover", () => {
 		tutorial.scale += 0.06;
@@ -89,13 +100,13 @@ class Beach extends Phaser.Scene {
 		
 
 		const tutorial_desc = this.add.image(394, 231, "base");
-		const tutorial_label = this.add.text(280, 51, "How To Play", {
+		const tutorial_label = this.add.text(305, 51, "How To Play", {
 		fontFamily: "Acme",
 		fontSize: "36px",
 		color: "white",
 		fontStyle: "Bold",
 		});
-		const details = this.add.text(300, 145, "Use directional keys to ", {
+		const details = this.add.text(303, 145, "Use directional keys to move \naround and follow the prompt \nto recycle/trash the items \nyou encounter.  \n\nChoose an incorrect action and \nyou lose one of your eight lives. \n\nThe game ends after you lose \nall lives or 60 seconds elapsed. \n\n\t\t\t           Happy Recycling!", {
 		fontFamily: "Acme",
 		fontSize: "16px",
 		color: "white",
