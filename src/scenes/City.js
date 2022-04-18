@@ -44,6 +44,32 @@ class City extends Phaser.Scene {
 		windows_and_Doors.scaleX = 1.25;
 		windows_and_Doors.scaleY = 1.25;
 
+		this.cityV2 = cityV2;
+
+		function formatTime(seconds){
+    		// Minutes
+    		var minutes = Math.floor(seconds/60);
+    		// Seconds
+    		var partInSeconds = seconds%60;
+    		// Adds left zeros to seconds
+    		partInSeconds = partInSeconds.toString().padStart(2,'0');
+    		// Returns formated time
+    		return `${partInSeconds}`;
+		}
+
+		
+
+		this.initialTime = 60;
+		//temp button-quiz
+		const button_quiz = this.add.image(656,50,"button-quiz");
+		button_quiz.setInteractive();
+		button_quiz.scaleX = 0.36;
+    	button_quiz.scaleY = 0.36;
+		button_quiz.on("pointerdown", () =>{
+			backgroundMusic.stop();
+			this.scene.start("Quiz");
+		});
+
 		//background music
 		var backgroundMusic = this.sound.add("city-bgmusic" , {volume: parseFloat(localStorage.musicVolume)});
 		backgroundMusic.loop = true;
@@ -120,22 +146,15 @@ class City extends Phaser.Scene {
 		this.add.image(692, 520, "D-Pad");
 
 		// score
-		const score = this.add.image(400, 34, "Score");
-		score.scaleX = 0.5332474691460656;
-		score.scaleY = 0.4992280777321614;
+		const score = this.add.image(400, 35, "Score");
+		score.scaleX = 0.5;
+		score.scaleY = 0.5;
 
 		// pause_menu
-<<<<<<< Updated upstream
-		const pause_menu = this.add.image(394, 281, "pause-menuV2");
-		pause_menu.scaleX = 0.26626053769694924;
-		pause_menu.scaleY = 0.27093994892320916;
-		pause_menu.visible = false;
-=======
 		this.pause_menu = this.add.image(394, 281, "pause-menuV2");
 		this.pause_menu.scaleX = 0.26626053769694924;
 		this.pause_menu.scaleY = 0.27093994892320916;
 		this.pause_menu.visible = false;
->>>>>>> Stashed changes
 
 		//Button Sound
 		var buttonClicked = this.sound.add("buttonOnClick");
@@ -166,11 +185,7 @@ class City extends Phaser.Scene {
 		button_no.setInteractive();
 		button_no.on("pointerdown", () => {
 			buttonClicked.play();
-<<<<<<< Updated upstream
-			pause_menu.visible = false;
-=======
 			this.pause_menu.visible = false;
->>>>>>> Stashed changes
 			button_yes.visible = false;
 			button_no.visible = false;
 			button_sound.visible = false;
@@ -236,21 +251,12 @@ class City extends Phaser.Scene {
 		button_music.visible = false;
 
 		// button_pause
-<<<<<<< Updated upstream
-		const button_pause = this.add.image(49, 41, "button-pause");
-		button_pause.scaleX = 0.16010465842344668;
-		button_pause.scaleY = 0.1577276264549412;
-		button_pause.setInteractive();
-		button_pause.on("pointerdown", () => {
-			pause_menu.visible = true;
-=======
 		this.button_pause = this.add.image(49, 41, "button-pause");
 		this.button_pause.scaleX = 0.16010465842344668;
 		this.button_pause.scaleY = 0.1577276264549412;
 		this.button_pause.setInteractive();
 		this.button_pause.on("pointerdown", () => {
 			this.pause_menu.visible = true;
->>>>>>> Stashed changes
 			button_yes.visible = true;
 			button_no.visible = true;
 			button_sound.visible = true;
@@ -258,21 +264,12 @@ class City extends Phaser.Scene {
             buttonClicked.play();
 			this.lifecounter+=1;
 			});
-<<<<<<< Updated upstream
-		button_pause.on("pointerover", () => {
-      		button_pause.scale += 0.02;
-    		});
-		button_pause.on("pointerout", () => {
-			button_pause.scaleX = 0.16010465842344668;
-			button_pause.scaleY = 0.1577276264549412;
-=======
 		this.button_pause.on("pointerover", () => {
       		this.button_pause.scale += 0.02;
     		});
 		this.button_pause.on("pointerout", () => {
 			this.button_pause.scaleX = 0.16010465842344668;
 			this.button_pause.scaleY = 0.1577276264549412;
->>>>>>> Stashed changes
 			});
 
 		// music_tick
@@ -287,7 +284,6 @@ class City extends Phaser.Scene {
 		fx_tick.scaleY = 0.14004985687875723;
 		fx_tick.visible = false;
 
-		
 		// d_Pad_Down
 		this.d_Pad_Down = this.add.image(692, 520, "D-Pad Down");
 		this.d_Pad_Down.visible = false;
@@ -324,12 +320,6 @@ class City extends Phaser.Scene {
 		console.log(this.cursors);
 
 		//creating score/score text updates
-<<<<<<< Updated upstream
-		var score = 0;
-		var scoreText;
-		scoreText = this.add.text(420, 23, '0', { fontSize: '25px', fill: '#000' });
-
-=======
 		this.score = 0;
 		this.scoreText = this.add.text(420, 20, '0', { font: '20px Georgia', fill: '#000' });
 
@@ -345,7 +335,6 @@ class City extends Phaser.Scene {
 			}
 			return num;
 		};
->>>>>>> Stashed changes
 
 	}
 	
@@ -353,11 +342,6 @@ class City extends Phaser.Scene {
 
 	update() {
 
-<<<<<<< Updated upstream
-		if (this.cursors.left.isDown)
-		{
-			this.d_Pad_Left.visible = true;
-=======
 		//Check to see if pause menu is off
 		if(this.pause_menu.visible == false)
 		{
@@ -384,7 +368,6 @@ class City extends Phaser.Scene {
 			this.d_Pad_Left.visible = true;
 			this.score += 1;
     		this.scoreText.setText(' ' + this.score);
->>>>>>> Stashed changes
 		} 
 		else if (this.cursors.right.isDown) 
 		{
@@ -467,3 +450,4 @@ class City extends Phaser.Scene {
 /* END OF COMPILED CODE */
 
 // You can write more code here
+

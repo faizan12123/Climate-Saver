@@ -1,0 +1,310 @@
+{
+    "id": "646dce16-dd9a-454e-9c32-85cd6b98f46e",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Quiz"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "81d59810-469a-4341-98e8-9c7b4e2cfa27",
+            "label": "quiz_background",
+            "components": [],
+            "texture": {
+                "key": "quiz-background"
+            },
+            "x": 403,
+            "y": 309,
+            "scaleX": 0.68,
+            "scaleY": 0.783
+        },
+        {
+            "type": "Image",
+            "id": "e770df57-250a-4079-8fcd-af449b73c600",
+            "label": "button_back",
+            "components": [],
+            "texture": {
+                "key": "button-back"
+            },
+            "x": 88,
+            "y": 87,
+            "scaleX": 0.15,
+            "scaleY": 0.15
+        },
+        {
+            "type": "Image",
+            "id": "92c4dc1f-b677-4806-b31a-bad6c1faa0ac",
+            "label": "button_facts",
+            "components": [],
+            "texture": {
+                "key": "button-facts"
+            },
+            "x": 88,
+            "y": 536,
+            "scaleX": 0.35,
+            "scaleY": 0.35
+        },
+        {
+            "type": "Container",
+            "id": "e49ca698-36be-41b9-b46f-4c371787345d",
+            "label": "m_container",
+            "components": [],
+            "x": 214,
+            "y": 96,
+            "scaleX": 1.21,
+            "scaleY": 1.1,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "bed06cba-f4f0-47e7-b86b-1eb9fa95ce60",
+                    "label": "quiz_box",
+                    "components": [],
+                    "texture": {
+                        "key": "quiz-box"
+                    },
+                    "x": 203,
+                    "y": 152,
+                    "scaleX": 0.36,
+                    "scaleY": 0.42
+                },
+                {
+                    "type": "Image",
+                    "id": "aec7a44d-6408-482c-9256-5dbf7bab98eb",
+                    "label": "choicebox_4",
+                    "components": [],
+                    "texture": {
+                        "key": "answer-textbox"
+                    },
+                    "x": 194,
+                    "y": 392,
+                    "scaleX": 2,
+                    "scaleY": 0.78
+                },
+                {
+                    "type": "Text",
+                    "id": "ae6826dc-2670-418b-ab9e-79c5cae23cc6",
+                    "label": "choice_4",
+                    "components": [],
+                    "x": 6,
+                    "y": 374,
+                    "text": "Choice 4\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2
+                },
+                {
+                    "type": "Image",
+                    "id": "4cb4629a-273d-402a-a0c2-9ae31cc6187d",
+                    "label": "choicebox_3",
+                    "components": [],
+                    "texture": {
+                        "key": "answer-textbox"
+                    },
+                    "x": 194,
+                    "y": 320,
+                    "scaleX": 2,
+                    "scaleY": 0.78
+                },
+                {
+                    "type": "Text",
+                    "id": "e9c481a6-a204-4000-a140-a0efd18b3da2",
+                    "label": "choice_3",
+                    "components": [],
+                    "x": 8,
+                    "y": 301,
+                    "text": "Choice 3\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2
+                },
+                {
+                    "type": "Image",
+                    "id": "9a357599-20f0-4638-8395-ef0a03b3cccd",
+                    "label": "choicebox_2",
+                    "components": [],
+                    "texture": {
+                        "key": "answer-textbox"
+                    },
+                    "x": 194,
+                    "y": 245,
+                    "scaleX": 2,
+                    "scaleY": 0.78
+                },
+                {
+                    "type": "Text",
+                    "id": "7701efe9-2676-4354-8b03-a2c4a45793cc",
+                    "label": "choice_2",
+                    "components": [],
+                    "x": 12,
+                    "y": 227,
+                    "text": "Choice 2\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2
+                },
+                {
+                    "type": "Image",
+                    "id": "8655cfd0-e587-44d3-a813-c886f00fb9d6",
+                    "label": "choicebox_1",
+                    "components": [],
+                    "texture": {
+                        "key": "answer-textbox"
+                    },
+                    "x": 194,
+                    "y": 172,
+                    "scaleX": 2,
+                    "scaleY": 0.78
+                },
+                {
+                    "type": "Text",
+                    "id": "1ec9b0d1-0e74-4289-908c-30cf49a5aa67",
+                    "label": "choice_1",
+                    "components": [],
+                    "x": 14,
+                    "y": 155,
+                    "text": "Choice 1\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2
+                },
+                {
+                    "type": "Text",
+                    "id": "39384c21-ef10-407c-8e20-d976d50d93c9",
+                    "label": "question-input",
+                    "components": [],
+                    "x": -2,
+                    "y": -35,
+                    "text": "Question appear here\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "8a9d40a5-2ec0-465a-af6f-a9af9befb8bb",
+            "label": "start_quiz",
+            "components": [],
+            "x": -51,
+            "y": -42,
+            "scaleX": 1.26,
+            "scaleY": 1.121439050834601,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "d273e0ec-0bbc-405f-ad5d-8531a87fbc50",
+                    "label": "quiz_box_start",
+                    "components": [],
+                    "texture": {
+                        "key": "quiz-box-start"
+                    },
+                    "x": 408,
+                    "y": 288,
+                    "scaleX": 0.33,
+                    "scaleY": 0.39
+                },
+                {
+                    "type": "Image",
+                    "id": "ac5e9c42-5a00-49d2-9f1e-31f0c389421a",
+                    "label": "button_start",
+                    "components": [],
+                    "texture": {
+                        "key": "main-menu-button-start"
+                    },
+                    "x": 400,
+                    "y": 417,
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                },
+                {
+                    "type": "Text",
+                    "id": "f0172fd1-f2b7-4236-85cc-9eaec4ef83a7",
+                    "label": "quiz-message",
+                    "components": [],
+                    "x": 205,
+                    "y": 255,
+                    "text": "Test your knowledge about the environment around you, press start to begin.\n",
+                    "align": "center",
+                    "fontFamily": "Poppins",
+                    "fontSize": "20px",
+                    "color": "#000000ff",
+                    "baselineY": 1.2,
+                    "wordWrapWidth": 430
+                },
+                {
+                    "type": "Text",
+                    "id": "3e33b7cc-d001-4f13-8af8-f76a1f672fb1",
+                    "label": "score_print",
+                    "components": [],
+                    "x": 261.49206662172037,
+                    "y": 247,
+                    "text": "Score goes here",
+                    "align": "center",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "bb8aa803-2970-4b82-8e1d-2e5b8ce06ccd",
+            "label": "fact_box",
+            "components": [],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "84b1a969-70dd-4f13-a360-eb5cdc978615",
+                    "label": "fact_popup",
+                    "components": [],
+                    "texture": {
+                        "key": "fact-popup"
+                    },
+                    "x": 438,
+                    "y": 295,
+                    "scaleX": 0.52,
+                    "scaleY": 0.48
+                },
+                {
+                    "type": "Text",
+                    "id": "1a0d50f1-8790-49db-9837-f1a25ecb1224",
+                    "label": "f_text",
+                    "components": [],
+                    "x": 109,
+                    "y": 177,
+                    "text": "Appear here\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff",
+                    "wordWrapWidth": 520
+                },
+                {
+                    "type": "Text",
+                    "id": "195fad41-7d72-4988-854e-5e6c724ca046",
+                    "label": "close-fact",
+                    "components": [],
+                    "x": 251,
+                    "y": 399,
+                    "text": "Click anywhere to exit\n",
+                    "fontSize": "25px",
+                    "color": "#000000ff"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

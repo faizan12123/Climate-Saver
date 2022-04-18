@@ -2,6 +2,101 @@
     "section1": {
         "files": [
             {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/1.png",
+                "type": "image",
+                "key": "1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_s/1.png",
+                "type": "image",
+                "key": "1_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/1.png",
+                "type": "image",
+                "key": "1_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/2.png",
+                "type": "image",
+                "key": "2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_s/2.png",
+                "type": "image",
+                "key": "2_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/2.png",
+                "type": "image",
+                "key": "2_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/3.png",
+                "type": "image",
+                "key": "3"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_s/3.png",
+                "type": "image",
+                "key": "3_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/3.png",
+                "type": "image",
+                "key": "3_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/4.png",
+                "type": "image",
+                "key": "4"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_s/4.png",
+                "type": "image",
+                "key": "4_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/4.png",
+                "type": "image",
+                "key": "4_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/5.png",
+                "type": "image",
+                "key": "5"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_s/5.png",
+                "type": "image",
+                "key": "5_1"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_idle_w/5.png",
+                "type": "image",
+                "key": "5_2"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/6.png",
+                "type": "image",
+                "key": "6"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/7.png",
+                "type": "image",
+                "key": "7"
+            },
+            {
+                "url": "assets/Character Sprites/demon/demon/demon_go_s/8.png",
+                "type": "image",
+                "key": "8"
+            },
+            {
+                "url": "assets/buttons/answer-textbox.png",
+                "type": "image",
+                "key": "answer-textbox"
+            },
+            {
                 "url": [
                     "assets/sounds/beach.mp3"
                 ],
@@ -32,6 +127,11 @@
                 "url": "assets/buttons/button-back.png",
                 "type": "image",
                 "key": "button-back"
+            },
+            {
+                "url": "assets/buttons/button-facts.png",
+                "type": "image",
+                "key": "button-facts"
             },
             {
                 "url": "assets/buttons/button-forward.png",
@@ -133,29 +233,24 @@
                 "key": "controlsOF"
             },
             {
-                "url": "assets/sprites/credit-textbox-content3.png",
-                "type": "image",
-                "key": "credit-textbox-content3"
-            },
-            {
                 "url": "assets/sprites/credits-banner-title.png",
                 "type": "image",
                 "key": "credits-banner-title"
             },
             {
-                "url": "assets/sprites/credits-textbox-content.png",
-                "type": "image",
-                "key": "credits-textbox-content"
-            },
-            {
-                "url": "assets/sprites/credits-textbox-content2.png",
-                "type": "image",
-                "key": "credits-textbox-content2"
-            },
-            {
                 "url": "assets/sprites/credits-textbox-content5.png",
                 "type": "image",
                 "key": "credits-textbox-content5"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
+                "type": "image",
+                "key": "D-Pad"
+            },
+            {
+                "url": "assets/sprites/fact-popup.png",
+                "type": "image",
+                "key": "fact-popup"
             },
             {
                 "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
@@ -392,6 +487,20 @@
                 "url": "assets/sprites/settings-container.png",
                 "type": "image",
                 "key": "settings-container"
+            },
+            {
+                "url": [
+                    "assets/sounds/sound-right.mp3"
+                ],
+                "type": "audio",
+                "key": "sound-right"
+            },
+            {
+                "url": [
+                    "assets/sounds/sound-wrong.mp3"
+                ],
+                "type": "audio",
+                "key": "sound-wrong"
             },
             {
                 "url": [

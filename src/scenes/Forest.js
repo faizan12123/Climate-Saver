@@ -41,7 +41,7 @@ class Forest extends Phaser.Scene {
 		health_bar_decoration.scaleX = 2.876226221353047;
 		health_bar_decoration.scaleY = 2.876226221353047;
 
-			// life_Bar_Animated_9
+		// life_Bar_Animated_9
 		this.life_Bar_Animated_9 = this.add.image(713, 44, "Life Bar Animated 9");
 		this.life_Bar_Animated_9.scaleX = 1.801947436688974;
 		this.life_Bar_Animated_9.scaleY = 1.801947436688974;
@@ -95,15 +95,15 @@ class Forest extends Phaser.Scene {
 		this.add.image(692, 520, "D-Pad");
 
 		// score
-		const score = this.add.image(400, 34, "Score");
-		score.scaleX = 0.5332474691460656;
-		score.scaleY = 0.4992280777321614;
+		const score = this.add.image(400, 35, "Score");
+		score.scaleX = 0.5;
+		score.scaleY = 0.5;
 
 		// pause_menu
-		const pause_menu = this.add.image(394, 281, "pause-menuV2");
-		pause_menu.scaleX = 0.26626053769694924;
-		pause_menu.scaleY = 0.27093994892320916;
-		pause_menu.visible = false;
+		this.pause_menu = this.add.image(394, 281, "pause-menuV2");
+		this.pause_menu.scaleX = 0.26626053769694924;
+		this.pause_menu.scaleY = 0.27093994892320916;
+		this.pause_menu.visible = false;
 
 		//Button Sound
 		var buttonClicked = this.sound.add("buttonOnClick");
@@ -134,7 +134,7 @@ class Forest extends Phaser.Scene {
 		button_no.setInteractive();
 		button_no.on("pointerdown", () => {
 			buttonClicked.play();
-			pause_menu.visible = false;
+			this.pause_menu.visible = false;
 			button_yes.visible = false;
 			button_no.visible = false;
 			button_sound.visible = false;
@@ -205,7 +205,7 @@ class Forest extends Phaser.Scene {
 		button_pause.scaleY = 0.1577276264549412;
 		button_pause.setInteractive();
 		button_pause.on("pointerdown", () => {
-			pause_menu.visible = true;
+			this.pause_menu.visible = true;
 			button_yes.visible = true;
 			button_no.visible = true;
 			button_sound.visible = true;
@@ -262,22 +262,58 @@ class Forest extends Phaser.Scene {
 	// Write more your code here
 	create() {
 
+		//create function for updown keys
 		this.editorCreate();
 		this.cursors = this.input.keyboard.createCursorKeys();
 		console.log(this.cursors);
 
 		//creating score/score text updates
-		var score = 0;
-		var scoreText;
-		scoreText = this.add.text(420, 23, '0', { fontSize: '25px', fill: '#000' });
+		this.score = 0;
+		this.scoreText = this.add.text(420, 20, '0', { font: '20px Georgia', fill: '#000' });
+
+		//creating timer
+		this.timeInSeconds = 150;
+		this.shouldSubtractSecond = 0;
+		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
+
+		//function for when timer's number is less than 10 and adds a zero before number
+		this.addZeros = function(num){
+			if(num < 10){
+				num = "0" + num;
+			}
+			return num;
+		};
 	}
 
 	update() {
 
 
+		//Check to see if pause menu is off
+		if(this.pause_menu.visible == false)
+		{
+			//start of timer code
+			this.shouldSubtractSecond++;
+			if(this.shouldSubtractSecond == 120)
+			{
+				this.timeInSeconds--;
+				this.shouldSubtractSecond = 0;
+			}
+		}
+		
+		var minutes = Math.floor(this.timeInSeconds / 60);
+		var seconds = this.timeInSeconds - (minutes * 60);
+		var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
+		this.timeText.text = timeString;
+
+		if (this.timeInSeconds == 0) {
+			//this.game.state.restart();
+		}
+
 		if (this.cursors.left.isDown)
 		{
 			this.d_Pad_Left.visible = true;
+			this.score += 1;
+    		this.scoreText.setText(' ' + this.score);
 		} 
 		else if (this.cursors.right.isDown) 
 		{
@@ -300,9 +336,11 @@ class Forest extends Phaser.Scene {
 
 		}
 
-			if(this.lifecounter == 1)
+		if(this.lifecounter == 1)
 		{
+			this.life_Bar_Animated_1.scale += 0.05;
 			this.life_Bar_Animated_1.visible = false;
+			console.log(this.lifecounter);
 		}
 		if(this.lifecounter == 2)
 		{
@@ -349,6 +387,8 @@ class Forest extends Phaser.Scene {
    			 score += 10;
     		scoreText.setText(' ' + score);
 		}
+
+
 
 
 	}
