@@ -377,6 +377,11 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-map.png",
+                "type": "image",
+                "key": "button-map"
+            },
+            {
                 "url": "assets/buttons/button-music.png",
                 "type": "image",
                 "key": "button-music"
