@@ -59,8 +59,8 @@ class Beach extends Phaser.Scene {
 		this.editorCreate();
 		this.physics.add.overlap(this.player, this.trashs, ()=> {
 			let image = this.add.image(128,499, "overlapPrompt");
-			image.scaleX = 0.3;
-			image.scaleY = 0.3;
+			image.scaleX = 0.2;
+			image.scaleY = 0.2;
 			}, null, this)
 	}
 	update(){
