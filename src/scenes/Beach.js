@@ -14,6 +14,7 @@ class Beach extends Phaser.Scene {
 		this.displayTrash();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		this.overlapBool = false;
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -98,6 +99,10 @@ class Beach extends Phaser.Scene {
         // {
         //     player.setVelocityY(-330);
         // }
+
+		if(!this.overlapBool){
+			this.hideOverlapPrompt();
+		}
   
 	}
 
@@ -126,6 +131,10 @@ class Beach extends Phaser.Scene {
 	}
 	displayOverlapPrompt(){
 		this.overlapPromptImg.visible = true;
+		this.overlapBool = true;
+		setTimeout(()=>{
+			this.overlapBool = false;
+		}, 5000);
 	}
 	hideOverlapPrompt(){
 		this.overlapPromptImg.visible = false;
