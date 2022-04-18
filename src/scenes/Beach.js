@@ -57,11 +57,7 @@ class Beach extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
-		this.physics.add.overlap(this.player, this.trashs, ()=> {
-			let image = this.add.image(128,499, "overlapPrompt");
-			image.scaleX = 0.2;
-			image.scaleY = 0.2;
-			}, null, this)
+		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
 	}
 	update(){
 		
@@ -123,6 +119,12 @@ class Beach extends Phaser.Scene {
 			this.backgroundMusic.play();
 		}
 	}
+	displayOverlapPrompt(){
+		this.overlapPromptImg = this.add.image(128,499, "overlapPrompt");
+		this.overlapPromptImg.scaleX = 0.2;
+		this.overlapPromptImg.scaleY = 0.2;
+	}
+
 	displayPlayer(){
 		// player
 		const player = this.add.sprite(419, 348, 'Boy  sheet wlaking and Idle');
