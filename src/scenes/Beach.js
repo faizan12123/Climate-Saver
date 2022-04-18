@@ -3,6 +3,7 @@ class Beach extends Phaser.Scene {
 	trashs;
 	beachV1;
 	healthBarNumber; // start with 9 bars
+	player_score;
 
 	constructor() {
 		super("Beach");
@@ -25,9 +26,8 @@ class Beach extends Phaser.Scene {
 		this.add.image(692, 520, "D-Pad");
 
 		// score
-		var player_score = 0;
 		const score = this.add.image(384, 44, "Score");
-		const score_count = this.add.text(420, 30, "Resume", {
+		const score_count = this.add.text(420, 30, this.player_score, {
 		fontFamily: "Acme",
 		fontSize: "24px",
 		color: "yellow",
@@ -154,6 +154,7 @@ class Beach extends Phaser.Scene {
 
 
 	create() {
+		this.player_score = 0;
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
 		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
@@ -207,6 +208,8 @@ class Beach extends Phaser.Scene {
 		if(this.overlapBool){
 			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
 				console.log("r pressed")
+				score_count.setText(player_score+1);
+
 				
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
