@@ -14,6 +14,7 @@ class Beach extends Phaser.Scene {
 		this.displayTrash();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		this.displayScoreBoard();
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
@@ -28,8 +29,9 @@ class Beach extends Phaser.Scene {
 		score.scaleY = 0.62297233942359;
 
 		
+
 		this.buttonClicked = this.sound.add("buttonOnClick")
-		
+
 		// button_pause
 		const button_pause = this.add.image(49, 41, "button-pause");
 		button_pause.scaleX = 0.16010465842344668;
@@ -51,6 +53,7 @@ class Beach extends Phaser.Scene {
 			});
 
 		this.events.emit("scene-awake");
+		
 	}
 
 
@@ -62,6 +65,9 @@ class Beach extends Phaser.Scene {
 		this.physics.add.overlap(this.player, this.trashs, ()=> {console.log("overlap"), null, this})
 		this.waterLayer.setCollisionByProperty({ collides: true });
 		this.objectsLayer.setCollisionByProperty({ collides: true });
+		if (this.healthBarNumber == 0){
+			this.scoreBoard.visible = true
+		}
 		// if (this.cursors.left.isDown)
         // {
         //     this.player.setVelocityX(-160);
@@ -118,6 +124,20 @@ class Beach extends Phaser.Scene {
 			this.backgroundMusic.play();
 		}
 	}
+
+	//scoreboard function
+	displayScoreBoard(){
+		
+		const scoreBoard = this.add.image(400, 300, "scoreboard")
+		
+		scoreBoard.visible= false;
+		scoreBoard.scaleX = 0.3;
+		scoreBoard.scaleY = 0.3;
+		const end_score = this.add.text(400, 300, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		end_score.setText(this.player_score+1);
+	}
+
+
 	displayPlayer(){
 		// player
 		const player = this.add.sprite(489, 348, 'Boy  sheet wlaking and Idle');
@@ -359,6 +379,7 @@ class Beach extends Phaser.Scene {
 		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
+		
 	}
 
 }
