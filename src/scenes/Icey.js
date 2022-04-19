@@ -8,18 +8,57 @@ class Icey extends Phaser.Scene {
 		this.displayMap();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		//this.displayScoreBoard();
+		//this.overlapBool = false;
+		
+		this.cursors = this.input.keyboard.createCursorKeys()
+
+		// cGB02_yellow_S_btn
+		const cGB02_yellow_S_btn = this.add.image(692, 520, "CGB02-yellow_S_btn");
+		cGB02_yellow_S_btn.scaleX = 0.7844121289516808;
+		cGB02_yellow_S_btn.scaleY = 0.7403687558671932;
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
 
+		// cGB02_yellow_M_btn
+		const cGB02_yellow_M_btn = this.add.image(400, 55, "CGB02-yellow_M_btn");
+		cGB02_yellow_M_btn.scaleX = 0.5662629604736447;
+		cGB02_yellow_M_btn.scaleY = 0.5656239889282708;
+
+		// cGB02_yellow_L_btn
+		const cGB02_yellow_L_btn = this.add.image(399, 35, "CGB02-yellow_L_btn");
+		cGB02_yellow_L_btn.scaleX = 0.4516785708514984;
+		cGB02_yellow_L_btn.scaleY = 0.30253966546224487;
+
+		// d_Pad_Down
+		this.d_Pad_Down = this.add.image(692, 520, "D-Pad Down");
+		this.d_Pad_Down.visible = false;
+
+		// d_Pad_Left
+		this.d_Pad_Left = this.add.image(692, 520, "D-Pad Left");
+		this.d_Pad_Left.visible = false;
+
+		// d_Pad_Right
+		this.d_Pad_Right = this.add.image(692, 520, "D-Pad Right");
+		this.d_Pad_Right.visible = false;
+
+		// d_Pad_Up
+		this.d_Pad_Up = this.add.image(692, 520, "D-Pad Up");
+		this.d_Pad_Up.visible = false;
+
+		//Pause Menu Checker
+		this.menu_check = false;
+
+
 		// score
 		var player_score = 0;
-		const score = this.add.image(384, 44, "Score");
-		const score_count = this.add.text(420, 30, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		const score = this.add.image(400, 35, "Score");
+		const score_count = this.add.text(420, 20, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "black" });
 		score_count.setText(player_score+1);
 
-		score.scaleX = 0.62297233942359;
-		score.scaleY = 0.62297233942359;
+		score.scaleX = 0.5;
+		score.scaleY = 0.5;
 
 		// pause_menu
 		const pause_menu = this.add.image(394, 281, "pause-menuV2");
@@ -56,8 +95,85 @@ class Icey extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
+		//creating timer
+		this.timeInSeconds = 30;
+		this.shouldSubtractSecond = 0;
+		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
+
+		//function for when timer's number is less than 10 and adds a zero before number
+		this.addZeros = function(num){
+			if(num < 10){
+				num = "0" + num;
+			}
+			return num;
+		};
 	}
 	update(){
+
+			if (this.healthBarNumber == 0){
+			/*this.scoreBoard.visible= true;
+			this.menu_check = true;
+			this.go_to_quiz_button.visible = true;
+			this.end_score.setText(this.player_score);
+			this.end_score.visible = true;	*/		
+			
+		}
+			if(this.menu_check == false)
+		{
+			//start of timer code
+			this.shouldSubtractSecond++;
+			if(this.shouldSubtractSecond == 120)
+			{
+				this.timeInSeconds--;
+				this.shouldSubtractSecond = 0;
+			}
+		}
+		
+		//timer calculator
+		var minutes = Math.floor(this.timeInSeconds / 60);
+		var seconds = this.timeInSeconds - (minutes * 60);
+		var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
+		this.timeText.text = timeString;
+
+		//when timer reaches 0
+		if (this.timeInSeconds == 0) {
+			/*this.scoreBoard.visible = true;
+			this.menu_check = true;
+			this.go_to_quiz_button.visible = true;
+			this.end_score.setText(this.player_score);
+			this.end_score.visible = true;	*/
+		}
+
+		/*if(this.scoreBoard.visible == true)
+		{
+			this.menu_check = true;
+		}*/
+
+		if (this.cursors.left.isDown)
+		{
+			this.d_Pad_Left.visible = true;
+		} 
+		else if (this.cursors.right.isDown) 
+		{
+			this.d_Pad_Right.visible = true;
+		}
+		else if (this.cursors.up.isDown) 
+		{
+			this.d_Pad_Up.visible = true;
+		} 
+		else if (this.cursors.down.isDown) 
+		{
+			this.d_Pad_Down.visible = true;
+		}
+		else{
+
+		this.d_Pad_Left.visible = false;
+		this.d_Pad_Right.visible = false;
+		this.d_Pad_Up.visible = false;
+		this.d_Pad_Down.visible = false;
+
+		}
+
 
 	}
 
@@ -104,6 +220,7 @@ class Icey extends Phaser.Scene {
 		pause_menu.scaleX = 0.26626053769694924;
 		pause_menu.scaleY = 0.27093994892320916;
 		//comment pause_menu.visible = false;
+		this.menu_check = true;
 
 		// btn_quit
 		const btn_quit = this.add.image(401, 409, "pause-menu-button-quit");
@@ -145,6 +262,7 @@ class Icey extends Phaser.Scene {
 				fx_tick.visible = false;
 				music_tick.visible = false;
 				this.input.keyboard.enabled = true;
+				this.menu_check = false;
 			})
 			.on("pointerover", () => {
       			btn_resume.scale += 0.05;
@@ -240,13 +358,12 @@ class Icey extends Phaser.Scene {
 		health_bar_decoration.scaleX = 2.876226221353047;
 		health_bar_decoration.scaleY = 2.876226221353047;
 
-		// life_Bar_Animated_1
+
 		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
 	}
 	updateHealthBar(){
-		this.healthBarNumber--;
 		this.healthBars.destroy();
 		if(this.healthBarNumber<0){
 			this.healthBarNumber = 0;
@@ -254,5 +371,6 @@ class Icey extends Phaser.Scene {
 		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
+		
 	}
 }

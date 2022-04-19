@@ -21,21 +21,56 @@ class Beach extends Phaser.Scene {
 		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
 		this.cursors = this.input.keyboard.createCursorKeys()
 
+		// cGB02_yellow_S_btn
+		const cGB02_yellow_S_btn = this.add.image(692, 520, "CGB02-yellow_S_btn");
+		cGB02_yellow_S_btn.scaleX = 0.7844121289516808;
+		cGB02_yellow_S_btn.scaleY = 0.7403687558671932;
+
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
 
+		// cGB02_yellow_M_btn
+		const cGB02_yellow_M_btn = this.add.image(400, 55, "CGB02-yellow_M_btn");
+		cGB02_yellow_M_btn.scaleX = 0.5662629604736447;
+		cGB02_yellow_M_btn.scaleY = 0.5656239889282708;
+
+		// cGB02_yellow_L_btn
+		const cGB02_yellow_L_btn = this.add.image(399, 35, "CGB02-yellow_L_btn");
+		cGB02_yellow_L_btn.scaleX = 0.4516785708514984;
+		cGB02_yellow_L_btn.scaleY = 0.30253966546224487;
+
+		// d_Pad_Down
+		this.d_Pad_Down = this.add.image(692, 520, "D-Pad Down");
+		this.d_Pad_Down.visible = false;
+
+		// d_Pad_Left
+		this.d_Pad_Left = this.add.image(692, 520, "D-Pad Left");
+		this.d_Pad_Left.visible = false;
+
+		// d_Pad_Right
+		this.d_Pad_Right = this.add.image(692, 520, "D-Pad Right");
+		this.d_Pad_Right.visible = false;
+
+		// d_Pad_Up
+		this.d_Pad_Up = this.add.image(692, 520, "D-Pad Up");
+		this.d_Pad_Up.visible = false;
+
+		//Pause Menu Checker
+		this.menu_check = false;
+
+		
 		// score
 		this.player_score = 0;
-		const score = this.add.image(384, 44, "Score");
-		const score_count = this.add.text(420, 30, this.player_score, {
+		const score = this.add.image(400, 35, "Score");
+		this.scoreText = this.add.text(420, 20, this.player_score, {
 		fontFamily: "Acme",
 		fontSize: "24px",
-		color: "yellow",
+		color: "black",
 		fontStyle: "Bold",
 		});
 		//score_count.setText(player_score+1);
-		score.scaleX = 0.62297233942359;
-		score.scaleY = 0.62297233942359;
+		score.scaleX = 0.5;
+		score.scaleY = 0.5;
 
 		//this.buttonClicked = this.sound.add("buttonOnClick")
 		const tut_resume = this.add.image(401, 323, "pause-menu-button-resume");
@@ -46,7 +81,7 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
 						this.buttonClicked.play();
 				}
-				pause_menu.visible = true;
+				this.pause_menu.visible = true;
 				btn_quit.visible = true;
 				tut_resume.visible = true;
 				button_sound.visible = true;
@@ -122,8 +157,6 @@ class Beach extends Phaser.Scene {
 		tutorial_desc.scaleX = 0.26626053769694924;
 		tutorial_desc.scaleY = 0.27093994892320916;
 		tutorial_desc.visible = false;
-
-
 		
 
 		this.buttonClicked = this.sound.add("buttonOnClick")
@@ -157,71 +190,20 @@ class Beach extends Phaser.Scene {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
 		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
-	}
-	update(){
-		
-		this.waterLayer.setCollisionByProperty({ collides: true });
-		this.objectsLayer.setCollisionByProperty({ collides: true });
-		if (this.healthBarNumber == 0){
-			this.scoreBoard.visible= true;
-			
-			this.go_to_quiz_button.visible = true;
-			
-		}
-		// if (this.cursors.left.isDown)
-        // {
-        //     this.player.setVelocityX(-160);
+		//creating timer
+		this.timeInSeconds = 30;
+		this.shouldSubtractSecond = 0;
+		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
 
-        //     this.player.anims.play('left', true);
-        // }
-        // else if (this.cursors.right.isDown)
-        // {
-        //     this.player.setVelocityX(160);
-
-        //     this.player.anims.play('right', true);
-        // }
-        // else if (this.cursors.up.isDown)
-        // {
-        //     this.player.setVelocityY(-160);
-
-        //     this.player.anims.play('up', true);
-        // }
-        // else if (this.cursors.down.isDown)
-        // {
-        //     this.player.setVelocityY(160);
-
-        //     this.player.anims.play('down', true);
-        // }
-        // else
-        // {
-        //     this.player.setVelocityX(0);
-
-        //     this.player.anims.play('turn');
-        // }
-
-        // if (this.cursors.up.isDown && this.player.body.touching.down)
-        // {
-        //     player.setVelocityY(-330);
-        // }
-
-		if(!this.overlapBool){
-			this.hideOverlapPrompt();
-		}
-		if(this.overlapBool){
-			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
-				console.log("r pressed")
-				this.player_score++
-				console.log("score: " + this.player_score)
-				// this.score_count.setText(this.player_score+1)
-				this.hideOverlapPrompt();
-			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
-				console.log("t pressed")
-				this.healthBarNumber--
-				console.log("Health: " + this.healthBarNumber)
-				this.hideOverlapPrompt();
+		//function for when timer's number is less than 10 and adds a zero before number
+		this.addZeros = function(num){
+			if(num < 10){
+				num = "0" + num;
 			}
-		}
+			return num;
+		};
 	}
+
 
 	displayMap(){
 		// beachV1
@@ -255,12 +237,29 @@ class Beach extends Phaser.Scene {
 		this.go_to_quiz_button.scaleX = 0.08;
 		this.go_to_quiz_button.scaleY = 0.08;
 		this.go_to_quiz_button.visible = false;
+		this.go_to_quiz_button.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+						this.buttonClicked.play();
+				}
+				this.scene.start("Quiz");
+
+			})
+			.on("pointerover", () => {
+      			this.go_to_quiz_button.scale += 0.01;
+    		})
+			.on("pointerout", () => {
+				this.go_to_quiz_button.scaleX = 0.08;
+				this.go_to_quiz_button.scaleY = 0.08;
+			})
 		
 		this.scoreBoard.scaleX = 0.3;
 		this.scoreBoard.scaleY = 0.3;
-		this.scoreBoard.visible= false;
-		const end_score = this.add.text(400, 300, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
-		end_score.setText(this.player_score+1);
+		this.scoreBoard.visible= false;	
+
+		this.end_score = this.add.text(420, 315, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		this.end_score.setText(this.player_score+1);
+		this.end_score.visible = false;
 	}
 
 
@@ -362,10 +361,11 @@ class Beach extends Phaser.Scene {
 
 	displayPauseMenu(){
 		// pause_menu
-		const pause_menu = this.add.image(394, 281, "pause-menuV2");
-		pause_menu.scaleX = 0.26626053769694924;
-		pause_menu.scaleY = 0.27093994892320916;
-		//comment pause_menu.visible = false;
+		this.pause_menu = this.add.image(394, 281, "pause-menuV2");
+		this.pause_menu.scaleX = 0.26626053769694924;
+		this.pause_menu.scaleY = 0.27093994892320916;
+		//comment this.pause_menu.visible = false;
+		this.menu_check = true;
 
 		// btn_quit
 		const btn_quit = this.add.image(401, 409, "pause-menu-button-quit");
@@ -399,7 +399,7 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
 						this.buttonClicked.play();
 				}
-				pause_menu.visible = false;
+				this.pause_menu.visible = false;
 				btn_quit.visible = false;
 				btn_resume.visible = false;
 				button_sound.visible = false;
@@ -407,6 +407,7 @@ class Beach extends Phaser.Scene {
 				fx_tick.visible = false;
 				music_tick.visible = false;
 				this.input.keyboard.enabled = true;
+				this.menu_check = false;
 			})
 			.on("pointerover", () => {
       			btn_resume.scale += 0.05;
@@ -502,13 +503,16 @@ class Beach extends Phaser.Scene {
 		health_bar_decoration.scaleX = 2.876226221353047;
 		health_bar_decoration.scaleY = 2.876226221353047;
 
-		// life_Bar_Animated_1
+		this.healthBarNumber = 8;
+
 		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
+
+
+	
 	}
 	updateHealthBar(){
-		this.healthBarNumber--;
 		this.healthBars.destroy();
 		if(this.healthBarNumber<0){
 			this.healthBarNumber = 0;
@@ -517,6 +521,131 @@ class Beach extends Phaser.Scene {
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
 		
+	}
+
+		update(){
+		
+		this.waterLayer.setCollisionByProperty({ collides: true });
+		this.objectsLayer.setCollisionByProperty({ collides: true });
+		//when health reaches 0
+		if (this.healthBarNumber == 0){
+			this.scoreBoard.visible= true;
+			this.menu_check = true;
+			this.go_to_quiz_button.visible = true;
+			this.end_score.setText(this.player_score);
+			this.end_score.visible = true;			
+			
+		}
+			if(this.menu_check == false)
+		{
+			//start of timer code
+			this.shouldSubtractSecond++;
+			if(this.shouldSubtractSecond == 120)
+			{
+				this.timeInSeconds--;
+				this.shouldSubtractSecond = 0;
+			}
+		}
+		
+		//timer calculator
+		var minutes = Math.floor(this.timeInSeconds / 60);
+		var seconds = this.timeInSeconds - (minutes * 60);
+		var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
+		this.timeText.text = timeString;
+
+		//when timer reaches 0
+		if (this.timeInSeconds == 0) {
+			this.scoreBoard.visible = true;
+			this.menu_check = true;
+			this.go_to_quiz_button.visible = true;
+			this.end_score.setText(this.player_score);
+			this.end_score.visible = true;	
+		}
+
+		if(this.scoreBoard.visible == true)
+		{
+			this.menu_check = true;
+		}
+
+		if (this.cursors.left.isDown)
+		{
+			this.d_Pad_Left.visible = true;
+		} 
+		else if (this.cursors.right.isDown) 
+		{
+			this.d_Pad_Right.visible = true;
+		}
+		else if (this.cursors.up.isDown) 
+		{
+			this.d_Pad_Up.visible = true;
+		} 
+		else if (this.cursors.down.isDown) 
+		{
+			this.d_Pad_Down.visible = true;
+		}
+		else{
+
+		this.d_Pad_Left.visible = false;
+		this.d_Pad_Right.visible = false;
+		this.d_Pad_Up.visible = false;
+		this.d_Pad_Down.visible = false;
+
+		}
+		// if (this.cursors.left.isDown)
+        // {
+        //     this.player.setVelocityX(-160);
+
+        //     this.player.anims.play('left', true);
+        // }
+        // else if (this.cursors.right.isDown)
+        // {
+        //     this.player.setVelocityX(160);
+
+        //     this.player.anims.play('right', true);
+        // }
+        // else if (this.cursors.up.isDown)
+        // {
+        //     this.player.setVelocityY(-160);
+
+        //     this.player.anims.play('up', true);
+        // }
+        // else if (this.cursors.down.isDown)
+        // {
+        //     this.player.setVelocityY(160);
+
+        //     this.player.anims.play('down', true);
+        // }
+        // else
+        // {
+        //     this.player.setVelocityX(0);
+
+        //     this.player.anims.play('turn');
+        // }
+
+        // if (this.cursors.up.isDown && this.player.body.touching.down)
+        // {
+        //     player.setVelocityY(-330);
+        // }
+
+		if(!this.overlapBool){
+			this.hideOverlapPrompt();
+		}
+		if(this.overlapBool){
+			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+				console.log("r pressed")
+				this.player_score++
+				console.log("score: " + this.player_score)
+				this.scoreText.setText(' ' + this.player_score);
+				this.hideOverlapPrompt();
+			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
+				console.log("t pressed")
+				this.healthBarNumber--
+				this.updateHealthBar();
+				console.log("Health: " + this.healthBarNumber)
+				this.hideOverlapPrompt();
+			}
+		}
+
 	}
 
 }
