@@ -740,11 +740,6 @@
                 "key": "MovementV2"
             },
             {
-                "url": "assets/Character Sprites/simpleCharacter/animations/MovementV2.js",
-                "type": "script",
-                "key": "MovementV2_1"
-            },
-            {
                 "url": "assets/Character Sprites/simpleCharacter/animations/MovementV3.js",
                 "type": "script",
                 "key": "MovementV3"
