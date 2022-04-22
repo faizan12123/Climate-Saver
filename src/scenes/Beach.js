@@ -3,6 +3,7 @@ class Beach extends Phaser.Scene {
   beachV1;
   healthBarNumber; // start with 9 bars
   player_score;
+  selectedTrash;
 
   constructor() {
     super("Beach");
@@ -211,13 +212,20 @@ class Beach extends Phaser.Scene {
     if (this.overlapBool) {
       if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
         console.log("r pressed");
-        score_count.setText(player_score + 1);
+        //score_count.setText(player_score + 1); //there are errors
+
+        //remove trash from GUI
+        this.selectedTrash.destroy();
 
         this.hideOverlapPrompt();
       } else if (Phaser.Input.Keyboard.JustDown(this.tPress)) {
         console.log("t pressed");
         this.healthBarNumber--;
         console.log("Health: " + this.healthBarNumber);
+
+         //remove trash from GUI
+        this.selectedTrash.destroy();
+        
         this.hideOverlapPrompt();
       }
     }
@@ -275,7 +283,7 @@ class Beach extends Phaser.Scene {
     this.overlapPromptImg.visible = true;
     this.overlapBool = true;
 
-    trash.destroy();
+    this.selectedTrash = trash;
     setTimeout(() => {
       this.overlapBool = false;
     }, 5000);
