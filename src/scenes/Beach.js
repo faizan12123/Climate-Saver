@@ -271,9 +271,11 @@ class Beach extends Phaser.Scene {
     end_score.setText(this.player_score + 1);
   }
 
-  displayOverlapPrompt() {
+  displayOverlapPrompt(player, trash) {
     this.overlapPromptImg.visible = true;
     this.overlapBool = true;
+
+    trash.destroy();
     setTimeout(() => {
       this.overlapBool = false;
     }, 5000);
