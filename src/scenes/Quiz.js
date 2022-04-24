@@ -257,42 +257,53 @@ class Quiz extends Phaser.Scene {
 				question: 'Single-use plastics such as plastic straws, plastic beverage bottles, and food wrappers are the most commonly found items in coastal cleanups worldwide.',
 				choice1:'True', choice2:'False',
 				answer:'True',
+				fact: 'Single-use plastics are the most common items found in coastal cleanups around the world. These include plastic cigarette butts, food wrappers, beverage bottles, bottle caps, straws, and drink stirrers.',
 			},{
 				question: 'How many garbage patches are there?',
 				choice1:'4', choice2:'0', choice3:'5', choice4:'1',
 				answer:'5',
+				fact: 'There are five of these garbage patches around the world. Garbage patches are formed when trash is caught in rotating ocean currents.',
 			},{
 				question: 'Degrading plastics causes chemicals to contaminate the ocean. How many years does it take for a plastic water bottle to fully decompose?',
 				choice1:'4', choice2:'400', choice3:'500', choice4:'1,000',
 				answer:'400',
+				fact: 'Plastic water bottles can take around 400 years to decompose. When the plastic degrades, chemicals are released that further contaminate the ocean.',
+
 			},{
 				question: 'What is one of the leading sources of pollution in the ocean caused by rainfall?',
 				choice1:'Precipitation', choice2:'Point Source', choice3:'Condensation', choice4:'Runoff',
 				answer:'Runoff',
+				fact: 'Runoff is one of the leading sources of pollution in the ocean. It is commonly caused by rainfall,which carries away natural and human-made pollutants into our water sources.',
 			},{
 				question: 'Seabirds and marine animals die more from predators rather than ocean pollution, plastic entanglement and ingestion combined.',
 				choice1:'True', choice2:'False', 
 				answer:'False',
+				fact:'Ocean pollution kills more than one million seabirds each year. More than 100,000 marine animals die every year as a result of plastic entanglement and ingestion.',
 			},{
 				question: '________ pollution is a less common type of pollution but still greatly impacts the ocean. This type of pollution comes from a single source such as an oil truck spill or a chemical spill from a factory.',
 				choice1:'Point source', choice2:'Oil spill', choice3:'Single source', choice4:'Indirect',
 				answer:'Point source',
+				fact:'The type of pollution that comes from a single source, such as an oil spill or a chemical spill, is called point source pollution. They are less common, but have a huge impact.',
 			},{
 				question: 'Which of the following countries are responsible for a third of all plastic pollution?',
 				choice1:'China and USA', choice2:'China and Indonesia', choice3:'UK and Australia', choice4:'Canada and USA',
 				answer:'China and Indonesia',
+				fact: 'China and Indonesia produce more plastic in the ocean than any other country, together they are responsible for a third of all plastic pollution. Over 80 percent of plastic pollution comes from only 20 countries, including the United States.',
 			},{
 				question: 'What percentage of ocean pollution will we never see nor clean because of the debris sinking to the bottom of the ocean?',
 				choice1:'10%', choice2:'30%', choice3:'70%', choice4:'90%',
 				answer:'70%',
+				fact:'The worst part of ocean pollution might be what we can\'t see: 70 percent of ocean debris sinks to the seafloor, meaning we probably won\'t ever be able to clean it up.',
 			},{
 				question: 'About how much of all plastic ever produced remains in the environment today?',
 				choice1:'1/4', choice2:'1/2', choice3:'2/3', choice4:'3/4',
 				answer:'2/3',
+				fact:'Plastic is a problem throughout its entire lifecycle - from its extraction to its eventual disposal. Roughly two-thirds of all plastic ever produced remains in the environment today-either as ocean pollution or as fragments in other environments.',
 			},{
 				question: 'What ocean is the biggest garbage patch located?',
 				choice1:'Atlantic', choice2:'Pacific', choice3:'Indian', choice4:'Arctic',
 				answer:'Pacific',
+				fact: 'The Great Pacific Garbage Patch is the largest of them all, covering an area twice as large as Texas. The size and shape of the garbage patches constantly change due to winds and currents.',
 			}];
 			let forestQ =[
 				{
