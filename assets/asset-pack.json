@@ -312,9 +312,19 @@
                 "key": "answer-textbox"
             },
             {
+                "url": "assets/City Assets/apple-charger.png",
+                "type": "image",
+                "key": "apple-charger"
+            },
+            {
                 "url": "assets/sprites/base.png",
                 "type": "image",
                 "key": "base"
+            },
+            {
+                "url": "assets/City Assets/battery.png",
+                "type": "image",
+                "key": "battery"
             },
             {
                 "url": [
@@ -337,6 +347,11 @@
                 "url": "assets/Tile Background/bg.png",
                 "type": "image",
                 "key": "bg"
+            },
+            {
+                "url": "assets/City Assets/books.png",
+                "type": "image",
+                "key": "books"
             },
             {
                 "url": "assets/Beach Assets/box.png",
@@ -551,9 +566,19 @@
                 "key": "glass-jar"
             },
             {
+                "url": "assets/City Assets/glasses.png",
+                "type": "image",
+                "key": "glasses"
+            },
+            {
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
                 "type": "image",
                 "key": "health_bar_decoration"
+            },
+            {
+                "url": "assets/City Assets/ipod.png",
+                "type": "image",
+                "key": "ipod"
             },
             {
                 "url": "assets/environment/Layer_0.png",
@@ -750,9 +775,19 @@
                 "key": "newspaper"
             },
             {
+                "url": "assets/City Assets/orangeJuice.png",
+                "type": "image",
+                "key": "orangeJuice"
+            },
+            {
                 "url": "assets/Beach Assets/overlapPrompt.png",
                 "type": "image",
                 "key": "overlapPrompt"
+            },
+            {
+                "url": "assets/City Assets/paint.png",
+                "type": "image",
+                "key": "paint"
             },
             {
                 "url": "assets/Beach Assets/paperbag.png",
@@ -788,6 +823,16 @@
                 "url": "assets/Beach Assets/pizza-box.png",
                 "type": "image",
                 "key": "pizza-box"
+            },
+            {
+                "url": "assets/City Assets/plastic-bag.png",
+                "type": "image",
+                "key": "plastic-bag"
+            },
+            {
+                "url": "assets/City Assets/plastic-utensiils.png",
+                "type": "image",
+                "key": "plastic-utensiils"
             },
             {
                 "url": "assets/Character Sprites/simpleCharacter/animations/player-animations.json",
@@ -875,6 +920,16 @@
                 "url": "assets/Beach Assets/stryrofoam-cup.png",
                 "type": "image",
                 "key": "stryrofoam-cup"
+            },
+            {
+                "url": "assets/City Assets/television.png",
+                "type": "image",
+                "key": "television"
+            },
+            {
+                "url": "assets/City Assets/togo-container.png",
+                "type": "image",
+                "key": "togo-container"
             },
             {
                 "url": [
