@@ -8,6 +8,7 @@ class City extends Phaser.Scene {
     this.displayMap();
     this.displayPlayer();
     this.displayHealthBar(); // there's working updateHealthBar() function
+    this.displayTrash();
 
     function formatTime(seconds) {
       // Minutes
@@ -344,6 +345,17 @@ class City extends Phaser.Scene {
     this.trashs = this.physics.add.group();
     this.trashs.enableBody = true;
 
+    const apple_charger = this.trashs.create(405 + 300, 187, "apple-charger");
+    const battery = this.trashs.create(110 + 300, 253, "battery");
+    const books = this.trashs.create(359 + 300, 433, "books");
+    const glasses = this.trashs.create(411 + 300, 266, "glasses");
+    const ipod = this.trashs.create(179 + 300, 50, "ipod");
+    const orangeJuice = this.trashs.create(405 + 300, 187, "orangeJuice");
+    const paint = this.trashs.create(110 + 300, 253, "paint");
+    const plastic_bag = this.trashs.create(359 + 300, 433, "plastic-bag");
+    const plastic_utensiils = this.trashs.create(411 + 300, 266, "plastic-utensiils");
+    const television = this.trashs.create(179 + 300, 50, "television");
+    const togo_container = this.trashs.create(179 + 300, 50, "togo-container");
   }
   displayHealthBar() {
     // health_bar_decoration
