@@ -346,7 +346,15 @@ class City extends Phaser.Scene {
     this.trashs.enableBody = true;
 
     const apple_charger = this.trashs.create(405 + 300, 187, "apple-charger");
+    apple_charger.scaleX = 0.15;
+    apple_charger.scaleY = 0.15;
+
     const battery = this.trashs.create(110 + 300, 253, "battery");
+    battery.scaleX = 0.5;
+    battery.scaleY = 0.5;
+
+    /*
+    
     const books = this.trashs.create(359 + 300, 433, "books");
     const glasses = this.trashs.create(411 + 300, 266, "glasses");
     const ipod = this.trashs.create(179 + 300, 50, "ipod");
@@ -356,6 +364,7 @@ class City extends Phaser.Scene {
     const plastic_utensiils = this.trashs.create(411 + 300, 266, "plastic-utensiils");
     const television = this.trashs.create(179 + 300, 50, "television");
     const togo_container = this.trashs.create(179 + 300, 50, "togo-container");
+    */
   }
   displayHealthBar() {
     // health_bar_decoration
