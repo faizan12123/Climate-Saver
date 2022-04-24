@@ -392,6 +392,11 @@
                 "key": "button-forward"
             },
             {
+                "url": "assets/buttons/button-map.png",
+                "type": "image",
+                "key": "button-map"
+            },
+            {
                 "url": "assets/buttons/button-music.png",
                 "type": "image",
                 "key": "button-music"
@@ -464,6 +469,11 @@
                 "key": "ceramic-cup"
             },
             {
+                "url": "assets/buttons/check-mark.png",
+                "type": "image",
+                "key": "check-mark"
+            },
+            {
                 "url": [
                     "assets/sounds/city-bgmusic.mp3"
                 ],
@@ -532,6 +542,11 @@
                 },
                 "type": "spritesheet",
                 "key": "dude"
+            },
+            {
+                "url": "assets/sprites/fact-popup.png",
+                "type": "image",
+                "key": "fact-popup"
             },
             {
                 "url": [
@@ -845,6 +860,13 @@
                 "key": "quiz-background"
             },
             {
+                "url": [
+                    "assets/sounds/quiz-bg.wav"
+                ],
+                "type": "audio",
+                "key": "quiz-bg"
+            },
+            {
                 "url": "assets/sprites/quiz-box.png",
                 "type": "image",
                 "key": "quiz-box"
@@ -942,6 +964,11 @@
                 "url": "assets/Beach Assets/water-bottle.png",
                 "type": "image",
                 "key": "water-bottle"
+            },
+            {
+                "url": "assets/buttons/x-mark.png",
+                "type": "image",
+                "key": "x-mark"
             }
         ]
     },
