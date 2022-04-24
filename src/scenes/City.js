@@ -338,6 +338,13 @@ class City extends Phaser.Scene {
     //Block Character Movement on Pause
     this.input.keyboard.enabled = false;
   }
+
+  displayTrash() {
+    // trashs
+    this.trashs = this.physics.add.group();
+    this.trashs.enableBody = true;
+
+  }
   displayHealthBar() {
     // health_bar_decoration
     const health_bar_decoration = this.add.image(
