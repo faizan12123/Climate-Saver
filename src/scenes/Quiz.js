@@ -441,6 +441,8 @@ class Quiz extends Phaser.Scene {
 
 		function nextQuestion(){
 			showQuestion(currentIndex++);
+			check_mark.visible = false;
+			x_mark.visible = false;
 			 clearChoice();
 			 enabledButton();
 			 console.log(score);
@@ -458,10 +460,12 @@ class Quiz extends Phaser.Scene {
 					 if(choice_1.text == questions[currentIndex].answer){
 				 //answer is correct
 				 score++
+				 check_mark.visible = true;
 				 disableButton();
 				 buttonRight.play();
 				 choicebox_1.setTint(0x00ff00);
 			 }else{
+				 x_mark.visible = true;
 				 disableButton();
 				 buttonWrong.play();
 				 choicebox_1.setTint(0xff0000);
@@ -470,10 +474,12 @@ class Quiz extends Phaser.Scene {
 			 choicebox_2.on("pointerdown", () =>{
 					 if(choice_2.text == questions[currentIndex].answer){
 				 score++
+				 check_mark.visible = true;
 				 disableButton();
 				 buttonRight.play();
 				 choicebox_2.setTint(0x00ff00);
 			 }else{
+				 x_mark.visible = true;
 				 disableButton();
 				 buttonWrong.play();
 				 choicebox_2.setTint(0xff0000);
@@ -482,10 +488,12 @@ class Quiz extends Phaser.Scene {
 			 choicebox_3.on("pointerdown", () =>{
 					 if(choice_3.text == questions[currentIndex].answer){
 				 score++
+				 check_mark.visible = true;
 				 disableButton();
 				 buttonRight.play();
 				 choicebox_3.setTint(0x00ff00);
 			 }else{
+				 x_mark.visible = true;
 				 disableButton();
 				 buttonWrong.play();
 				 choicebox_3.setTint(0xff0000);
@@ -494,10 +502,12 @@ class Quiz extends Phaser.Scene {
 			 choicebox_4.on("pointerdown", () =>{
 					 if(choice_4.text == questions[currentIndex].answer){
 				 score++
+				 check_mark.visible = true;
 				 disableButton();
 				 buttonRight.play();
 				 choicebox_4.setTint(0x00ff00);
 			 }else{
+				 x_mark.visible = true;
 				 disableButton();
 				 buttonWrong.play();
 				 choicebox_4.setTint(0xff0000);
@@ -512,6 +522,8 @@ class Quiz extends Phaser.Scene {
 			 choicebox_3.input.enabled = false;
 			 choicebox_4.input.enabled = false;
 			 if(currentIndex == 9){
+				check_mark.visible = false;
+				x_mark.visible = false;
 				totalScore();
 			}else{
 				setTimeout(nextQuestion, 2000);
@@ -566,6 +578,18 @@ class Quiz extends Phaser.Scene {
 		close_fact.text = "Click anywhere to exit\n";
 		close_fact.setStyle({ "color": "#000000ff", "fontSize": "25px" });
 		fact_box.add(close_fact);
+		
+		// x_mark
+		const x_mark = this.add.image(448, 167, "x-mark");
+		x_mark.scaleX = 0.6;
+		x_mark.scaleY = 0.6;
+		x_mark.visible = false;
+
+		// check_mark
+		const check_mark = this.add.image(450, 167, "check-mark");
+		check_mark.scaleX = 0.6;
+		check_mark.scaleY = 0.6;
+		check_mark.visible = false;
 
 		//background music
 		var backgroundMusic = this.sound.add("quiz-bg", {volume: 0.2});

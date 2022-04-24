@@ -449,6 +449,11 @@
                 "key": "ceramic-cup"
             },
             {
+                "url": "assets/buttons/check-mark.png",
+                "type": "image",
+                "key": "check-mark"
+            },
+            {
                 "url": [
                     "assets/sounds/city-bgmusic.mp3"
                 ],
@@ -889,6 +894,11 @@
                 "url": "assets/Beach Assets/water-bottle.png",
                 "type": "image",
                 "key": "water-bottle"
+            },
+            {
+                "url": "assets/buttons/x-mark.png",
+                "type": "image",
+                "key": "x-mark"
             }
         ]
     },

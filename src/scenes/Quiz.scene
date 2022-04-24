@@ -298,6 +298,32 @@
                     "color": "#000000ff"
                 }
             ]
+        },
+        {
+            "type": "Image",
+            "id": "73038e47-4e3d-4596-903c-9b25bb5a3a90",
+            "label": "x_mark",
+            "components": [],
+            "texture": {
+                "key": "x-mark"
+            },
+            "x": 448,
+            "y": 167,
+            "scaleX": 0.6,
+            "scaleY": 0.6
+        },
+        {
+            "type": "Image",
+            "id": "d47da73c-66cc-4b9a-b020-3bb8d0b9f4da",
+            "label": "check_mark",
+            "components": [],
+            "texture": {
+                "key": "check-mark"
+            },
+            "x": 450,
+            "y": 167,
+            "scaleX": 0.6,
+            "scaleY": 0.6
         }
     ],
     "plainObjects": [],
