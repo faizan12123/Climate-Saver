@@ -361,20 +361,34 @@ class City extends Phaser.Scene {
     glasses.scaleX = 0.20;
     glasses.scaleY = 0.20;
 
-    const ipod = this.trashs.create(179 + 300, 50, "ipod");
+    const ipod = this.trashs.create(179 + 300, 250, "ipod");
     ipod.scaleX = 0.15;
     ipod.scaleY = 0.15;
 
-    const orangeJuice = this.trashs.create(405 + 300, 187, "orangeJuice");
+    const orangeJuice = this.trashs.create(300, 187, "orangeJuice");
+    orangeJuice.scaleX = 0.15;
+    orangeJuice.scaleY = 0.15;
+
+     const paint = this.trashs.create(110 , 253, "paint");
+     paint.scaleX = 0.15;
+     paint.scaleY = 0.15;
     
-    /*    
-    
-    const paint = this.trashs.create(110 + 300, 253, "paint");
-    const plastic_bag = this.trashs.create(359 + 300, 433, "plastic-bag");
-    const plastic_utensiils = this.trashs.create(411 + 300, 266, "plastic-utensiils");
-    const television = this.trashs.create(179 + 300, 50, "television");
-    const togo_container = this.trashs.create(179 + 300, 50, "togo-container");
-    */
+      const plastic_bag = this.trashs.create(300, 400, "plastic-bag");
+      plastic_bag.scaleX = 0.15;
+      plastic_bag.scaleY = 0.15;
+
+      const plastic_utensiils = this.trashs.create(520, 266, "plastic-utensiils");
+      plastic_utensiils.scaleX = 0.15;
+      plastic_utensiils.scaleY = 0.15;
+
+      const television = this.trashs.create(179 + 300, 550, "television");
+      television.scaleX = 0.35;
+      television.scaleY = 0.35;
+
+      const togo_container = this.trashs.create( 50, 550, "togo-container");
+      togo_container.scaleX = 0.15;
+      togo_container.scaleY = 0.15;
+
   }
   displayHealthBar() {
     // health_bar_decoration
