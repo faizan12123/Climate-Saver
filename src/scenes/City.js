@@ -6,9 +6,15 @@ class City extends Phaser.Scene {
   /** @returns {void} */
   editorCreate() {
     this.displayMap();
+    this.displayTrash();
     this.displayPlayer();
     this.displayHealthBar(); // there's working updateHealthBar() function
-    this.displayTrash();
+    this.displayScoreBoard();
+    this.overlapBool = false;
+
+    this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+    this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+    this.cursors = this.input.keyboard.createCursorKeys();
 
     function formatTime(seconds) {
       // Minutes
@@ -145,11 +151,44 @@ class City extends Phaser.Scene {
   // Write your code here
 
   create() {
-    this.healthBarNumber = 8;
+    this.player_score = 0;
+    this.healthBarNumber = 8; // start with 9 bars
     this.editorCreate();
+    this.physics.add.overlap(
+      this.player,
+      this.trashs,
+      this.displayOverlapPrompt,
+      null,
+      this
+    );
   }
   update() {
     this.worldLayer.setCollisionByProperty({ collides: true });
+    
+
+    if (!this.overlapBool) {
+      this.hideOverlapPrompt();
+    }
+    if (this.overlapBool) {
+      if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+        console.log("r pressed");
+        //score_count.setText(player_score + 1); //there are errors
+
+        //remove trash from GUI
+        this.selectedTrash.destroy();
+
+        this.hideOverlapPrompt();
+      } else if (Phaser.Input.Keyboard.JustDown(this.tPress)) {
+        console.log("t pressed");
+        this.healthBarNumber--;
+        console.log("Health: " + this.healthBarNumber);
+
+         //remove trash from GUI
+        this.selectedTrash.destroy();
+        
+        this.hideOverlapPrompt();
+      }
+    }
   }
 
   displayMap() {
@@ -190,7 +229,50 @@ class City extends Phaser.Scene {
     if (localStorage.settingsOptionMusic == "true") {
       this.backgroundMusic.play();
     }
+
+     this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
+    this.overlapPromptImg.scaleX = 0.2;
+    this.overlapPromptImg.scaleY = 0.2;
+    this.overlapPromptImg.visible = false;
   }
+
+  //scoreboard function
+  displayScoreBoard() {
+    this.scoreBoard = this.add.image(400, 300, "scoreboard");
+    this.go_to_quiz_button = this.add.image(
+      410,
+      460,
+      "continue-to-quiz-button"
+    );
+    this.go_to_quiz_button.scaleX = 0.08;
+    this.go_to_quiz_button.scaleY = 0.08;
+    this.go_to_quiz_button.visible = false;
+
+    this.scoreBoard.scaleX = 0.3;
+    this.scoreBoard.scaleY = 0.3;
+    this.scoreBoard.visible = false;
+    const end_score = this.add.text(400, 300, this.player_score, {
+      fontFamily: "Georgia",
+      fontSize: "24px",
+      color: "yellow",
+    });
+    end_score.setText(this.player_score + 1);
+  }
+
+  displayOverlapPrompt(player, trash) {
+    this.overlapPromptImg.visible = true;
+    this.overlapBool = true;
+
+    this.selectedTrash = trash;
+    setTimeout(() => {
+      this.overlapBool = false;
+    }, 5000);
+  }
+  hideOverlapPrompt() {
+    this.overlapPromptImg.visible = false;
+  }
+
+  
 
   displayPlayer() {
     // player
