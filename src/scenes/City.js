@@ -345,50 +345,74 @@ class City extends Phaser.Scene {
     this.trashs = this.physics.add.group();
     this.trashs.enableBody = true;
 
-    const apple_charger = this.trashs.create(125, 433, "apple-charger");
-    apple_charger.scaleX = 0.15;
-    apple_charger.scaleY = 0.15;
+    setTimeout(() => {
+      const apple_charger = this.trashs.create(125, 433, "apple-charger");
+      apple_charger.scaleX = 0.15;
+      apple_charger.scaleY = 0.15;
+    }, 500);
 
-    const battery = this.trashs.create(110 + 300, 253, "battery");
-    battery.scaleX = 0.5;
-    battery.scaleY = 0.5;
+    setTimeout(() => {
+      const battery = this.trashs.create(110 + 300, 253, "battery");
+      battery.scaleX = 0.5;
+      battery.scaleY = 0.5;
+    }, 4500);
+    setTimeout(() => {
+      const books = this.trashs.create(359 + 300, 433, "books");
+      books.scaleX = 0.15;
+      books.scaleY = 0.15;
+    }, 8500);
+    
+    setTimeout(() => {
+      const glasses = this.trashs.create(411 + 300, 366, "glasses");
+      glasses.scaleX = 0.20;
+      glasses.scaleY = 0.20;
+    }, 12500);
+    
+  
 
-    const books = this.trashs.create(359 + 300, 433, "books");
-    books.scaleX = 0.15;
-    books.scaleY = 0.15;
+    setTimeout(() => {
+      const ipod = this.trashs.create(179 + 200, 80, "ipod");
+      ipod.scaleX = 0.205;
+      ipod.scaleY = 0.205;
+    }, 16500);
 
-    const glasses = this.trashs.create(411 + 300, 266, "glasses");
-    glasses.scaleX = 0.20;
-    glasses.scaleY = 0.20;
+    setTimeout(() => {
+      const paint = this.trashs.create(110 , 353, "paint");
+      paint.scaleX = 0.15;
+      paint.scaleY = 0.15;
+    }, 20500);
+    
+    setTimeout(() => {
+      const plastic_bag = this.trashs.create(300, 400, "plastic-bag");
+      plastic_bag.scaleX = 0.15;
+      plastic_bag.scaleY = 0.15;
 
-    const ipod = this.trashs.create(179 + 200, 80, "ipod");
-    ipod.scaleX = 0.205;
-    ipod.scaleY = 0.205;
+    }, 24500);
+    
+    setTimeout(() => {
+      const plastic_utensiils = this.trashs.create(520, 426, "plastic-utensiils");
+      plastic_utensiils.scaleX = 0.15;
+      plastic_utensiils.scaleY = 0.15;
 
+    }, 28500);
+
+    setTimeout(() => {
+      const television = this.trashs.create(179 + 300, 550, "television");
+      television.scaleX = 0.35;
+      television.scaleY = 0.35;
+    }, 32500);
     /*
     const orangeJuice = this.trashs.create(300, 187, "orangeJuice");
     orangeJuice.scaleX = 0.17;
     orangeJuice.scaleY = 0.17;
     */
-    const paint = this.trashs.create(110 , 253, "paint");
-    paint.scaleX = 0.15;
-    paint.scaleY = 0.15;
+    setTimeout(() => {
+      const togo_container = this.trashs.create( 50, 550, "togo-container");
+      togo_container.scaleX = 0.15;
+      togo_container.scaleY = 0.15;
+    }, 36500);
+
     
-    const plastic_bag = this.trashs.create(300, 400, "plastic-bag");
-    plastic_bag.scaleX = 0.15;
-    plastic_bag.scaleY = 0.15;
-
-    const plastic_utensiils = this.trashs.create(520, 266, "plastic-utensiils");
-    plastic_utensiils.scaleX = 0.15;
-    plastic_utensiils.scaleY = 0.15;
-
-    const television = this.trashs.create(179 + 300, 550, "television");
-    television.scaleX = 0.35;
-    television.scaleY = 0.35;
-
-    const togo_container = this.trashs.create( 50, 550, "togo-container");
-    togo_container.scaleX = 0.15;
-    togo_container.scaleY = 0.15;
   }
   displayHealthBar() {
     // health_bar_decoration
