@@ -10,7 +10,7 @@ class Forest extends Phaser.Scene {
 		this.displayMap();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
-		
+
 		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
 		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
 		this.cursors = this.input.keyboard.createCursorKeys();
@@ -96,6 +96,10 @@ class Forest extends Phaser.Scene {
 		}
 
 		this.forestMap = forestMap;
+		this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
+		this.overlapPromptImg.scaleX = 0.2;
+		this.overlapPromptImg.scaleY = 0.2;
+		this.overlapPromptImg.visible = false;
 	}
 	displayPlayer(){
 		// player

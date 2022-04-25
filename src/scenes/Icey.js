@@ -90,6 +90,11 @@ class Icey extends Phaser.Scene {
 		if(localStorage.settingsOptionMusic == "true"){
 			this.backgroundMusic.play();
 		}
+
+		this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
+		this.overlapPromptImg.scaleX = 0.2;
+		this.overlapPromptImg.scaleY = 0.2;
+		this.overlapPromptImg.visible = false;
 	}
 	displayPlayer(){
 		// player
