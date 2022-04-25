@@ -8,6 +8,9 @@ class Icey extends Phaser.Scene {
 		this.displayMap();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+		this.cursors = this.input.keyboard.createCursorKeys();
 
 		// directionpad
 		this.add.image(692, 520, "D-Pad");
