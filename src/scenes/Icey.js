@@ -345,21 +345,86 @@ class Icey extends Phaser.Scene {
 		 this.trashs = this.physics.add.group();
 		 this.trashs.enableBody = true;
 
-		 // camping_light
+		// backpack
 		setTimeout(() => {
-			const camping_light = this.trashs.create(54, 276, "camping-light");
-			camping_light.scaleX = 0.2;
-			camping_light.scaleY = 0.2;
-			camping_light.name = "recyclable"
+			const backpack  = this.trashs.create(412, 259, "backpack");
+			backpack .scaleX = 0.2;
+			backpack .scaleY = 0.2;
+			backpack .name = "recyclable"
 		}, 1000);
 
 		setTimeout(() => {
 			// chips_bag
-			const chips_bag = this.trashs.create(426, 370, "chips-bag");
-			chips_bag.scaleX = 0.3;
-			chips_bag.scaleY = 0.3;
+			const chips_bag = this.trashs.create(514, 350, "chips-bag");
+			chips_bag.scaleX = 0.4;
+			chips_bag.scaleY = 0.4;
 			chips_bag.name = "trash"
 		}, 7000);
+
+		// food
+		setTimeout(() => {
+			const food = this.trashs.create(142, 508, "food");
+			food.scaleX = 0.2;
+			food.scaleY = 0.2;
+			food.name = "trash"
+		}, 13000);
+
+		// dumbell
+		setTimeout(() => {
+			const dumbell = this.trashs.create(72, 167, "dumbell");
+			dumbell.scaleX = 0.5;
+			dumbell.scaleY = 0.5;
+			dumbell.name = "recyclable"
+		}, 20000);
+
+		// glasses_1
+		setTimeout(() => {
+			const glasses_1 = this.trashs.create(738, 224, "glasses_1");
+			glasses_1.scaleX = 0.35;
+			glasses_1.scaleY = 0.35;
+			glasses_1.name="recyclable"
+		}, 25000);
+
+		// ipodTingz
+		setTimeout(() => {
+			const ipodTingz = this.trashs.create(191, 291, "ipodTingz");
+			ipodTingz.scaleX = 0.3;
+			ipodTingz.scaleY = 0.3;
+			ipodTingz.name = "recyclable"
+		}, 32000);
+
+		// jacket
+		setTimeout(() => {
+			const jacket = this.trashs.create(517, 129, "jacket");
+			jacket.scaleX = 0.23;
+			jacket.scaleY = 0.23;
+			jacket.name = "recyclable"
+		}, 37000);
+
+		// mittens 
+		setTimeout(() => {
+			const mittens = this.trashs.create(442, 539, "mittens");
+			mittens .scaleX = 0.2;
+			mittens .scaleY = 0.2;
+			mittens .name = "recyclable"
+		}, 45000);
+
+		// notebook
+		setTimeout(() => {
+			const notebook = this.trashs.create(243, 91, "notebook");
+			notebook.scaleX = 0.4;
+			notebook.scaleY = 0.4;
+			notebook.name="recyclable"
+		}, 51000);
+
+		// sticks_tingz
+		setTimeout(() => {
+			const sticks_tingz = this.trashs.create(712, 374, "sticks_tingz");
+			sticks_tingz.scaleX = 0.2;
+			sticks_tingz.scaleY = 0.2;
+			sticks_tingz.name ="recyclable"
+		}, 57000);
+
 
 	}
 	displayPauseMenu(){
