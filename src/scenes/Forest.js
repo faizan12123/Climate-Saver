@@ -203,6 +203,10 @@ class Forest extends Phaser.Scene {
 				console.log(this.selectedTrash.name)
 				if(this.selectedTrash.name=="recyclable"){
 					console.log("it is recyclable")
+					this.displayResponse(true);
+				}
+				else{
+					this.displayResponse(false);
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
@@ -211,6 +215,13 @@ class Forest extends Phaser.Scene {
 				this.healthBarNumber--
 				this.updateHealthBar();
 				console.log("Health: " + this.healthBarNumber)
+				if(this.selectedTrash.name=="trash"){
+					console.log("it is trash")
+					this.displayResponse(true);
+				}
+				else{
+					this.displayResponse(false);
+				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			}
@@ -253,6 +264,19 @@ class Forest extends Phaser.Scene {
 		this.overlapPromptImg.scaleX = 0.2;
 		this.overlapPromptImg.scaleY = 0.2;
 		this.overlapPromptImg.visible = false;
+
+
+		//responses
+
+		// check_mark
+       	this.ResponseCheck = this.add.image(409, 307, "check-mark")
+		this.ResponseCheck.visible = false;
+
+		// x_mark
+        this.ResponseX =  this.add.image(402, 301, "x-mark");
+		this.ResponseX.visible = false
+		
+
 	}
 	displayOverlapPrompt(player, trash) {
 		this.overlapPromptImg.visible = true;
@@ -265,6 +289,21 @@ class Forest extends Phaser.Scene {
 	}
 	hideOverlapPrompt(){
 			this.overlapPromptImg.visible = false;
+	}
+	displayResponse(correctBool){
+		if(correctBool){
+			this.ResponseCheck.visible = true;
+			setTimeout(() => {
+				this.ResponseCheck.visible = false;
+			}, 3000);
+
+		}
+		else{
+			this.ResponseX.visible = true;
+			setTimeout(() => {
+				this.ResponseX.visible = false;
+			}, 3000);
+		}
 	}
 
 	displayPlayer(){
