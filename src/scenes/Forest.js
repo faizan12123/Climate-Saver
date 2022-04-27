@@ -235,61 +235,109 @@ class Forest extends Phaser.Scene {
 		const camping_light = this.trashs.create(54, 276, "camping-light");
 		camping_light.scaleX = 0.2;
 		camping_light.scaleY = 0.2;
+		camping_light.visible = false;
+		setTimeout(() => {
+			camping_light.visible = true;
+		}, 1000);
 
 		// chips_bag
 		const chips_bag = this.trashs.create(426, 370, "chips-bag");
 		chips_bag.scaleX = 0.3;
 		chips_bag.scaleY = 0.3;
+		chips_bag.visible = false
+		setTimeout(() => {
+			chips_bag.visible = true;
+		}, 7000);
 
 		// deoderant
 		const deoderant = this.trashs.create(712, 499, "deoderant");
 		deoderant.scaleX = 0.3;
 		deoderant.scaleY = 0.3;
+		deoderant.visible = false;
+		setTimeout(() => {
+			deoderant.visible = true;
+		}, 13000);
 
 		// juicebox
 		const juicebox = this.trashs.create(139, 507, "juicebox");
 		juicebox.scaleX = 0.17;
 		juicebox.scaleY = 0.17;
+		juicebox.visible = false;
+		setTimeout(() => {
+			juicebox.visible = true;
+		}, 20000);
 
 		// plastic_straws
 		const plastic_straws = this.trashs.create(707, 318, "plastic-straws");
 		plastic_straws.scaleX = 0.2;
 		plastic_straws.scaleY = 0.2;
+		plastic_straws.visible = false;
+		setTimeout(() => {
+			plastic_straws.visible = true;
+		}, 25000);
 
 		// smartphone
 		const smartphone = this.trashs.create(459, 215, "smartphone");
 		smartphone.scaleX = 0.15;
 		smartphone.scaleY = 0.15;
+		smartphone.visible = false;
+		setTimeout(() => {
+			smartphone.visible = true;
+		}, 32000);
 
 		// soda_can
 		const soda_can = this.trashs.create(752, 179, "soda-can");
 		soda_can.scaleX = 1;
 		soda_can.scaleY = 1;
+		soda_can.visible = false;
+		setTimeout(() => {
+			soda_can.visible = true;
+		}, 37000);
 
 		// rope
 		const rope = this.trashs.create(201, 149, "rope");
 		rope.scaleX = 0.25;
 		rope.scaleY = 0.25;
+		rope.visible = false;
+		setTimeout(() => {
+			rope.visible = true;
+		}, 45000);
 
 		// skateboard
 		const skateboard = this.trashs.create(550, 116, "skateboard");
-		skateboard.scaleX = 0.23;
-		skateboard.scaleY = 0.23;
+		skateboard.scaleX = 0.15;
+		skateboard.scaleY = 0.15;
+		skateboard.visible = false
+		setTimeout(() => {
+			skateboard.visible = true;
+		}, 51000);
 
 		// soda_bottle
 		const soda_bottle = this.trashs.create(261, 391, "soda-bottle");
 		soda_bottle.scaleX = 0.1;
 		soda_bottle.scaleY = 0.1;
+		soda_bottle.visible = false;
+		setTimeout(() => {
+			soda_bottle.visible = true;
+		}, 57000);
 
 		// soda_can_1
 		const soda_can_1 = this.trashs.create(592, 445, "soda-can_1");
 		soda_can_1.scaleX = 0.25;
 		soda_can_1.scaleY = 0.25;
+		soda_can_1.visible = false;
+		setTimeout(() => {
+			soda_can_1.visible = true;
+		}, 62000);
 
 		// ziploc_bag
 		const ziploc_bag = this.trashs.create(458, 513, "ziploc-bag");
 		ziploc_bag.scaleX = 0.2;
 		ziploc_bag.scaleY = 0.2;
+		ziploc_bag.visible = false;
+		setTimeout(() => {
+			ziploc_bag.visible = true;
+		}, 68000);
 	}
 	displayPauseMenu(){
 		// pause_menu
