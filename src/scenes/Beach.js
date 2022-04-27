@@ -291,6 +291,8 @@ class Beach extends Phaser.Scene {
 		this.overlapPromptImg.visible = false;
 	}
 	displayResponse(correctBool){
+		this.ResponseCheck.visible = false;
+		this.ResponseX.visible = false;
 		if(correctBool){
 			this.ResponseCheck.visible = true;
 			setTimeout(() => {

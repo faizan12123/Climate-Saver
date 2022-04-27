@@ -347,6 +347,8 @@ class City extends Phaser.Scene {
   }
  
     displayResponse(correctBool){
+		this.ResponseCheck.visible = false;
+		this.ResponseX.visible = false;
 		if(correctBool){
 			this.ResponseCheck.visible = true;
 			setTimeout(() => {
