@@ -2,7 +2,6 @@ class Beach extends Phaser.Scene {
 
 	trashs;
 	beachV1;
-	healthBarNumber; // start with 9 bars
 
 	constructor() {
 		super("Beach");
@@ -591,13 +590,10 @@ displayTrash() {
 		health_bar_decoration.scaleX = 2.876226221353047;
 		health_bar_decoration.scaleY = 2.876226221353047;
 
-		this.healthBarNumber = 8;
 
 		this.healthBars = this.add.image(713, 44, "Life-Bar-"+this.healthBarNumber);
 		this.healthBars.scaleX = 1.801947436688974;
 		this.healthBars.scaleY = 1.801947436688974;
-
-
 	
 	}
 	updateHealthBar(){
@@ -617,11 +613,12 @@ displayTrash() {
 		this.objectsLayer.setCollisionByProperty({ collides: true });
 		//when health reaches 0
 		if (this.healthBarNumber == 0){
+			/*
 			this.scoreBoard.visible= true;
 			this.menu_check = true;
 			this.go_to_quiz_button.visible = true;
 			this.end_score.setText(this.player_score);
-			this.end_score.visible = true;			
+			this.end_score.visible = true;		*/	
 			
 		}
 			if(this.menu_check == false)
@@ -748,6 +745,8 @@ displayTrash() {
 				}
 				else{
 					this.displayResponse(false);
+					this.healthBarNumber--;
+					this.updateHealthBar();
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
