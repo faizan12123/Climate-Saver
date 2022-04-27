@@ -105,6 +105,7 @@ class Icey extends Phaser.Scene {
 
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
+		this.gameOverStatus = false;
 		this.editorCreate();
 		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
 
@@ -131,6 +132,7 @@ class Icey extends Phaser.Scene {
 				this.end_score.setText(this.player_score);
 				this.end_score.visible = true;	
 				this.input.keyboard.enabled = false;	
+				this.gameOverStatus = true;
 			}
 			if(this.menu_check == false)
 		{
@@ -157,6 +159,7 @@ class Icey extends Phaser.Scene {
 			this.end_score.setText(this.player_score);
 			this.end_score.visible = true;	
 			this.input.keyboard.enabled = false;
+			this.gameOverStatus = true;
 		}
 
 		/*if(this.scoreBoard.visible == true)
@@ -383,85 +386,123 @@ class Icey extends Phaser.Scene {
 		 this.trashs.enableBody = true;
 
 		// backpack
-		setTimeout(() => {
-			const backpack  = this.trashs.create(412, 259, "backpack");
-			backpack .scaleX = 0.2;
-			backpack .scaleY = 0.2;
-			backpack .name = "recyclable"
-		}, 1000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const backpack  = this.trashs.create(412, 259, "backpack");
+					backpack .scaleX = 0.2;
+					backpack .scaleY = 0.2;
+					backpack .name = "recyclable"
+				}
+			}, 1000);
+		}
 
-		setTimeout(() => {
-			// chips_bag
-			const chips_bag = this.trashs.create(514, 350, "chips-bag");
-			chips_bag.scaleX = 0.4;
-			chips_bag.scaleY = 0.4;
-			chips_bag.name = "trash"
-		}, 7000);
-
+		// chips_bag
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const chips_bag = this.trashs.create(514, 350, "chips-bag");
+					chips_bag.scaleX = 0.4;
+					chips_bag.scaleY = 0.4;
+					chips_bag.name = "trash"
+				}
+			}, 7000);
+		}
 		// food
-		setTimeout(() => {
-			const food = this.trashs.create(142, 508, "food");
-			food.scaleX = 0.2;
-			food.scaleY = 0.2;
-			food.name = "trash"
-		}, 13000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const food = this.trashs.create(142, 508, "food");
+					food.scaleX = 0.2;
+					food.scaleY = 0.2;
+					food.name = "trash"
+				}
+			}, 13000);
+		}
 
 		// dumbell
-		setTimeout(() => {
-			const dumbell = this.trashs.create(72, 167, "dumbell");
-			dumbell.scaleX = 0.5;
-			dumbell.scaleY = 0.5;
-			dumbell.name = "recyclable"
-		}, 20000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const dumbell = this.trashs.create(72, 167, "dumbell");
+					dumbell.scaleX = 0.5;
+					dumbell.scaleY = 0.5;
+					dumbell.name = "recyclable";
+				}
+			}, 20000);
+		}
 
 		// glasses_1
-		setTimeout(() => {
-			const glasses_1 = this.trashs.create(738, 224, "glasses_1");
-			glasses_1.scaleX = 0.35;
-			glasses_1.scaleY = 0.35;
-			glasses_1.name="recyclable"
-		}, 25000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const glasses_1 = this.trashs.create(738, 224, "glasses_1");
+					glasses_1.scaleX = 0.35;
+					glasses_1.scaleY = 0.35;
+					glasses_1.name="recyclable"
+				}
+			}, 25000);
+		}
 
 		// ipodTingz
-		setTimeout(() => {
-			const ipodTingz = this.trashs.create(191, 291, "ipodTingz");
-			ipodTingz.scaleX = 0.3;
-			ipodTingz.scaleY = 0.3;
-			ipodTingz.name = "recyclable"
-		}, 32000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const ipodTingz = this.trashs.create(191, 291, "ipodTingz");
+					ipodTingz.scaleX = 0.3;
+					ipodTingz.scaleY = 0.3;
+					ipodTingz.name = "recyclable"
+				}
+			}, 32000);
+		}
 
 		// jacket
-		setTimeout(() => {
-			const jacket = this.trashs.create(517, 129, "jacket");
-			jacket.scaleX = 0.23;
-			jacket.scaleY = 0.23;
-			jacket.name = "recyclable"
-		}, 37000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const jacket = this.trashs.create(517, 129, "jacket");
+					jacket.scaleX = 0.23;
+					jacket.scaleY = 0.23;
+					jacket.name = "recyclable"
+				}
+			}, 37000);
+		}
 
 		// mittens 
-		setTimeout(() => {
-			const mittens = this.trashs.create(442, 539, "mittens");
-			mittens .scaleX = 0.2;
-			mittens .scaleY = 0.2;
-			mittens .name = "recyclable"
-		}, 45000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+				const mittens = this.trashs.create(442, 539, "mittens");
+				mittens .scaleX = 0.2;
+				mittens .scaleY = 0.2;
+				mittens .name = "recyclable"
+				}
+			}, 45000);
+		}
 
 		// notebook
-		setTimeout(() => {
-			const notebook = this.trashs.create(243, 91, "notebook");
-			notebook.scaleX = 0.4;
-			notebook.scaleY = 0.4;
-			notebook.name="recyclable"
-		}, 51000);
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const notebook = this.trashs.create(243, 91, "notebook");
+					notebook.scaleX = 0.4;
+					notebook.scaleY = 0.4;
+					notebook.name="recyclable"
+				}
+			}, 51000);
+		}
 
 		// sticks_tingz
-		setTimeout(() => {
-			const sticks_tingz = this.trashs.create(712, 374, "sticks_tingz");
-			sticks_tingz.scaleX = 0.2;
-			sticks_tingz.scaleY = 0.2;
-			sticks_tingz.name ="recyclable"
-		}, 57000);
-
+		if(!this.gameOverStatus){
+			setTimeout(() => {
+				if(!this.gameOverStatus){
+					const sticks_tingz = this.trashs.create(712, 374, "sticks_tingz");
+					sticks_tingz.scaleX = 0.2;
+					sticks_tingz.scaleY = 0.2;
+					sticks_tingz.name ="recyclable"
+				}
+			}, 57000);
+		}
 
 	}
 	displayPauseMenu(){
