@@ -6,13 +6,16 @@ class Icey extends Phaser.Scene {
 
 	editorCreate() {
 		this.displayMap();
+		this.displayTrash();
 		this.displayPlayer();
+		this.setOverlapPrompt();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		this.overlapBool = false;
+
 		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
 		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
 		this.cursors = this.input.keyboard.createCursorKeys();
-		//this.displayScoreBoard();
-		//this.overlapBool = false;
+
 		
 		this.cursors = this.input.keyboard.createCursorKeys()
 
@@ -55,11 +58,15 @@ class Icey extends Phaser.Scene {
 
 
 		// score
-		var player_score = 0;
+		this.player_score = 0;
 		const score = this.add.image(400, 35, "Score");
-		const score_count = this.add.text(420, 20, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "black" });
-		score_count.setText(player_score+1);
-
+		this.scoreText = this.add.text(420, 20, this.player_score, {
+		fontFamily: "Acme",
+		fontSize: "24px",
+		color: "black",
+		fontStyle: "Bold",
+		});
+		//score_count.setText(player_score+1);
 		score.scaleX = 0.5;
 		score.scaleY = 0.5;
 
@@ -98,6 +105,9 @@ class Icey extends Phaser.Scene {
 	create() {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
+		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
+
+
 		//creating timer
 		this.timeInSeconds = 30;
 		this.shouldSubtractSecond = 0;
@@ -177,6 +187,47 @@ class Icey extends Phaser.Scene {
 
 		}
 
+		if(!this.overlapBool){
+			this.hideOverlapPrompt();
+		}
+		if(this.overlapBool){
+			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+				console.log("r pressed")
+
+				if(this.selectedTrash.name=="recyclable"){
+					console.log("it is recyclable")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
+				}
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
+				console.log("t pressed")
+
+				if(this.selectedTrash.name=="trash"){
+					console.log("it is trash")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
+				}
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			}
+		}
+
 
 	}
 
@@ -212,6 +263,72 @@ class Icey extends Phaser.Scene {
 		this.overlapPromptImg.scaleY = 0.2;
 		this.overlapPromptImg.visible = false;
 	}
+
+	setOverlapPrompt(){
+		this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
+		this.overlapPromptImg.scaleX = 0.2;
+		this.overlapPromptImg.scaleY = 0.2;
+		this.overlapPromptImg.visible = false;
+
+
+		//responses
+
+		// check_mark
+       	this.ResponseCheck = this.add.image(409, 307, "check-mark")
+		this.ResponseCheck.visible = false;
+
+		// x_mark
+        this.ResponseX =  this.add.image(402, 301, "x-mark");
+		this.ResponseX.visible = false
+		
+
+	}
+	displayOverlapPrompt(player, trash) {
+		this.overlapPromptImg.visible = true;
+		this.overlapBool = true;
+
+		this.selectedTrash = trash;
+		setTimeout(() => {
+		this.overlapBool = false;
+		}, 5000);
+	}
+
+	hideOverlapPrompt(){
+			this.overlapPromptImg.visible = false;
+	}
+
+	displayResponse(correctBool){
+		var buttonRight = this.sound.add("sound-right");
+		var buttonWrong = this.sound.add("sound-wrong");
+		
+		this.ResponseCheck.visible = false;
+		this.ResponseX.visible = false;
+		if(correctBool){
+			if(localStorage.settingsOptionFX == "true"){
+				buttonRight.play();
+				console.log("play sound")
+			}
+			else{
+				console.log("no sound")
+			}
+
+			this.ResponseCheck.visible = true;
+			setTimeout(() => {
+				this.ResponseCheck.visible = false;
+			}, 3000);
+
+		}
+		else{
+			if(localStorage.settingsOptionFX == "true"){
+				buttonWrong.play();
+			}
+			this.ResponseX.visible = true;
+			setTimeout(() => {
+				this.ResponseX.visible = false;
+			}, 3000);
+		}
+	}
+
 	displayPlayer(){
 		// player
 		const player = this.add.sprite(489, 348, "1_1");
@@ -221,6 +338,29 @@ class Icey extends Phaser.Scene {
 
 		//animations + movements
 		this.player.play("down-idle");
+	}
+
+	displayTrash(){
+		 // trashs
+		 this.trashs = this.physics.add.group();
+		 this.trashs.enableBody = true;
+
+		 // camping_light
+		setTimeout(() => {
+			const camping_light = this.trashs.create(54, 276, "camping-light");
+			camping_light.scaleX = 0.2;
+			camping_light.scaleY = 0.2;
+			camping_light.name = "recyclable"
+		}, 1000);
+
+		setTimeout(() => {
+			// chips_bag
+			const chips_bag = this.trashs.create(426, 370, "chips-bag");
+			chips_bag.scaleX = 0.3;
+			chips_bag.scaleY = 0.3;
+			chips_bag.name = "trash"
+		}, 7000);
+
 	}
 	displayPauseMenu(){
 		// pause_menu
