@@ -198,6 +198,12 @@ class Forest extends Phaser.Scene {
 				this.player_score++
 				console.log("score: " + this.player_score)
 				this.scoreText.setText(' ' + this.player_score);
+				console.log(this.recyclables)
+				console.log(this.selectedTrash)
+				console.log(this.selectedTrash.name)
+				if(this.selectedTrash.name=="recyclable"){
+					console.log("it is recyclable")
+				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
@@ -275,12 +281,14 @@ class Forest extends Phaser.Scene {
 		 // trashs
 		 this.trashs = this.physics.add.group();
 		 this.trashs.enableBody = true;
-		 
+		 this.recyclables = [];
+
 		// camping_light
 		const camping_light = this.trashs.create(54, 276, "camping-light");
 		camping_light.scaleX = 0.2;
 		camping_light.scaleY = 0.2;
 		camping_light.visible = false;
+		camping_light.name = "recyclable"
 		setTimeout(() => {
 			camping_light.visible = true;
 		}, 1000);
@@ -290,6 +298,7 @@ class Forest extends Phaser.Scene {
 		chips_bag.scaleX = 0.3;
 		chips_bag.scaleY = 0.3;
 		chips_bag.visible = false
+		chips_bag.name = "trash"
 		setTimeout(() => {
 			chips_bag.visible = true;
 		}, 7000);
@@ -299,6 +308,7 @@ class Forest extends Phaser.Scene {
 		deoderant.scaleX = 0.3;
 		deoderant.scaleY = 0.3;
 		deoderant.visible = false;
+		deoderant.name = "trash"
 		setTimeout(() => {
 			deoderant.visible = true;
 		}, 13000);
@@ -308,6 +318,7 @@ class Forest extends Phaser.Scene {
 		juicebox.scaleX = 0.17;
 		juicebox.scaleY = 0.17;
 		juicebox.visible = false;
+		juicebox.name = "recyclable"
 		setTimeout(() => {
 			juicebox.visible = true;
 		}, 20000);
@@ -317,6 +328,7 @@ class Forest extends Phaser.Scene {
 		plastic_straws.scaleX = 0.2;
 		plastic_straws.scaleY = 0.2;
 		plastic_straws.visible = false;
+		plastic_straws.name = "trash"
 		setTimeout(() => {
 			plastic_straws.visible = true;
 		}, 25000);
@@ -326,6 +338,7 @@ class Forest extends Phaser.Scene {
 		smartphone.scaleX = 0.15;
 		smartphone.scaleY = 0.15;
 		smartphone.visible = false;
+		smartphone.name = "recyclable"
 		setTimeout(() => {
 			smartphone.visible = true;
 		}, 32000);
@@ -335,6 +348,7 @@ class Forest extends Phaser.Scene {
 		soda_can.scaleX = 1;
 		soda_can.scaleY = 1;
 		soda_can.visible = false;
+		soda_can.name = "recyclable"
 		setTimeout(() => {
 			soda_can.visible = true;
 		}, 37000);
@@ -344,6 +358,7 @@ class Forest extends Phaser.Scene {
 		rope.scaleX = 0.25;
 		rope.scaleY = 0.25;
 		rope.visible = false;
+		rope.name = "recyclable"
 		setTimeout(() => {
 			rope.visible = true;
 		}, 45000);
@@ -352,7 +367,8 @@ class Forest extends Phaser.Scene {
 		const skateboard = this.trashs.create(550, 116, "skateboard");
 		skateboard.scaleX = 0.15;
 		skateboard.scaleY = 0.15;
-		skateboard.visible = false
+		skateboard.visible = false;
+		skateboard.name="recyclable"
 		setTimeout(() => {
 			skateboard.visible = true;
 		}, 51000);
@@ -362,6 +378,7 @@ class Forest extends Phaser.Scene {
 		soda_bottle.scaleX = 0.1;
 		soda_bottle.scaleY = 0.1;
 		soda_bottle.visible = false;
+		soda_bottle.name ="recyclable"
 		setTimeout(() => {
 			soda_bottle.visible = true;
 		}, 57000);
@@ -371,6 +388,7 @@ class Forest extends Phaser.Scene {
 		soda_can_1.scaleX = 0.25;
 		soda_can_1.scaleY = 0.25;
 		soda_can_1.visible = false;
+		soda_can_1.name ="recyclable"
 		setTimeout(() => {
 			soda_can_1.visible = true;
 		}, 62000);
@@ -380,6 +398,7 @@ class Forest extends Phaser.Scene {
 		ziploc_bag.scaleX = 0.2;
 		ziploc_bag.scaleY = 0.2;
 		ziploc_bag.visible = false;
+		ziploc_bag.name = "recyclable"
 		setTimeout(() => {
 			ziploc_bag.visible = true;
 		}, 68000);
