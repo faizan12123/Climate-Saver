@@ -263,13 +263,15 @@ class Beach extends Phaser.Scene {
 	}
 
 
-	displayOverlapPrompt(){
-		this.overlapPromptImg.visible = true;
-		this.overlapBool = true;
-		setTimeout(()=>{
-			this.overlapBool = false;
-		}, 5000);
-	}
+  displayOverlapPrompt(player, trash) {
+    this.overlapPromptImg.visible = true;
+    this.overlapBool = true;
+
+    this.selectedTrash = trash;
+    setTimeout(() => {
+      this.overlapBool = false;
+    }, 5000);
+  }
 	hideOverlapPrompt(){
 		this.overlapPromptImg.visible = false;
 	}
@@ -662,12 +664,14 @@ displayTrash() {
 				this.player_score++
 				console.log("score: " + this.player_score)
 				this.scoreText.setText(' ' + this.player_score);
+        this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
 				console.log("t pressed")
 				this.healthBarNumber--
 				this.updateHealthBar();
 				console.log("Health: " + this.healthBarNumber)
+        this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			}
 		}
