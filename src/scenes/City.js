@@ -510,23 +510,27 @@ class City extends Phaser.Scene {
       const apple_charger = this.trashs.create(125, 433, "apple-charger");
       apple_charger.scaleX = 0.15;
       apple_charger.scaleY = 0.15;
+	  apple_charger.name = "recyclable"
     }, 500);
 
     setTimeout(() => {
       const battery = this.trashs.create(110 + 300, 253, "battery");
       battery.scaleX = 0.5;
       battery.scaleY = 0.5;
+	  battery.name = "recyclable"
     }, 4500);
     setTimeout(() => {
       const books = this.trashs.create(359 + 300, 433, "books");
       books.scaleX = 0.15;
       books.scaleY = 0.15;
+	  books.name = "recyclable"
     }, 8500);
     
     setTimeout(() => {
       const glasses = this.trashs.create(411 + 300, 366, "glasses");
       glasses.scaleX = 0.20;
       glasses.scaleY = 0.20;
+	  glasses.name = "recyclable"
     }, 12500);
     
   
@@ -535,18 +539,21 @@ class City extends Phaser.Scene {
       const ipod = this.trashs.create(179 + 200, 80, "ipod");
       ipod.scaleX = 0.205;
       ipod.scaleY = 0.205;
+	  ipod.name = "recyclable"
     }, 16500);
 
     setTimeout(() => {
       const paint = this.trashs.create(110 , 353, "paint");
       paint.scaleX = 0.15;
       paint.scaleY = 0.15;
+	  paint.name = "recyclable"
     }, 20500);
     
     setTimeout(() => {
       const plastic_bag = this.trashs.create(300, 400, "plastic-bag");
       plastic_bag.scaleX = 0.15;
       plastic_bag.scaleY = 0.15;
+	  plastic_bag.name = "recyclable"
 
     }, 24500);
     
@@ -554,6 +561,7 @@ class City extends Phaser.Scene {
       const plastic_utensiils = this.trashs.create(520, 426, "plastic-utensiils");
       plastic_utensiils.scaleX = 0.15;
       plastic_utensiils.scaleY = 0.15;
+	  plastic_utensiils.name = "trash"
 
     }, 28500);
 
@@ -561,6 +569,7 @@ class City extends Phaser.Scene {
       const television = this.trashs.create(179 + 300, 550, "television");
       television.scaleX = 0.35;
       television.scaleY = 0.35;
+	  television.name = "recyclable"
     }, 32500);
     /*
     const orangeJuice = this.trashs.create(300, 187, "orangeJuice");
