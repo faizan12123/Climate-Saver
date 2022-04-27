@@ -254,26 +254,46 @@ class City extends Phaser.Scene {
 
 		}
 
-    if (!this.overlapBool) {
-      this.hideOverlapPrompt();
-    }
-    if (this.overlapBool) {
-      if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
-        console.log("r pressed");
-        this.player_score++
-				console.log("score: " + this.player_score)
-				this.scoreText.setText(' ' + this.player_score);
-        this.selectedTrash.destroy();
-        this.hideOverlapPrompt();
-      } else if (Phaser.Input.Keyboard.JustDown(this.tPress)) {
-          console.log("t pressed")
-          this.healthBarNumber--
-          this.updateHealthBar();
-          console.log("Health: " + this.healthBarNumber)
-        	this.selectedTrash.destroy();
-				  this.hideOverlapPrompt();
-      }
-    }
+		if (!this.overlapBool) {
+		this.hideOverlapPrompt();
+		}
+		if (this.overlapBool) {
+			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+				console.log("r pressed")
+
+				if(this.selectedTrash.name=="recyclable"){
+					console.log("it is recyclable")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
+				}
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
+				console.log("t pressed")
+
+				if(this.selectedTrash.name=="trash"){
+					console.log("it is trash")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
+				}
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			}
+   		}
 	}
 
 	displayMap(){
@@ -314,8 +334,33 @@ class City extends Phaser.Scene {
     this.overlapPromptImg.scaleX = 0.2;
     this.overlapPromptImg.scaleY = 0.2;
     this.overlapPromptImg.visible = false;
-  }
 
+	//responses
+
+		// check_mark
+		this.ResponseCheck = this.add.image(409, 307, "check-mark")
+		this.ResponseCheck.visible = false;
+
+		// x_mark
+        this.ResponseX =  this.add.image(402, 301, "x-mark");
+		this.ResponseX.visible = false
+  }
+ 
+    displayResponse(correctBool){
+		if(correctBool){
+			this.ResponseCheck.visible = true;
+			setTimeout(() => {
+				this.ResponseCheck.visible = false;
+			}, 3000);
+
+		}
+		else{
+			this.ResponseX.visible = true;
+			setTimeout(() => {
+				this.ResponseX.visible = false;
+			}, 3000);
+		}
+	}
   //scoreboard function
   displayScoreBoard() {
     this.scoreBoard = this.add.image(400, 300, "scoreboard");
@@ -569,7 +614,7 @@ class City extends Phaser.Scene {
       const television = this.trashs.create(179 + 300, 550, "television");
       television.scaleX = 0.35;
       television.scaleY = 0.35;
-	  television.name = "recyclable"
+	  television
     }, 32500);
     /*
     const orangeJuice = this.trashs.create(300, 187, "orangeJuice");
