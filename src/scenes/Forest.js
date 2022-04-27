@@ -9,10 +9,13 @@ class Forest extends Phaser.Scene {
 		this.displayMap();
 		this.displayTrash();
 		this.displayPlayer();
+		this.setOverlapPrompt();
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		//this.displayScoreBoard();
-		//this.overlapBool = false;
+		this.overlapBool = false;
 		
+		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
 		this.cursors = this.input.keyboard.createCursorKeys()
 
 		// cGB02_yellow_S_btn
@@ -58,11 +61,15 @@ class Forest extends Phaser.Scene {
 
 
 		// score
-		var player_score = 0;
+		this.player_score = 0;
 		const score = this.add.image(400, 35, "Score");
-		const score_count = this.add.text(420, 20, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "black" });
-		score_count.setText(player_score+1);
-
+		this.scoreText = this.add.text(420, 20, this.player_score, {
+		fontFamily: "Acme",
+		fontSize: "24px",
+		color: "black",
+		fontStyle: "Bold",
+		});
+		//score_count.setText(player_score+1);
 		score.scaleX = 0.5;
 		score.scaleY = 0.5;
 
@@ -102,6 +109,8 @@ class Forest extends Phaser.Scene {
 		this.healthBarNumber = 8; // start with 9 bars
 		this.editorCreate();
 		this.player.play("down-idle");
+		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
+
 		//creating timer
 		this.timeInSeconds = 30;
 		this.shouldSubtractSecond = 0;
@@ -180,6 +189,26 @@ class Forest extends Phaser.Scene {
 		this.d_Pad_Down.visible = false;
 
 		}
+		if(!this.overlapBool){
+			this.hideOverlapPrompt();
+		}
+		if(this.overlapBool){
+			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
+				console.log("r pressed")
+				this.player_score++
+				console.log("score: " + this.player_score)
+				this.scoreText.setText(' ' + this.player_score);
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
+				console.log("t pressed")
+				this.healthBarNumber--
+				this.updateHealthBar();
+				console.log("Health: " + this.healthBarNumber)
+        		this.selectedTrash.destroy();
+				this.hideOverlapPrompt();
+			}
+		}
 
 	}
 
@@ -211,11 +240,27 @@ class Forest extends Phaser.Scene {
 		}
 
 		this.forestMap = forestMap;
+	}
+
+	 setOverlapPrompt(){
 		this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
 		this.overlapPromptImg.scaleX = 0.2;
 		this.overlapPromptImg.scaleY = 0.2;
 		this.overlapPromptImg.visible = false;
 	}
+	displayOverlapPrompt(player, trash) {
+		this.overlapPromptImg.visible = true;
+		this.overlapBool = true;
+
+		this.selectedTrash = trash;
+		setTimeout(() => {
+		this.overlapBool = false;
+		}, 5000);
+	}
+	hideOverlapPrompt(){
+			this.overlapPromptImg.visible = false;
+	}
+
 	displayPlayer(){
 		// player
 		const player = this.add.sprite(489, 348, "1_1");
