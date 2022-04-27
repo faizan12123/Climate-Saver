@@ -195,32 +195,35 @@ class Forest extends Phaser.Scene {
 		if(this.overlapBool){
 			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
 				console.log("r pressed")
-				this.player_score++
-				console.log("score: " + this.player_score)
-				this.scoreText.setText(' ' + this.player_score);
-				console.log(this.recyclables)
-				console.log(this.selectedTrash)
-				console.log(this.selectedTrash.name)
+
 				if(this.selectedTrash.name=="recyclable"){
 					console.log("it is recyclable")
 					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
 				}
 				else{
 					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
 				console.log("t pressed")
-				this.healthBarNumber--
-				this.updateHealthBar();
-				console.log("Health: " + this.healthBarNumber)
+
 				if(this.selectedTrash.name=="trash"){
 					console.log("it is trash")
 					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
 				}
 				else{
 					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
