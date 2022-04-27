@@ -937,6 +937,16 @@
                 "key": "quiz-box-start"
             },
             {
+                "url": "assets/Forest Assets/result-recycle.png",
+                "type": "image",
+                "key": "result-recycle"
+            },
+            {
+                "url": "assets/Forest Assets/result-trash.png",
+                "type": "image",
+                "key": "result-trash"
+            },
+            {
                 "url": "assets/Forest Assets/rope.png",
                 "type": "image",
                 "key": "rope"
