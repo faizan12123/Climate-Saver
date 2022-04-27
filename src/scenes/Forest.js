@@ -294,9 +294,20 @@ class Forest extends Phaser.Scene {
 			this.overlapPromptImg.visible = false;
 	}
 	displayResponse(correctBool){
+		var buttonRight = this.sound.add("sound-right");
+		var buttonWrong = this.sound.add("sound-wrong");
+		
 		this.ResponseCheck.visible = false;
 		this.ResponseX.visible = false;
 		if(correctBool){
+			if(localStorage.settingsOptionFX == "true"){
+				buttonRight.play();
+				console.log("play sound")
+			}
+			else{
+				console.log("no sound")
+			}
+
 			this.ResponseCheck.visible = true;
 			setTimeout(() => {
 				this.ResponseCheck.visible = false;
@@ -304,6 +315,9 @@ class Forest extends Phaser.Scene {
 
 		}
 		else{
+			if(localStorage.settingsOptionFX == "true"){
+				buttonWrong.play();
+			}
 			this.ResponseX.visible = true;
 			setTimeout(() => {
 				this.ResponseX.visible = false;

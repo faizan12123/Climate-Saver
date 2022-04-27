@@ -346,23 +346,37 @@ class City extends Phaser.Scene {
 		this.ResponseX.visible = false
   }
  
-    displayResponse(correctBool){
-		this.ResponseCheck.visible = false;
-		this.ResponseX.visible = false;
-		if(correctBool){
-			this.ResponseCheck.visible = true;
-			setTimeout(() => {
-				this.ResponseCheck.visible = false;
-			}, 3000);
-
+  displayResponse(correctBool){
+	var buttonRight = this.sound.add("sound-right");
+	var buttonWrong = this.sound.add("sound-wrong");
+	
+	this.ResponseCheck.visible = false;
+	this.ResponseX.visible = false;
+	if(correctBool){
+		if(localStorage.settingsOptionFX == "true"){
+			buttonRight.play();
+			console.log("play sound")
 		}
 		else{
-			this.ResponseX.visible = true;
-			setTimeout(() => {
-				this.ResponseX.visible = false;
-			}, 3000);
+			console.log("no sound")
 		}
+
+		this.ResponseCheck.visible = true;
+		setTimeout(() => {
+			this.ResponseCheck.visible = false;
+		}, 3000);
+
 	}
+	else{
+		if(localStorage.settingsOptionFX == "true"){
+			buttonWrong.play();
+		}
+		this.ResponseX.visible = true;
+		setTimeout(() => {
+			this.ResponseX.visible = false;
+		}, 3000);
+	}
+}
   //scoreboard function
   displayScoreBoard() {
     this.scoreBoard = this.add.image(400, 300, "scoreboard");
