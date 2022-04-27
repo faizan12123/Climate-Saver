@@ -230,7 +230,19 @@ class Beach extends Phaser.Scene {
     this.overlapPromptImg.scaleX = 0.2;
     this.overlapPromptImg.scaleY = 0.2;
     this.overlapPromptImg.visible = false;
+
+	//responses
+
+	// check_mark
+    this.ResponseCheck = this.add.image(409, 307, "check-mark")
+	this.ResponseCheck.visible = false;
+
+	// x_mark
+    this.ResponseX =  this.add.image(402, 301, "x-mark");
+	this.ResponseX.visible = false
   }
+
+  
 
 	//scoreboard function
 	displayScoreBoard(){
@@ -277,6 +289,21 @@ class Beach extends Phaser.Scene {
   }
 	hideOverlapPrompt(){
 		this.overlapPromptImg.visible = false;
+	}
+	displayResponse(correctBool){
+		if(correctBool){
+			this.ResponseCheck.visible = true;
+			setTimeout(() => {
+				this.ResponseCheck.visible = false;
+			}, 3000);
+
+		}
+		else{
+			this.ResponseX.visible = true;
+			setTimeout(() => {
+				this.ResponseX.visible = false;
+			}, 3000);
+		}
 	}
 
 	displayPlayer(){
@@ -349,45 +376,59 @@ displayTrash() {
 
   setTimeout(() => {
     const box = this.trashs.create(405 + 300, 187, "box");
+	box.name = "recyclable"
   }, 1000);
   setTimeout(() => {
     const ceramic_cup = this.trashs.create(110 + 300, 253, "ceramic-cup");
+	ceramic_cup.name = "trash"
   }, 5000);
   setTimeout(() => {
     const can2 = this.trashs.create(359 + 300, 433, "can2");
+	can2.name = "recyclable"
   }, 10000);
   setTimeout(() => {
     const can = this.trashs.create(411 + 300, 266, "can");
+	can.name = "recyclable"
   }, 15000);
   setTimeout(() => {
     const glass_bottle = this.trashs.create(179 + 300, 50, "glass-bottle");
+	glass_bottle.name = "recyclable"
   }, 20000);
   setTimeout(() => {
     const detergent_bottle = this.trashs.create(422 + 300,521,"detergent-bottle");
+	detergent_bottle.name = "recyclable"
   }, 25000);
   setTimeout(() => {
     const glass_bottle2 = this.trashs.create(251 + 300, 534, "glass-bottle2");
+	glass_bottle2.name = "recyclable"
   }, 30000);
   setTimeout(() => {
     const glass_jar = this.trashs.create(189 + 300, 358, "glass-jar");
+	glass_jar.name = "recyclable"
   }, 35000);
   setTimeout(() => {
     const milk_carton = this.trashs.create(264 + 300, 186, "milk-carton");
+	milk_carton.name = "recyclable"
   }, 40000);
   setTimeout(() => {
     const paperbag = this.trashs.create(455 + 300, 368, "paperbag");
+	paperbag.name = "recyclable"
   }, 45000);
   setTimeout(() => {
     const newspaper = this.trashs.create(303 + 300, 289, "newspaper");
+	newspaper.name = "recyclable"
   }, 50000);
   setTimeout(() => {
     const pizza_box = this.trashs.create(0 + 300, 258, "pizza-box");
+	pizza_box.name = "trash"
   }, 55000);
   setTimeout(() => {
     const soda_can = this.trashs.create(416 + 300, 62, "soda-can");
+	soda_can.name = "recyclable"
   }, 60000);
   setTimeout(() => {
     const spray_can = this.trashs.create(86 + 300, 388, "spray-can");
+	spray_can.name = "recyclable"
   }, 65000);
 }
 	displayPauseMenu(){
@@ -664,17 +705,35 @@ displayTrash() {
 		if(this.overlapBool){
 			if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
 				console.log("r pressed")
-				this.player_score++
-				console.log("score: " + this.player_score)
-				this.scoreText.setText(' ' + this.player_score);
-        this.selectedTrash.destroy();
+
+				if(this.selectedTrash.name=="recyclable"){
+					console.log("it is recyclable")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+					this.healthBarNumber--
+					this.updateHealthBar();
+				}
+        		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			} else if(Phaser.Input.Keyboard.JustDown(this.tPress)){
 				console.log("t pressed")
-				this.healthBarNumber--
-				this.updateHealthBar();
-				console.log("Health: " + this.healthBarNumber)
-        this.selectedTrash.destroy();
+
+				if(this.selectedTrash.name=="trash"){
+					console.log("it is trash")
+					this.displayResponse(true);
+					this.player_score++
+					console.log("score: " + this.player_score)
+					this.scoreText.setText(' ' + this.player_score);
+				}
+				else{
+					this.displayResponse(false);
+				}
+        		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
 			}
 		}
