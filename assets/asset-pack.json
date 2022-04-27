@@ -317,6 +317,11 @@
                 "key": "apple-charger"
             },
             {
+                "url": "assets/icey assets/backpack.png",
+                "type": "image",
+                "key": "backpack"
+            },
+            {
                 "url": "assets/sprites/base.png",
                 "type": "image",
                 "key": "base"
@@ -594,9 +599,19 @@
                 "key": "dude"
             },
             {
+                "url": "assets/icey assets/dumbell.png",
+                "type": "image",
+                "key": "dumbell"
+            },
+            {
                 "url": "assets/sprites/fact-popup.png",
                 "type": "image",
                 "key": "fact-popup"
+            },
+            {
+                "url": "assets/icey assets/food.png",
+                "type": "image",
+                "key": "food"
             },
             {
                 "url": [
@@ -636,6 +651,11 @@
                 "key": "glasses"
             },
             {
+                "url": "assets/icey assets/glasses.png",
+                "type": "image",
+                "key": "glasses_1"
+            },
+            {
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
                 "type": "image",
                 "key": "health_bar_decoration"
@@ -644,6 +664,16 @@
                 "url": "assets/City Assets/ipod.png",
                 "type": "image",
                 "key": "ipod"
+            },
+            {
+                "url": "assets/icey assets/ipodTingz.png",
+                "type": "image",
+                "key": "ipodTingz"
+            },
+            {
+                "url": "assets/icey assets/jacket.png",
+                "type": "image",
+                "key": "jacket"
             },
             {
                 "url": "assets/Forest Assets/juicebox.png",
@@ -830,6 +860,11 @@
                 "key": "milk-carton"
             },
             {
+                "url": "assets/icey assets/mittens.png",
+                "type": "image",
+                "key": "mittens"
+            },
+            {
                 "url": "assets/Character Sprites/demon/animations/MovementV2.js",
                 "type": "script",
                 "key": "MovementV2"
@@ -843,6 +878,11 @@
                 "url": "assets/Beach Assets/newspaper.png",
                 "type": "image",
                 "key": "newspaper"
+            },
+            {
+                "url": "assets/icey assets/notebook.png",
+                "type": "image",
+                "key": "notebook"
             },
             {
                 "url": "assets/City Assets/orangeJuice.png",
@@ -1032,6 +1072,11 @@
                 "url": "assets/Beach Assets/spray-can.png",
                 "type": "image",
                 "key": "spray-can"
+            },
+            {
+                "url": "assets/icey assets/sticks_tingz.png",
+                "type": "image",
+                "key": "sticks_tingz"
             },
             {
                 "url": "assets/Beach Assets/stryrofoam-cup.png",
