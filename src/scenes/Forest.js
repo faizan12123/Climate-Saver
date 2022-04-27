@@ -7,6 +7,7 @@ class Forest extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 		this.displayMap();
+		this.displayTrash();
 		this.displayPlayer();
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		//this.displayScoreBoard();
@@ -224,6 +225,71 @@ class Forest extends Phaser.Scene {
 
 		//animations + movements
 		this.player.play("down-idle");
+	}
+	displayTrash(){
+		 // trashs
+		 this.trashs = this.physics.add.group();
+		 this.trashs.enableBody = true;
+		 
+		// camping_light
+		const camping_light = this.trashs.create(54, 276, "camping-light");
+		camping_light.scaleX = 0.2;
+		camping_light.scaleY = 0.2;
+
+		// chips_bag
+		const chips_bag = this.trashs.create(426, 370, "chips-bag");
+		chips_bag.scaleX = 0.3;
+		chips_bag.scaleY = 0.3;
+
+		// deoderant
+		const deoderant = this.trashs.create(712, 499, "deoderant");
+		deoderant.scaleX = 0.3;
+		deoderant.scaleY = 0.3;
+
+		// juicebox
+		const juicebox = this.trashs.create(139, 507, "juicebox");
+		juicebox.scaleX = 0.17;
+		juicebox.scaleY = 0.17;
+
+		// plastic_straws
+		const plastic_straws = this.trashs.create(707, 318, "plastic-straws");
+		plastic_straws.scaleX = 0.2;
+		plastic_straws.scaleY = 0.2;
+
+		// smartphone
+		const smartphone = this.trashs.create(459, 215, "smartphone");
+		smartphone.scaleX = 0.15;
+		smartphone.scaleY = 0.15;
+
+		// soda_can
+		const soda_can = this.trashs.create(752, 179, "soda-can");
+		soda_can.scaleX = 1;
+		soda_can.scaleY = 1;
+
+		// rope
+		const rope = this.trashs.create(201, 149, "rope");
+		rope.scaleX = 0.25;
+		rope.scaleY = 0.25;
+
+		// skateboard
+		const skateboard = this.trashs.create(550, 116, "skateboard");
+		skateboard.scaleX = 0.23;
+		skateboard.scaleY = 0.23;
+
+		// soda_bottle
+		const soda_bottle = this.trashs.create(261, 391, "soda-bottle");
+		soda_bottle.scaleX = 0.1;
+		soda_bottle.scaleY = 0.1;
+
+		// soda_can_1
+		const soda_can_1 = this.trashs.create(592, 445, "soda-can_1");
+		soda_can_1.scaleX = 0.25;
+		soda_can_1.scaleY = 0.25;
+
+		// ziploc_bag
+		const ziploc_bag = this.trashs.create(458, 513, "ziploc-bag");
+		ziploc_bag.scaleX = 0.2;
+		ziploc_bag.scaleY = 0.2;
 	}
 	displayPauseMenu(){
 		// pause_menu
