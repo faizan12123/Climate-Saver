@@ -9,6 +9,7 @@ class City extends Phaser.Scene {
 		this.displayMap();
     this.displayTrash();
     this.displayPlayer();
+    this.setOverlapPrompt();
     this.displayHealthBar(); // there's working updateHealthBar() function
     this.displayScoreBoard();
     this.overlapBool = false;
@@ -17,6 +18,7 @@ class City extends Phaser.Scene {
     this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
     this.cursors = this.input.keyboard.createCursorKeys();
 		
+    /*
 		//temp button-quiz
 		const button_quiz = this.add.image(656,50,"button-quiz");
 		button_quiz.setInteractive();
@@ -25,6 +27,7 @@ class City extends Phaser.Scene {
 		button_quiz.on("pointerdown", () =>{
 			this.scene.start("Quiz");
 		});
+    */
 
 		// cGB02_yellow_S_btn
 		const cGB02_yellow_S_btn = this.add.image(692, 520, "CGB02-yellow_S_btn");
@@ -65,13 +68,17 @@ class City extends Phaser.Scene {
 		this.menu_check = false;
 
 		// score
-		var player_score = 0;
+		this.player_score = 0;
 		const score = this.add.image(400, 35, "Score");
-		const score_count = this.add.text(420, 20, player_score, { fontFamily: "Georgia", fontSize: "24px", color: "black" });
-		score_count.setText(player_score+1);
-
-		score.scaleX = 0.62297233942359;
-		score.scaleY = 0.62297233942359;
+		this.scoreText = this.add.text(420, 20, this.player_score, {
+		fontFamily: "Acme",
+		fontSize: "24px",
+		color: "black",
+		fontStyle: "Bold",
+		});
+		//score_count.setText(player_score+1);
+		score.scaleX = 0.5;
+		score.scaleY = 0.5;
 
     //tutorial
     //tutorial button
@@ -154,9 +161,6 @@ class City extends Phaser.Scene {
 				button_pause.scaleY = 0.1577276264549412;
 			});
 
-
-		/*--------------GAMEPLAY THINGS--------------- */
-		this.add.text(20, 0, 'Space Bar to hit things. Arrows to move', { fontFamily: "Georgia", fontSize: "40px", color: "yellow" });
 
 		this.events.emit("scene-awake");
 	}
@@ -256,21 +260,18 @@ class City extends Phaser.Scene {
     if (this.overlapBool) {
       if (Phaser.Input.Keyboard.JustDown(this.rPress)) {
         console.log("r pressed");
-        //score_count.setText(player_score + 1); //there are errors
-
-        //remove trash from GUI
+        this.player_score++
+				console.log("score: " + this.player_score)
+				this.scoreText.setText(' ' + this.player_score);
         this.selectedTrash.destroy();
-
         this.hideOverlapPrompt();
       } else if (Phaser.Input.Keyboard.JustDown(this.tPress)) {
-        console.log("t pressed");
-        this.healthBarNumber--;
-        console.log("Health: " + this.healthBarNumber);
-
-         //remove trash from GUI
-        this.selectedTrash.destroy();
-        
-        this.hideOverlapPrompt();
+          console.log("t pressed")
+          this.healthBarNumber--
+          this.updateHealthBar();
+          console.log("Health: " + this.healthBarNumber)
+        	this.selectedTrash.destroy();
+				  this.hideOverlapPrompt();
       }
     }
 	}
@@ -306,6 +307,9 @@ class City extends Phaser.Scene {
 		if(localStorage.settingsOptionMusic == "true"){
 			this.backgroundMusic.play();
 		}
+
+  }
+  setOverlapPrompt(){
     this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
     this.overlapPromptImg.scaleX = 0.2;
     this.overlapPromptImg.scaleY = 0.2;
