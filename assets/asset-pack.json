@@ -474,6 +474,21 @@
                 "key": "check-mark"
             },
             {
+                "url": "assets/Tile Background/CGB02-yellow_L_btn.png",
+                "type": "image",
+                "key": "CGB02-yellow_L_btn"
+            },
+            {
+                "url": "assets/Tile Background/CGB02-yellow_M_btn.png",
+                "type": "image",
+                "key": "CGB02-yellow_M_btn"
+            },
+            {
+                "url": "assets/Tile Background/CGB02-yellow_S_btn.png",
+                "type": "image",
+                "key": "CGB02-yellow_S_btn"
+            },
+            {
                 "url": [
                     "assets/sounds/city-bgmusic.mp3"
                 ],
@@ -524,6 +539,26 @@
                 "url": "assets/In Game Buttons/Black Buttons/D-Pad.png",
                 "type": "image",
                 "key": "D-Pad"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Down.png",
+                "type": "image",
+                "key": "D-Pad Down"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Left.png",
+                "type": "image",
+                "key": "D-Pad Left"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Right.png",
+                "type": "image",
+                "key": "D-Pad Right"
+            },
+            {
+                "url": "assets/In Game Buttons/Black Buttons/D-Pad Up.png",
+                "type": "image",
+                "key": "D-Pad Up"
             },
             {
                 "url": "assets/Beach Assets/detergent-bottle.png",
@@ -601,47 +636,47 @@
                 "key": "Layer_0"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 9.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-0.png",
                 "type": "image",
                 "key": "Life-Bar-0"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 8.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-1.png",
                 "type": "image",
                 "key": "Life-Bar-1"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 7.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-2.png",
                 "type": "image",
                 "key": "Life-Bar-2"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 6.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-3.png",
                 "type": "image",
                 "key": "Life-Bar-3"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 5.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-4.png",
                 "type": "image",
                 "key": "Life-Bar-4"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 4.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-5.png",
                 "type": "image",
                 "key": "Life-Bar-5"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 3.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-6.png",
                 "type": "image",
                 "key": "Life-Bar-6"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 2.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-7.png",
                 "type": "image",
                 "key": "Life-Bar-7"
             },
             {
-                "url": "assets/In Game Buttons/Health Bar/Life Bar Animated 1.png",
+                "url": "assets/In Game Buttons/Health Bar/Life-Bar-8.png",
                 "type": "image",
                 "key": "Life-Bar-8"
             },
