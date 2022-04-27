@@ -454,6 +454,11 @@
                 "key": "buttonOnClick"
             },
             {
+                "url": "assets/Forest Assets/camping-light.png",
+                "type": "image",
+                "key": "camping-light"
+            },
+            {
                 "url": "assets/Beach Assets/can.png",
                 "type": "image",
                 "key": "can"
@@ -469,11 +474,6 @@
                 "key": "ceramic-cup"
             },
             {
-                "url": "assets/buttons/check-mark.png",
-                "type": "image",
-                "key": "check-mark"
-            },
-            {
                 "url": "assets/Tile Background/CGB02-yellow_L_btn.png",
                 "type": "image",
                 "key": "CGB02-yellow_L_btn"
@@ -487,6 +487,16 @@
                 "url": "assets/Tile Background/CGB02-yellow_S_btn.png",
                 "type": "image",
                 "key": "CGB02-yellow_S_btn"
+            },
+            {
+                "url": "assets/buttons/check-mark.png",
+                "type": "image",
+                "key": "check-mark"
+            },
+            {
+                "url": "assets/Forest Assets/chips-bag.png",
+                "type": "image",
+                "key": "chips-bag"
             },
             {
                 "url": [
@@ -561,6 +571,11 @@
                 "key": "D-Pad Up"
             },
             {
+                "url": "assets/Forest Assets/deoderant.png",
+                "type": "image",
+                "key": "deoderant"
+            },
+            {
                 "url": "assets/Beach Assets/detergent-bottle.png",
                 "type": "image",
                 "key": "detergent-bottle"
@@ -629,6 +644,11 @@
                 "url": "assets/City Assets/ipod.png",
                 "type": "image",
                 "key": "ipod"
+            },
+            {
+                "url": "assets/Forest Assets/juicebox.png",
+                "type": "image",
+                "key": "juicebox"
             },
             {
                 "url": "assets/environment/Layer_0.png",
@@ -880,6 +900,11 @@
                 "key": "plastic-bag"
             },
             {
+                "url": "assets/Forest Assets/plastic-straws.png",
+                "type": "image",
+                "key": "plastic-straws"
+            },
+            {
                 "url": "assets/City Assets/plastic-utensiils.png",
                 "type": "image",
                 "key": "plastic-utensiils"
@@ -912,6 +937,11 @@
                 "key": "quiz-box-start"
             },
             {
+                "url": "assets/Forest Assets/rope.png",
+                "type": "image",
+                "key": "rope"
+            },
+            {
                 "url": "assets/In Game Buttons/White Buttons/Score.png",
                 "type": "image",
                 "key": "Score"
@@ -940,6 +970,16 @@
                 "key": "simpleCharacter"
             },
             {
+                "url": "assets/Forest Assets/skateboard.png",
+                "type": "image",
+                "key": "skateboard"
+            },
+            {
+                "url": "assets/Forest Assets/smartphone.png",
+                "type": "image",
+                "key": "smartphone"
+            },
+            {
                 "url": "assets/environment/snowyMap.json",
                 "type": "tilemapTiledJSON",
                 "key": "snowyMap"
@@ -950,9 +990,19 @@
                 "key": "snowyTile"
             },
             {
+                "url": "assets/Forest Assets/soda-bottle.png",
+                "type": "image",
+                "key": "soda-bottle"
+            },
+            {
                 "url": "assets/Beach Assets/soda-can.png",
                 "type": "image",
                 "key": "soda-can"
+            },
+            {
+                "url": "assets/Forest Assets/soda-can.png",
+                "type": "image",
+                "key": "soda-can_1"
             },
             {
                 "url": [
@@ -1004,6 +1054,11 @@
                 "url": "assets/buttons/x-mark.png",
                 "type": "image",
                 "key": "x-mark"
+            },
+            {
+                "url": "assets/Forest Assets/ziploc-bag.png",
+                "type": "image",
+                "key": "ziploc-bag"
             }
         ]
     },
