@@ -13,6 +13,7 @@ class Beach extends Phaser.Scene {
 		this.displayMap();
 		this.displayTrash();
 		this.displayPlayer();
+    this.setOverlapPrompt();
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		this.displayScoreBoard();
 		this.overlapBool = false;
@@ -222,12 +223,14 @@ class Beach extends Phaser.Scene {
 		if(localStorage.settingsOptionMusic == "true"){
 			this.backgroundMusic.play();
 		}
-
-		this.overlapPromptImg = this.add.image(128,499, "overlapPrompt");
-		this.overlapPromptImg.scaleX = 0.2;
-		this.overlapPromptImg.scaleY = 0.2;
-		this.overlapPromptImg.visible =false;
 	}
+
+  setOverlapPrompt(){
+    this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
+    this.overlapPromptImg.scaleX = 0.2;
+    this.overlapPromptImg.scaleY = 0.2;
+    this.overlapPromptImg.visible = false;
+  }
 
 	//scoreboard function
 	displayScoreBoard(){
