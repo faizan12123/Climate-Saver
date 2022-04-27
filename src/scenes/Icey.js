@@ -10,6 +10,7 @@ class Icey extends Phaser.Scene {
 		this.displayPlayer();
 		this.setOverlapPrompt();
 		this.displayHealthBar(); // there's working updateHealthBar() function
+		this.displayScoreBoard();
 		this.overlapBool = false;
 
 		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
@@ -124,13 +125,13 @@ class Icey extends Phaser.Scene {
 	update(){
 
 			if (this.healthBarNumber == 0){
-			/*this.scoreBoard.visible= true;
-			this.menu_check = true;
-			this.go_to_quiz_button.visible = true;
-			this.end_score.setText(this.player_score);
-			this.end_score.visible = true;	*/		
-			
-		}
+				this.scoreBoard.visible= true;
+				this.menu_check = true;
+				this.go_to_quiz_button.visible = true;
+				this.end_score.setText(this.player_score);
+				this.end_score.visible = true;	
+				this.input.keyboard.enabled = false;	
+			}
 			if(this.menu_check == false)
 		{
 			//start of timer code
@@ -150,11 +151,12 @@ class Icey extends Phaser.Scene {
 
 		//when timer reaches 0
 		if (this.timeInSeconds == 0) {
-			/*this.scoreBoard.visible = true;
+			this.scoreBoard.visible = true;
 			this.menu_check = true;
 			this.go_to_quiz_button.visible = true;
 			this.end_score.setText(this.player_score);
-			this.end_score.visible = true;	*/
+			this.end_score.visible = true;	
+			this.input.keyboard.enabled = false;
 		}
 
 		/*if(this.scoreBoard.visible == true)
@@ -283,6 +285,41 @@ class Icey extends Phaser.Scene {
 		
 
 	}
+
+	//scoreboard function
+	displayScoreBoard(){
+		
+		this.scoreBoard = this.add.image(400, 300, "scoreboard")
+		this.go_to_quiz_button = this.add.image(410,460, "continue-to-quiz-button")
+		this.go_to_quiz_button.scaleX = 0.08;
+		this.go_to_quiz_button.scaleY = 0.08;
+		this.go_to_quiz_button.visible = false;
+		this.go_to_quiz_button.setInteractive()
+			.on("pointerdown", () => {
+				if(localStorage.settingsOptionFX == "true"){
+						this.buttonClicked.play();
+				}
+				this.input.keyboard.enabled = true;
+				this.scene.start("Quiz");
+
+			})
+			.on("pointerover", () => {
+      			this.go_to_quiz_button.scale += 0.01;
+    		})
+			.on("pointerout", () => {
+				this.go_to_quiz_button.scaleX = 0.08;
+				this.go_to_quiz_button.scaleY = 0.08;
+			})
+		
+		this.scoreBoard.scaleX = 0.3;
+		this.scoreBoard.scaleY = 0.3;
+		this.scoreBoard.visible= false;	
+
+		this.end_score = this.add.text(420, 315, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		this.end_score.setText(this.player_score+1);
+		this.end_score.visible = false;
+	}
+
 	displayOverlapPrompt(player, trash) {
 		this.overlapPromptImg.visible = true;
 		this.overlapBool = true;

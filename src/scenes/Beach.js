@@ -12,7 +12,7 @@ class Beach extends Phaser.Scene {
 		this.displayMap();
 		this.displayTrash();
 		this.displayPlayer();
-    this.setOverlapPrompt();
+   		this.setOverlapPrompt();
 		this.displayHealthBar(); // there's working updateHealthBar() function
 		this.displayScoreBoard();
 		this.overlapBool = false;
@@ -256,6 +256,7 @@ class Beach extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
 						this.buttonClicked.play();
 				}
+				this.input.keyboard.enabled = true;
 				this.scene.start("Quiz");
 
 			})
@@ -384,68 +385,68 @@ class Beach extends Phaser.Scene {
 // 		this.physics.add.collider(this.player, this.objectsLayer)
 //   }
 	
-displayTrash() {
-  // trashs
-  this.trashs = this.physics.add.group();
-  this.trashs.enableBody = true;
+	displayTrash() {
+		// trashs
+		this.trashs = this.physics.add.group();
+		this.trashs.enableBody = true;
 
-  setTimeout(() => {
-    const box = this.trashs.create(405 + 300, 187, "box");
-	box.name = "recyclable"
-  }, 1000);
-  setTimeout(() => {
-    const ceramic_cup = this.trashs.create(110 + 300, 253, "ceramic-cup");
-	ceramic_cup.name = "trash"
-  }, 5000);
-  setTimeout(() => {
-    const can2 = this.trashs.create(359 + 300, 433, "can2");
-	can2.name = "recyclable"
-  }, 10000);
-  setTimeout(() => {
-    const can = this.trashs.create(411 + 300, 266, "can");
-	can.name = "recyclable"
-  }, 15000);
-  setTimeout(() => {
-    const glass_bottle = this.trashs.create(179 + 300, 50, "glass-bottle");
-	glass_bottle.name = "recyclable"
-  }, 20000);
-  setTimeout(() => {
-    const detergent_bottle = this.trashs.create(422 + 300,521,"detergent-bottle");
-	detergent_bottle.name = "recyclable"
-  }, 25000);
-  setTimeout(() => {
-    const glass_bottle2 = this.trashs.create(251 + 300, 534, "glass-bottle2");
-	glass_bottle2.name = "recyclable"
-  }, 30000);
-  setTimeout(() => {
-    const glass_jar = this.trashs.create(189 + 300, 358, "glass-jar");
-	glass_jar.name = "recyclable"
-  }, 35000);
-  setTimeout(() => {
-    const milk_carton = this.trashs.create(264 + 300, 186, "milk-carton");
-	milk_carton.name = "recyclable"
-  }, 40000);
-  setTimeout(() => {
-    const paperbag = this.trashs.create(455 + 300, 368, "paperbag");
-	paperbag.name = "recyclable"
-  }, 45000);
-  setTimeout(() => {
-    const newspaper = this.trashs.create(303 + 300, 289, "newspaper");
-	newspaper.name = "recyclable"
-  }, 50000);
-  setTimeout(() => {
-    const pizza_box = this.trashs.create(0 + 300, 258, "pizza-box");
-	pizza_box.name = "trash"
-  }, 55000);
-  setTimeout(() => {
-    const soda_can = this.trashs.create(416 + 300, 62, "soda-can");
-	soda_can.name = "recyclable"
-  }, 60000);
-  setTimeout(() => {
-    const spray_can = this.trashs.create(86 + 300, 388, "spray-can");
-	spray_can.name = "recyclable"
-  }, 65000);
-}
+		setTimeout(() => {
+			const box = this.trashs.create(405 + 300, 187, "box");
+			box.name = "recyclable"
+		}, 1000);
+		setTimeout(() => {
+			const ceramic_cup = this.trashs.create(110 + 300, 253, "ceramic-cup");
+			ceramic_cup.name = "trash"
+		}, 5000);
+		setTimeout(() => {
+			const can2 = this.trashs.create(359 + 300, 433, "can2");
+			can2.name = "recyclable"
+		}, 10000);
+		setTimeout(() => {
+			const can = this.trashs.create(411 + 300, 266, "can");
+			can.name = "recyclable"
+		}, 15000);
+		setTimeout(() => {
+			const glass_bottle = this.trashs.create(179 + 300, 50, "glass-bottle");
+			glass_bottle.name = "recyclable"
+		}, 20000);
+		setTimeout(() => {
+			const detergent_bottle = this.trashs.create(422 + 300,521,"detergent-bottle");
+			detergent_bottle.name = "recyclable"
+		}, 25000);
+		setTimeout(() => {
+			const glass_bottle2 = this.trashs.create(251 + 300, 534, "glass-bottle2");
+			glass_bottle2.name = "recyclable"
+		}, 30000);
+		setTimeout(() => {
+			const glass_jar = this.trashs.create(189 + 300, 358, "glass-jar");
+			glass_jar.name = "recyclable"
+		}, 35000);
+		setTimeout(() => {
+			const milk_carton = this.trashs.create(264 + 300, 186, "milk-carton");
+			milk_carton.name = "recyclable"
+		}, 40000);
+		setTimeout(() => {
+			const paperbag = this.trashs.create(455 + 300, 368, "paperbag");
+			paperbag.name = "recyclable"
+		}, 45000);
+		setTimeout(() => {
+			const newspaper = this.trashs.create(303 + 300, 289, "newspaper");
+			newspaper.name = "recyclable"
+		}, 50000);
+		setTimeout(() => {
+			const pizza_box = this.trashs.create(0 + 300, 258, "pizza-box");
+			pizza_box.name = "trash"
+		}, 55000);
+		setTimeout(() => {
+			const soda_can = this.trashs.create(416 + 300, 62, "soda-can");
+			soda_can.name = "recyclable"
+		}, 60000);
+		setTimeout(() => {
+			const spray_can = this.trashs.create(86 + 300, 388, "spray-can");
+			spray_can.name = "recyclable"
+		}, 65000);
+	}
 	displayPauseMenu(){
 		// pause_menu
 		this.pause_menu = this.add.image(394, 281, "pause-menuV2");
@@ -613,13 +614,13 @@ displayTrash() {
 		this.objectsLayer.setCollisionByProperty({ collides: true });
 		//when health reaches 0
 		if (this.healthBarNumber == 0){
-			/*
+			
 			this.scoreBoard.visible= true;
 			this.menu_check = true;
 			this.go_to_quiz_button.visible = true;
 			this.end_score.setText(this.player_score);
-			this.end_score.visible = true;		*/	
-			
+			this.end_score.visible = true;	
+			this.input.keyboard.enabled = false;	
 		}
 			if(this.menu_check == false)
 		{
@@ -645,6 +646,7 @@ displayTrash() {
 			this.go_to_quiz_button.visible = true;
 			this.end_score.setText(this.player_score);
 			this.end_score.visible = true;	
+			this.input.keyboard.enabled = false;
 		}
 
 		if(this.scoreBoard.visible == true)
