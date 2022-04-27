@@ -316,12 +316,10 @@ class Forest extends Phaser.Scene {
 		this.scoreBoard.scaleX = 0.3;
 		this.scoreBoard.scaleY = 0.3;
 		this.scoreBoard.visible = false;
-		const end_score = this.add.text(400, 300, this.player_score, {
-		  fontFamily: "Georgia",
-		  fontSize: "24px",
-		  color: "yellow",
-		});
-		end_score.setText(this.player_score + 1);
+
+		this.end_score = this.add.text(420, 315, this.player_score, { fontFamily: "Georgia", fontSize: "24px", color: "yellow" });
+		this.end_score.setText(this.player_score+1);
+		this.end_score.visible = false;
 	  }
 
 	displayOverlapPrompt(player, trash) {
