@@ -693,6 +693,10 @@ class Beach extends Phaser.Scene {
 			this.end_score.visible = true;	
 			this.input.keyboard.enabled = false;
 			this.gameOverStatus = true;	
+
+			this.trashs.children.entries.forEach((item) => {
+				item.visible = false;
+			})
 		}
 			if(this.menu_check == false)
 		{
@@ -720,6 +724,10 @@ class Beach extends Phaser.Scene {
 			this.end_score.visible = true;	
 			this.input.keyboard.enabled = false;
 			this.gameOverStatus = true;
+
+			this.trashs.children.entries.forEach((item) => {
+				item.visible = false;
+			})
 		}
 
 		if(this.scoreBoard.visible == true)
