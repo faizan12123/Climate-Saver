@@ -23,7 +23,7 @@ class Icey extends Phaser.Scene {
 			d:  Phaser.Input.Keyboard.KeyCodes.D,
 			w:  Phaser.Input.Keyboard.KeyCodes.W
 		});
-		
+
 		this.cursors = this.input.keyboard.createCursorKeys();
 
 		
@@ -131,6 +131,8 @@ class Icey extends Phaser.Scene {
 			}
 			return num;
 		};
+
+		this.isWalking = false;
 	}
 	update(){
 
@@ -187,18 +189,36 @@ class Icey extends Phaser.Scene {
 		if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.left.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.a.isDown))
 		{
 			this.d_Pad_Left.visible = true;
+
+			if(this.isWalking === false)
+				if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		} 
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.right.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.d.isDown))
 		{
 			this.d_Pad_Right.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		}
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.up.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.w.isDown))
 		{
 			this.d_Pad_Up.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		} 
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.down.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" &&  this.keys.s.isDown))
 		{
 			this.d_Pad_Down.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		}
 		else{
 
@@ -206,6 +226,9 @@ class Icey extends Phaser.Scene {
 		this.d_Pad_Right.visible = false;
 		this.d_Pad_Up.visible = false;
 		this.d_Pad_Down.visible = false;
+		this.walkingFX.stop();
+		this.isWalking = false;
+		
 
 		}
 
@@ -280,10 +303,7 @@ class Icey extends Phaser.Scene {
 			this.backgroundMusic.play();
 		}
 
-		this.overlapPromptImg = this.add.image(128, 499, "overlapPrompt");
-		this.overlapPromptImg.scaleX = 0.2;
-		this.overlapPromptImg.scaleY = 0.2;
-		this.overlapPromptImg.visible = false;
+		this.walkingFX = this.sound.add("footstep-city" , {volume: parseFloat(localStorage.fxVolume), loop: true});
 	}
 
 	setOverlapPrompt(){
