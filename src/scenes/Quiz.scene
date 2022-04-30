@@ -255,6 +255,32 @@
             ]
         },
         {
+            "type": "Image",
+            "id": "73038e47-4e3d-4596-903c-9b25bb5a3a90",
+            "label": "x_mark",
+            "components": [],
+            "texture": {
+                "key": "x-mark"
+            },
+            "x": 448,
+            "y": 167,
+            "scaleX": 0.6,
+            "scaleY": 0.6
+        },
+        {
+            "type": "Image",
+            "id": "d47da73c-66cc-4b9a-b020-3bb8d0b9f4da",
+            "label": "check_mark",
+            "components": [],
+            "texture": {
+                "key": "check-mark"
+            },
+            "x": 450,
+            "y": 167,
+            "scaleX": 0.6,
+            "scaleY": 0.6
+        },
+        {
             "type": "Layer",
             "id": "bb8aa803-2970-4b82-8e1d-2e5b8ce06ccd",
             "label": "fact_box",
@@ -300,30 +326,139 @@
             ]
         },
         {
-            "type": "Image",
-            "id": "73038e47-4e3d-4596-903c-9b25bb5a3a90",
-            "label": "x_mark",
+            "type": "Container",
+            "id": "1db919d2-6afb-45e9-a682-a991adafe7ac",
+            "label": "pick",
             "components": [],
-            "texture": {
-                "key": "x-mark"
-            },
-            "x": 448,
-            "y": 167,
-            "scaleX": 0.6,
-            "scaleY": 0.6
-        },
-        {
-            "type": "Image",
-            "id": "d47da73c-66cc-4b9a-b020-3bb8d0b9f4da",
-            "label": "check_mark",
-            "components": [],
-            "texture": {
-                "key": "check-mark"
-            },
-            "x": 450,
-            "y": 167,
-            "scaleX": 0.6,
-            "scaleY": 0.6
+            "x": 321,
+            "y": 361,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "6c061154-83ff-4475-831e-c9381e3fb7c7",
+                    "label": "quiz_box_1",
+                    "components": [],
+                    "texture": {
+                        "key": "quiz-box"
+                    },
+                    "x": 156,
+                    "y": -91,
+                    "scaleX": 0.4487818558067428,
+                    "scaleY": 0.3140212500973206
+                },
+                {
+                    "type": "Image",
+                    "id": "09bd7458-af73-4e8f-a598-d0fb5deca958",
+                    "label": "select4",
+                    "components": [],
+                    "texture": {
+                        "key": "button-radio"
+                    },
+                    "x": 201,
+                    "y": 53,
+                    "scaleX": 1.28,
+                    "scaleY": 1.09
+                },
+                {
+                    "type": "Image",
+                    "id": "57fd13bc-3751-45f4-8d99-a526ad125e53",
+                    "label": "select3",
+                    "components": [],
+                    "texture": {
+                        "key": "button-radio"
+                    },
+                    "x": -12,
+                    "y": 53,
+                    "scaleX": 1.28,
+                    "scaleY": 1.09
+                },
+                {
+                    "type": "Image",
+                    "id": "f62624fa-2856-4b16-bae6-482f05f4d6f2",
+                    "label": "select2",
+                    "components": [],
+                    "texture": {
+                        "key": "button-radio"
+                    },
+                    "x": 201,
+                    "y": -62,
+                    "scaleX": 1.28,
+                    "scaleY": 1.09
+                },
+                {
+                    "type": "Image",
+                    "id": "e7385adc-7589-4e4f-87e7-ae6ffe554775",
+                    "label": "select1",
+                    "components": [],
+                    "texture": {
+                        "key": "button-radio"
+                    },
+                    "x": -12,
+                    "y": -62,
+                    "scaleX": 1.28,
+                    "scaleY": 1.09
+                },
+                {
+                    "type": "Text",
+                    "id": "4d1b8dbd-3b34-47cc-8c17-ae20d7cee8b5",
+                    "label": "forestT",
+                    "components": [],
+                    "x": 258,
+                    "y": 35,
+                    "text": "Forest\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "74233def-85fe-41f6-b156-93899cd4a608",
+                    "label": "iceyT",
+                    "components": [],
+                    "x": 37,
+                    "y": 34,
+                    "text": "Icey\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "4ac238e0-4fed-4347-940e-f81302726fb2",
+                    "label": "beachT",
+                    "components": [],
+                    "x": 258,
+                    "y": -81,
+                    "text": "Beach\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "d40742d4-9929-42cb-953f-2d378f5ffc37",
+                    "label": "cityT",
+                    "components": [],
+                    "x": 39,
+                    "y": -82,
+                    "text": "City",
+                    "fontFamily": "Poppins",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "5740bef7-70b4-42c4-9b04-ae55d404c4cf",
+                    "label": "pickT",
+                    "components": [],
+                    "x": -30,
+                    "y": -211,
+                    "text": "Choose Environment\n       to begin quiz\n",
+                    "fontFamily": "Poppins",
+                    "fontSize": "35px",
+                    "color": "#000000ff"
+                }
+            ]
         }
     ],
     "plainObjects": [],

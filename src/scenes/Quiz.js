@@ -146,6 +146,7 @@ class Quiz extends Phaser.Scene {
 		quiz_box_start.scaleX = 0.33;
 		quiz_box_start.scaleY = 0.39;
 		start_quiz.add(quiz_box_start);
+		start_quiz.visible = false;
 
 		// button_start
 		const button_start = this.add.image(400, 417, "main-menu-button-start");
@@ -311,42 +312,52 @@ class Quiz extends Phaser.Scene {
 				question:'Deforestation is the destruction of forest lands for the purpose of converting them into other uses which are usually regarded as less profitable.',
 				choice1: 'True', choice2: 'False',
 				answer:'False', 
+				fact:'Deforestation is the permanent removal of trees away from forests to make way for another use such as agriculture, livestock, building, or manufacturing.',
 			},{
 				question:'Forests produce three-quarters of freshwater.',
 				choice1: 'True', choice2: 'False', 
 				answer:'True', 
+				fact:'The 2020 United Nations State of the World\'s Forests report found that approximately a third of Earth\'s freshwater comes from forests, and the loss of trees can affect water quality.',
 			},{
 				question:'How much of Earth\'s surface is covered by forests?',
 				choice1: '70%', choice2: '45%', choice3: '30%', choice4: '90%',
 				answer:'30%', 
+				fact:'According to the World Wildlife Fund, more than 30% of Earth\'s land surface is covered by forests, which produce oxygen and absorb carbon dioxide.',
 			},{
 				question:'Why are trees important against climate change?',
-				choice1: 'Trees slow down air polution', choice2: 'Trees provides shade and wood', choice3: 'Trees produce oxygen', choice4: 'Trees decrease greenhouse emissions',
-				answer:'Trees absorb decrease greenhouse emissions', 
+				choice1: 'Slow down air polution', choice2: 'Provides shade and wood', choice3: 'Pproduce oxygen', choice4: 'Decrease greenhouse emissions',
+				answer:'Decrease greenhouse emissions', 
+				fact:'Trees can absorb carbon dioxide, decreasing the amount of greenhouse gas emissions from human activity. As climate change continues, trees play an important role in capturing and storing excess carbon dioxide.',
 			},{
 				question:'All of the materials responsible for the majority of tropical deforestation beside?',
 				choice1: 'Beef', choice2: 'Fruit', choice3: 'Wood', choice4: 'Palm oil',
 				answer:'Fruit', 
+				fact:'The Union Concerned Scientists (UCS) reports that beef, soy, palm oil, and wood products are the four commodities that are most responsible for tropical deforestation.',
 			},{
 				question:'Palm oil is a sought after resource contributing to deforestation.',
 				choice1: 'True', choice2: 'False',
 				answer:'False', 
+				fact:'Palm oil is one of the most commonly produced vegetable oils, found in half of all supermarket products. Many forests are cleared to plant palm oil plantations.',
 			},{
 				question:'How does deforestation affect water conditions in the tropical region?',
 				choice1: 'Reduce sunlight', choice2: 'Reduce rainfall', choice3: 'Reduce snowfall', choice4: 'Harsh winds',
 				answer:'Reduce rainfall', 
+				fact:'Deforestation in tropical regions can also affect the formation of water vapor over the canopy, which can reduce rainfall.',
 			},{
 				question:'How does deforestation occur intentionally?',
 				choice1: 'Wildfires', choice2: 'Human activities', choice3: 'Logging', choice4: 'Fuel suppling',
 				answer:'Wildfires', 
+				fact:'It is not always intentional to deforest. In some cases, wildfires and overgrazing may result in deforestation because they prevent new trees from growing.',
 			},{
 				question:'Deforestation is one of the contributers to global warming?',
 				choice1: 'True', choice2: 'False', 
 				answer:'True', 
+				fact:'About 10% of global warming is attributed to forest loss and damage.',
 			},{
 				question:'How many trees are cut down each year around the world?',
 				choice1: '20 million', choice2: '15 billion', choice3: '2 trillion', choice4: '12 million',
 				answer:'15 billion', 
+				fact:'Deforestation costs between $2 trillion and $4.5 trillion each year through the loss of biodiversity.',
 			}]
 			let iceyQ =[
 				{
@@ -397,8 +408,6 @@ class Quiz extends Phaser.Scene {
 		let score = 0;
 
 		function showQuestion(){
-			//switch question by environment
-			questions = cityQ;
 			//shuffled = questions.sort(()=>Math.random()-.5);
 			let q = questions[currentIndex];
 			question_input.text = q.question;
@@ -590,6 +599,93 @@ class Quiz extends Phaser.Scene {
 		check_mark.scaleX = 0.6;
 		check_mark.scaleY = 0.6;
 		check_mark.visible = false;
+		
+		// pick
+		const pick = this.add.container(321, 361);
+
+		// quiz_box_1
+		const quiz_box_1 = this.add.image(156, -91, "quiz-box");
+		quiz_box_1.scaleX = 0.4;
+		quiz_box_1.scaleY = 0.3;
+		pick.add(quiz_box_1);
+
+		// select4
+		const select4 = this.add.image(201, 53, "button-radio");
+		select4.scaleX = 1.28;
+		select4.scaleY = 1.09;
+		select4.setInteractive();
+		pick.add(select4);
+		select4.on("pointerdown", () =>{
+			questions = forestQ;
+			pick.visible= false;
+			start_quiz.visible= true;
+		});
+
+		// select3
+		const select3 = this.add.image(-12, 53, "button-radio");
+		select3.scaleX = 1.28;
+		select3.scaleY = 1.09;
+		select3.setInteractive(); 
+		pick.add(select3);
+		select3.on("pointerdown", () =>{
+			questions = iceyQ;
+			pick.visible= false;
+			start_quiz.visible= true;
+		});
+
+		// select2
+		const select2 = this.add.image(201, -62, "button-radio");
+		select2.scaleX = 1.28;
+		select2.scaleY = 1.09;
+		select2.setInteractive();
+		pick.add(select2);
+		select2.on("pointerdown", () =>{
+			questions = beachQ;
+			pick.visible= false;
+			start_quiz.visible= true;
+		});
+
+		// select1
+		const select1 = this.add.image(-12, -62, "button-radio");
+		select1.scaleX = 1.28;
+		select1.scaleY = 1.09;
+		select1.setInteractive();
+		pick.add(select1);
+		select1.on("pointerdown", () =>{
+			questions = cityQ;
+			pick.visible= false;
+			start_quiz.visible= true;
+		});
+
+		// forestT
+		const forestT = this.add.text(258, 35, "", {});
+		forestT.text = "Forest\n";
+		forestT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px" });
+		pick.add(forestT);
+
+		// iceyT
+		const iceyT = this.add.text(37, 34, "", {});
+		iceyT.text = "Icey\n";
+		iceyT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px" });
+		pick.add(iceyT);
+
+		// beachT
+		const beachT = this.add.text(258, -81, "", {});
+		beachT.text = "Beach\n";
+		beachT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px" });
+		pick.add(beachT);
+
+		// cityT
+		const cityT = this.add.text(39, -82, "", {});
+		cityT.text = "City";
+		cityT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "30px" });
+		pick.add(cityT);
+
+		// pickT
+		const pickT = this.add.text(-30, -211, "", {});
+		pickT.text = "Choose Environment\n       to begin quiz\n";
+		pickT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "35px" });
+		pick.add(pickT);
 
 		//background music
 		var backgroundMusic = this.sound.add("quiz-bg", {volume: 0.2});
