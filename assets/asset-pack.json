@@ -615,6 +615,13 @@
             },
             {
                 "url": [
+                    "assets/City Assets/footstep-city.mp3"
+                ],
+                "type": "audio",
+                "key": "footstep-city"
+            },
+            {
+                "url": [
                     "assets/sounds/forest-bgmusic.mp3"
                 ],
                 "type": "audio",
