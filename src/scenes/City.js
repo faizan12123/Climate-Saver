@@ -24,7 +24,7 @@ class City extends Phaser.Scene {
 			d:  Phaser.Input.Keyboard.KeyCodes.D,
 			w:  Phaser.Input.Keyboard.KeyCodes.W
 		});
-		
+
 		this.cursors = this.input.keyboard.createCursorKeys();
 		
     /*
@@ -195,6 +195,8 @@ class City extends Phaser.Scene {
 			}
 			return num;
 		};
+
+		this.isWalking = false;
 		
 	}
 	update(){
@@ -253,18 +255,36 @@ class City extends Phaser.Scene {
 		if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.left.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.a.isDown))
 		{
 			this.d_Pad_Left.visible = true;
+
+			if(this.isWalking === false)
+				if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		} 
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.right.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.d.isDown))
 		{
 			this.d_Pad_Right.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		}
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.up.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.w.isDown))
 		{
 			this.d_Pad_Up.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		} 
 		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.down.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" &&  this.keys.s.isDown))
 		{
 			this.d_Pad_Down.visible = true;
+			if(this.isWalking === false){
+				this.walkingFX.play();
+				this.isWalking = true;
+			}
 		}
 		else{
 
@@ -272,9 +292,11 @@ class City extends Phaser.Scene {
 		this.d_Pad_Right.visible = false;
 		this.d_Pad_Up.visible = false;
 		this.d_Pad_Down.visible = false;
+		this.walkingFX.stop();
+		this.isWalking = false;
+		
 
 		}
-
 		if (!this.overlapBool) {
 		this.hideOverlapPrompt();
 		}
@@ -348,6 +370,8 @@ class City extends Phaser.Scene {
 		if(localStorage.settingsOptionMusic == "true"){
 			this.backgroundMusic.play();
 		}
+
+		this.walkingFX = this.sound.add("footstep-city" , {volume: parseFloat(localStorage.fxVolume), loop: true});
 
   }
   setOverlapPrompt(){
