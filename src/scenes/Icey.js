@@ -15,6 +15,15 @@ class Icey extends Phaser.Scene {
 
 		this.rPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
 		this.tPress = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+
+		//for WASD keys
+		this.keys = this.input.keyboard.addKeys({
+			a:  Phaser.Input.Keyboard.KeyCodes.A,
+			s:  Phaser.Input.Keyboard.KeyCodes.S,
+			d:  Phaser.Input.Keyboard.KeyCodes.D,
+			w:  Phaser.Input.Keyboard.KeyCodes.W
+		});
+		
 		this.cursors = this.input.keyboard.createCursorKeys();
 
 		
@@ -175,19 +184,19 @@ class Icey extends Phaser.Scene {
 			this.menu_check = true;
 		}*/
 
-		if (this.cursors.left.isDown)
+		if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.left.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.a.isDown))
 		{
 			this.d_Pad_Left.visible = true;
 		} 
-		else if (this.cursors.right.isDown) 
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" && this.cursors.right.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.d.isDown))
 		{
 			this.d_Pad_Right.visible = true;
 		}
-		else if (this.cursors.up.isDown) 
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.up.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" && this.keys.w.isDown))
 		{
 			this.d_Pad_Up.visible = true;
 		} 
-		else if (this.cursors.down.isDown) 
+		else if ((localStorage.getItem("controlsOptionArrows") == "true" &&this.cursors.down.isDown) || (localStorage.getItem("controlsOptionArrows")  == "false" &&  this.keys.s.isDown))
 		{
 			this.d_Pad_Down.visible = true;
 		}
