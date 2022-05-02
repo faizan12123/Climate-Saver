@@ -364,43 +364,53 @@ class Quiz extends Phaser.Scene {
 				//icey question
 				question:'What is the frozen part of the Earth system called?',
 				choice1: 'Hemisphere', choice2: 'Cryosphere', choice3: 'Atmosphere', choice4: 'Icesphere',
-				answer:'Cryosphere', 
+				answer:'Cryosphere',
+				 fact:'The cryosphere, known as the parts with ice on our planet, is intertwined with the other parts of the Earth system that what happens there affects the entire planet.', 
 			},{
 				question:'What places contain most of Earth\'s ice?',
 				choice1: 'Greenland and Antarctic', choice2: 'The Arctic and Iceland', choice3: 'Greenland and Iceland', choice4: 'The Arctic and Antarctic',
 				answer:'The Arctic and Antarctic', 
+				fact: 'Climate change continues to rise, the more ice will melt. The Arctic and Antarctic contain most of Earth\'s ice, therefore the entire planet is affected by this issue.',
 			},{
 				question:'Why does solar energy reflect back more from snow and ice?',
 				choice1: 'Their light color', choice2: 'Coldness', choice3: 'Solid Phase', choice4: 'Fix volume',
 				answer:'Their light color', 
+				fact: 'Snow and ice reflect about 90% of the solar radiation they receive back to space. With melting ice, more land is exposed so the radiation is not reflected but absorbed by land causing more global warming.',
 			},{
 				question:'What short-lived pollutant affects the rate of snow and ice melting and reflectivity?',
 				choice1: 'Hydrogen', choice2: 'Nitrogen', choice3: 'Carbon Dioxide', choice4: 'Black Carbon',
-				answer:'Black Carbon', 
+				answer:'Black Carbon',
+				fact: 'Soot, known as black carbon is the 2nd leading cause of global warming, while. Black carbon pollution covers the ice and increases the rate of snow and ice melting because of its color that reduces reflectivity.',
 			},{
 				question:'Black carbon is not preventable and can stay in the atmosphere months to years.',
 				choice1: 'True', choice2: 'False', 
-				answer:'False', 
+				answer:'False',
+				fact: 'Carbon dioxide stays in the atmosphere for a longer time than black carbon and is not preventable. Black carbon is a “short-lived” pollutant that causes warming for a few days to months.', 
 			},{
 				question:'Less snow is beneficial to the wildlife and communities in the Arctic.',
 				choice1: 'True', choice2: 'False', 
 				answer:'False', 
+				fact: 'Less snow covering the Arctic, Antarctic, and the ground in general decrease the benefits of snow as an insulator for vegetation and wildlife, supplying water, transportation, travel, etc.',
 			},{
 				question:'What gasses are released after the soil is thawed in icey environments?',
 				choice1: 'Carbon dioxide and Methane', choice2: 'Ethane and Methane', choice3: 'Nitrogen and Carbon dioxide', choice4: 'Chlorine and Carbonmonoxide',
 				answer:'Carbon dioxide and Methane', 
+				fact: 'Global warming thaws frozen soil that has been there for 40,000 years. These frozen soils contain greenhouse gasses, carbon dioxide and methane. The gasses will be released into the atmosphere which will cause more warming to occur.',
 			},{
 				question:'Sea ice affects the movement of ocean waters.',
 				choice1: 'True', choice2: 'False', 
 				answer:'True', 
+				fact: 'The movement of ocean waters is affected by sea ice. The water below sea ice is more dense and has a higher concentration of salt. Normal ocean circulation may be disrupted if the amount of sea ice changes, this also leads to changes in global climates.',
 			},{
 				question:'About what percentage does snow and ice reflect solar energy?',
 				choice1: '100%', choice2: '50%', choice3: '90%', choice4: '10%',
 				answer:'90%', 
+				fact: 'The light color of snow and ice reflect about 90% of the sunlight. reduction in snow cover and ice causes the Earth\'s surface to absorb more energy from the sun and become warmer.',
 			},{
 				question:'At what rate does the sea level increase per year?',
 				choice1: '100 centimeters', choice2: '1-2 meters', choice3: '1-2 millimeters', choice4: '1 kilometers',
 				answer:'1-2 millimeters', 
+				fact: 'Each year, the sea level has increased about 1-2 millimeters because of global warming melting glaciers and ice sheets at a faster rate.',
 			}
 			];
 
@@ -682,8 +692,8 @@ class Quiz extends Phaser.Scene {
 		pick.add(cityT);
 
 		// pickT
-		const pickT = this.add.text(-30, -211, "", {});
-		pickT.text = "Choose Environment\n       to begin quiz\n";
+		const pickT = this.add.text(-50, -211, "", {});
+		pickT.text = "Choose an Environment\n       to begin quiz\n";
 		pickT.setStyle({ "color": "#000000ff", "fontFamily": "Poppins", "fontSize": "35px" });
 		pick.add(pickT);
 
