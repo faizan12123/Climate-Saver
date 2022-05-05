@@ -604,6 +604,48 @@
                 "key": "dumbell"
             },
             {
+                "type": "multiatlas",
+                "url": "assets/ExplosionAsset/explosion.json",
+                "path": "assets/ExplosionAsset",
+                "key": "explosion"
+            },
+            {
+                "url": "assets/ExplosionAsset/explosion+1_1.png",
+                "type": "image",
+                "key": "explosion+1_1"
+            },
+            {
+                "url": "assets/ExplosionAsset/explosion+1_2.png",
+                "type": "image",
+                "key": "explosion+1_2"
+            },
+            {
+                "url": "assets/ExplosionAsset/explosion+1_3.png",
+                "type": "image",
+                "key": "explosion+1_3"
+            },
+            {
+                "url": "assets/ExplosionAsset/Explosion1.png",
+                "type": "image",
+                "key": "Explosion1"
+            },
+            {
+                "type": "multiatlas",
+                "url": "assets/ExplosionAsset/explosion1+.json",
+                "path": "assets/ExplosionAsset",
+                "key": "explosion1+"
+            },
+            {
+                "url": "assets/ExplosionAsset/Explosion2.png",
+                "type": "image",
+                "key": "Explosion2"
+            },
+            {
+                "url": "assets/ExplosionAsset/Explosion3.png",
+                "type": "image",
+                "key": "Explosion3"
+            },
+            {
                 "url": "assets/sprites/fact-popup.png",
                 "type": "image",
                 "key": "fact-popup"
@@ -666,6 +708,12 @@
                 "url": "assets/In Game Buttons/Health Bar/health_bar_decoration.png",
                 "type": "image",
                 "key": "health_bar_decoration"
+            },
+            {
+                "type": "multiatlas",
+                "url": "assets/In Game Buttons/Health Bar/heartanimated.json",
+                "path": "assets/In Game Buttons/Health Bar",
+                "key": "heartanimated"
             },
             {
                 "url": "assets/City Assets/ipod.png",

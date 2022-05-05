@@ -122,7 +122,7 @@ class Forest extends Phaser.Scene {
 		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
 
 		//creating timer
-		this.timeInSeconds = 30;
+		this.timeInSeconds = 60;
 		this.shouldSubtractSecond = 0;
 		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
 
@@ -247,11 +247,14 @@ class Forest extends Phaser.Scene {
 					this.player_score++
 					console.log("score: " + this.player_score)
 					this.scoreText.setText(' ' + this.player_score);
+					this.displayExplosion_1(this.selectedTrash);
 				}
 				else{
 					this.displayResponse(false);
+					this.displayHeartEffect();
 					this.healthBarNumber--
 					this.updateHealthBar();
+					this.displayExplosion(this.selectedTrash);
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
@@ -264,11 +267,14 @@ class Forest extends Phaser.Scene {
 					this.player_score++
 					console.log("score: " + this.player_score)
 					this.scoreText.setText(' ' + this.player_score);
+					this.displayExplosion_1(this.selectedTrash);
 				}
 				else{
 					this.displayResponse(false);
+					this.displayHeartEffect();
 					this.healthBarNumber--
 					this.updateHealthBar();
+					this.displayExplosion(this.selectedTrash);
 				}
         		this.selectedTrash.destroy();
 				this.hideOverlapPrompt();
@@ -347,6 +353,8 @@ class Forest extends Phaser.Scene {
 					}
 					this.input.keyboard.enabled = true;
 					this.scene.start("Quiz");
+					this.walkingFX.stop();
+					this.backgroundMusic.stop();
 	
 				})
 				.on("pointerover", () => {
@@ -613,8 +621,9 @@ class Forest extends Phaser.Scene {
 				if(localStorage.settingsOptionFX == "true"){
             		this.buttonClicked.play();
           		}
-				  this.input.keyboard.enabled = true;
+				this.input.keyboard.enabled = true;
 				this.backgroundMusic.stop();
+				this.walkingFX.stop();
 				this.scene.start("MainMenu");
 			})
 			.on("pointerover", () => {
@@ -754,5 +763,77 @@ class Forest extends Phaser.Scene {
 		this.healthBars.scaleY = 1.801947436688974;
 		
 	}
+
+	preload(){
+
+		this.anims.create({
+			key: "Heart",
+			frameRate: 10,
+			frames: this.anims.generateFrameNames("heartanimated",{
+				prefix: "Red16px",
+				suffix: ".png",
+				start:1,
+				end:10,
+			}),
+			repeat: 1,
+		});
+
+		this.anims.create({
+		key: "Explode",
+		frameRate: 10,
+		frames: this.anims.generateFrameNames("explode",{
+			prefix: "Explosion",
+			suffix: ".png",
+			start:1,
+			end:3,
+		}),
+		repeat: 1,
+		});
+
+		this.anims.create({
+		key: "Explode1+",
+		frameRate: 10,
+		frames: this.anims.generateFrameNames("explode1+",{
+			prefix: "explosion+1_",
+			suffix: ".png",
+			start:1,
+			end:3,
+		}),
+		repeat: 1,
+		});
+  }
+
+  displayHeartEffect(){
+	  this.heart = this.add.sprite(625, 40, "heartanimated", "heartanimated.png");
+	  this.heart.scaleX = 3.5;
+	  this.heart.scaleY = 3.5;
+	  this.heart.play('Heart', false);
+	  this.heart.once('animationcomplete', () => {
+      console.log('animationcomplete')
+      this.heart.destroy()
+    })
+  }
+
+  displayExplosion(selectedTrash){
+
+    this.explode = this.add.sprite(selectedTrash.x, selectedTrash.y, "explode", "Explosion.png");
+    this.explode.play('Explode', false);
+    this.explode.once('animationcomplete', () => {
+      console.log('animationcomplete')
+      this.explode.destroy()
+    })
+    
+  }
+
+  displayExplosion_1(selectedTrash){
+
+    this.explode1 = this.add.sprite(selectedTrash.x, selectedTrash.y, "explode1+", "explosion1+.png");
+    this.explode1.play('Explode1+', false);
+    this.explode1.once('animationcomplete', () => {
+      console.log('animationcomplete')
+      this.explode1.destroy()
+    })
+
+  }
 }
 
