@@ -184,7 +184,7 @@ class City extends Phaser.Scene {
 		this.editorCreate();
 		this.physics.add.overlap(this.player, this.trashs, this.displayOverlapPrompt, null, this)
 		//creating timer
-		this.timeInSeconds = 15;
+		this.timeInSeconds = 60;
 		this.shouldSubtractSecond = 0;
 		this.timeText = this.add.text(380, 55, '0:00', { font: '20px Georgia', fill: '#000' });
 
