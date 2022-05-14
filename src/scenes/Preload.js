@@ -65,6 +65,10 @@ class Preload extends Phaser.Scene {
 
 		this.editorPreload();
 
+		this.load.atlas("heartanimated", "./assets/In Game Buttons/Health Bar/heartanimated.png", "./assets/In Game Buttons/Health Bar/heartanimated.json");
+		this.load.atlas("explode", "./assets/ExplosionAsset/explosion.png", "./assets/ExplosionAsset/explosion.json");
+		this.load.atlas("explode1+", "./assets/ExplosionAsset/explosion1+.png", "./assets/ExplosionAsset/explosion1+.json");
+
 		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("MainMenu"));
 	}
 

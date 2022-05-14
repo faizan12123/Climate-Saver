@@ -103,7 +103,7 @@ class Controls extends Phaser.Scene {
 			}
 		});
 
-		// ARROW_tick
+		// ARROW_tick 
 		const aRROW_tick = this.add.image(236, 284, "button-tick");
 		aRROW_tick.scaleX = 0.1;
 		aRROW_tick.scaleY = 0.1;

@@ -4,6 +4,7 @@
 
 ## INTRODUCTION  
 Climate Saver is an educational web game designed to teach the youth about enviornmental issues and ways they can become better stewards of their planet.   
+Blog Site: https://faizan12123.github.io/climatesaverwebsite/
 Live Site: https://faizan12123.github.io/Climate-Saver/
 ## TECHNOLOGIES USED
 - Adobe Photoshop 2022  
@@ -15,6 +16,15 @@ Live Site: https://faizan12123.github.io/Climate-Saver/
 ## SCREENSHOTS
 ![Loading Screen](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-loadingscene-version1-fs.png)
 ![Main Menu](https://github.com/faizan12123/Climate-Saver/blob/feature-main-menu/README/screenshot-mainmenu-version2-fs.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-mapselect-v1.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-snow-v1.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/main/README/city.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/develop/README/screenshot-forest-v1.png?raw=true)
+![](https://github.com/faizan12123/Climate-Saver/blob/main/README/beach.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/main/README/Credits.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/main/README/controls.png)
+![](https://github.com/faizan12123/Climate-Saver/blob/main/README/settings.png)
+
 
 ## CREDITS
 ### MEET THE TEAM
