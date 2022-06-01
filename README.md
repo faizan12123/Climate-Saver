@@ -6,7 +6,7 @@
 Climate Saver is an educational web game designed to teach the youth about enviornmental issues and ways they can become better stewards of their planet.
 
 ## LIVE SITES
-Blog Site: https://faizan12123.github.io/climatesaverwebsite/
+Blog Site: https://faizan12123.github.io/climate-saver-blog-site/
 
 
 Live Site: https://faizan12123.github.io/Climate-Saver/
